@@ -1,0 +1,94 @@
+.team-sec{
+    .team-wrap{
+        position: relative;
+        overflow: hidden;
+        .team-desc{
+            background: $color__theme;
+            text-align: center;
+            padding: 20px 0;
+
+            h3{
+                font-size: 19px;
+                color: #fff;
+                margin: 0;
+            }
+            span{
+                font-size: 13px;
+                color: #fff;
+            }
+        }
+    }
+}
+.team-img{
+    position: relative;
+}
+.hover-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 50px;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.5);
+    -webkit-transform: translateX(-103%);
+    -ms-transform: translateX(-103%);
+    transform: translateX(-103%);
+    -webkit-transition: all 0.20s ease 0s;
+    transition: all 0.20s ease 0s;
+}
+.team-sec .team-wrap:hover .hover-bg {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+}
+.team_social {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transform: rotate(90deg);
+    position: absolute;
+    right: -30px;
+    bottom: 98px;
+}
+.team_social li {
+  display: inline-block;
+  margin-right: 5px;
+}
+.team_social li a {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  font-size: 17px;
+  color: #fff;
+  line-height: 34px;
+  text-align: center;
+  display: inline-block;
+  -webkit-transition: border 0.3s ease 0s;
+  transition: border 0.3s ease 0s;
+  -webkit-transition: background 0.3s ease 0s;
+    transition: background 0.3s ease 0s;
+}
+.team_social li a:hover {
+  color: #fff;
+}
+.team_social li a i{
+    line-height: 32px;
+}
+.team_social .facebook:hover{
+    background: #3b5998;
+    border-color:#3b5998;
+}
+.team_social .twitter:hover{
+    background: #00aced;
+    border-color:#00aced;
+}
+.team_social .gplus:hover{
+    background: #dd4b39;
+    border-color: #dd4b39;
+}
+.team_social .pinterest:hover{
+    background: #cb2027;
+    border-color: #cb2027;
+}

@@ -1,0 +1,29 @@
+.section{
+    padding: 70px 0;
+    position: relative;
+}
+.section-title {
+    max-width: 500px;
+    margin-bottom: 50px;
+    position: relative;
+}
+.section-title h2 {
+    margin-top: 0;
+    z-index: 99;
+    position: relative;
+    margin-bottom: 20px;
+}
+.pad5px{
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+}
+.section-title h2:before {
+    background: none repeat scroll 0 0 #00bbff;
+    content: " ";
+    position: absolute;
+    width: 49px;
+    height: 2px;
+    display: inline-block;
+    top: 40px;
+    left: 0;
+}

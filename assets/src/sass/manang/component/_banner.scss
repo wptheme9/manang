@@ -1,0 +1,88 @@
+.mg-banner-wrapper{
+    background: url("../img/business.jpeg");
+    height: 700px;
+    min-height: 700px;
+    outline: 0;
+     &:before{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: .73;
+        content: '';
+        background: #000;
+    }
+    .banner-text-wrap{
+        position: relative;
+        z-index: 99;
+        text-align: center;
+        padding-top: 90px;
+        max-width: 670px;
+        margin: 130px auto;
+            h2{
+            font-size: 50px;
+            font-family: $title-family;
+            color: #fff;
+            text-transform: uppercase;
+            margin-top: 0;
+            font-weight: 700;
+             margin-bottom: 18px;
+             line-height: 63px;
+        }
+        p{
+            color: #fff;
+        }
+        .btn-default{
+            margin-top: 30px;
+        }
+    }
+}
+
+.mg-banner-slider{
+    .slider-item{
+        background: url("../img/business.jpeg");
+        width: 100%;
+        height: 700px;
+        min-height: 700px;
+        background-size: cover;
+        background-position: center center;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        outline: 0;
+         &:before{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: .73;
+            content: '';
+            background: #000;
+        }
+        .banner-text-wrap{
+            position: relative;
+            z-index: 99;
+            text-align: center;
+            padding-top: 90px;
+            max-width: 670px;
+            margin: 130px auto;
+                h2{
+                font-size: 50px;
+                font-family: $title-family;
+                color: #fff;
+                text-transform: uppercase;
+                margin-top: 0;
+                font-weight: 700;
+                 margin-bottom: 18px;
+                 line-height: 63px;
+            }
+            p{
+                color: #fff;
+            }
+            .btn-default{
+                margin-top: 30px;
+            }
+        }
+    }
+}

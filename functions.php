@@ -127,6 +127,7 @@ add_action( 'widgets_init', 'manang_widgets_init' );
  * Enqueue scripts and styles.
  */
 function manang_scripts() {
+	wp_enqueue_style( 'google-font', 'https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700' );
 	wp_enqueue_style( 'manang-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'manang-main-css', get_template_directory_uri().'/assets/css/manang.css' );
 

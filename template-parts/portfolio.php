@@ -27,7 +27,7 @@
 
               <div class="grid">
                 <div class="element-item grid-col-3 box category1 " >
-                    <img src="assets/img/des-port1.jpg">
+                    <img src="<?php echo get_template_directory_uri().'/assets/img/des-port1.jpg' ?>">
                     <div class="box-content">
                         <i class="ion-plus"></i>
                         <h3 class="title">Lorem Ipsum</h3>

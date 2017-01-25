@@ -14,67 +14,67 @@
             <div class="client-slider">
                 <div class="item">
                     <div class="client-image-wrapper">
-                        <a href="#"><img src="assets/img/14.png" alt=""></a>
+                        <a href="#"><img src="<?php echo get_template_directory_uri(). '/assets/img/14.png' ?>" alt=""></a>
                     </div>
                 </div>
                 <div class="item">
                     <div class="client-image-wrapper">
-                        <a href="#"><img src="assets/img/14.png" alt=""></a>
+                        <a href="#"><img src="<?php echo get_template_directory_uri(). '/assets/img/14.png' ?>" alt=""></a>
                     </div>
                 </div>
                 <div class="item">
                     <div class="client-image-wrapper">
-                        <a href="#"><img src="assets/img/14.png" alt=""></a>
+                        <a href="#"><img src="<?php echo get_template_directory_uri(). '/assets/img/14.png' ?>" alt=""></a>
                     </div>
                 </div>
                 <div class="item">
                     <div class="client-image-wrapper">
-                        <a href="#"><img src="assets/img/14.png" alt=""></a>
+                        <a href="#"><img src="<?php echo get_template_directory_uri(). '/assets/img/14.png' ?>" alt=""></a>
                     </div>
                 </div>
                 <div class="item">
                     <div class="client-image-wrapper">
-                        <a href="#"><img src="assets/img/14.png" alt=""></a>
+                        <a href="#"><img src="<?php echo get_template_directory_uri(). '/assets/img/14.png' ?>" alt=""></a>
                     </div>
                 </div>
                 <div class="item">
                     <div class="client-image-wrapper">
-                        <a href="#"><img src="assets/img/14.png" alt=""></a>
+                        <a href="#"><img src="<?php echo get_template_directory_uri(). '/assets/img/14.png' ?>" alt=""></a>
                     </div>
                 </div>
                 <div class="item">
                     <div class="client-image-wrapper">
-                        <a href="#"><img src="assets/img/14.png" alt=""></a>
+                        <a href="#"><img src="<?php echo get_template_directory_uri(). '/assets/img/14.png' ?>" alt=""></a>
                     </div>
                 </div>
                 <div class="item">
                     <div class="client-image-wrapper">
-                        <a href="#"><img src="assets/img/14.png" alt=""></a>
+                        <a href="#"><img src="<?php echo get_template_directory_uri(). '/assets/img/14.png' ?>" alt=""></a>
                     </div>
                 </div>
                 <div class="item">
                     <div class="client-image-wrapper">
-                        <a href="#"><img src="assets/img/14.png" alt=""></a>
+                        <a href="#"><img src="<?php echo get_template_directory_uri(). '/assets/img/14.png' ?>" alt=""></a>
                     </div>
                 </div>
                 <div class="item">
                     <div class="client-image-wrapper">
-                        <a href="#"><img src="assets/img/14.png" alt=""></a>
+                        <a href="#"><img src="<?php echo get_template_directory_uri(). '/assets/img/14.png' ?>" alt=""></a>
                     </div>
                 </div>
                 <div class="item">
                     <div class="client-image-wrapper">
-                        <a href="#"><img src="assets/img/14.png" alt=""></a>
+                        <a href="#"><img src="<?php echo get_template_directory_uri(). '/assets/img/14.png' ?>" alt=""></a>
                     </div>
                 </div>
                 <div class="item">
                     <div class="client-image-wrapper">
-                        <a href="#"><img src="assets/img/14.png" alt=""></a>
+                        <a href="#"><img src="<?php echo get_template_directory_uri(). '/assets/img/14.png' ?>" alt=""></a>
                     </div>
                 </div>
                 <div class="item">
                     <div class="client-image-wrapper">
-                        <a href="#"><img src="assets/img/14.png" alt=""></a>
+                        <a href="#"><img src="<?php echo get_template_directory_uri(). '/assets/img/14.png' ?>" alt=""></a>
                     </div>
                 </div>
             </div>

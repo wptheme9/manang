@@ -20,7 +20,7 @@
             <div class="col-md-3">
                 <div class="team-wrap">
                     <div class="team-img">
-                        <img src="assets/img/team1.jpg">
+                        <img src="<?php echo get_template_directory_uri(). '/assets/img/team1.jpg' ?>">
                         <div class="hover-bg">
                             <ul class="team_social">
                                 <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
@@ -39,7 +39,7 @@
             <div class="col-md-3">
                 <div class="team-wrap">
                     <div class="team-img">
-                        <img src="assets/img/team2.jpg">
+                        <img src="<?php echo get_template_directory_uri(). '/assets/img/team2.jpg' ?>">
                         <div class="hover-bg">
                             <ul class="team_social">
                                 <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
@@ -58,7 +58,7 @@
             <div class="col-md-3">
                 <div class="team-wrap">
                     <div class="team-img">
-                        <img src="assets/img/team3.jpg">
+                        <img src="<?php echo get_template_directory_uri(). '/assets/img/team3.jpg' ?>">
                         <div class="hover-bg">
                             <ul class="team_social">
                                 <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
@@ -77,7 +77,7 @@
             <div class="col-md-3">
                 <div class="team-wrap">
                     <div class="team-img">
-                        <img src="assets/img/team4.jpg">
+                        <img src="<?php echo get_template_directory_uri(). '/assets/img/team4.jpg' ?>">
                         <div class="hover-bg">
                             <ul class="team_social">
                                 <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>

@@ -6,7 +6,7 @@
                 <div class="item">
                     <div class="testimonial">
                         <div class="pic">
-                            <img src="assets/img/client.png" alt="">
+                            <img src="<?php echo get_template_directory_uri() . '/assets/img/client.png' ?>" alt="">
                         </div>
                         <div class="testimonial-content">
                             <p class="description">
@@ -22,7 +22,7 @@
                 <div class="item">
                     <div class="testimonial">
                         <div class="pic">
-                            <img src="assets/img/client.png" alt="">
+                            <img src="<?php echo get_template_directory_uri() . '/assets/img/client.png' ?>" alt="">
                         </div>
                         <div class="testimonial-content">
                             <p class="description">
@@ -38,7 +38,7 @@
                 <div class="item">
                     <div class="testimonial">
                         <div class="pic">
-                            <img src="assets/img/client.png" alt="">
+                            <img src="<?php echo get_template_directory_uri() . '/assets/img/client.png' ?>" alt="">
                         </div>
                         <div class="testimonial-content">
                             <p class="description">

@@ -35,7 +35,7 @@
                 </div>
 
                 <div class="element-item grid-col-3 box category1 " >
-                    <img src="assets/img/des-port2.jpg">
+                    <img src="<?php echo get_template_directory_uri().'/assets/img/des-port2.jpg' ?>">
                     <div class="box-content">
                         <i class="ion-plus"></i>
                         <h3 class="title">Lorem Ipsum</h3>
@@ -43,7 +43,7 @@
                 </div>
 
                 <div class="element-item grid-col-3 box category2 " >
-                    <img src="assets/img/des-port3.jpg">
+                    <img src="<?php echo get_template_directory_uri().'/assets/img/des-port3.jpg' ?>">
                     <div class="box-content">
                         <i class="ion-plus"></i>
                         <h3 class="title">Lorem Ipsum</h3>
@@ -51,7 +51,7 @@
                 </div>
 
                 <div class="element-item grid-col-3 box category1 " >
-                    <img src="assets/img/des-port4.jpg">
+                    <img src="<?php echo get_template_directory_uri().'/assets/img/des-port4.jpg' ?>">
                     <div class="box-content">
                         <i class="ion-plus"></i>
                         <h3 class="title">Lorem Ipsum</h3>
@@ -59,14 +59,14 @@
                 </div>
 
                 <div class="element-item grid-col-3 box category2 " >
-                    <img src="assets/img/des-port5.jpg">
+                    <img src="<?php echo get_template_directory_uri().'/assets/img/des-port5.jpg' ?>">
                     <div class="box-content">
                         <i class="ion-plus"></i>
                         <h3 class="title">Lorem Ipsum</h3>
                     </div>
                 </div>
                 <div class="element-item grid-col-3 box category2 " >
-                    <img src="assets/img/des-port6.jpg">
+                    <img src="<?php echo get_template_directory_uri().'/assets/img/des-port6.jpg' ?>">
                     <div class="box-content">
                         <i class="ion-plus"></i>
                         <h3 class="title">Lorem Ipsum</h3>

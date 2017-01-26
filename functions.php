@@ -161,7 +161,12 @@ require get_template_directory() . '/inc/extras.php';
 /**
  * Customizer additions.
  */
-require get_template_directory() . '/inc/customizer.php';
+require dirname(__File__) . '/customizer/manang-color-picker/manang-color-picker.php';
+require( dirname(__FILE__) . "/customizer/fonts/font-customizer.php");
+require( dirname(__FILE__) . "/customizer/fonts/customizer-font-controls.php");
+require( dirname(__FILE__) . "/customizer/cpm-sanitization.php");
+require get_template_directory() . '/customizer/customizer-custom-control.php';
+require get_template_directory() . '/customizer/customizer.php';
 
 /**
  * Load Jetpack compatibility file.

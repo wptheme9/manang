@@ -1,22 +1,9 @@
 <?php
 
-$wp_customize->add_setting('manang_option[extend_menu_option]',
-        array(
-            'type'    => 'option',
-            'sanitize_callback' => 'cpm_framework_sanitize_checkbox',
-            'default' => '1',
-            ));
-$wp_customize->add_control('manang_option[extend_menu_option]',
-        array(
-            'section' => 'header_options',
-            'label'   => esc_html__('Show Top Menu', 'manang'),
-            'type'    => 'checkbox',
-));
-
 $wp_customize->add_setting('manang_option[search_show]',
                 array(
                     'type' => 'option',
-                    'sanitize_callback' => 'cpm_framework_sanitize_checkbox',
+                    'sanitize_callback' => 'manang_sanitize_checkbox',
                     'default' => 1,
                     )
 );
@@ -35,7 +22,7 @@ $wp_customize->add_setting(
         'manang_option[layout_picker]',
         array(
             'type'      =>'option',
-            'sanitize_callback' => 'cpm_framework_sanitize_checkbox',
+            'sanitize_callback' => 'manang_sanitize_checkbox',
             'default'   => 'menu-left-right',
         )
 );
@@ -55,56 +42,12 @@ $wp_customize->add_control(
         )
 );
 
-$wp_customize->add_setting(
-        'manang_option[social_icons_option]',
-        array(
-            'type'      =>'option',
-            'sanitize_callback' => 'cpm_framework_sanitize_checkbox',
-            'default'   => 'social-left',
-        )
-);
-
-$wp_customize->add_control(
-        'manang_option[social_icons_option]',
-        array(
-            'section'  => 'header_options',
-            'label'    => esc_html__( 'Social icons/Menu', 'manang' ),
-            'type'     => 'radio',
-            'choices'  => array(
-                'social-left'  => esc_html__( 'Social Icon in top left', 'manang'),
-                'social-right'        => esc_html__( 'Social Icon in top right', 'manang' ),
-                'menu-left-right' => esc_html__( 'Both menu', 'manang' ),
-            ),
-            'settings' => 'manang_option[social_icons_option]',
-        )
-);
-$version_wp = get_bloginfo('version');
-if($version_wp < 4.5){
-    $wp_customize->add_setting('manang_option[upload_image_logo]',
-        array(
-            'type' => 'option',
-            'sanitize_callback' => 'cpm_framework_sanitize_image',
-            )
-        );
-    $wp_customize->add_control(
-        new WP_Customize_Image_Control(
-        $wp_customize,
-        'manang_option[upload_image_logo]',
-        array(
-            'label'           => __( 'Add Logo', 'manang' ),
-            'section'         => 'title_tagline',
-            'settings'        => 'manang_option[upload_image_logo]',
-            'priority'        => 40,
-        ) )
-    );
-}
-
 //Banner Section
 $wp_customize->add_setting(
         'manang_option[banner_picker]',
         array(
             'type'      =>'option',
-            'sanitize_callback' => 'cpm_framework_sanitize_checkbox',
+            'sanitize_callback' => 'manang_sanitize_checkbox',
             'default'   => 'banner-default',
         )
 );
@@ -125,24 +68,10 @@ $wp_customize->add_control(
             )
 );
 
-$wp_customize->add_setting('manang_option[cover_banner]',
-        array(
-            'type'    => 'option',
-            'sanitize_callback' => 'cpm_framework_sanitize_checkbox',
-            'default' => '',
-            ));
-$wp_customize->add_control('manang_option[cover_banner]',
-        array(
-            'section' => 'banner_options',
-            'label'   => esc_html__('Cover Banner', 'manang'),
-            'type'    => 'checkbox',
-            ));
-
-
 $wp_customize->add_setting('manang_option[slider_image_title]',
     array(
         'type' => 'option',
-        'sanitize_callback' => 'esc_attr',
+        'sanitize_callback' => 'esc_html',
         )
     );
 $wp_customize->add_control('manang_option[slider_image_title]',
@@ -150,7 +79,7 @@ $wp_customize->add_control('manang_option[slider_image_title]',
         'label'           => esc_html__( 'Title', 'manang' ),
         'type'            => 'text',
         'section'         => 'banner_options',
-        'active_callback' => 'cpm_framework_callback_choice',
+        'active_callback' => 'manang_callback_choice',
         )
 );
 
@@ -165,7 +94,7 @@ $wp_customize->add_control('manang_option[slider_image_description]',
         'label'           => __('Description','manang'),
         'type'            => 'textarea',
         'section'         => 'banner_options',
-        'active_callback' => 'cpm_framework_callback_choice',
+        'active_callback' => 'manang_callback_choice',
         )
 );
 
@@ -180,14 +109,14 @@ $wp_customize->add_control('manang_option[slider_image_text]',
         'label'           => __('Button Text','manang'),
         'type'            => 'text',
         'section'         => 'banner_options',
-        'active_callback' => 'cpm_framework_callback_choice',
+        'active_callback' => 'manang_callback_choice',
         )
     );
 
 $wp_customize->add_setting('manang_option[slider_image_link]',
     array(
         'type' => 'option',
-        'sanitize_callback' => 'cpm_framework_sanitize_url',
+        'sanitize_callback' => 'manang_sanitize_url',
         )
     );
 $wp_customize->add_control('manang_option[slider_image_link]',
@@ -195,7 +124,7 @@ $wp_customize->add_control('manang_option[slider_image_link]',
         'label'             => __('Button Link','manang'),
         'type'              => 'text',
         'section'           => 'banner_options',
-        'active_callback'   => 'cpm_framework_callback_choice',
+        'active_callback'   => 'manang_callback_choice',
         'sanitize_callback' => 'esc_url_raw',
         )
     );
@@ -203,7 +132,7 @@ $wp_customize->add_control('manang_option[slider_image_link]',
 $wp_customize->add_setting('manang_option[upload_banner_image]',
     array(
         'type' => 'option',
-        'sanitize_callback' => 'cpm_framework_sanitize_image',
+        'sanitize_callback' => 'manang_sanitize_image',
         )
     );
 $wp_customize->add_control(
@@ -212,7 +141,7 @@ $wp_customize->add_control(
     'manang_option[upload_banner_image]',
     array(
         'label'           => __( 'Add Image', 'manang' ),
-        'active_callback' => 'cpm_framework_callback_choice',
+        'active_callback' => 'manang_callback_choice',
         'section'         => 'banner_options',
         'settings'        => 'manang_option[upload_banner_image]',
     ) )
@@ -231,7 +160,7 @@ $wp_customize->add_control('manang_option[slider_video_title]',
         'label'           => __('Title','manang'),
         'type'            => 'text',
         'section'         => 'banner_options',
-        'active_callback' => 'cpm_framework_callback_choice',
+        'active_callback' => 'manang_callback_choice',
         )
 );
 
@@ -246,7 +175,7 @@ $wp_customize->add_control('manang_option[slider_video_description]',
         'label'           => __('Description','manang'),
         'type'            => 'textarea',
         'section'         => 'banner_options',
-        'active_callback' => 'cpm_framework_callback_choice',
+        'active_callback' => 'manang_callback_choice',
         )
 );
 $wp_customize->add_setting('manang_option[slider_video_text]',
@@ -260,14 +189,14 @@ $wp_customize->add_control('manang_option[slider_video_text]',
         'label'           => __('Button Text','manang'),
         'type'            => 'text',
         'section'         => 'banner_options',
-        'active_callback' => 'cpm_framework_callback_choice',
+        'active_callback' => 'manang_callback_choice',
         )
     );
 
 $wp_customize->add_setting('manang_option[slider_video_link]',
     array(
         'type' => 'option',
-        'sanitize_callback' => 'cpm_framework_sanitize_url',
+        'sanitize_callback' => 'manang_sanitize_url',
         )
     );
 $wp_customize->add_control('manang_option[slider_video_link]',
@@ -275,7 +204,7 @@ $wp_customize->add_control('manang_option[slider_video_link]',
         'label'           => __('Button Link','manang'),
         'type'            => 'text',
         'section'         => 'banner_options',
-        'active_callback' => 'cpm_framework_callback_choice',
+        'active_callback' => 'manang_callback_choice',
         'sanitize_callback' => 'esc_url_raw',
         )
     );
@@ -292,7 +221,7 @@ $wp_customize->add_control(
     'manang_option[upload_banner_video]',
     array(
         'label'           => __( 'Add Video', 'manang' ),
-        'active_callback' => 'cpm_framework_callback_choice',
+        'active_callback' => 'manang_callback_choice',
         'section'         => 'banner_options',
         'settings'        => 'manang_option[upload_banner_video]',
     ) )
@@ -300,7 +229,7 @@ $wp_customize->add_control(
 $wp_customize->add_setting('manang_option[banner_video_audio]',
                 array(
                     'type' => 'option',
-                    'sanitize_callback' => 'cpm_framework_sanitize_checkbox',
+                    'sanitize_callback' => 'manang_sanitize_checkbox',
                     'default' => 1,
                     )
             );
@@ -310,7 +239,7 @@ $wp_customize->add_setting('manang_option[banner_video_audio]',
                     'section'         => 'banner_options',
                     'settings'        =>  'manang_option[banner_video_audio]',
                     'type'            => 'checkbox',
-                    'active_callback' => 'cpm_framework_callback_choice',
+                    'active_callback' => 'manang_callback_choice',
                     )
             );
 
@@ -327,7 +256,7 @@ $wp_customize->add_control(
     array(
         'label'           => __( 'Add Image', 'manang' ),
         'description' => __('This Image will be shown in the mobile view.','manang'),
-        'active_callback' => 'cpm_framework_callback_choice',
+        'active_callback' => 'manang_callback_choice',
         'section'         => 'banner_options',
         'settings'        => 'manang_option[upload_banner_video_preview_image]',
     ) )

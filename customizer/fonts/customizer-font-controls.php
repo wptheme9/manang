@@ -3,7 +3,7 @@
 if( ! class_exists('WP_Customize_Control') ){
 	return NULL;
 }
-class cpm_framework_Google_Font_Dropdown_Custom_Control extends WP_Customize_Control {
+class manang_Google_Font_Dropdown_Custom_Control extends WP_Customize_Control {
 	private $fonts = false;
 	public function __construct( $manager, $id, $args = array(), $options = array() ) {
 	        $this->fonts = $this->get_fonts('all');

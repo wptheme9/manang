@@ -5,7 +5,7 @@
         'default'=>'1',
         'type'=>'option',
         'capability'=>'edit_theme_options',
-        'sanitize_callback'=>'cpm_framework_sanitize_checkbox',
+        'sanitize_callback'=>'manang_sanitize_checkbox',
         )
     );
     $wp_customize->add_control( 'contact_check', array(
@@ -21,7 +21,7 @@
             'type'    => 'option',
             'default'=>'',
             'capability' => 'edit_theme_options',
-            'sanitize_callback'=>'cpm_framework_sanitize_checkbox',
+            'sanitize_callback'=>'manang_sanitize_checkbox',
         )
     );
     $wp_customize->add_control( 'contact_map', array(

@@ -22,8 +22,6 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'manang' ); ?></a>
-
 	<!-- Header -->
     <header id="top" class="header mg-hero">
         <!-- Start of Naviation -->
@@ -63,19 +61,8 @@
             </div>
         </div>
         <!-- End of Navigation -->
-
         <!-- Start of header banner -->
-        <div class="mg-banner-wrapper parallax">
-            <div class="container">
-                <div class="row">
-                    <div class="banner-text-wrap">
-                        <h2>WE create awesome user interface</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros</p>
-                        <a href="#" class="btn btn-default">Purchase Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <?php do_action( 'manang_banner_option' ); ?>
         <!-- End of header banner -->
 
     </header>

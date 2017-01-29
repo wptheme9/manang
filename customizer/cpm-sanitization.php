@@ -1,22 +1,22 @@
 <?php
-if(!function_exists('cpm_framework_sanitize_url')):
+if(!function_exists('manang_sanitize_url')):
     /**
      * Sanitize URL function for customizer
      *
      * @copyright Copyright (c) 2015, WordPress Theme Review Team
      */
-    function cpm_framework_sanitize_url( $url ) {
+    function manang_sanitize_url( $url ) {
         return esc_url_raw( $url );
     }
 endif;
 
-if(!function_exists('cpm_framework_sanitize_image')):
+if(!function_exists('manang_sanitize_image')):
     /**
      * Sanitize image URL
      *
      * @copyright Copyright (c) 2015, WordPress Theme Review Team
      */
-    function cpm_framework_sanitize_image( $image, $setting ) {
+    function manang_sanitize_image( $image, $setting ) {
         /*
          * Array of valid image file types.
          *
@@ -37,7 +37,7 @@ if(!function_exists('cpm_framework_sanitize_image')):
     }
 endif;
 
-if(!function_exists('cpm_framework_sanitize_select')):
+if(!function_exists('manang_sanitize_select')):
     /**
      * Sanitize checkbox for customizer
      *
@@ -50,12 +50,12 @@ if(!function_exists('cpm_framework_sanitize_select')):
      *
      * @copyright Copyright (c) 2015, WordPress Theme Review Team
      */
-    function cpm_framework_sanitize_select( $input, $setting ) {
+    function manang_sanitize_select( $input, $setting ) {
 
         // Ensure input is a slug.
         $input = sanitize_key( $input );
 
-        $control = cpm_framework_control_id_from_settings( $setting->id );
+        $control = manang_control_id_from_settings( $setting->id );
 
         // Get list of choices from the control associated with the setting.
         $choices = $setting->manager->get_control( $control )->choices;
@@ -65,7 +65,7 @@ if(!function_exists('cpm_framework_sanitize_select')):
     }
 endif;
 
-if(!function_exists('cpm_framework_control_id_from_settings')):
+if(!function_exists('manang_control_id_from_settings')):
     /**
      * Sanitize numeric value
      *
@@ -78,26 +78,26 @@ if(!function_exists('cpm_framework_control_id_from_settings')):
      * @param  string $settings settings name.
      * @return string
      */
-    function cpm_framework_control_id_from_settings( $settings ) {
+    function manang_control_id_from_settings( $settings ) {
         $name = trim( $settings, ']' );
         return preg_replace( '/[\[\]]/', '_', $name );
     }
 endif;
 
-if(!function_exists('cpm_framework_sanitize_text')):
-    function cpm_framework_sanitize_text( $input ) {
+if(!function_exists('manang_sanitize_text')):
+    function manang_sanitize_text( $input ) {
         return wp_kses_post( force_balance_tags( $input ) );
     }
 endif;
 
-if(!function_exists('cpm_framework_sanitize_checkbox')):
-    function cpm_framework_sanitize_checkbox( $input ) {
+if(!function_exists('manang_sanitize_checkbox')):
+    function manang_sanitize_checkbox( $input ) {
         return $input;
     }
 endif;
 
-if(!function_exists('cpm_framework_sanitize_integer')):
-    function cpm_framework_sanitize_integer( $input ) {
+if(!function_exists('manang_sanitize_integer')):
+    function manang_sanitize_integer( $input ) {
         return (int)($input);
     }
 endif;

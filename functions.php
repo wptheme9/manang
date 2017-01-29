@@ -172,3 +172,6 @@ require get_template_directory() . '/customizer/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+require get_template_directory() . '/lib/manang-functions.php';
+require get_template_directory() . '/lib/manang-banner.php';

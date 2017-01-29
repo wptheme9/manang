@@ -4,7 +4,7 @@
                 'manang_option[cta_layout]',
                 array(
                     'type'    =>'option',
-                    'sanitize_callback' => 'cpm_framework_sanitize_checkbox',
+                    'sanitize_callback' => 'manang_sanitize_checkbox',
                     'default' => 'center-button',
                 )
         );
@@ -29,7 +29,7 @@
                 array(
                     'type'    => 'option',
                     'default' => 'image_as_bg',
-                    'sanitize_callback' => 'cpm_framework_sanitize_checkbox',
+                    'sanitize_callback' => 'manang_sanitize_checkbox',
                 )
         );
 
@@ -50,7 +50,7 @@
         $wp_customize->add_setting('manang_option[cta_bg_img]',
             array(
                 'type' => 'option',
-                'sanitize_callback' => 'cpm_framework_sanitize_image',
+                'sanitize_callback' => 'manang_sanitize_image',
                 )
             );
         $wp_customize->add_control(
@@ -61,7 +61,7 @@
                 'label'           => __( 'Add Image', 'manang' ),
                 'section'         => 'cta_options',
                 'settings'        => 'manang_option[cta_bg_img]',
-                'active_callback' => 'cpm_framework_callback_cta',
+                'active_callback' => 'manang_callback_cta',
             ) )
         );
         $wp_customize->add_setting('manang_option[cta_bg_color]',
@@ -85,7 +85,7 @@
         $wp_customize->add_setting('manang_option[cta_parallax]',
                 array(
                     'type' => 'option',
-                    'sanitize_callback' => 'cpm_framework_sanitize_checkbox',
+                    'sanitize_callback' => 'manang_sanitize_checkbox',
                     )
             );
         $wp_customize->add_control('manang_option[cta_parallax]',
@@ -94,7 +94,7 @@
                     'section'         => 'cta_options',
                     'settings'        =>  'manang_option[cta_parallax]',
                     'type'            => 'checkbox',
-                    'active_callback' => 'cpm_framework_callback_cta',
+                    'active_callback' => 'manang_callback_cta',
                     )
             );
 
@@ -113,14 +113,14 @@
                 'label'           => __( 'Add Video', 'manang' ),
                 'section'         => 'cta_options',
                 'settings'        => 'manang_option[cta_bg_video]',
-                'active_callback' => 'cpm_framework_callback_cta'
+                'active_callback' => 'manang_callback_cta'
             ) )
         );
 
         $wp_customize->add_setting('manang_option[cta_video_audio]',
                 array(
                     'type' => 'option',
-                    'sanitize_callback' => 'cpm_framework_sanitize_checkbox',
+                    'sanitize_callback' => 'manang_sanitize_checkbox',
                     'default' => 1,
                     )
             );
@@ -130,7 +130,7 @@
                     'section'         => 'cta_options',
                     'settings'        =>  'manang_option[cta_video_audio]',
                     'type'            => 'checkbox',
-                    'active_callback' => 'cpm_framework_callback_cta',
+                    'active_callback' => 'manang_callback_cta',
                     )
             );
 
@@ -150,7 +150,7 @@
                 'description' => __('This Image will be shown in the mobile view.','manang'),
                 'section'         => 'cta_options',
                 'settings'        => 'manang_option[cta_bg_video_preview_image]',
-                'active_callback' => 'cpm_framework_callback_cta'
+                'active_callback' => 'manang_callback_cta'
             ) )
         );
 
@@ -203,7 +203,7 @@
             array(
                 'type' => 'option',
                  'sanitize_callback' => 'esc_url_raw',
-                'sanitize_callback' => 'cpm_framework_sanitize_url',
+                'sanitize_callback' => 'manang_sanitize_url',
                 )
         );
         $wp_customize->add_control('manang_option[cta_button_link]',

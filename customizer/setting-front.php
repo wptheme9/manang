@@ -19,7 +19,7 @@
             $wp_customize->add_setting('manang_option[skills_post_count]',
                 array(
                     'type'    => 'option',
-                    'sanitize_callback' => 'cpm_framework_sanitize_integer',
+                    'sanitize_callback' => 'manang_sanitize_integer',
                     'default' => '4',
                     )
             );
@@ -34,7 +34,7 @@
             $wp_customize->add_setting('manang_option[skills_bg_image]',
                 array(
                     'type' => 'option',
-                    'sanitize_callback' => 'cpm_framework_sanitize_image',
+                    'sanitize_callback' => 'manang_sanitize_image',
                     )
                 );
                 $wp_customize->add_control(
@@ -69,7 +69,7 @@
                 $wp_customize->add_setting('manang_option[skills_parallax]',
                         array(
                             'type' => 'option',
-                            'sanitize_callback' => 'cpm_framework_sanitize_checkbox',
+                            'sanitize_callback' => 'manang_sanitize_checkbox',
                             )
                     );
                 $wp_customize->add_control('manang_option[skills_parallax]',
@@ -85,7 +85,7 @@
                         'manang_option[skills_animation]',
                         array(
                             'type'    => 'option',
-                            'sanitize_callback' => 'cpm_framework_sanitize_checkbox',
+                            'sanitize_callback' => 'manang_sanitize_checkbox',
                             'default' => 'anim',
                             )
             );
@@ -106,7 +106,7 @@
                     'manang_option[skills_layout]',
                     array(
                         'type'    =>'option',
-                        'sanitize_callback' => 'cpm_framework_sanitize_checkbox',
+                        'sanitize_callback' => 'manang_sanitize_checkbox',
                         'default' => 'skills-anim',
                     )
             );
@@ -132,7 +132,7 @@
                 'manang_option[sidebar_layout]',
                 array(
                     'type'    =>'option',
-                    'sanitize_callback' => 'cpm_framework_sanitize_checkbox',
+                    'sanitize_callback' => 'manang_sanitize_checkbox',
                     'default' => 'left-sidebar',
                 )
         );
@@ -172,7 +172,7 @@
             $wp_customize->add_setting('manang_option[team_count]',
                     array(
                         'type'    => 'option',
-                        'sanitize_callback' => 'cpm_framework_sanitize_integer',
+                        'sanitize_callback' => 'manang_sanitize_integer',
                         'default' => '4'
                         )
             );
@@ -187,7 +187,7 @@
             $wp_customize->add_setting('manang_option[team_bg_image]',
             array(
                 'type' => 'option',
-                'sanitize_callback' => 'cpm_framework_sanitize_image',
+                'sanitize_callback' => 'manang_sanitize_image',
                 )
             );
             $wp_customize->add_control(
@@ -222,7 +222,7 @@
             $wp_customize->add_setting('manang_option[team_parallax]',
                     array(
                         'type' => 'option',
-                        'sanitize_callback' => 'cpm_framework_sanitize_checkbox',
+                        'sanitize_callback' => 'manang_sanitize_checkbox',
                         )
                 );
             $wp_customize->add_control('manang_option[team_parallax]',
@@ -237,7 +237,7 @@
             $wp_customize->add_setting('manang_option[team_layout_single]',
                     array(
                         'type' => 'option',
-                        'sanitize_callback' => 'cpm_framework_sanitize_checkbox',
+                        'sanitize_callback' => 'manang_sanitize_checkbox',
                         'default' => 'with-sidebar',
                         )
                 );
@@ -258,7 +258,7 @@
                     'manang_option[team_layout]',
                     array(
                         'type'    =>'option',
-                        'sanitize_callback' => 'cpm_framework_sanitize_checkbox',
+                        'sanitize_callback' => 'manang_sanitize_checkbox',
                         'default' => 'team-layout1',
                     )
             );
@@ -299,7 +299,7 @@
             $wp_customize->add_setting('manang_option[service_post_count]',
                     array(
                         'type' => 'option',
-                        'sanitize_callback' => 'cpm_framework_sanitize_integer',
+                        'sanitize_callback' => 'manang_sanitize_integer',
                         'default' => '6',
                     )
             );
@@ -311,18 +311,18 @@
                     )
             );
 
-            if(!function_exists('cpm_framework_get_categories_select')):
-                function cpm_framework_get_categories_select() {
-                    $cpm_framework_cat = get_terms( array(
+            if(!function_exists('manang_get_categories_select')):
+                function manang_get_categories_select() {
+                    $manang_cat = get_terms( array(
                         'taxonomy' => 'callout_category',
                         'hide_empty' => false,
                     ) );
                     $results="";
                     $results['default'] = "Select category";
-                    if(! empty( $cpm_framework_cat ) && ! is_wp_error( $cpm_framework_cat ) ):
-                        $count = count($cpm_framework_cat);
+                    if(! empty( $manang_cat ) && ! is_wp_error( $manang_cat ) ):
+                        $count = count($manang_cat);
                          for ($i=0; $i < $count; $i++) {
-                           $results[$cpm_framework_cat[$i]->slug] = $cpm_framework_cat[$i]->name;
+                           $results[$manang_cat[$i]->slug] = $manang_cat[$i]->name;
                          }
                      endif;
                     return $results;
@@ -331,7 +331,7 @@
             $wp_customize->add_setting('manang_option[callout_category]',
                     array(
                         'type' => 'option',
-                        'sanitize_callback' => 'cpm_framework_sanitize_checkbox',
+                        'sanitize_callback' => 'manang_sanitize_checkbox',
                         'default' => 'default',
                     )
             );
@@ -340,14 +340,14 @@
                         'type'              => 'select',
                         'section'           => 'service_options',
                         'label'             => esc_html__('Select Call Out Category','manang'),
-                        'choices'           => cpm_framework_get_categories_select(),
+                        'choices'           => manang_get_categories_select(),
                     )
             );
 
             $wp_customize->add_setting('manang_option[service_bg_image]',
             array(
                 'type' => 'option',
-                'sanitize_callback' => 'cpm_framework_sanitize_image',
+                'sanitize_callback' => 'manang_sanitize_image',
                 )
             );
             $wp_customize->add_control(
@@ -382,7 +382,7 @@
             $wp_customize->add_setting('manang_option[service_parallax]',
                     array(
                         'type' => 'option',
-                        'sanitize_callback' => 'cpm_framework_sanitize_checkbox',
+                        'sanitize_callback' => 'manang_sanitize_checkbox',
                         )
                 );
             $wp_customize->add_control('manang_option[service_parallax]',
@@ -399,7 +399,7 @@
                     'manang_option[service_tab_choice]',
                     array(
                         'type'    => 'option',
-                        'sanitize_callback' => 'cpm_framework_sanitize_checkbox',
+                        'sanitize_callback' => 'manang_sanitize_checkbox',
                         'default' => 'yes',
                         )
             );
@@ -420,7 +420,7 @@
                     'manang_option[service_layout_option]',
                     array(
                         'type'    => 'option',
-                        'sanitize_callback' => 'cpm_framework_sanitize_checkbox',
+                        'sanitize_callback' => 'manang_sanitize_checkbox',
                         'default' => '3col',
                         )
             );
@@ -430,7 +430,7 @@
                         'label'           => esc_html__( 'Column', 'manang' ),
                         'type'            => 'radio',
                         'section'         => 'service_options',
-                        'active_callback' => 'cpm_framework_service_check_callback',
+                        'active_callback' => 'manang_service_check_callback',
                         'choices'         => array(
                                 '3col' => __('3 Columned','manang'),
                                 '4col' =>  __('4 Columned','manang'),
@@ -442,7 +442,7 @@
                     'manang_option[service_effects]',
                     array(
                         'type'    =>'option',
-                        'sanitize_callback' => 'cpm_framework_sanitize_checkbox',
+                        'sanitize_callback' => 'manang_sanitize_checkbox',
                         'default' => 'mul-row-ser',
                     )
             );
@@ -452,7 +452,7 @@
                         'manang_option[service_effects]',
                         array(
                             'section'         => 'service_options',
-                            'active_callback' => 'cpm_framework_service_check_callback',
+                            'active_callback' => 'manang_service_check_callback',
                             'label'           => esc_html__( 'Layouts/Effects', 'manang' ),
                             'type'            => 'radio',
                             'choices'         => array(
@@ -484,7 +484,7 @@
             $wp_customize->add_setting('manang_option[testimonial_count]',
                     array(
                         'type'    => 'option',
-                        'sanitize_callback' => 'cpm_framework_sanitize_integer',
+                        'sanitize_callback' => 'manang_sanitize_integer',
                         'default' => '4',
                         )
             );
@@ -499,7 +499,7 @@
             $wp_customize->add_setting('manang_option[testimonial_bg_image]',
             array(
                 'type' => 'option',
-                'sanitize_callback' => 'cpm_framework_sanitize_image',
+                'sanitize_callback' => 'manang_sanitize_image',
                 )
             );
             $wp_customize->add_control(
@@ -534,7 +534,7 @@
             $wp_customize->add_setting('manang_option[testimonial_parallax]',
                     array(
                         'type' => 'option',
-                        'sanitize_callback' => 'cpm_framework_sanitize_checkbox',
+                        'sanitize_callback' => 'manang_sanitize_checkbox',
                         )
                 );
             $wp_customize->add_control('manang_option[testimonial_parallax]',
@@ -550,7 +550,7 @@
                     'manang_option[testimonial_item]',
                     array(
                         'type'    => 'option',
-                        'sanitize_callback' => 'cpm_framework_sanitize_checkbox',
+                        'sanitize_callback' => 'manang_sanitize_checkbox',
                         'default' => 'single-item-testimonial',
                         )
             );
@@ -571,7 +571,7 @@
                     'manang_option[testimonial_layout]',
                     array(
                         'type'    =>'option',
-                        'sanitize_callback' => 'cpm_framework_sanitize_checkbox',
+                        'sanitize_callback' => 'manang_sanitize_checkbox',
                         'default' => 'testimonial-layout1',
                     )
             );
@@ -613,7 +613,7 @@
             $wp_customize->add_setting('manang_option[client_count]',
                     array(
                         'type'    => 'option',
-                        'sanitize_callback' => 'cpm_framework_sanitize_integer',
+                        'sanitize_callback' => 'manang_sanitize_integer',
                         'default' => '5',
                         )
             );
@@ -628,7 +628,7 @@
              $wp_customize->add_setting('manang_option[client_bg_image]',
             array(
                 'type' => 'option',
-                'sanitize_callback' => 'cpm_framework_sanitize_image',
+                'sanitize_callback' => 'manang_sanitize_image',
                 )
             );
             $wp_customize->add_control(
@@ -663,7 +663,7 @@
             $wp_customize->add_setting('manang_option[client_parallax]',
                     array(
                         'type' => 'option',
-                        'sanitize_callback' => 'cpm_framework_sanitize_checkbox',
+                        'sanitize_callback' => 'manang_sanitize_checkbox',
                         )
                 );
             $wp_customize->add_control('manang_option[client_parallax]',
@@ -678,7 +678,7 @@
             $wp_customize->add_setting('manang_option[client_slide_option]',
                     array(
                         'type'    => 'option',
-                        'sanitize_callback' => 'cpm_framework_sanitize_checkbox',
+                        'sanitize_callback' => 'manang_sanitize_checkbox',
                         'default' => 'yes',
                         )
             );
@@ -697,7 +697,7 @@
             $wp_customize->add_setting('manang_option[client_hover_effect]',
                     array(
                         'type'    => 'option',
-                        'sanitize_callback' => 'cpm_framework_sanitize_checkbox',
+                        'sanitize_callback' => 'manang_sanitize_checkbox',
                         'default' => 'hover-bw',
                         )
             );
@@ -735,7 +735,7 @@
             $wp_customize->add_setting('manang_option[portfolio_count]',
                     array(
                         'type'    =>  'option',
-                        'sanitize_callback' => 'cpm_framework_sanitize_integer',
+                        'sanitize_callback' => 'manang_sanitize_integer',
                         'default' => '4'
                         )
             );
@@ -750,7 +750,7 @@
              $wp_customize->add_setting('manang_option[portfolio_bg_image]',
             array(
                 'type' => 'option',
-                'sanitize_callback' => 'cpm_framework_sanitize_image',
+                'sanitize_callback' => 'manang_sanitize_image',
                 )
             );
             $wp_customize->add_control(
@@ -785,7 +785,7 @@
             $wp_customize->add_setting('manang_option[portfolio_parallax]',
                     array(
                         'type' => 'option',
-                        'sanitize_callback' => 'cpm_framework_sanitize_checkbox',
+                        'sanitize_callback' => 'manang_sanitize_checkbox',
                         )
                 );
             $wp_customize->add_control('manang_option[portfolio_parallax]',
@@ -800,7 +800,7 @@
             $wp_customize->add_setting('manang_option[portfolio_padding]',
                     array(
                         'type'    => 'option',
-                        'sanitize_callback' => 'cpm_framework_sanitize_checkbox',
+                        'sanitize_callback' => 'manang_sanitize_checkbox',
                         'default' => 'padbot',
                         )
             );
@@ -820,7 +820,7 @@
                     'manang_option[portfolio_column]',
                     array(
                         'type'    =>'option',
-                        'sanitize_callback' => 'cpm_framework_sanitize_checkbox',
+                        'sanitize_callback' => 'manang_sanitize_checkbox',
                         'default' => '2col',
                     )
             );
@@ -843,7 +843,7 @@
                     'manang_option[portfolio_filter]',
                     array(
                         'type'    =>'option',
-                        'sanitize_callback' => 'cpm_framework_sanitize_checkbox',
+                        'sanitize_callback' => 'manang_sanitize_checkbox',
                         'default' => 'yes',
                     )
             );
@@ -865,7 +865,7 @@
                     'manang_option[portfolio_layout]',
                     array(
                         'type'    =>'option',
-                        'sanitize_callback' => 'cpm_framework_sanitize_checkbox',
+                        'sanitize_callback' => 'manang_sanitize_checkbox',
                         'default' => 'portfolio-layout1',
                     )
             );
@@ -886,7 +886,7 @@
                                 'portfolio-layout6' => esc_html__( 'Layout 6', 'manang' ),
                             ),
                             'settings'        => 'manang_option[portfolio_layout]',
-                            'active_callback' => 'cpm_framework_portfolio_check_callback',
+                            'active_callback' => 'manang_portfolio_check_callback',
                         )
             );
         endif;
@@ -897,7 +897,7 @@
         array(
             'type'    => 'option',
             'default'=>'',
-            'sanitize_callback'=>'cpm_framework_sanitize_text',
+            'sanitize_callback'=>'manang_sanitize_text',
             'capability'        => 'edit_theme_options',
         )
     );
@@ -913,7 +913,7 @@
         array(
             'type'    => 'option',
             'default'=>'mailchimp',
-            'sanitize_callback'=>'cpm_framework_sanitize_text',
+            'sanitize_callback'=>'manang_sanitize_text',
             'capability'        => 'edit_theme_options',
         )
     );
@@ -932,7 +932,7 @@
         array(
             'type'    => 'option',
             'default'=>'',
-            'sanitize_callback'=>'cpm_framework_sanitize_text',
+            'sanitize_callback'=>'manang_sanitize_text',
             'capability'        => 'edit_theme_options',
         )
     );
@@ -941,7 +941,7 @@
         'type'=>'text',
         'section'    => 'mailchimp_options',
         'settings'   => 'manang_option[mailchimp_api_key]',
-        'active_callback' => 'cpm_framework_mailchimp_api_key',
+        'active_callback' => 'manang_mailchimp_api_key',
     ) );
 
     $wp_customize->add_setting(
@@ -949,7 +949,7 @@
         array(
             'type'    => 'option',
             'default'=>'',
-            'sanitize_callback'=>'cpm_framework_sanitize_text',
+            'sanitize_callback'=>'manang_sanitize_text',
             'capability'        => 'edit_theme_options',
         )
     );
@@ -958,7 +958,7 @@
         'type'=>'text',
         'section'    => 'mailchimp_options',
         'settings'   => 'manang_option[mailchimp_list_id]',
-        'active_callback' => 'cpm_framework_mailchimp_api_key',
+        'active_callback' => 'manang_mailchimp_api_key',
     ) );
 
     $wp_customize->add_setting(
@@ -966,7 +966,7 @@
         array(
             'type'    => 'option',
             'default'=>'',
-            'sanitize_callback'=>'cpm_framework_sanitize_text',
+            'sanitize_callback'=>'manang_sanitize_text',
             'capability'        => 'edit_theme_options',
         )
     );
@@ -975,7 +975,7 @@
         'type'=>'text',
         'section'    => 'mailchimp_options',
         'settings'   => 'manang_option[campaign_api_key]',
-        'active_callback' => 'cpm_framework_mailchimp_api_key',
+        'active_callback' => 'manang_mailchimp_api_key',
     ) );
 
 
@@ -984,7 +984,7 @@
         array(
             'type'    => 'option',
             'default'=>'',
-            'sanitize_callback'=>'cpm_framework_sanitize_text',
+            'sanitize_callback'=>'manang_sanitize_text',
             'capability'        => 'edit_theme_options',
         )
     );
@@ -993,7 +993,7 @@
         'type'=>'text',
         'section'    => 'mailchimp_options',
         'settings'   => 'manang_option[campaign_list_id]',
-        'active_callback' => 'cpm_framework_mailchimp_api_key',
+        'active_callback' => 'manang_mailchimp_api_key',
     ) );
 
     $wp_customize->add_setting(
@@ -1001,7 +1001,7 @@
         array(
             'type'    => 'option',
             'default'=>1,
-            'sanitize_callback'=>'cpm_framework_sanitize_checkbox',
+            'sanitize_callback'=>'manang_sanitize_checkbox',
             'capability'        => 'edit_theme_options',
         )
     );
@@ -1018,7 +1018,7 @@
         array(
             'type'    => 'option',
             'default'=>'',
-            'sanitize_callback'=>'cpm_framework_sanitize_checkbox',
+            'sanitize_callback'=>'manang_sanitize_checkbox',
             'capability'        => 'edit_theme_options',
         )
     );

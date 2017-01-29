@@ -192,7 +192,7 @@ if ( ! function_exists( 'manang_customize_register' ) ) :
                 'type'          => 'option',
                 'default'          => '#1CBAC8',
                 'capability'        => 'edit_theme_options',
-                'sanitize_callback' => 'cpm_framework_sanitize_text',
+                'sanitize_callback' => 'manang_sanitize_text',
             ) );
         $wp_customize->add_control(new WP_Customize_Color_Control ( $wp_customize, 'site_color', array(
                 'label' => __( 'Change Site Color:', 'manang' ),
@@ -218,7 +218,7 @@ if ( ! function_exists( 'manang_customize_register' ) ) :
          $wp_customize->add_setting('manang_option[blog_post_count]',
                 array(
                     'type'    => 'option',
-                    'sanitize_callback' => 'cpm_framework_sanitize_integer',
+                    'sanitize_callback' => 'manang_sanitize_integer',
                     'default' => '6'
                     )
         );
@@ -235,7 +235,7 @@ if ( ! function_exists( 'manang_customize_register' ) ) :
        $wp_customize->add_setting('manang_option[blog_bg_image]',
         array(
             'type' => 'option',
-            'sanitize_callback' => 'cpm_framework_sanitize_image',
+            'sanitize_callback' => 'manang_sanitize_image',
             )
         );
         $wp_customize->add_control(
@@ -271,8 +271,8 @@ if ( ! function_exists( 'manang_customize_register' ) ) :
         $wp_customize->add_setting('manang_option[blog_parallax]',
                 array(
                     'type' => 'option',
-                    'sanitize_callback' => 'cpm_framework_sanitize_checkbox',
-                    'sanitize_callback' => 'cpm_framework_sanitize_checkbox',
+                    'sanitize_callback' => 'manang_sanitize_checkbox',
+                    'sanitize_callback' => 'manang_sanitize_checkbox',
                     )
             );
         $wp_customize->add_control('manang_option[blog_parallax]',
@@ -288,7 +288,7 @@ if ( ! function_exists( 'manang_customize_register' ) ) :
                 'manang_option[blog_meta]',
                 array(
                     'type'    => 'option',
-                    'sanitize_callback' => 'cpm_framework_sanitize_checkbox',
+                    'sanitize_callback' => 'manang_sanitize_checkbox',
                     'default' => '1',
                     )
         );
@@ -305,7 +305,7 @@ if ( ! function_exists( 'manang_customize_register' ) ) :
                 'manang_option[blog_author_image]',
                 array(
                     'type'    => 'option',
-                    'sanitize_callback' => 'cpm_framework_sanitize_checkbox',
+                    'sanitize_callback' => 'manang_sanitize_checkbox',
                     'default' => '1',
                     )
         );
@@ -321,7 +321,7 @@ if ( ! function_exists( 'manang_customize_register' ) ) :
         $wp_customize->add_setting('manang_option[blog_slider_choice]',
             array(
                 'type'    => 'option',
-                'sanitize_callback' => 'cpm_framework_sanitize_checkbox',
+                'sanitize_callback' => 'manang_sanitize_checkbox',
                 'default' => 'yes',
                 )
             );
@@ -364,7 +364,7 @@ if ( ! function_exists( 'manang_customize_register' ) ) :
                 'manang_option[blog_effects]',
                 array(
                     'type'    => 'option',
-                    'sanitize_callback' => 'cpm_framework_sanitize_checkbox',
+                    'sanitize_callback' => 'manang_sanitize_checkbox',
                     'default' => 'blog-layout1',
                     )
         );
@@ -390,7 +390,7 @@ if ( ! function_exists( 'manang_customize_register' ) ) :
     $wp_customize->add_setting('manang_option[footer_checkbox]',
             array(
                 'type'    => 'option',
-                'sanitize_callback' => 'cpm_framework_sanitize_checkbox',
+                'sanitize_callback' => 'manang_sanitize_checkbox',
                 'default' => '1',
     ));
     $wp_customize->add_control('manang_option[footer_checkbox]',
@@ -404,7 +404,7 @@ if ( ! function_exists( 'manang_customize_register' ) ) :
             'manang_option[pre_footer_layout]',
             array(
                 'type'    =>'option',
-                'sanitize_callback' => 'cpm_framework_sanitize_checkbox',
+                'sanitize_callback' => 'manang_sanitize_checkbox',
                 'default' => 'prefooter1',
             )
     );
@@ -413,7 +413,7 @@ if ( ! function_exists( 'manang_customize_register' ) ) :
                 array(
                     'section'         => 'footer_options',
                     'label'           => esc_html__( 'Pre-Footer', 'manang' ),
-                    'active_callback' => 'cpm_framework_pre_footer_callback',
+                    'active_callback' => 'manang_pre_footer_callback',
                     'settings'        => 'manang_option[pre_footer_layout]',
                     'type'            => 'radio',
                     'choices'         => array(
@@ -430,7 +430,7 @@ if ( ! function_exists( 'manang_customize_register' ) ) :
             'manang_option[footer_layout]',
             array(
                 'type'    =>'option',
-                 'sanitize_callback' => 'cpm_framework_sanitize_checkbox',
+                 'sanitize_callback' => 'manang_sanitize_checkbox',
                 'default' => 'footer1',
             )
     );
@@ -497,18 +497,18 @@ if ( ! function_exists( 'manang_customize_register' ) ) :
     add_action( 'customize_register', 'manang_customize_register' );
 endif;
 
-if(!function_exists('cpm_framework_customize_preview_js')):
+if(!function_exists('manang_customize_preview_js')):
     /**
      * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
      */
-    function cpm_framework_customize_preview_js() {
-    	wp_enqueue_script( 'cpm_framework_customizer', get_template_directory_uri() . '/customizer/js/customizer.js', array( 'customize-preview' ), '20151215', true );
+    function manang_customize_preview_js() {
+    	wp_enqueue_script( 'manang_customizer', get_template_directory_uri() . '/customizer/js/customizer.js', array( 'customize-preview' ), '20151215', true );
     }
-    add_action( 'customize_preview_init', 'cpm_framework_customize_preview_js' );
+    add_action( 'customize_preview_init', 'manang_customize_preview_js' );
 endif;
 
-if(!function_exists('cpm_framework_callback_choice')):
-    function cpm_framework_callback_choice( $control ) {
+if(!function_exists('manang_callback_choice')):
+    function manang_callback_choice( $control ) {
         $banner_setting = $control->manager->get_setting('manang_option[banner_picker]')->value();
         $control_id = $control->id;
 
@@ -557,8 +557,8 @@ if(!function_exists('cpm_framework_callback_choice')):
     }
 endif;
 
-if(!function_exists('cpm_framework_mailchimp_api_key')):
-    function cpm_framework_mailchimp_api_key($control){
+if(!function_exists('manang_mailchimp_api_key')):
+    function manang_mailchimp_api_key($control){
         $newsletter_setting = $control->manager->get_setting('manang_option[mailchimp_campaign_option]')->value();
         $control_id = $control->id;
 
@@ -579,8 +579,8 @@ if(!function_exists('cpm_framework_mailchimp_api_key')):
         return false;
     }
 endif;
-if(!function_exists('cpm_framework_pre_footer_callback')):
-    function cpm_framework_pre_footer_callback($control){
+if(!function_exists('manang_pre_footer_callback')):
+    function manang_pre_footer_callback($control){
         $footer_setting = $control->manager->get_setting('manang_option[footer_checkbox]')->value();
         $control_id = $control->id;
          if ( $control_id == 'manang_option[pre_footer_layout]'  && $footer_setting == '1' ){
@@ -591,8 +591,8 @@ if(!function_exists('cpm_framework_pre_footer_callback')):
     }
 endif;
 
-if(!function_exists('cpm_framework_callback_cta')):
-    function cpm_framework_callback_cta($control){
+if(!function_exists('manang_callback_cta')):
+    function manang_callback_cta($control){
         $cta_setting = $control->manager->get_setting('manang_option[cta_bg_option]')->value();
         $control_id = $control->id;
         if ( $control_id == 'manang_option[cta_bg_img]'  && $cta_setting == 'image_as_bg' ){
@@ -614,8 +614,8 @@ if(!function_exists('cpm_framework_callback_cta')):
     }
 endif;
 
-if(!function_exists('cpm_framework_service_check_callback')):
-    function cpm_framework_service_check_callback($control){
+if(!function_exists('manang_service_check_callback')):
+    function manang_service_check_callback($control){
         $service_setting = $control->manager->get_setting('manang_option[service_tab_choice]')->value();
         $control_id = $control->id;
         if ( $control_id == 'manang_option[service_effects]'  && $service_setting == 'no' ){
@@ -629,8 +629,8 @@ if(!function_exists('cpm_framework_service_check_callback')):
     }
 endif;
 
-if(!function_exists('cpm_framework_portfolio_check_callback')):
-    function cpm_framework_portfolio_check_callback($control){
+if(!function_exists('manang_portfolio_check_callback')):
+    function manang_portfolio_check_callback($control){
         $portfolio_setting = $control->manager->get_setting('manang_option[portfolio_filter]')->value();
         $control_id = $control->id;
         if ( $control_id == 'manang_option[portfolio_layout]'  && $portfolio_setting == 'no' ){

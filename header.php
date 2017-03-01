@@ -40,7 +40,7 @@
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="navbar-collapse">
+                    <!-- <div class="collapse navbar-collapse" id="navbar-collapse">
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="#">Home</a></li>
                             <li><a href="#">About Us</a></li>
@@ -56,7 +56,17 @@
                             <li><a href="#">Support</a></li>
                             <li><a href="#">Contact</a></li>
                         </ul>
-                    </div><!-- End navbar-collapse -->
+                    </div> --><!-- End navbar-collapse -->
+                    <?php wp_nav_menu(
+                        array(
+                            'theme_location' => 'primary',
+                            'menu_class' => 'nav navbar-nav navbar-right',
+                            'container' => false,
+                            'fallback_cb' => 'manang_nav_walker::fallback'
+                            )
+                        );
+                    ?>
+
                 </nav>
             </div>
         </div>

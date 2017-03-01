@@ -46,7 +46,7 @@ function manang_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'menu-1' => esc_html__( 'Top', 'manang' ),
+		'primary' => esc_html__( 'Primary', 'manang' ),
 		) );
 
 	/**
@@ -120,6 +120,42 @@ function manang_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	register_sidebar( array(
+    		'name'          => esc_html__( 'Footer Widget 1', 'manang' ),
+    		'id'            => 'sidebar-2',
+    		'description'   => '',
+    		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    		'after_widget'  => '</div>',
+    		'before_title'  => '<h4 class="widget-title">',
+    		'after_title'   => '</h4>',
+    	) );
+    	register_sidebar( array(
+    		'name'          => esc_html__( 'Footer Widget 2', 'manang' ),
+    		'id'            => 'sidebar-3',
+    		'description'   => '',
+    		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    		'after_widget'  => '</div>',
+    		'before_title'  => '<h4 class="widget-title">',
+    		'after_title'   => '</h4>',
+    	) );
+    	register_sidebar( array(
+    		'name'          => esc_html__( 'Footer Widget 3', 'manang' ),
+    		'id'            => 'sidebar-4',
+    		'description'   => '',
+    		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    		'after_widget'  => '</div>',
+    		'before_title'  => '<h4 class="widget-title">',
+    		'after_title'   => '</h4>',
+    	) );
+    	register_sidebar( array(
+    		'name'          => esc_html__( 'Footer Widget 4', 'manang' ),
+    		'id'            => 'sidebar-5',
+    		'description'   => '',
+    		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    		'after_widget'  => '</div>',
+    		'before_title'  => '<h4 class="widget-title">',
+    		'after_title'   => '</h4>',
+    	) );
 }
 add_action( 'widgets_init', 'manang_widgets_init' );
 
@@ -175,3 +211,12 @@ require get_template_directory() . '/inc/jetpack.php';
 
 require get_template_directory() . '/lib/manang-functions.php';
 require get_template_directory() . '/lib/manang-banner.php';
+require get_template_directory() . '/lib/manang-cta-function.php';
+require get_template_directory() . '/lib/manang-features.php';
+require get_template_directory() . '/lib/manang-portfolio.php';
+require get_template_directory() . '/lib/manang-counter.php';
+require get_template_directory() . '/lib/manang-team.php';
+require get_template_directory() . '/lib/manang-clients.php';
+require get_template_directory() . '/lib/manang-blog.php';
+require get_template_directory() . '/lib/manang-testimonial.php';
+require get_template_directory() . '/lib/manang-nav-walker.php';

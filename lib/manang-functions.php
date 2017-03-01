@@ -40,6 +40,7 @@ if ( ! function_exists( 'manang_default_settings' ) ) {
                     'portfolio_parallax'             => '',
                     'portfolio_bg_color'             => '',
                     'portfolio_bg_image'             => '',
+                    'portfolio_sub_title'            => '',
 
                     'skills_title'                   => '',
                     'skills_layout'                  => 'skills-anim',

@@ -16,6 +16,14 @@ if ( ! function_exists( 'manang_customize_register' ) ) :
         require( dirname(__FILE__) . "/../customizer/setting-front.php" );
         require( dirname(__FILE__) . "/../customizer/setting-cta.php" );
         require( dirname(__FILE__) . "/../customizer/setting-contact.php" );
+        require( dirname(__FILE__) . "/../customizer/setting-cta-secondary.php" );
+        require( dirname(__FILE__) . "/../customizer/setting-features.php" );
+        require( dirname(__FILE__) . "/../customizer/setting-portfolio.php" );
+        require( dirname(__FILE__) . "/../customizer/setting-team.php" );
+        require( dirname(__FILE__) . "/../customizer/setting-clients.php" );
+        require( dirname(__FILE__) . "/../customizer/setting-counter.php" );
+        require( dirname(__FILE__) . "/../customizer/setting-blog.php" );
+
     	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
     	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
     	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
@@ -43,7 +51,7 @@ if ( ! function_exists( 'manang_customize_register' ) ) :
                 array(
                     'title'    => __( 'Banner Options','manang' ),
                     'panel' => 'theme_options',
-                    'priority' => 3,
+                    'priority' => 2,
                     )
         );
 
@@ -67,13 +75,41 @@ if ( ! function_exists( 'manang_customize_register' ) ) :
                     )
         );
 
+       $wp_customize->add_section(
+            'cta_options_secondary',
+                array(
+                    'title'    => __( 'Call To Action Secondary','manang' ),
+                    'panel' => 'theme_options',
+                    'priority' => 5,
+                    )
+        );
+
+        //Features Section
+        $wp_customize->add_section(
+                'features_options',
+                array(
+                    'title'    => __( 'Features','manang' ),
+                    'panel' => 'theme_options',
+                    'priority' => 6,
+                    )
+        );
+
+         //Portfolio Section
+        $wp_customize->add_section(
+                'portfolio_options',
+                array(
+                    'title'    => __( 'Portfolio Options','manang' ),
+                    'panel' => 'theme_options',
+                    'priority' => 7,
+                    )
+        );
         //Call To Action Section
        $wp_customize->add_section(
             'social_options',
                 array(
                     'title'    => __( 'Social Options','manang' ),
                     'panel' => 'theme_options',
-                    'priority' => 2,
+                    'priority' => 11,
                     )
         );
 
@@ -108,15 +144,6 @@ if ( ! function_exists( 'manang_customize_register' ) ) :
                     )
         );
 
-        //Service Section
-        $wp_customize->add_section(
-                'service_options',
-                array(
-                    'title'    => __( 'Call Out Options','manang' ),
-                    'panel' => 'theme_options',
-                    'priority' => 9,
-                    )
-        );
 
         //Testimonial Section
         $wp_customize->add_section(
@@ -135,16 +162,6 @@ if ( ! function_exists( 'manang_customize_register' ) ) :
                     'title'    => __( 'Client Options','manang' ),
                     'panel' => 'theme_options',
                     'priority' => 11,
-                    )
-        );
-
-        //Portfolio Section
-        $wp_customize->add_section(
-                'portfolio_options',
-                array(
-                    'title'    => __( 'Portfolio Options','manang' ),
-                    'panel' => 'theme_options',
-                    'priority' => 12,
                     )
         );
 
@@ -199,192 +216,6 @@ if ( ! function_exists( 'manang_customize_register' ) ) :
                 'section'     => 'colors',
                 'settings'   => 'manang_option[site_color]')
             ) );
-
-        //Latest Blog Section
-        $wp_customize->add_setting('manang_option[blog_title]',
-                array(
-                    'type'    => 'option',
-                    'sanitize_callback' => 'esc_attr',
-                    'default' => ''
-                    )
-        );
-        $wp_customize->add_control('manang_option[blog_title]',
-                array(
-                    'type'    => 'text',
-                    'label'   => esc_html__( 'Block Title for Home Page.', 'manang' ),
-                    'section' => 'latest_blog_options',
-                    )
-        );
-         $wp_customize->add_setting('manang_option[blog_post_count]',
-                array(
-                    'type'    => 'option',
-                    'sanitize_callback' => 'manang_sanitize_integer',
-                    'default' => '6'
-                    )
-        );
-        $wp_customize->add_control('manang_option[blog_post_count]',
-                array(
-                    'type'    => 'text',
-                    'label'   => esc_html__( 'Number of post to be displayed in Home Page', 'manang' ),
-                    'section' => 'latest_blog_options',
-                    )
-        );
-
-
-
-       $wp_customize->add_setting('manang_option[blog_bg_image]',
-        array(
-            'type' => 'option',
-            'sanitize_callback' => 'manang_sanitize_image',
-            )
-        );
-        $wp_customize->add_control(
-            new WP_Customize_Image_Control(
-            $wp_customize,
-            'manang_option[blog_bg_image]',
-            array(
-                'label'           => __( 'Background Image', 'manang' ),
-                'section'         => 'latest_blog_options',
-                'settings'        => 'manang_option[blog_bg_image]',
-            ) )
-        );
-
-
-        $wp_customize->add_setting('manang_option[blog_bg_color]',
-            array(
-                'type' => 'option',
-                'sanitize_callback' => 'esc_attr',
-                )
-        );
-        $wp_customize->add_control(
-            new Customize_Opacity_Color_Control(
-                $wp_customize,
-                'manang_option[blog_bg_color]',
-                array(
-                    'label'    => __('Background Color','manang'),
-                    'palette' => true,
-                    'section'  => 'latest_blog_options'
-                )
-            )
-        );
-
-        $wp_customize->add_setting('manang_option[blog_parallax]',
-                array(
-                    'type' => 'option',
-                    'sanitize_callback' => 'manang_sanitize_checkbox',
-                    'sanitize_callback' => 'manang_sanitize_checkbox',
-                    )
-            );
-        $wp_customize->add_control('manang_option[blog_parallax]',
-                array(
-                    'label'           => __('Parallax','manang'),
-                    'section'         => 'latest_blog_options',
-                    'type'            => 'checkbox',
-                    'settings'        =>  'manang_option[blog_parallax]',
-                    )
-        );
-
-        $wp_customize->add_setting(
-                'manang_option[blog_meta]',
-                array(
-                    'type'    => 'option',
-                    'sanitize_callback' => 'manang_sanitize_checkbox',
-                    'default' => '1',
-                    )
-        );
-        $wp_customize->add_control(
-                'manang_option[blog_meta]',
-                array(
-                    'label'   => esc_html__( 'Show Metas', 'manang' ),
-                    'type'    => 'checkbox',
-                    'section' => 'latest_blog_options',
-                    )
-        );
-
-        $wp_customize->add_setting(
-                'manang_option[blog_author_image]',
-                array(
-                    'type'    => 'option',
-                    'sanitize_callback' => 'manang_sanitize_checkbox',
-                    'default' => '1',
-                    )
-        );
-        $wp_customize->add_control(
-                'manang_option[blog_author_image]',
-                array(
-                    'label'   => esc_html__( 'Show Author Image', 'manang' ),
-                    'type'    => 'checkbox',
-                    'section' => 'latest_blog_options',
-                    )
-        );
-
-        $wp_customize->add_setting('manang_option[blog_slider_choice]',
-            array(
-                'type'    => 'option',
-                'sanitize_callback' => 'manang_sanitize_checkbox',
-                'default' => 'yes',
-                )
-            );
-        $wp_customize->add_control('manang_option[blog_slider_choice]',
-            array(
-                'label'   => __('Slide','manang'),
-                'type'    => 'radio',
-                'section' => 'latest_blog_options',
-                'choices' => array(
-                        'yes' => esc_html__('Yes','manang'),
-                        'no'  =>  esc_html__('No','manang'),
-                        ),
-                )
-            );
-
-        $wp_customize->add_setting(
-                'manang_option[latest_blog_layout]',
-                array(
-                    'type'    =>'option',
-                    'sanitize_callback' => 'esc_attr',
-                    'default' => 'two-column',
-                )
-        );
-
-        $wp_customize->add_control(
-                    'manang_option[latest_blog_layout]',
-                    array(
-                        'section' => 'latest_blog_options',
-                        'label'   => esc_html__( 'Column', 'manang' ),
-                        'type'    => 'radio',
-                        'choices' => array(
-                            'two-column'   =>  esc_html__( '2 Column', 'manang' ),
-                            'three-column' => esc_html__( '3 Column', 'manang' ),
-                        ),
-                    )
-        );
-
-
-        $wp_customize->add_setting(
-                'manang_option[blog_effects]',
-                array(
-                    'type'    => 'option',
-                    'sanitize_callback' => 'manang_sanitize_checkbox',
-                    'default' => 'blog-layout1',
-                    )
-        );
-        $wp_customize->add_control(
-                'manang_option[blog_effects]',
-                array(
-                    'label'   => esc_html__( 'Layouts/Effects', 'manang' ),
-                    'type'    => 'radio',
-                    'choices' => array(
-                                    'blog-layout1' => esc_html__('Effect 1','manang'),
-                                    'blog-layout2' => esc_html__('Effect 2','manang'),
-                                    'blog-layout3' => esc_html__('Effect 3','manang'),
-                                    'blog-layout4' => esc_html__('Effect 4','manang'),
-                                    'blog-layout5' => esc_html__('Effect 5','manang'),
-                                    'blog-layout6' => esc_html__('Effect 6','manang'),
-                                    ),
-                    'section'  => 'latest_blog_options',
-                    )
-        );
-
 
     //Footer Section
     $wp_customize->add_setting('manang_option[footer_checkbox]',
@@ -451,15 +282,15 @@ if ( ! function_exists( 'manang_customize_register' ) ) :
                 )
     );
 
-    $wp_customize->add_setting('manang_option[copyright_text]',
+    $wp_customize->add_setting('manang_option[footer_text]',
             array(
                 'type' => 'option',
-                'sanitize_callback' => 'esc_attr',
+                'sanitize_callback' => 'esc_html',
                 )
     );
-    $wp_customize->add_control('manang_option[copyright_text]',
+    $wp_customize->add_control('manang_option[footer_text]',
             array(
-                'label'   => esc_html__( 'Footer text', 'manang' ),
+                'label'   => esc_html__( 'Footer Text', 'manang' ),
                 'section' => 'footer_options',
                 'type'    => 'text',
             )
@@ -468,7 +299,7 @@ if ( ! function_exists( 'manang_customize_register' ) ) :
     $wp_customize->add_setting('manang_option[developed_by_text]',
             array(
                 'type' => 'option',
-                'sanitize_callback' => 'esc_attr',
+                'sanitize_callback' => 'esc_html',
                 )
     );
     $wp_customize->add_control('manang_option[developed_by_text]',
@@ -654,7 +485,7 @@ if(!function_exists('manang_sortables')):
             );
         endif;
 
-        if( post_type_exists( 'callout' )):
+        if( post_type_exists( 'feature' )):
             /* Services */
             $services['callout'] = array(
                 'id'       => 'callout',

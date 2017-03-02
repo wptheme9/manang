@@ -1,29 +1,52 @@
-/*!
-Theme Name:
-Theme URI:
-Author: Codethemes
-Author URI:
-Description:
-Version: 1.0.0
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain:
-Tags:
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others. */
+/**
+* Manang -  Creative One page Business and Agency Template
+* File : style.css
+* Date :  20/2/2017
+* Author : Axel_design <sushil.th94@gmail.com>
+*/
 
 /*--------------------------------------------------------------
 TABLE OF CONTENTS:
 ----------------------------------------------------------------
 1. Bootstrap
 2. Base
-    ## Typography
+    ## Animate
     ## Helpers
+    ## fonts
+    ## typography
 3. layouts
+    ## footer
+    ## page-content
+    ## navigation
+    ## sections
 4. components
+    ## banner
+    ## top-header
+    ## header
+    ## about
+    ## botfooter
+    ## cta
+    ## portfolio
+    ## counter
+    ## features
+    ## team
+    ## subscribe
+    ## blog
+    ## client
+    ## prefooter
+    ## pricing
+    ## contact
+    ## testimonial
 5. vendors
+    ## slick
+    ## ionicons
+    ## magnific-popup
+    ## youtubepopup
+    ## aos
+    ## vendor-overrides
 6. utils
+    ## hover-effects
+    ## media-queries
 
 --------------------------------------------------------------*/
 
@@ -73,6 +96,8 @@ TABLE OF CONTENTS:
         "manang/component/blog",
         "manang/component/client",
         "manang/component/prefooter",
+        "manang/component/pricing",
+        "manang/component/contact",
         "manang/component/testimonial";
 
 
@@ -81,6 +106,9 @@ TABLE OF CONTENTS:
 --------------------------------------------------------------*/
 @import "vendor/slick",
         "vendor/ionicons",
+        "vendor/magnific-popup",
+        "vendor/youtubepopup",
+        "vendor/aos",
         "vendor/vendor-overrides";
 
 /*--------------------------------------------------------------

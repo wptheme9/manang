@@ -1,4 +1,4 @@
-<div class="counter-sec section">
+<div id="fact" class="counter-sec section">
     <div class="container">
         <div class="row">
             <div class="counter-wrap">

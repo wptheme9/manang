@@ -177,6 +177,19 @@ function manang_scripts() {
 	wp_enqueue_script( 'jarallax', get_template_directory_uri() . '/assets/js/jarallax.js',array(), '20170124', true );
 	wp_enqueue_script( 'countto', get_template_directory_uri() . '/assets/js/jquery.countTo.js',array(), '20170124', true );
 	wp_enqueue_script( 'slick', get_template_directory_uri() . '/assets/js/slick.min.js',array(), '20170124', true );
+    wp_enqueue_script( 'mananghome2-app', get_template_directory_uri() . '/assets/js/mananghome2/app.js',array(), '20170302', true );
+    wp_enqueue_script( 'aos', get_template_directory_uri() . '/assets/js/aos.js',array(), '20170302', true );
+    wp_enqueue_script( 'footer-reveal', get_template_directory_uri() . '/assets/js/footer-reveal.js',array(), '20170302', true );
+    wp_enqueue_script( 'jquery-ajaxchimp', get_template_directory_uri() . '/assets/js/jquery.ajaxchimp.js',array(), '20170302', true );
+    wp_enqueue_script( 'jquery-magnific', get_template_directory_uri() . '/assets/js/jquery.magnific-popup.min.js',array(), '20170302', true );
+    wp_enqueue_script( 'jquery-nav', get_template_directory_uri() . '/assets/js/jquery.nav.js',array(), '20170302', true );
+    wp_enqueue_script( 'validate', get_template_directory_uri() . '/assets/js/validate.min.js',array(), '20170302', true );
+    wp_enqueue_script( 'video', get_template_directory_uri() . '/assets/js/jquery.video.js',array(), '20170302', true );
+    wp_enqueue_script( 'pagescroll', get_template_directory_uri() . '/assets/js/pagescroll.js',array(), '20170302', true );
+    wp_enqueue_script( 'plax', get_template_directory_uri() . '/assets/js/plax.js',array(), '20170302', true );
+    wp_enqueue_script( 'slick-animation', get_template_directory_uri() . '/assets/js/slick-animation.js',array(), '20170302', true );
+    wp_enqueue_script( 'sticky-header', get_template_directory_uri() . '/assets/js/sticky-header.js',array(), '20170302', true );
+    wp_enqueue_script( 'youtubepopup', get_template_directory_uri() . '/assets/js/youtubepopup.js',array(), '20170302', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

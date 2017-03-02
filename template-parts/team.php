@@ -7,8 +7,9 @@
  * @since Yudlee 1.0.0
  */
 ?>
-<!-- Start of portfolio section -->
-<section class="section team-sec">
+
+<!-- Start of team-fancy style-->
+<section id="team" class="section team-sec">
     <div class="container">
         <div class="section-title">
             <h2>Creative Minds</h2>
@@ -18,78 +19,78 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-3">
-                <div class="team-wrap">
-                    <div class="team-img">
-                        <img src="<?php echo get_template_directory_uri(). '/assets/img/team1.jpg' ?>">
-                        <div class="hover-bg">
-                            <ul class="team_social">
-                                <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#" class="gplus"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a></li>
+                <div class="team-wrap team-fancy" data-aos="fade-up">
+                    <div class="our-team">
+                        <div class="team_img">
+                            <img src="assets/img/team1.jpg" alt="">
+                            <ul class="social">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="team-desc">
-                        <h3>Klyie jenner</h3>
-                        <span>Designer</span>
+                        <div class="team-content">
+                            <h3 class="title">Williamson</h3>
+                            <span class="post">web developer</span>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="team-wrap">
-                    <div class="team-img">
-                        <img src="<?php echo get_template_directory_uri(). '/assets/img/team2.jpg' ?>">
-                        <div class="hover-bg">
-                            <ul class="team_social">
-                                <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#" class="gplus"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a></li>
+                <div class="team-wrap team-fancy" data-aos="fade-up">
+                    <div class="our-team">
+                        <div class="team_img">
+                            <img src="assets/img/team2.jpg" alt="">
+                            <ul class="social">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="team-desc">
-                        <h3>Klyie jenner</h3>
-                        <span>Designer</span>
+                        <div class="team-content">
+                            <h3 class="title">Williamson</h3>
+                            <span class="post">web developer</span>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="team-wrap">
-                    <div class="team-img">
-                        <img src="<?php echo get_template_directory_uri(). '/assets/img/team3.jpg' ?>">
-                        <div class="hover-bg">
-                            <ul class="team_social">
-                                <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#" class="gplus"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a></li>
+                <div class="team-wrap team-fancy" data-aos="fade-up">
+                    <div class="our-team">
+                        <div class="team_img">
+                            <img src="assets/img/team3.jpg" alt="">
+                            <ul class="social">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="team-desc">
-                        <h3>Klyie jenner</h3>
-                        <span>Designer</span>
+                        <div class="team-content">
+                            <h3 class="title">Williamson</h3>
+                            <span class="post">web developer</span>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="team-wrap">
-                    <div class="team-img">
-                        <img src="<?php echo get_template_directory_uri(). '/assets/img/team4.jpg' ?>">
-                        <div class="hover-bg">
-                            <ul class="team_social">
-                                <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#" class="gplus"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a></li>
+                <div class="team-wrap team-fancy" data-aos="fade-up">
+                    <div class="our-team">
+                        <div class="team_img">
+                            <img src="assets/img/team4.jpg" alt="">
+                            <ul class="social">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="team-desc">
-                        <h3>Klyie jenner</h3>
-                        <span>Designer</span>
+                        <div class="team-content">
+                            <h3 class="title">Williamson</h3>
+                            <span class="post">web developer</span>
+                        </div>
                     </div>
                 </div>
             </div>

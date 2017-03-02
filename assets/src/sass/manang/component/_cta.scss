@@ -1,17 +1,32 @@
 .cta-sec{
-    padding: 80px 0;
+    padding: 120px 0;
     text-align: center;
-    background: #1f252c;
+    background: url("../img/photo1.jpg");
+    outline: 0;
+    z-index:99;
+
+    &:before{
+        background: rgba(0,0,0,0.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: '';
+    }
 
     .cta-content{
+        z-index: 99;
+        position: relative;
         h2{
             margin: 0;
             margin-bottom: 10px;
-            font-size: 31px;
+            font-size: 37px;
             text-transform: uppercase;
             font-family: Poppins;
-            font-weight: 500;
+            font-weight: 700;
             color: #fff;
+            line-height: 50px;
         }
         p{
             margin-bottom: 20px;
@@ -21,6 +36,11 @@
             background: transparent;
             border: 2px solid #fff;
             color: #fff;
+
+            &:hover,&:focus{
+                border-color: $color__theme;
+                background: $color__theme;
+            }
         }
     }
 }

@@ -8,68 +8,73 @@
  */
 ?>
 <!-- Start of portfolio section -->
-<section class="section portfolio-sec portfolio-filter">
+<section id="portfolio" class="section portfolio-sec portfolio-filter">
     <div class="container">
-        <div class="section-title">
-            <h2>Recent Works</h2>
-            <p> dolor sit amet, consectetuer adipiscing elit. Donec odio.Quisque volutpat mattis eros. Nullam</p>
-        </div>
         <div class="row">
-        <!-- Start of button group -->
-            <div class="button-group filters-button-group">
-            <button class="button is-checked" data-filter="*">all</button>
-            <button class="button" data-filter=".category1">Graphics</button>
-            <button class="button" data-filter=".category2">Mockup</button>
-            <button class="button" data-filter=".category2">Photography</button>
-            <button class="button" data-filter=".category2">Images</button>
-          </div>
-          <!-- End of button group -->
-
-              <div class="grid">
-                <div class="element-item grid-col-3 box category1 " >
-                    <img src="<?php echo get_template_directory_uri().'/assets/img/des-port1.jpg' ?>">
+            <div class="section-title">
+                <h2>Recent Works</h2>
+                <p> dolor sit amet, consectetuer adipiscing elit. Donec odio.Quisque volutpat mattis eros. Nullam</p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 col-sm-6 pad0">
+                <div class="element-item box" data-aos="fade-up">
+                    <img src="assets/img/des-port2.jpg" alt="">
                     <div class="box-content">
-                        <i class="ion-plus"></i>
-                        <h3 class="title">Lorem Ipsum</h3>
+                        <a href="assets/img/des-port2.jpg" class="popup-link"><i class="ion-plus"></i></a>
+                        <h3 class="title">CATALOGUE ILLUSTRATOR</h3>
                     </div>
                 </div>
+            </div>
 
-                <div class="element-item grid-col-3 box category1 " >
-                    <img src="<?php echo get_template_directory_uri().'/assets/img/des-port2.jpg' ?>">
+            <div class="col-md-4 col-sm-6 pad0">
+                <div class="element-item box" data-aos="fade-up">
+                    <img src="assets/img/des-port3.jpg" alt="">
                     <div class="box-content">
-                        <i class="ion-plus"></i>
-                        <h3 class="title">Lorem Ipsum</h3>
+                        <a href="assets/img/des-port3.jpg" class="popup-link"><i class="ion-plus"></i></a>
+                        <h3 class="title">CATALOGUE ILLUSTRATOR</h3>
                     </div>
                 </div>
+            </div>
 
-                <div class="element-item grid-col-3 box category2 " >
-                    <img src="<?php echo get_template_directory_uri().'/assets/img/des-port3.jpg' ?>">
+            <div class="col-md-4 col-sm-6 pad0">
+                <div class="element-item box" data-aos="fade-up">
+                    <img src="assets/img/des-port8.jpg" alt="">
                     <div class="box-content">
-                        <i class="ion-plus"></i>
-                        <h3 class="title">Lorem Ipsum</h3>
+                        <a href="assets/img/des-port8.jpg" class="popup-link"><i class="ion-plus"></i></a>
+                        <h3 class="title">CATALOGUE ILLUSTRATOR</h3>
                     </div>
                 </div>
+            </div>
 
-                <div class="element-item grid-col-3 box category1 " >
-                    <img src="<?php echo get_template_directory_uri().'/assets/img/des-port4.jpg' ?>">
+            <div class="col-md-4 col-sm-6 pad0">
+                <div class="element-item box" data-aos="fade-up" >
+                    <img src="assets/img/des-port4.jpg" alt="">
                     <div class="box-content">
-                        <i class="ion-plus"></i>
-                        <h3 class="title">Lorem Ipsum</h3>
+                        <a href="assets/img/des-port4.jpg" class="popup-link"><i class="ion-plus"></i></a>
+                        <h3 class="title">CATALOGUE ILLUSTRATOR</h3>
                     </div>
                 </div>
+            </div>
 
-                <div class="element-item grid-col-3 box category2 " >
-                    <img src="<?php echo get_template_directory_uri().'/assets/img/des-port5.jpg' ?>">
+            <div class="col-md-4 col-sm-6 pad0">
+                <div class="element-item box" data-aos="fade-up" >
+                    <img src="assets/img/des-port5.jpg" alt="">
                     <div class="box-content">
-                        <i class="ion-plus"></i>
-                        <h3 class="title">Lorem Ipsum</h3>
+                        <a href="assets/img/des-port5.jpg" class="popup-link"><i class="ion-plus"></i></a>
+                        <h3 class="title">CATALOGUE ILLUSTRATOR</h3>
                     </div>
                 </div>
-                <div class="element-item grid-col-3 box category2 " >
-                    <img src="<?php echo get_template_directory_uri().'/assets/img/des-port6.jpg' ?>">
+            </div>
+
+            <div class="col-md-4 col-sm-6 pad0">
+                <div class="element-item box" data-aos="fade-up" >
+                    <img src="assets/img/des-port7.jpg" alt="">
                     <div class="box-content">
-                        <i class="ion-plus"></i>
-                        <h3 class="title">Lorem Ipsum</h3>
+                        <a href="assets/img/des-port7.jpg" class="popup-link"><i class="ion-plus"></i></a>
+                        <h3 class="title">CATALOGUE ILLUSTRATOR</h3>
                     </div>
                 </div>
             </div>

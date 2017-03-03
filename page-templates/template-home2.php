@@ -5,7 +5,8 @@
 * Template Name: Home2
 *
 ***/
-get_template_part( 'template-parts/header', 'img' );
+get_header();
+// get_template_part( 'template-parts/header', 'img' );
 get_template_part('template-parts/fancybox');
 get_template_part('template-parts/about');
 get_template_part('template-parts/cta','sec');

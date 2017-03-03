@@ -11,20 +11,15 @@
 
 ?>
 
-	</div>
-	<footer>
-    <?php $manang_options = manang_options();
-    $footer_text = $manang_options['footer_text'];
-    $developed_by = $manang_options['developed_by_text'];
-    get_template_part( 'template-parts/manang','prefooter' ); ?>
-
+<!-- Footer -->
+<footer>
     <div class="botfooter">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="copyright">
-                        <h3><?php echo esc_html( $footer_text); ?></h3>
-                        <p><?php echo esc_html( $developed_by); ?></p>
+                    <div class="copyright" data-aos="fade-down">
+                        <h3>Manang| Multipurpose WordpressTheme</h3>
+                        <p>Copyright © 2016 Manang | All Rights Reserved</p>
                         <ul class="footer_social">
                             <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
@@ -37,7 +32,6 @@
         </div>
     </div>
 </footer>
-</div>
 <?php wp_footer(); ?>
 
 </body>

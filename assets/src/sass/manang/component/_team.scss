@@ -182,7 +182,7 @@
 .team-fancy .our-team .post{
     display: inline-block;
     font-size: 15px;
-    color: #666;
+    color: $color__theme;
     text-transform: capitalize;
 }
 .team-fancy .our-team .post:before{
@@ -336,5 +336,177 @@
     .team-classic .our-team .title:before,
     .team-classic .our-team .title:after{
         top: -83px;
+    }
+}
+
+
+// Team simple
+
+.team-simple .our-team{
+    text-align: center;
+}
+
+.team-simple .our-team .pic{
+    position: relative;
+    overflow: hidden;
+}
+
+.team-simple .our-team .pic img{
+    width: 100%;
+    height: auto;
+    transition: all 0.2s ease 0s;
+}
+
+.team-simple .our-team:hover .pic img{
+    transform: translateY(-15px);
+}
+
+.team-simple .our-team .social_media_team{
+    position: absolute;
+    bottom: -20%;
+    width: 100%;
+    background-color:$color__theme;
+    transition: all 0.35s ease 0s;
+}
+
+.team-simple .our-team:hover .social_media_team{
+    bottom: 0px;
+}
+
+.team-simple .our-team .team_social{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    height: 100%;
+}
+
+.team-simple .our-team .team_social li{
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.team-simple .our-team .team_social li a{
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    display: block;
+    color:#fff;
+    font-size: 18px;
+    transition: all 1.3s ease 0s;
+}
+
+.team-simple .our-team .team_social li a:hover{
+    background: #fff;
+    color:#424242;
+}
+
+.team-simple .our-team .team-prof{
+    margin-top: 10px;
+}
+
+.team-simple .our-team .post-title a{
+    font-size: 19px;
+    color: #333;
+    margin: 0;
+    margin: 0 0 20px;
+    position: relative;
+}
+
+.team-simple .our-team .post-title a:hover{
+    text-decoration: none;
+    color:$color__theme;
+}
+
+.team-simple .our-team .post{
+    display: inline-block;
+    font-size: 15px;
+    color: #7a90ff;
+    text-transform: capitalize;
+}
+
+@media screen and (max-width: 990px){
+    .team-simple .our-team{
+        margin-bottom: 30px;
+    }
+}
+
+// team round
+.team-round .our-team{
+    text-align:center;
+}
+.team-round .our-team .pic{
+    position: relative;
+    border-radius: 50%;
+}
+.team-round .our-team .pic img{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+.team-round .our-team .pic-bottom{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition:all 0.3s ease 0s;
+}
+.team-round .our-team .pic:hover .pic-bottom{
+    background:$color__theme;;
+    opacity: 0.9;
+}
+.team-round .our-team .pic:hover .pic-bottom:after{
+    opacity: 1;
+}
+.team-round .our-team .post-title{
+    font-size: 19px;
+    color: #333;
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    position: relative;
+}
+.team-round .our-team .post-title a{
+    color:#232a34;
+    transition: all 0.3s ease 0s;
+}
+.team-round .our-team .post-title a:hover{
+    color:$color__theme;;
+    text-decoration: none;
+}
+.team-round .our-team .post{
+    display: inline-block;
+    font-size: 15px;
+    color: #7a90ff;
+    text-transform: capitalize;
+}
+.team-round .our-team .team_social{
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+.team-round .our-team .team_social > li{
+    display: inline-block;
+}
+.team-round .our-team .team_social > li > a{
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 50%;
+    display: block;
+    color: #666;
+    background: #efefef;
+    transition: all 0.3s ease 0s;
+    font-size: 14px;
+    margin-right: 10px;
+}
+.team-round .our-team .team_social > li > a:hover{
+    background: $color__theme;;
+    color:#fff;
+}
+@media screen and (max-width: 990px){
+    .team-round .our-team{
+        margin-bottom: 30px;
     }
 }

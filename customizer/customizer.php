@@ -23,6 +23,7 @@ if ( ! function_exists( 'manang_customize_register' ) ) :
         require( dirname(__FILE__) . "/../customizer/setting-clients.php" );
         require( dirname(__FILE__) . "/../customizer/setting-counter.php" );
         require( dirname(__FILE__) . "/../customizer/setting-blog.php" );
+        require( dirname(__FILE__) . "/../customizer/setting-testimonial.php" );
 
     	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
     	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';

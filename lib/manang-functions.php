@@ -66,6 +66,17 @@ if ( ! function_exists( 'manang_default_settings' ) ) {
                     'cta_bg_option'                  => 'image_as_bg',
                     'cta_bg_video_preview_image'     => '',
 
+                    'cta_bg_color_secondary'        => '',
+                    'cta_bg_image_secondary'        => '',
+                    'cta_parallax_secondary'        => '',
+                    'cta_bg_video_secondary'        => '',
+                    'cta_video_audio_secondary'     => '',
+                    'cta_bg_video_secondary_preview_image_secondary'    => '',
+                    'cta_title_secondary'           => '',
+                    'cta_description_secondary'     => '',
+                    'cta_button_text_secondary'     => '',
+                    'cta_button_link_secondary'     => '',
+
 
                     'blog_title'                     => '',
                     'blog_post_count'                => '6',
@@ -97,7 +108,8 @@ if ( ! function_exists( 'manang_default_settings' ) ) {
                     'team_layout_single'             => 'with-sidebar',
 
                     'testimonial_title'              => '',
-                    'testimonial_count'              => '4',
+                    'testimonial_description'        => '',
+                    'testimonial_count'              => '',
                     'testimonial_layout'             => 'testimonial-layout1',
                     'testimonial_item'               => 'single-item-testimonial',
                     'testimonial_parallax'           => '',

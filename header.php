@@ -22,14 +22,14 @@
 
 <body <?php body_class(); ?>>
  <!-- Loader -->
-    <div class="loader-wrapper">
+  <!--   <div class="loader-wrapper">
         <div class="loader">
             <div class="loader-inner"></div>
             <div class="loader-inner"></div>
             <div class="loader-inner"></div>
             <div class="loader-inner"></div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Header -->
     <header id="top" class="header mg-hero header-transparent">

@@ -236,3 +236,6 @@ require get_template_directory() . '/lib/manang-clients.php';
 require get_template_directory() . '/lib/manang-blog.php';
 require get_template_directory() . '/lib/manang-testimonial.php';
 require get_template_directory() . '/lib/manang-nav-walker.php';
+require get_template_directory() . '/vc-elements/manang-services.php';
+require get_template_directory() . '/vc-elements/cta.php';
+require get_template_directory() . '/vc-elements/testimonial.php';

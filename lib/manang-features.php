@@ -1,13 +1,13 @@
 <?php
 if(!function_exists('manang_features_query')){
-    function manang_features_query($callout_category="",$number_post="",$service_title="",$service_description=""){
+    function manang_features_query($feature_category="",$number_post="-1",$feature_title="",$feature_description="",$feature_effects=""){
         ob_start();
         $tax_query = '';
-        if($callout_category!=''){
+        if($feature_category!=''){
             $tax_query[] =  array(
                 'taxonomy' => 'feature_category',
                 'field' => 'slug',
-                'terms' => $callout_category,
+                'terms' => $feature_category,
             );
         }
         $features_argument = array(
@@ -23,35 +23,27 @@ if(!function_exists('manang_features_query')){
         // print_r($features_query);
         if($features_query->have_posts()){
          ?>
-            <section class="section callout-sec">
+            <section id="service" class="section callout-sec">
                 <div class="container">
                     <div class="section-title">
-                        <h2><?php echo esc_html($service_title); ?></h2>
-                        <p><?php echo esc_html($service_description);?></p>
+                        <h2><?php echo esc_html($feature_title); ?></h2>
+                        <p><?php echo esc_html($feature_description);?></p>
                     </div>
-
-                    <div class="callout-wrap">
+                    <?php $icon_left = ($feature_effects == 'feature4'?'icon-left':''); ?>
+                    <div class="callout-wrap <?php echo $icon_left; ?>" >
                         <div class="row">
                             <?php
+                            $count=1;
                             while($features_query->have_posts()){
                                 $features_query->the_post();
-                                $feature_icon_class = get_post_meta( get_the_id(), 'feature_icon_class', true ); ?>
-                                <div class="col-md-4 col-sm-4">
-                                    <div class="callout-item">
-                                        <div class="callout-icon">
-                                            <i class="<?php echo esc_html($feature_icon_class); ?>"></i>
-                                        </div>
-                                        <div class="callout-content">
-                                            <?php the_title( '<h3>', '</h3>'); ?>
-                                            <p><?php the_excerpt(); ?></p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            <?php }
+                                $feature_icon_class = get_post_meta( get_the_id(), 'feature_icon_class', true );
+                                get_template_part('template-parts/features/'.$feature_effects);
+                                if( $count%3 == 0 && $count<$features_query->post_count) {
+                                    echo '</div>';
+                                    echo '<div class="row">';
+                                }
+                            }
                             wp_reset_postdata(); ?>
-
-
                         </div>
                     </div>
                 </div>
@@ -59,7 +51,7 @@ if(!function_exists('manang_features_query')){
         <?php }
         echo  ob_get_clean();
     }
-    add_action( 'manang_query_features', 'manang_features_query', 10, 4 );
+    add_action( 'manang_query_features', 'manang_features_query', 10, 5 );
 }
 
 if ( ! function_exists ( 'manang_features_shortcode' ) ) {
@@ -75,14 +67,14 @@ if ( ! function_exists ( 'manang_features_shortcode' ) ) {
         ), $atts ) );
         $customizer_options = manang_options();
         $feature_post_count = ( empty($number_post)?$customizer_options['feature_post_count']:$number_post );
-        $service_parallax = $customizer_options['service_parallax'];
-        $service_bg_image = $customizer_options['service_bg_image'];
+        $feature_parallax = $customizer_options['feature_parallax'];
+        $feature_bg_image = $customizer_options['feature_bg_image'];
         $feature_title = ( empty($feature_title)?$customizer_options['feature_title']:$feature_title );
         $feature_description = ( empty($feature_description)?$customizer_options['feature_description']:$feature_description );
-        $id = ($service_parallax == '1' ? 'parallax' : 'noparallax');
-        $callout_category = ( empty($category)?$customizer_options['callout_category']:$category );
+        $feature_category = ( empty($category)?$customizer_options['feature_category']:$category );
+        $feature_effects = ( empty($effects)?$customizer_options['feature_effects']:$effects);
 
-        do_action( 'manang_query_features', $callout_category,$feature_post_count,$feature_title,$feature_description );
+        do_action( 'manang_query_features', $feature_category,$feature_post_count,$feature_title,$feature_description,$feature_effects );
     }
     add_shortcode( 'manang_features', 'manang_features_shortcode' );
 }

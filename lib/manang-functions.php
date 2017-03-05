@@ -89,15 +89,14 @@ if ( ! function_exists( 'manang_default_settings' ) ) {
                     'blog_bg_color'                  => '',
                     'blog_bg_image'                  => '',
 
-                    'service_title'                  => '',
-                    'service_tab_choice'             => 'yes',
-                    'service_layout_option'          => '3col',
-                    'service_post_count'             => '6',
-                    'service_effects'                => 'mul-row-ser',
-                    'service_parallax'               => '',
-                    'service_bg_color'               => '',
-                    'service_bg_image'               => '',
-                    'callout_category'               => 'default',
+                    'feature_title'                  => '',
+                    'feature_description'             => '',
+                    'feature_post_count'             => '6',
+                    'feature_category'               => '',
+                    'feature_bg_image'          => '',
+                    'feature_bg_color'                => '',
+                    'feature_parallax'               => '',
+                    'feature_effects'               => 'feature1',
 
                     'team_title'                     => '',
                     'team_count'                     => '4',
@@ -210,3 +209,20 @@ if(!function_exists('manang_banner_choice')){
     add_action( 'manang_banner_option', 'manang_banner_choice', 10 );
 }
 
+if(!function_exists('manang_get_categories_select')):
+    function manang_get_categories_select() {
+        $manang_cat = get_terms( array(
+            'taxonomy' => 'feature_category',
+            'hide_empty' => false,
+        ) );
+        $results="";
+        $results[''] = "Select category";
+        if(! empty( $manang_cat ) && ! is_wp_error( $manang_cat ) ):
+            $count = count($manang_cat);
+             for ($i=0; $i < $count; $i++) {
+               $results[$manang_cat[$i]->slug] = $manang_cat[$i]->name;
+             }
+         endif;
+        return $results;
+    }
+endif;

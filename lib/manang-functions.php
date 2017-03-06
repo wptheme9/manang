@@ -226,3 +226,67 @@ if(!function_exists('manang_get_categories_select')):
         return $results;
     }
 endif;
+
+if ( ! function_exists( 'manang_get_excerpt' ) ) :
+    function manang_get_excerpt( $post_id, $count ) {
+        $content_post = get_post($post_id);
+        $excerpt = $content_post->post_content;
+        $excerpt = strip_tags($excerpt);
+        $excerpt = strip_shortcodes($excerpt);
+        $excerpt = preg_replace('/\s\s+/', ' ', $excerpt);
+        $strip = explode( ' ' ,$excerpt );
+        foreach($strip as $key => $single){
+            if (!filter_var($single, FILTER_VALIDATE_URL) === false) {
+                unset($strip[$key]);
+            }
+        }
+        $excerpt = implode( ' ', $strip );
+        $excerpt = substr($excerpt, 0, $count);
+        if(strlen($excerpt) >= $count){
+            $excerpt = substr($excerpt, 0, strripos($excerpt, ' '));
+            $excerpt = $excerpt . '...';
+        }
+        return $excerpt;
+    }
+endif;
+
+/*
+Add Range Option to Visual Composer Params
+*/
+if (function_exists('add_shortcode_param')) {
+    add_shortcode_param('range', 'manang_range_settings_field');
+}
+
+function manang_range_settings_field($settings, $value) {
+    $dependency = vc_generate_dependencies_attributes($settings);
+    $param_name = isset($settings['param_name']) ? $settings['param_name'] : '';
+    $type = isset($settings['type']) ? $settings['type'] : '';
+    $min = isset($settings['min']) ? $settings['min'] : '';
+    $max = isset($settings['max']) ? $settings['max'] : '';
+    $step = isset($settings['step']) ? $settings['step'] : '';
+    $unit = isset($settings['unit']) ? $settings['unit'] : '';
+    $uniqeID = uniqid();
+    $output = '';
+    $output.= '<div class="mk-ui-input-slider" ><div ' . $dependency . ' class="mk-range-input" data-value="' . $value . '" data-min="' . $min . '" data-max="' . $max . '" data-step="' . $step . '" id="rangeInput-' . $uniqeID . '"></div><input name="' . $param_name . '"  class="range-input-selector wpb_vc_param_value ' . $param_name . ' ' . $type . '" type="text" value="' . $value . '"/><span class="unit">' . $unit . '</span></div>';
+    $output.= '<script type="text/javascript">
+
+        var range_wrapper_' . $uniqeID . ' = jQuery("#rangeInput-' . $uniqeID . '"),
+
+            mk_min = parseFloat(range_wrapper_' . $uniqeID . '.attr("data-min")),
+            mk_max = parseFloat(range_wrapper_' . $uniqeID . '.attr("data-max")),
+            mk_step = parseFloat(range_wrapper_' . $uniqeID . '.attr("data-step")),
+            mk_value = parseFloat(range_wrapper_' . $uniqeID . '.attr("data-value"));
+
+            range_wrapper_' . $uniqeID . '.slider({
+                  value:mk_value,
+                  min: mk_min,
+                  max: mk_max,
+                  step: mk_step,
+                  slide: function( event, ui ) {
+                    range_wrapper_' . $uniqeID . '.siblings(".range-input-selector").val(ui.value );
+                  }
+            });
+
+    </script>';
+    return $output;
+}

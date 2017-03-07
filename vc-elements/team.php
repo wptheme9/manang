@@ -60,24 +60,17 @@ function manang_team_integrateWithVC(){
             array(
                 "type" => "textfield",
                 "heading" => __("Add Post Count", "manang") ,
-                "param_name" => "feature_description",
+                "param_name" => "count",
                 "value" => __("", "manang") ,
-                "description" => __("Total Number Of Team.", "manang")
+                "description" => __("If left empty, all the posts are shown from team.", "manang")
             ) ,
              array(
                 "type" => "dropdown",
                 "heading" => __("Choose Category", "manang") ,
-                "param_name" => "feature_style",
+                "param_name" => "team_category",
                 "description" => __("This option will display only the selected categories.", "manang") ,
                 "value" => manang_get_team_categories_select(),
             ) ,
-            array(
-                "type" => "textfield",
-                "heading" => __("Extra class name", "manang") ,
-                "param_name" => "el_class",
-                "value" => "",
-                "description" => __("If you wish to style particular description element differently, then use this field to add a class name.", "manang")
-            ),
         ),
     ));
     if(class_exists('WPBakeryShortCode')){
@@ -87,38 +80,64 @@ function manang_team_integrateWithVC(){
 
                $values =  shortcode_atts( array(
                             'style'                => '',
-                            'column'               => '',
+                            'column'               => 'col-md-4',
                             'count'                => '',
-                            'select'               => '',
-                            'el_class'             => ''
+                            'team_category'               => '',
                             ),$atts);
                $style = $values['style'];
                $column = $values['column'];
                $count = $values['count'];
-               $select = $values['select'];
-               $el_class = $values['el_class'];
-                ob_start(); ?>
-                <div class="col-md-3">
-                    <div class="team-wrap team-classic" data-aos="fade-up">
-                        <div class="our-team">
-                            <img src="assets/img/team1.jpg" alt=" ">
-                            <div class="team-content">
-                                <h3 class="title">Williamson</h3>
-                                <span class="post">web developer</span>
-                                <ul class="social-links">
-                                    <li><a href="#"><i class="fa fa-facebook"></i> </a></li>
-                                    <li><a href="#"><i class="fa fa-google-plus"></i> </a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i> </a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i> </a></li>
-                                    <li><a href="#"><i class="fa fa-pinterest-p"></i> </a></li>
-                                </ul>
+               $team_category = $values['team_category'];
+
+               $team_post_count = (!empty($count)?$count:-1);
+                $tax_query = '';
+                if($team_category!=''){
+                    $tax_query[] =  array(
+                        'taxonomy' => 'team_category',
+                        'field' => 'slug',
+                        'terms' => $team_category,
+                    );
+                }
+                $team_argument = array(
+                    'post_type'      => 'team',
+                    'post_status'    => 'publish',
+                    'posts_per_page' => $team_post_count,
+                    'orderby'        => 'menu_order date',
+                    'order'          => 'desc',
+                    'tax_query' => $tax_query,
+                );
+                $team_query = new WP_Query($team_argument);
+                ob_start();
+                if($team_query->have_posts()):
+                    while($team_query->have_posts()):
+                        $team_query->the_post();
+                        $manang_basecamp_team_designation = get_post_meta(get_the_id(), 'manang_basecamp_team_designation', true);
+                        $manang_basecamp_team_facebook = get_post_meta(get_the_id(), 'manang_basecamp_team_facebook', true);
+                        $manang_basecamp_team_twitter = get_post_meta(get_the_id(), 'manang_basecamp_team_twitter', true);
+                        $manang_basecamp_team_gmail = get_post_meta(get_the_id(), 'manang_basecamp_team_gmail', true);
+                        $manang_basecamp_team_pinterest = get_post_meta(get_the_id(), 'manang_basecamp_team_pinterest', true); ?>
+                        <div class="<?php echo $column; ?>">
+                            <div class="team-wrap team-classic" data-aos="fade-up">
+                                <div class="our-team">
+                                    <?php the_post_thumbnail(); ?>
+                                    <div class="team-content">
+                                        <?php the_title( '<h3 class="title">', '</h3>' ); ?>
+                                        <span class="post"><?php echo esc_html($manang_basecamp_team_designation); ?></span>
+                                        <ul class="social-links">
+                                            <li><a href="<?php echo esc_url($manang_basecamp_team_facebook); ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="<?php echo esc_url($manang_basecamp_team_twitter); ?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="<?php echo esc_url($manang_basecamp_team_gmail); ?>" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                                            <li><a href="<?php echo esc_url($manang_basecamp_team_pinterest); ?>" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-
-                <?php $output = ob_get_clean();
-                return $output;
+                    <?php endwhile;
+                    wp_reset_postdata();
+                endif;
+            $output = ob_get_clean();
+            return $output;
             }
         }
     }

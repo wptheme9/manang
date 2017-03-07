@@ -246,3 +246,4 @@ require get_template_directory() . '/lib/manang-nav-walker.php';
 require get_template_directory() . '/vc-elements/feature.php';
 require get_template_directory() . '/vc-elements/cta.php';
 require get_template_directory() . '/vc-elements/testimonial.php';
+require get_template_directory() . '/vc-elements/team.php';

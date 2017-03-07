@@ -209,23 +209,23 @@ if(!function_exists('manang_banner_choice')){
     add_action( 'manang_banner_option', 'manang_banner_choice', 10 );
 }
 
-if(!function_exists('manang_get_categories_select')):
-    function manang_get_categories_select() {
-        $manang_cat = get_terms( array(
-            'taxonomy' => 'feature_category',
-            'hide_empty' => false,
-        ) );
-        $results="";
-        $results[''] = "Select category";
-        if(! empty( $manang_cat ) && ! is_wp_error( $manang_cat ) ):
-            $count = count($manang_cat);
-             for ($i=0; $i < $count; $i++) {
-               $results[$manang_cat[$i]->slug] = $manang_cat[$i]->name;
-             }
-         endif;
-        return $results;
-    }
-endif;
+// if(!function_exists('manang_get_categories_select')):
+//     function manang_get_team_categories_select() {
+//         $manang_cat = get_terms( array(
+//             'taxonomy' => 'team_category',
+//             'hide_empty' => false,
+//         ) );
+//         $results="";
+//         $results[''] = "Select category";
+//         if(! empty( $manang_cat ) && ! is_wp_error( $manang_cat ) ):
+//             $count = count($manang_cat);
+//              for ($i=0; $i < $count; $i++) {
+//                $results[$manang_cat[$i]->slug] = $manang_cat[$i]->name;
+//              }
+//          endif;
+//         return $results;
+//     }
+// endif;
 
 if ( ! function_exists( 'manang_get_excerpt' ) ) :
     function manang_get_excerpt( $post_id, $count ) {

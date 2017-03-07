@@ -17,9 +17,9 @@ if ( ! function_exists( 'manang_customize_register' ) ) :
         require( dirname(__FILE__) . "/../customizer/setting-cta.php" );
         require( dirname(__FILE__) . "/../customizer/setting-contact.php" );
         require( dirname(__FILE__) . "/../customizer/setting-cta-secondary.php" );
-        require( dirname(__FILE__) . "/../customizer/setting-features.php" );
+        // require( dirname(__FILE__) . "/../customizer/setting-features.php" );
         require( dirname(__FILE__) . "/../customizer/setting-portfolio.php" );
-        require( dirname(__FILE__) . "/../customizer/setting-team.php" );
+        // require( dirname(__FILE__) . "/../customizer/setting-team.php" );
         require( dirname(__FILE__) . "/../customizer/setting-clients.php" );
         require( dirname(__FILE__) . "/../customizer/setting-counter.php" );
         require( dirname(__FILE__) . "/../customizer/setting-blog.php" );

@@ -34,9 +34,9 @@ function manang_icon_box_integrateWithVC(){
                 "description" => __("", 'manang') ,
                 "param_name" => "icon_image_size",
                 "value" => array(
-                    __("Small", 'manang') => "small",
-                    __("Medium", 'manang') => "medium",
-                    __("Large", 'manang') => "large",
+                    __("Small", 'manang') => "icon-small",
+                    __("Medium", 'manang') => "icon-med",
+                    __("Large", 'manang') => "icon-big",
                 ) ,
                 "type" => "dropdown"
             ) ,
@@ -181,9 +181,9 @@ function manang_icon_box_integrateWithVC(){
                 "param_name" => "position",
                 "description" => __("This option will position the whole box description.", "manang") ,
                 "value" => array(
-                    "Center" => "top",
-                    "Left" => "left",
-                    "Right" => "right",
+                    "Top" => "icon-top",
+                    "Left" => "icon-left",
+                    "Right" => "icon-right",
                 )
             ) ,
              array(
@@ -192,17 +192,17 @@ function manang_icon_box_integrateWithVC(){
                 "param_name" => "feature_style",
                 "description" => __("This option will position the whole box description.", "manang") ,
                 "value" => array(
-                    "Boxed" => "boxed",
+                    "Boxed" => "boxed-style",
                     "Simple" => "simple",
                 )
             ) ,
-            array(
-                "type" => "textfield",
-                "heading" => __("Read More URL", "manang") ,
-                "param_name" => "read_more_url",
-                "value" => "",
-                "description" => __("", "manang")
-            ) ,
+            // array(
+            //     "type" => "textfield",
+            //     "heading" => __("Read More URL", "manang") ,
+            //     "param_name" => "read_more_url",
+            //     "value" => "",
+            //     "description" => __("", "manang")
+            // ) ,
             array(
                 "type" => "textfield",
                 "heading" => __("Extra class name", "manang") ,
@@ -227,20 +227,21 @@ function manang_icon_box_integrateWithVC(){
                             'icon_border_color'             => '',
                             'icon_hover_color'              => '',
                             'icon_hover_border_color'       => '',
-                            'position'                         => 'top',
+                            'position'                         => 'icon-top',
                             'title'                         => '',
                             'title_font_size'               => '20',
                             'title_font_color'              => '',
-                            'feature_description'                    => '',
+                            'feature_description'           => '',
                             'description_font_color'        => '',
-                            'feature_style'                 => 'boxed',
-                            'read_more_url'                 => '',
+                            'feature_style'                 => 'boxed-style',
+                            // 'read_more_url'                 => '',
                             'el_class'                      => ''
                             ),$atts);
                $icon_type = $values['icon_type'];
                $icon_image = $values['icon_image'];
                $icon_class = $values['icon_class'];
                $icon_image_size = $values['icon_image_size'];
+               $icon_color = $values['icon_color'];
                $icon_background_color = $values['icon_background_color'];
                $icon_border_color = $values['icon_border_color'];
                $icon_hover_color = $values['icon_hover_color'];
@@ -251,17 +252,19 @@ function manang_icon_box_integrateWithVC(){
                $title_font_color = $values['title_font_color'];
                $feature_description = $values['feature_description'];
                $description_font_color = $values['description_font_color'];
-               $read_more_url = $values['read_more_url'];
+               $feature_style = $values['feature_style'];
+               // $read_more_url = $values['read_more_url'];
                $el_class = $values['el_class'];
-               $feature_image = wp_get_attachment_url( $icon_image,$icon_image_size );
+               $feature_image = wp_get_attachment_url( $icon_image );
                $title_style = 'style="font-size:' . $title_font_size . 'px; color:'.$title_font_color.'"';
                $description_style = 'style="color:'.$description_font_color.'"';
+               $icon_style = 'style="background:'.$icon_background_color.' border: 2px solid'.$icon_border_color.'"';
                 ob_start();
                 ?>
-                <div class="callout-item icon-top <?php echo esc_attr($el_class); ?>" data-aos="fade-up">
-                    <div class="callout-icon">
+                <div class="callout-item <?php echo esc_attr($el_class . ' '. $position . ' '.$feature_style); ?>" data-aos="fade-up">
+                    <div <?php echo $icon_style; ?> class="callout-icon <?php echo esc_attr($icon_image_size); ?>">
                         <?php if($icon_type == 'icon'){ ?>
-                            <i class="<?php echo esc_attr($icon_class); ?>"></i>
+                            <i style="color:<?php echo $icon_color; ?>" class="<?php echo esc_attr($icon_class); ?>"></i>
                         <?php }
                         else{ ?>
                                 <img src="<?php echo esc_url($feature_image); ?>" alt="">
@@ -273,9 +276,17 @@ function manang_icon_box_integrateWithVC(){
                     </div>
                 </div>
                 <?php
+                $app_styles=".callout-icon:hover i{color: $icon_hover_color} .callout-icon:hover {border: 2px solid $icon_hover_border_color;}";
+                // manang_style_function($app_styles);
                 $output = ob_get_clean();
                 return $output;
             }
         }
     }
 }
+
+
+function manang_style_function($app_styles) {
+    echo '<style type="text/css">'.$app_styles.'</style>';
+}
+add_action( 'wp_footer', 'manang_style_function', 999 );

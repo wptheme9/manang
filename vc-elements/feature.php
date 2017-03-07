@@ -9,12 +9,11 @@
 ?>
 <?php
 
-
-add_action( 'vc_before_init', 'manang_feature_integrateWithVC' );
-function manang_feature_integrateWithVC(){
+add_action( 'vc_before_init', 'manang_icon_box_integrateWithVC' );
+function manang_icon_box_integrateWithVC(){
     vc_map(array(
         "name" => __("Icon Box", "manang") ,
-        "base" => "mk_icon_box2",
+        "base" => "manang_icon_box",
         "category" => __('Manang', 'manang') ,
         'icon' => 'icon-mk-icon-box vc_mk_element-icon',
         'description' => __('Powerful & versatile Icon Boxes.', 'manang') ,
@@ -33,7 +32,7 @@ function manang_feature_integrateWithVC(){
             array(
                 "heading" => __("Icon/Image Size", 'manang') ,
                 "description" => __("", 'manang') ,
-                "param_name" => "icon_size",
+                "param_name" => "icon_image_size",
                 "value" => array(
                     __("Small", 'manang') => "small",
                     __("Medium", 'manang') => "medium",
@@ -59,7 +58,7 @@ function manang_feature_integrateWithVC(){
             array(
                 "type" => "textfield",
                 "heading" => __("Icon Class Name", "manang") ,
-                "param_name" => "icon",
+                "param_name" => "icon_class",
                 "value" => "ion-ios-briefcase-outline",
                 "description" => __("<a target='_blank' href='ionicons.com'>Click here</a> to get the icon class name (or any other font icons library that you have installed in the theme)", "manang") ,
                 "dependency" => array(
@@ -124,19 +123,6 @@ function manang_feature_integrateWithVC(){
             ) ,
             array(
                 "type" => "colorpicker",
-                "heading" => __("Icon Hover Background Color", "manang") ,
-                "param_name" => "icon_hover_background_color",
-                "value" => "",
-                "description" => __("", "manang") ,
-                "dependency" => array(
-                    'element' => "icon_type",
-                    'value' => array(
-                        'icon'
-                    )
-                )
-            ) ,
-            array(
-                "type" => "colorpicker",
                 "heading" => __("Icon Hover Border Color", "manang") ,
                 "param_name" => "icon_hover_border_color",
                 "value" => "",
@@ -159,7 +145,7 @@ function manang_feature_integrateWithVC(){
             array(
                 "type" => "range",
                 "heading" => __("Title Font Size", "manang") ,
-                "param_name" => "title_size",
+                "param_name" => "title_font_size",
                 "value" => "20",
                 "min" => "5",
                 "max" => "40",
@@ -167,72 +153,47 @@ function manang_feature_integrateWithVC(){
                 "unit" => 'px'
             ) ,
             array(
-                "type" => "dropdown",
-                "heading" => __("Title Font Weight", "manang") ,
-                "param_name" => "title_weight",
-                "width" => 150,
-                "value" => array(
-                    __('Default', "manang") => "inherit",
-                    __('Bold', "manang") => "bold",
-                    __('Bolder', "manang") => "bolder",
-                    __('Normal', "manang") => "normal",
-                    __('Light', "manang") => "300"
-                ) ,
-                "description" => __("", "manang")
-            ) ,
-            array(
                 "type" => "colorpicker",
                 "heading" => __("Title Font Color", "manang") ,
-                "param_name" => "title_color",
+                "param_name" => "title_font_color",
                 "value" => "",
                 "description" => __("", "manang")
             ) ,
-            array(
-                "type" => "range",
-                "heading" => __("Title Top Padding", "manang") ,
-                "param_name" => "title_top_padding",
-                "value" => "10",
-                "min" => "5",
-                "max" => "60",
-                "step" => "1",
-                "unit" => 'px'
-            ) ,
-            array(
-                "type" => "range",
-                "heading" => __("Title Bottom Padding", "manang") ,
-                "param_name" => "title_bottom_padding",
-                "value" => "10",
-                "min" => "5",
-                "max" => "60",
-                "step" => "1",
-                "unit" => 'px'
-            ) ,
-
             array(
                 "type" => "textarea_html",
                 "holder" => "div",
                 'toolbar' => 'full',
                 "heading" => __("Description", "manang") ,
-                "param_name" => "content",
+                "param_name" => "feature_description",
                 "value" => __("", "manang") ,
-                "description" => __("Enter your content.", "manang")
+                "description" => __("Enter your description.", "manang")
             ) ,
             array(
                 "type" => "colorpicker",
                 "heading" => __("Description Font Color", "manang") ,
-                "param_name" => "description_color",
+                "param_name" => "description_font_color",
                 "value" => "",
                 "description" => __("", "manang")
             ) ,
             array(
                 "type" => "dropdown",
-                "heading" => __("Box Align", "manang") ,
-                "param_name" => "align",
-                "description" => __("This option will align the whole box content.", "manang") ,
+                "heading" => __("Position", "manang") ,
+                "param_name" => "position",
+                "description" => __("This option will position the whole box description.", "manang") ,
                 "value" => array(
-                    "Center" => "center",
+                    "Center" => "top",
                     "Left" => "left",
                     "Right" => "right",
+                )
+            ) ,
+             array(
+                "type" => "dropdown",
+                "heading" => __("Style", "manang") ,
+                "param_name" => "feature_style",
+                "description" => __("This option will position the whole box description.", "manang") ,
+                "value" => array(
+                    "Boxed" => "boxed",
+                    "Simple" => "simple",
                 )
             ) ,
             array(
@@ -247,63 +208,74 @@ function manang_feature_integrateWithVC(){
                 "heading" => __("Extra class name", "manang") ,
                 "param_name" => "el_class",
                 "value" => "",
-                "description" => __("If you wish to style particular content element differently, then use this field to add a class name and then refer to it in Custom CSS Shortcode or Masterkey Custom CSS option.", "manang")
-            )
-        )
+                "description" => __("If you wish to style particular description element differently, then use this field to add a class name.", "manang")
+            ),
+        ),
     ));
-}
-if(class_exists('WPBakeryShortCode')){
-    class WPBakeryShortCode_manang_feature extends WPBakeryShortCode {
+    if(class_exists('WPBakeryShortCode')){
+        class WPBakeryShortCode_manang_icon_box extends WPBakeryShortCode {
 
-        public function content( $atts, $content = null ) {
-           $values =  shortcode_atts( array(
-                'icon_type'                     => 'icon',
-                'icon_image'                    => '',
-                'icon'                          => 'ion-ios-briefcase-outline',
-                'icon_size'                     => 'small',
-                'icon_color'                    => '',
-                'icon_background_color'         => '',
-                'icon_border_color'             => '',
-                'icon_hover_color'              => '',
-                'icon_hover_background_color'   => '',
-                'icon_hover_border_color'       => '',
-                'title'                         => '',
-                'title_size'                    => '20',
-                'title_color'                   => '',
-                'title_weight'                  => 'inherit',
-                'title_top_padding'             => '10',
-                'title_bottom_padding'          => '10',
-                'content'                       => '',
-                'description_color'             => '',
-                'animation'                     => '',
-                'read_more_url'                 => '',
-                'align'                         => 'center',
-                'el_class'                      => ''
-                ),$atts);
-           $feature_image = wp_get_attachment_url( $values['icon_image'] );
-            ob_start();
-            ?>
-            <div class="callout-item icon-top img-icon" data-aos="fade-up">
-                <div class="callout-icon">
-                    <?php if($values['icon_type'] == 'icon'){ ?>
-                        <i class="<?php echo esc_attr($feature_icon_class); ?>"></i>
-                    <?php }
-                    else{ ?>
-                            <img src="<?php echo esc_url($feature_image); ?>" alt="">
-                        <?php }?>
-                </div>
-                <div class="callout-content">
-                    <h3><?php echo esc_html($values['title']); ?></h3>
-                    <p><?php echo esc_html($values['content']); ?> </p>
-                </div>
-            </div>
-           <?php
-            ?>
-            <?php
-            $output = ob_get_clean();
-            ob_flush();
-            return $output;
+            protected function content( $atts, $content = null ) {
 
+               $values =  shortcode_atts( array(
+                            'icon_type'                     => 'icon',
+                            'icon_image'                    => '',
+                            'icon_class'                    => 'ion-ios-briefcase-outline',
+                            'icon_image_size'               => 'small',
+                            'icon_color'                    => '',
+                            'icon_background_color'         => '',
+                            'icon_border_color'             => '',
+                            'icon_hover_color'              => '',
+                            'icon_hover_border_color'       => '',
+                            'position'                         => 'top',
+                            'title'                         => '',
+                            'title_font_size'               => '20',
+                            'title_font_color'              => '',
+                            'feature_description'                    => '',
+                            'description_font_color'        => '',
+                            'feature_style'                 => 'boxed',
+                            'read_more_url'                 => '',
+                            'el_class'                      => ''
+                            ),$atts);
+               $icon_type = $values['icon_type'];
+               $icon_image = $values['icon_image'];
+               $icon_class = $values['icon_class'];
+               $icon_image_size = $values['icon_image_size'];
+               $icon_background_color = $values['icon_background_color'];
+               $icon_border_color = $values['icon_border_color'];
+               $icon_hover_color = $values['icon_hover_color'];
+               $icon_hover_border_color = $values['icon_hover_border_color'];
+               $position = $values['position'];
+               $title = $values['title'];
+               $title_font_size = $values['title_font_size'];
+               $title_font_color = $values['title_font_color'];
+               $feature_description = $values['feature_description'];
+               $description_font_color = $values['description_font_color'];
+               $read_more_url = $values['read_more_url'];
+               $el_class = $values['el_class'];
+               $feature_image = wp_get_attachment_url( $icon_image,$icon_image_size );
+               $title_style = 'style="font-size:' . $title_font_size . 'px; color:'.$title_font_color.'"';
+               $description_style = 'style="color:'.$description_font_color.'"';
+                ob_start();
+                ?>
+                <div class="callout-item icon-top <?php echo esc_attr($el_class); ?>" data-aos="fade-up">
+                    <div class="callout-icon">
+                        <?php if($icon_type == 'icon'){ ?>
+                            <i class="<?php echo esc_attr($icon_class); ?>"></i>
+                        <?php }
+                        else{ ?>
+                                <img src="<?php echo esc_url($feature_image); ?>" alt="">
+                            <?php }?>
+                    </div>
+                    <div class="callout-description">
+                        <h3 <?php echo $title_style; ?>><?php echo esc_html($title); ?></h3>
+                        <p <?php echo $description_style; ?>><?php echo esc_html($feature_description); ?> </p>
+                    </div>
+                </div>
+                <?php
+                $output = ob_get_clean();
+                return $output;
+            }
         }
     }
 }

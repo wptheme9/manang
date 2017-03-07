@@ -166,12 +166,6 @@ function manang_scripts() {
 	wp_enqueue_style( 'google-font', 'https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700' );
 	wp_enqueue_style( 'manang-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'manang-maincss', get_template_directory_uri().'/assets/css/manang.css' );
-    // $color = get_theme_mod( 'my-custom-color' ); //E.g. #FF0000
-    $custom_css = "
-            .mycolor{
-                    background: {$color};
-            }";
-    wp_add_inline_style( 'manang-maincss', $custom_css );
     $locale = 'libraries=places';
     $key='AIzaSyC5hS1gzt5G8PySLPMnYZT37P4tbTHDCG0';
     wp_register_script('googlemaps', 'http://maps.googleapis.com/maps/api/js?' . $locale . '&key=' . $key);

@@ -80,11 +80,14 @@ function manang_fancybox_integrateWithVC(){
             ) ,
 
             array(
-                "type" => "colorpicker",
-                "heading" => __("Fancybox Content Color", "manang") ,
+                "heading" => __("Fancybox Content Color", 'manang') ,
+                "description" => __("", 'manang') ,
                 "param_name" => "fancybox_content_color",
-                "value" => "",
-                "description" => __("", "manang")
+                "value" => array(
+                    __("Light", 'manang') => "light",
+                    __("Dark", 'manang') => "dark"
+                ) ,
+                "type" => "dropdown"
             ) ,
 
             array(
@@ -117,7 +120,7 @@ function manang_fancybox_integrateWithVC(){
                             'fancybox_title'           => '',
                             // 'content'                  => '',
                             'fancybox_bg_color'        => '',
-                            'fancybox_content_color'   => '',
+                            'fancybox_content_color'   => 'light',
                             'read_more_url'            => '',
                             'read_more_text'           => '',
                             ),$atts);
@@ -132,7 +135,7 @@ function manang_fancybox_integrateWithVC(){
                $read_more_text = $values['read_more_text'];
 
                 ob_start(); ?>
-                    <div class="fancybox-item" style="background:<?php echo esc_attr($fancybox_bg_color); ?>">
+                    <div class="fancybox-item <?php echo $fancybox_content_color ?>" style="background:<?php echo esc_attr($fancybox_bg_color); ?>">
                         <h3><?php echo esc_html($fancybox_title); ?></h3>
                         <p><?php echo $content; ?></p>
                         <?php if(!empty($read_more_text) && !empty($read_more_url)): ?>

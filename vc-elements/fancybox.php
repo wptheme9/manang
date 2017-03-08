@@ -30,7 +30,7 @@ function manang_fancybox_integrateWithVC(){
              array(
                 "type" => "textfield",
                 "heading" => __("Icon Class Name", "manang") ,
-                "param_name" => "icon_class",
+                "param_name" => "fancybox_icon_class",
                 "value" => "ion-ios-briefcase-outline",
                 "description" => __("<a target='_blank' href='ionicons.com'>Click here</a> to get the icon class name (or any other font icons library that you have installed in the theme)", "manang") ,
                 "dependency" => array(
@@ -112,7 +112,7 @@ function manang_fancybox_integrateWithVC(){
 
                $values =  shortcode_atts( array(
                             'icon_number'              => 'icon',
-                            'icon_class'               => '',
+                            'fancybox_icon_class'      => 'ion-ios-briefcase-outline',
                             'number_field'             => '',
                             'fancybox_title'           => '',
                             // 'content'                  => '',
@@ -122,7 +122,7 @@ function manang_fancybox_integrateWithVC(){
                             'read_more_text'           => '',
                             ),$atts);
                $icon_number = $values['icon_number'];
-               $icon_class = $values['icon_class'];
+               $fancybox_icon_class = $values['fancybox_icon_class'];
                $number_field = $values['number_field'];
                $fancybox_title = $values['fancybox_title'];
                // $content = $values['content'];
@@ -139,7 +139,7 @@ function manang_fancybox_integrateWithVC(){
                             <a class="readmore" href="<?php echo esc_url($read_more_url); ?>"><?php echo esc_html($read_more_text); ?><span class="ion-arrow-right-a"></span></a>
                         <?php endif; ?>
                         <?php if($icon_number == 'icon'){ ?>
-                            <i class="<?php echo esc_attr($icon_class); ?>"></i>
+                            <i class="<?php echo $fancybox_icon_class; ?>"></i>
                             <?php }
                         else { ?>
                             <span><?php echo esc_html($number_field); ?></span>

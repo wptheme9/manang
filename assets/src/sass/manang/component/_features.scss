@@ -163,3 +163,13 @@
 .fancybox-item p{
     color: #fff;
 }
+.fancybox-item span {
+    color: rgba(255, 255, 255, 0.15);
+    font-size: 84px;
+    position: absolute;
+    z-index: 1;
+    top: 55px;
+    left: 46px;
+    font-family: Poppins;
+    font-weight: 700;
+}

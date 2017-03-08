@@ -109,31 +109,98 @@ function manang_team_integrateWithVC(){
                 $team_query = new WP_Query($team_argument);
                 ob_start();
                 if($team_query->have_posts()):
+
                     while($team_query->have_posts()):
                         $team_query->the_post();
                         $manang_basecamp_team_designation = get_post_meta(get_the_id(), 'manang_basecamp_team_designation', true);
                         $manang_basecamp_team_facebook = get_post_meta(get_the_id(), 'manang_basecamp_team_facebook', true);
                         $manang_basecamp_team_twitter = get_post_meta(get_the_id(), 'manang_basecamp_team_twitter', true);
                         $manang_basecamp_team_gmail = get_post_meta(get_the_id(), 'manang_basecamp_team_gmail', true);
-                        $manang_basecamp_team_pinterest = get_post_meta(get_the_id(), 'manang_basecamp_team_pinterest', true); ?>
-                        <div class="<?php echo $column; ?>">
-                            <div class="team-wrap team-classic" data-aos="fade-up">
-                                <div class="our-team">
-                                    <?php the_post_thumbnail(); ?>
-                                    <div class="team-content">
-                                        <?php the_title( '<h3 class="title">', '</h3>' ); ?>
-                                        <span class="post"><?php echo esc_html($manang_basecamp_team_designation); ?></span>
-                                        <ul class="social-links">
-                                            <li><a href="<?php echo esc_url($manang_basecamp_team_facebook); ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="<?php echo esc_url($manang_basecamp_team_twitter); ?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a href="<?php echo esc_url($manang_basecamp_team_gmail); ?>" target="_blank"><i class="fa fa-google-plus"></i></a></li>
-                                            <li><a href="<?php echo esc_url($manang_basecamp_team_pinterest); ?>" target="_blank"><i class="fa fa-pinterest"></i></a></li>
-                                        </ul>
+                        $manang_basecamp_team_pinterest = get_post_meta(get_the_id(), 'manang_basecamp_team_pinterest', true);
+                        switch($style){
+                            case( "classic" ): ?>
+                                <div class="<?php echo $column; ?>">
+                                    <div class="team-wrap team-classic">
+                                        <div class="our-team">
+                                            <?php the_post_thumbnail(); ?>
+                                            <div class="team-content">
+                                                <?php the_title( '<h3 class="title">', '</h3>' ); ?>
+                                                <span class="post"><?php echo esc_html($manang_basecamp_team_designation); ?></span>
+                                                <ul class="social-links">
+                                                    <li><a href="<?php echo esc_url($manang_basecamp_team_facebook); ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                                    <li><a href="<?php echo esc_url($manang_basecamp_team_twitter); ?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                                    <li><a href="<?php echo esc_url($manang_basecamp_team_gmail); ?>" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                                                    <li><a href="<?php echo esc_url($manang_basecamp_team_pinterest); ?>" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    <?php endwhile;
+                            <?php break;
+                            case( "fancy" ): ?>
+                                    <div class="<?php echo $column; ?>">
+                                        <div class="team-wrap team-fancy" data-aos="fade-up">
+                                            <div class="our-team">
+                                                <div class="team_img">
+                                                    <?php the_post_thumbnail(); ?>
+                                                    <ul class="social">
+                                                        <li><a href="<?php echo esc_url($manang_basecamp_team_facebook); ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                                        <li><a href="<?php echo esc_url($manang_basecamp_team_twitter); ?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                                        <li><a href="<?php echo esc_url($manang_basecamp_team_gmail); ?>" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                                                        <li><a href="<?php echo esc_url($manang_basecamp_team_pinterest); ?>" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="team-content">
+                                                    <?php the_title( '<h3 class="title">', '</h3>' ); ?>
+                                                    <span class="post"><?php echo esc_html($manang_basecamp_team_designation); ?></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            <?php break;
+                            case( "rounded" ): ?>
+                                 <div class="<?php echo $column; ?>">
+                                    <div class="team-wrap team-round" data-aos="fade-up">
+                                        <div class="our-team">
+                                            <div class="pic">
+                                                <?php the_post_thumbnail(); ?>
+                                                <a href="<?php the_permalink(); ?>" class="pic-bottom"></a>
+                                            </div>
+                                            <div class="team-prof">
+                                                <h3 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                                                <span class="post"><?php echo esc_html($manang_basecamp_team_designation); ?></span>
+                                                <ul class="team_social">
+                                                    <li><a href="<?php echo esc_url($manang_basecamp_team_facebook); ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                                    <li><a href="<?php echo esc_url($manang_basecamp_team_twitter); ?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                                    <li><a href="<?php echo esc_url($manang_basecamp_team_gmail); ?>" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                                                    <li><a href="<?php echo esc_url($manang_basecamp_team_pinterest); ?>" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php break;
+                            case( "simple" ): ?>
+                                    <div class="<?php echo $column; ?>">
+                                        <div class="team-wrap team-classic" data-aos="fade-up">
+                                            <div class="our-team">
+                                                <?php the_post_thumbnail(); ?>
+                                                <div class="team-content">
+                                                    <?php the_title( '<h3 class="title">', '</h3>' ); ?>
+                                                    <span class="post"><?php echo esc_html($manang_basecamp_team_designation); ?></span>
+                                                    <ul class="social-links">
+                                                        <li><a href="<?php echo esc_url($manang_basecamp_team_facebook); ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                                        <li><a href="<?php echo esc_url($manang_basecamp_team_twitter); ?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                                        <li><a href="<?php echo esc_url($manang_basecamp_team_gmail); ?>" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                                                        <li><a href="<?php echo esc_url($manang_basecamp_team_pinterest); ?>" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            <?php break;
+                        }
+                        endwhile;
                     wp_reset_postdata();
                 endif;
             $output = ob_get_clean();

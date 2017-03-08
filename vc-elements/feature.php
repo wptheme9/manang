@@ -164,7 +164,7 @@ function manang_icon_box_integrateWithVC(){
                 "holder" => "div",
                 'toolbar' => 'full',
                 "heading" => __("Description", "manang") ,
-                "param_name" => "feature_description",
+                "param_name" => "content",
                 "value" => __("", "manang") ,
                 "description" => __("Enter your description.", "manang")
             ) ,
@@ -231,7 +231,7 @@ function manang_icon_box_integrateWithVC(){
                             'title'                         => '',
                             'title_font_size'               => '20',
                             'title_font_color'              => '',
-                            'feature_description'           => '',
+                            'content'           => '',
                             'description_font_color'        => '',
                             'feature_style'                 => 'boxed-style',
                             // 'read_more_url'                 => '',
@@ -250,7 +250,7 @@ function manang_icon_box_integrateWithVC(){
                $title = $values['title'];
                $title_font_size = $values['title_font_size'];
                $title_font_color = $values['title_font_color'];
-               $feature_description = $values['feature_description'];
+               $content = $values['content'];
                $description_font_color = $values['description_font_color'];
                $feature_style = $values['feature_style'];
                // $read_more_url = $values['read_more_url'];
@@ -272,7 +272,7 @@ function manang_icon_box_integrateWithVC(){
                     </div>
                     <div class="callout-description">
                         <h3 <?php echo $title_style; ?>><?php echo esc_html($title); ?></h3>
-                        <p <?php echo $description_style; ?>><?php echo esc_html($feature_description); ?> </p>
+                        <p <?php echo $description_style; ?>><?php echo esc_html($content); ?> </p>
                     </div>
                 </div>
                 <?php

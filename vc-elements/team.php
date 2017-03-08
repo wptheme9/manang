@@ -139,7 +139,7 @@ function manang_team_integrateWithVC(){
                             <?php break;
                             case( "fancy" ): ?>
                                     <div class="<?php echo $column; ?>">
-                                        <div class="team-wrap team-fancy" data-aos="fade-up">
+                                        <div class="team-wrap team-fancy">
                                             <div class="our-team">
                                                 <div class="team_img">
                                                     <?php the_post_thumbnail(); ?>
@@ -160,7 +160,7 @@ function manang_team_integrateWithVC(){
                             <?php break;
                             case( "rounded" ): ?>
                                  <div class="<?php echo $column; ?>">
-                                    <div class="team-wrap team-round" data-aos="fade-up">
+                                    <div class="team-wrap team-round">
                                         <div class="our-team">
                                             <div class="pic">
                                                 <?php the_post_thumbnail(); ?>
@@ -182,7 +182,7 @@ function manang_team_integrateWithVC(){
                             <?php break;
                             case( "simple" ): ?>
                                     <div class="<?php echo $column; ?>">
-                                        <div class="team-wrap team-classic" data-aos="fade-up">
+                                        <div class="team-wrap team-classic">
                                             <div class="our-team">
                                                 <?php the_post_thumbnail(); ?>
                                                 <div class="team-content">

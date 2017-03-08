@@ -132,7 +132,7 @@ function manang_fancybox_integrateWithVC(){
                $read_more_text = $values['read_more_text'];
 
                 ob_start(); ?>
-                    <div class="fancybox-item">
+                    <div class="fancybox-item" style="background:<?php esc_attr($fancybox_bg_color); ?>">
                         <h3><?php echo esc_html($fancybox_title); ?></h3>
                         <p><?php echo $content; ?></p>
                         <?php if(!empty($read_more_text && !empty($read_more_url))): ?>

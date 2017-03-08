@@ -231,7 +231,7 @@ function manang_icon_box_integrateWithVC(){
                             'title'                         => '',
                             'title_font_size'               => '20',
                             'title_font_color'              => '',
-                            'content'           => '',
+                            // 'content'           => '',
                             'description_font_color'        => '',
                             'feature_style'                 => 'boxed-style',
                             // 'read_more_url'                 => '',
@@ -250,7 +250,7 @@ function manang_icon_box_integrateWithVC(){
                $title = $values['title'];
                $title_font_size = $values['title_font_size'];
                $title_font_color = $values['title_font_color'];
-               $content = $values['content'];
+               // $content = $values['content'];
                $description_font_color = $values['description_font_color'];
                $feature_style = $values['feature_style'];
                // $read_more_url = $values['read_more_url'];

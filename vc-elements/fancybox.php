@@ -49,7 +49,7 @@ function manang_fancybox_integrateWithVC(){
                 "dependency" => array(
                     'element' => "icon_number",
                     'value' => array(
-                        'icon'
+                        'number'
                     )
                 )
             ) ,
@@ -115,7 +115,7 @@ function manang_fancybox_integrateWithVC(){
                             'icon_class'               => '',
                             'number_field'             => '',
                             'fancybox_title'           => '',
-                            'content'                  => '',
+                            // 'content'                  => '',
                             'fancybox_bg_color'        => '',
                             'fancybox_content_color'   => '',
                             'read_more_url'            => '',
@@ -125,7 +125,7 @@ function manang_fancybox_integrateWithVC(){
                $icon_class = $values['icon_class'];
                $number_field = $values['number_field'];
                $fancybox_title = $values['fancybox_title'];
-               $content = $values['content'];
+               // $content = $values['content'];
                $fancybox_bg_color = $values['fancybox_bg_color'];
                $fancybox_content_color = $values['fancybox_content_color'];
                $read_more_url = $values['read_more_url'];
@@ -135,7 +135,7 @@ function manang_fancybox_integrateWithVC(){
                     <div class="fancybox-item" style="background:<?php esc_attr($fancybox_bg_color); ?>">
                         <h3><?php echo esc_html($fancybox_title); ?></h3>
                         <p><?php echo $content; ?></p>
-                        <?php if(!empty($read_more_text && !empty($read_more_url))): ?>
+                        <?php if(!empty($read_more_text) && !empty($read_more_url)): ?>
                             <a class="readmore" href="<?php echo esc_url($read_more_url); ?>"><?php echo esc_html($read_more_text); ?><span class="ion-arrow-right-a"></span></a>
                         <?php endif; ?>
                         <?php if($icon_number == 'icon'){ ?>

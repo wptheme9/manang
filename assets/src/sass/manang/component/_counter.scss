@@ -1,7 +1,6 @@
-.counter-sec{
-    background: -webkit-linear-gradient(left, #7a90ff 6%, #53bfd8);
-    text-align: center;
 
+
+.counter-wrap.icon-top{
     h3.timer{
         font-size: 42px;
         font-weight: 700;
@@ -16,4 +15,31 @@
         font-size: 55px;
         color: #fff;
     }
+}
+
+.counter-wrap.icon-left{
+    h3.timer{
+        font-size: 42px;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 0;
+        margin-top: 15px;
+    }
+    span{
+        color: #fff;
+    }
+    i{
+        font-size: 55px;
+        color: #fff;
+        float: left;
+    }
+    .counter-info {
+        text-align: left;
+        margin-left: 90px;
+    }
+}
+
+.counter-sec{
+    background: -webkit-linear-gradient(left, #7a90ff 6%, #53bfd8);
+    text-align: center;
 }

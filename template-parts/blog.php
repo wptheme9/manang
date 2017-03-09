@@ -15,7 +15,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <div class="blog-wrap"  data-aos="fade-in">
+                <div class="blog-wrap style1"  data-aos="fade-in">
                     <div class="blog-img">
                         <img src="assets/img/blog4.jpg" alt="">
                     </div>
@@ -36,7 +36,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="blog-wrap"  data-aos="fade-in">
+                <div class="blog-wrap style1"  data-aos="fade-in">
                     <div class="blog-img">
                         <img src="assets/img/blog2.jpeg" alt="">
                     </div>
@@ -57,7 +57,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="blog-wrap"  data-aos="fade-in">
+                <div class="blog-wrap style1"  data-aos="fade-in">
                     <div class="blog-img">
                         <img src="assets/img/blog3.jpg" alt="">
                     </div>
@@ -74,6 +74,74 @@
                     </div>
                     <h2>Inspire new startups and help them grow to become profitable</h2>
                     <p>Sed adipiscing ornare risus. Morbi est est, blandit sit amet, sagittis vel, euismod vel, velit. Pellentesque egestas sem. Suspendisse</p>
+                    <a href="#" class="btn btn-default">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="blog" class="section blog-sec">
+    <div class="section-title">
+        <h2>From Our Blog</h2>
+        <p> dolor sit amet, consectetuer adipiscing elit. Donec odio.Quisque volutpat mattis eros. Nullam</p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="blog-wrap style2"  data-aos="fade-in">
+                    <img src="assets/img/blog4.jpg" alt="">
+                    <div class="post-review">
+                        <div class="post-date">
+                            12
+                            <small>feb</small>
+                        </div>
+                        <h3 class="post-title">
+                            <a href="#">Lorem ipsum dolor sit amet, consectetur.</a>
+                        </h3>
+                        <ul class="post-comment">
+                            <li>By Codemin<a href="">5 comment</a></li>
+                        </ul>
+                    </div>
+                     <p>Sed adipiscing ornare risus. Morbi est est, blandit sit amet, sagittis vel, euismod vel, velit. Pellentesque egestas sem. Suspendisse</p>
+                    <a href="#" class="btn btn-default">Read More</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="blog-wrap style2"  data-aos="fade-in">
+                    <img src="assets/img/blog4.jpg" alt="">
+                    <div class="post-review">
+                        <div class="post-date">
+                            12
+                            <small>feb</small>
+                        </div>
+                        <h3 class="post-title">
+                            <a href="#">Lorem ipsum dolor sit amet, consectetur.</a>
+                        </h3>
+                        <ul class="post-comment">
+                            <li>By Codemin<a href="">5 comment</a></li>
+                        </ul>
+                    </div>
+                     <p>Sed adipiscing ornare risus. Morbi est est, blandit sit amet, sagittis vel, euismod vel, velit. Pellentesque egestas sem. Suspendisse</p>
+                    <a href="#" class="btn btn-default">Read More</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="blog-wrap style2"  data-aos="fade-in">
+                    <img src="assets/img/blog4.jpg" alt="">
+                    <div class="post-review">
+                        <div class="post-date">
+                            12
+                            <small>feb</small>
+                        </div>
+                        <h3 class="post-title">
+                            <a href="#">Lorem ipsum dolor sit amet, consectetur.</a>
+                        </h3>
+                        <ul class="post-comment">
+                            <li>By Codemin<a href="">5 comment</a></li>
+                        </ul>
+                    </div>
+                     <p>Sed adipiscing ornare risus. Morbi est est, blandit sit amet, sagittis vel, euismod vel, velit. Pellentesque egestas sem. Suspendisse</p>
                     <a href="#" class="btn btn-default">Read More</a>
                 </div>
             </div>

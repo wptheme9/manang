@@ -76,6 +76,8 @@ function manang_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+    //team_image_size
+    add_image_size( 'manang_team',600,400,true );
 }
 endif;
 add_action( 'after_setup_theme', 'manang_setup' );

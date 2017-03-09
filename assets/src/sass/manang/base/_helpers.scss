@@ -16,6 +16,35 @@
     position: relative;
     font-weight: 700;
     text-transform: uppercase;
+    font-size: 32px;
+}
+.section-title img {
+    max-height: 50px;
+    margin-bottom: 20px;
+}
+.section-title i {
+    font-size: 50px;
+    margin-bottom: 20px;
+    display: block;
+}
+.section-title{
+    h1.shadow-title {
+        color: rgba(195, 195, 195, 0.31);
+        font-size: 82px;
+        position: absolute;
+        z-index: 1;
+        top: -44px;
+        text-transform: uppercase;
+        left: 133px;
+        font-family: Poppins;
+        font-weight: 700;
+    }
+}
+
+.title-modern{
+    p{
+        margin-top: 30px;
+    }
 }
 .pad0{
     padding-left: 0 !important;

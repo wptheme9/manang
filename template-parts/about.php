@@ -47,3 +47,36 @@
     </div>
 </div>
 
+
+<!-- Section Title1 -->
+<div class="section-title title-simple">
+    <h2>From Our Blog</h2>
+    <p> dolor sit amet, consectetuer adipiscing elit. Donec odio.Quisque volutpat mattis eros. Nullam</p>
+</div>
+
+<!-- Title with image -->
+<div class="section-title title-simple">
+    <img src="<?php echo get_template_directory_uri();?>/assets/img/icon-title.png">
+    <h2>From Our Blog</h2>
+    <p> dolor sit amet, consectetuer adipiscing elit. Donec odio.Quisque volutpat mattis eros. Nullam</p>
+</div>
+
+
+<!-- Title with Icon -->
+<div class="section-title title-simple">
+    <i class="ion-android-laptop"></i>
+    <h2>From Our Blog</h2>
+    <p> dolor sit amet, consectetuer adipiscing elit. Donec odio.Quisque volutpat mattis eros. Nullam</p>
+</div>
+
+
+
+
+<!-- 2nd Style -->
+
+<div class="section-title title-modern">
+    <h1 class="shadow-title">Blog</h1>
+    <h2>From Our Blog</h2>
+    <p> dolor sit amet, consectetuer adipiscing elit. Donec odio.Quisque volutpat mattis eros. Nullam</p>
+</div>
+

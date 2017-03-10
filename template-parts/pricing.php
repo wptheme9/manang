@@ -1,10 +1,13 @@
-<section id="pricing" class="pricing-section bg-12 section">
+<section id="pricing" class="section">
     <div class="section-title">
         <h2>Choose your Pricing</h2>
         <p> dolor sit amet, consectetuer adipiscing elit. Donec odio.Quisque volutpat mattis eros. Nullam</p>
     </div>
-    <div class="pricing pricing--palden" data-aos="fade">
-        <div class="pricing__item">
+
+
+        <div class="container">
+            <div class="col-md-4">
+        <div class="pricing__item pricing style1">
             <div class="pricing__deco">
                 <svg class="pricing__deco-img" version="1.1" id="Layer_1" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="100px" viewBox="0 0 300 100" enable-background="new 0 0 300 100" xml:space="preserve">
                     <path class="deco-layer deco-layer--1" opacity="0.6" fill="#FFFFFF" d="M30.913,43.944c0,0,42.911-34.464,87.51-14.191c77.31,35.14,113.304-1.952,146.638-4.729
@@ -27,7 +30,11 @@ c53.07-16.399,104.047,36.903,104.047,36.903l1.333,36.667l-372-2.954L-34.667,62.9
             </ul>
             <button class="pricing__action">Choose plan</button>
         </div>
-        <div class="pricing__item pricing__item--featured" data-aos="fade">
+
+    </div>
+
+    <div class="col-md-4">
+        <div class="pricing__item pricing__item--featured pricing style1" data-aos="fade">
             <div class="pricing__deco">
                 <svg class="pricing__deco-img" version="1.1" id="Layer_2" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="100px" viewBox="0 0 300 100" enable-background="new 0 0 300 100" xml:space="preserve">
                     <path class="deco-layer deco-layer--1" opacity="0.6" fill="#FFFFFF" d="M30.913,43.944c0,0,42.911-34.464,87.51-14.191c77.31,35.14,113.304-1.952,146.638-4.729
@@ -50,7 +57,13 @@ c53.07-16.399,104.047,36.903,104.047,36.903l1.333,36.667l-372-2.954L-34.667,62.9
             </ul>
             <button class="pricing__action">Choose plan</button>
         </div>
-        <div class="pricing__item" data-aos="fade">
+    </div>
+
+
+
+
+    <div class="col-md-4">
+        <div class="pricing__item pricing style1"  data-aos="fade">
             <div class="pricing__deco">
                 <svg class="pricing__deco-img" version="1.1" id="Layer_3" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="100px" viewBox="0 0 300 100" enable-background="new 0 0 300 100" xml:space="preserve">
                     <path class="deco-layer deco-layer--1" opacity="0.6" fill="#FFFFFF" d="M30.913,43.944c0,0,42.911-34.464,87.51-14.191c77.31,35.14,113.304-1.952,146.638-4.729
@@ -74,4 +87,55 @@ c53.07-16.399,104.047,36.903,104.047,36.903l1.333,36.667l-372-2.954L-34.667,62.9
             <button class="pricing__action">Choose plan</button>
         </div>
     </div>
+</div>
+
 </section>
+
+
+
+
+        <section class="pricing-section">
+
+            <div class="container">
+                <div class="col-md-4">
+                    <div class="pricing__item styel2">
+                        <h3 class="pricing__title">Cafés <span class="pricing__amp">&amp;</span> Nightclubs</h3>
+                        <div class="pricing__price"><span class="pricing__currency">$</span>199<span class="pricing__period">/month</span></div>
+                        <ul class="pricing__feature-list">
+                            <li class="pricing__feature">Up to 5 employees</li>
+                            <li class="pricing__feature">Support at $25/hour</li>
+                            <li class="pricing__feature">Small social media package</li>
+                        </ul>
+                        <button class="pricing__action">Choose plan</button>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4">
+                    <div class="pricing__item styel2 pricing__item--featured">
+                        <h3 class="pricing__title">Diners <span class="pricing__amp">&amp;</span> Restaurants</h3>
+                        <div class="pricing__price"><span class="pricing__currency">$</span>350<span class="pricing__period">/month</span></div>
+                        <ul class="pricing__feature-list">
+                            <li class="pricing__feature">Up to 15 employees</li>
+                            <li class="pricing__feature">Free support</li>
+                            <li class="pricing__feature">Full social media package</li>
+                        </ul>
+                        <button class="pricing__action">Choose plan</button>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4">
+                    <div class="pricing__item styel2">
+                        <h3 class="pricing__title">BBs <span class="pricing__amp">&amp;</span> Pensions</h3>
+                        <div class="pricing__price"><span class="pricing__currency">$</span>899<span class="pricing__period">/month</span></div>
+                        <ul class="pricing__feature-list">
+                            <li class="pricing__feature">Unlimited employees</li>
+                            <li class="pricing__feature">Free support</li>
+                            <li class="pricing__feature">Full social media package</li>
+                        </ul>
+                        <button class="pricing__action">Choose plan</button>
+                    </div>
+                </div>
+            </div>
+        </section>

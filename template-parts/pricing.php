@@ -98,7 +98,7 @@ c53.07-16.399,104.047,36.903,104.047,36.903l1.333,36.667l-372-2.954L-34.667,62.9
 
             <div class="container">
                 <div class="col-md-4">
-                    <div class="pricing__item styel2">
+                    <div class="pricing__item style2">
                         <h3 class="pricing__title">Cafés <span class="pricing__amp">&amp;</span> Nightclubs</h3>
                         <div class="pricing__price"><span class="pricing__currency">$</span>199<span class="pricing__period">/month</span></div>
                         <ul class="pricing__feature-list">
@@ -112,7 +112,7 @@ c53.07-16.399,104.047,36.903,104.047,36.903l1.333,36.667l-372-2.954L-34.667,62.9
 
 
                 <div class="col-md-4">
-                    <div class="pricing__item styel2 pricing__item--featured">
+                    <div class="pricing__item style2 pricing__item--featured">
                         <h3 class="pricing__title">Diners <span class="pricing__amp">&amp;</span> Restaurants</h3>
                         <div class="pricing__price"><span class="pricing__currency">$</span>350<span class="pricing__period">/month</span></div>
                         <ul class="pricing__feature-list">
@@ -126,7 +126,7 @@ c53.07-16.399,104.047,36.903,104.047,36.903l1.333,36.667l-372-2.954L-34.667,62.9
 
 
                 <div class="col-md-4">
-                    <div class="pricing__item styel2">
+                    <div class="pricing__item style2">
                         <h3 class="pricing__title">BBs <span class="pricing__amp">&amp;</span> Pensions</h3>
                         <div class="pricing__price"><span class="pricing__currency">$</span>899<span class="pricing__period">/month</span></div>
                         <ul class="pricing__feature-list">

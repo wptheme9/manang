@@ -82,3 +82,13 @@
     </div>
 </div>
 
+<!-- 3rd Style -->
+
+<div class="section-title title-classic">
+    <h1 class="shadow-title">Portfolio</h1>
+    <div class="title-content">
+        <h2>Recent Projects</h2>
+        <p> dolor sit amet, consectetuer adipiscing elit. Donec odio.Quisque volutpat mattis eros. Nullam</p>
+    </div>
+</div>
+

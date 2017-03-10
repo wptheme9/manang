@@ -40,7 +40,10 @@
         line-height: 108px;
     }
 }
-
+.title-classic .shadow-title {
+    font-size: 80px !important;
+    float: none !important;
+}
 .title-modern{
     text-align: left;
     p{
@@ -49,6 +52,11 @@
     .title-content {
         margin-left: 111px;
     }
+}
+.title-classic.section-title h2 {
+    font-size: 19px;
+    letter-spacing: 8px;
+    font-weight: normal;
 }
 .pad0{
     padding-left: 0 !important;

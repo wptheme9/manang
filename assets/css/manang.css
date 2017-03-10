@@ -10470,21 +10470,31 @@ button.close {
 
 .section-title h1.shadow-title {
   color: rgba(195, 195, 195, 0.31);
-  font-size: 82px;
-  position: absolute;
+  font-size: 128px;
   z-index: 1;
-  top: -44px;
   text-transform: uppercase;
-  left: 133px;
   font-family: Poppins;
-  font-weight: 700; }
+  font-weight: 700;
+  float: left;
+  margin: 0;
+  line-height: 108px; }
 
-.title-modern p {
-  margin-top: 30px; }
+.title-modern {
+  text-align: left; }
+  .title-modern p {
+    margin-top: 10px; }
+  .title-modern .title-content {
+    margin-left: 111px; }
 
 .pad0 {
   padding-left: 0 !important;
   padding-right: 0 !important; }
+
+.float-left {
+  float: left !important; }
+
+.float-right {
+  float: right !important; }
 
 .subscription-form-wrapper p.sub-info {
   max-width: 450px;

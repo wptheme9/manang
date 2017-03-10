@@ -75,8 +75,10 @@
 <!-- 2nd Style -->
 
 <div class="section-title title-modern">
-    <h1 class="shadow-title">Blog</h1>
-    <h2>From Our Blog</h2>
-    <p> dolor sit amet, consectetuer adipiscing elit. Donec odio.Quisque volutpat mattis eros. Nullam</p>
+    <h1 class="shadow-title">B</h1>
+    <div class="title-content">
+        <h2>From Our Blog</h2>
+        <p> dolor sit amet, consectetuer adipiscing elit. Donec odio.Quisque volutpat mattis eros. Nullam</p>
+    </div>
 </div>
 

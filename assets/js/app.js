@@ -90,6 +90,38 @@
       });
     }
 
+    $(".jAudio--player").jAudio({
+      playlist: [
+        {
+          file: "http://localhost:8888/blaire/wp-content/themes/manang/assets/tracks/01.mp3",
+          thumb: "http://localhost:8888/blaire/wp-content/themes/manang/assets/thumbs/01.jpg",
+          trackName: "Dusk",
+          trackArtist: "Tobu & Syndec",
+          trackAlbum: "Single",
+        },
+        {
+          file: "http://localhost:8888/blaire/wp-content/themes/manang/assets/tracks/02.mp3",
+          thumb: "http://localhost:8888/blaire/wp-content/themes/manang/assets/thumbs/02.jpg",
+          trackName: "Blank",
+          trackArtist: "Disfigure",
+          trackAlbum: "Single",
+        },
+        {
+          file: "http://localhost:8888/blaire/wp-content/themes/manang/assets/tracks/03.mp3",
+          thumb: "http://localhost:8888/blaire/wp-content/themes/manang/assets/thumbs/03.jpg",
+          trackName: "Fade",
+          trackArtist: "Alan Walker",
+          trackAlbum: "Single",
+        }
+      ],
+
+        swfPath: "",
+        supplied: "OGA, MP3",
+        useStateClassSkin: true,
+        autoBlur: false,
+        smoothPlayBar: true,
+    });
+
       $('.navbar-nav').onePageNav({
         currentClass: 'current',
         changeHash: false,
@@ -117,7 +149,7 @@
         data: {
             labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
             datasets: [{
-                label: '# of Votes',
+                label: 'Votes',
                 data: [12, 19, 3, 5, 2, 3],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
@@ -256,6 +288,38 @@
         slide: 'div'
     });
 
+    //client
+    $('.client-slider').slick({
+      infinite: true,
+      autoplaySpeed: 7000,
+      arrows: false,
+      slidesToShow: 5,
+      slidesToScroll: 5,
+      responsive: [
+          {
+            breakpoint: 990,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 4,
+              infinite: true,
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2
+            }
+          }
+      ]
+    });
 
     $(".video-popup").YouTubePopUp();
 

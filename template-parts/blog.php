@@ -89,7 +89,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <div class="blog-wrap style2"  data-aos="fade-in">
+                <div class="blog-wrap style2 box-shadow"  data-aos="fade-in">
                     <img src="assets/img/blog4.jpg" alt="">
                     <div class="post-review">
                         <div class="post-date">
@@ -108,7 +108,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="blog-wrap style2"  data-aos="fade-in">
+                <div class="blog-wrap style2 box-shadow"  data-aos="fade-in">
                     <img src="assets/img/blog4.jpg" alt="">
                     <div class="post-review">
                         <div class="post-date">
@@ -127,7 +127,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="blog-wrap style2"  data-aos="fade-in">
+                <div class="blog-wrap style2 box-shadow"  data-aos="fade-in">
                     <img src="assets/img/blog4.jpg" alt="">
                     <div class="post-review">
                         <div class="post-date">
@@ -154,16 +154,17 @@
 <section class="section blog-sec">
     <div class="container">
         <div class="row">
-            <div class="col-md-4 pad5px">
-                <div class="blog-wrap style3 blog2">
-                    <div class="blog-date">
-                        <span class="day">3</span>
-                        <span class="month">Dec</span>
+            <div class="col-md-4">
+                <div class="blog-wrap style3 box-shadow">
+                    <div class="blog-image">
+                        <img src="<?php echo get_template_directory_uri();?>/assets/img/blog4.jpg" alt="">
+                        <div class="blog-date">
+                            <span class="tags">fashion</span>
+                        </div>
                     </div>
-                    <h2>Lorem ipsum dolor sit amet </h2>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat  </p>
 
                     <div class="blog-footer">
+                        <h2>PortLand transforms your current website into a powerful traffic generating machine</h2>
                         <div class="author">
                             <i class="fa fa-user"></i><span>Codemin</span>
                         </div>
@@ -174,16 +175,17 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 pad5px">
-                <div class="blog-wrap style3">
-                    <div class="blog-date">
-                        <span class="day">3</span>
-                        <span class="month">Dec</span>
+            <div class="col-md-4">
+                <div class="blog-wrap style3 box-shadow">
+                     <div class="blog-image">
+                        <img src="<?php echo get_template_directory_uri();?>/assets/img/blog4.jpg" alt="">
+                        <div class="blog-date">
+                            <span class="tags">fashion</span>
+                        </div>
                     </div>
-                    <h2>Lorem ipsum dolor sit amet </h2>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat  </p>
 
                     <div class="blog-footer">
+                        <h2>PortLand transforms your current website into a powerful traffic generating machine</h2>
                         <div class="author">
                             <i class="fa fa-user"></i><span>Codemin</span>
                         </div>
@@ -194,16 +196,18 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 pad5px">
-                <div class="blog-wrap style3">
-                    <div class="blog-date">
-                        <span class="day">3</span>
-                        <span class="month">Dec</span>
+            <div class="col-md-4">
+                <div class="blog-wrap style3 box-shadow">
+                    <div class="blog-image">
+                        <img src="<?php echo get_template_directory_uri();?>/assets/img/blog4.jpg" alt="">
+                        <div class="blog-date">
+                            <span class="tags">fashion</span>
+                        </div>
                     </div>
-                    <h2>Lorem ipsum dolor sit amet </h2>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat  </p>
+
 
                     <div class="blog-footer">
+                        <h2>PortLand transforms your current website into a powerful traffic generating machine</h2>
                         <div class="author">
                             <i class="fa fa-user"></i><span>Codemin</span>
                         </div>

@@ -16,11 +16,59 @@
     position: relative;
     font-weight: 700;
     text-transform: uppercase;
+    font-size: 32px;
+}
+.section-title img {
+    max-height: 50px;
+    margin-bottom: 20px;
+}
+.section-title i {
+    font-size: 50px;
+    margin-bottom: 20px;
+    display: block;
+}
+.section-title{
+    h1.shadow-title {
+        color: rgba(195, 195, 195, 0.31);
+        font-size: 128px;
+        z-index: 1;
+        text-transform: uppercase;
+        font-family: Poppins;
+        font-weight: 700;
+        float: left;
+        margin: 0;
+        line-height: 108px;
+    }
+}
+.title-classic .shadow-title {
+    font-size: 80px !important;
+    float: none !important;
+}
+.title-modern{
+    text-align: left;
+    p{
+        margin-top: 10px;
+    }
+    .title-content {
+        margin-left: 111px;
+    }
+}
+.title-classic.section-title h2 {
+    font-size: 19px;
+    letter-spacing: 8px;
+    font-weight: normal;
 }
 .pad0{
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
+.float-left{
+    float: left !important;
+}
+.float-right{
+    float: right !important;
+}
+
 .subscription-form-wrapper p.sub-info {
     max-width: 450px;
     margin: 0 auto;

@@ -261,8 +261,8 @@ function manang_icon_box_integrateWithVC(){
                $icon_style = 'style="background:'.$icon_background_color.'; border: 2px solid'.$icon_border_color.'"';
                 ob_start();
                 ?>
-                <div class="callout-item <?php echo esc_attr($el_class . ' '. $position . ' '.$feature_style); ?>">
-                    <div <?php echo $icon_style; ?> class="callout-icon <?php echo esc_attr($icon_image_size); ?>">
+                <div class="callout-item <?php echo esc_attr($el_class . ' '. $position . ' '.$feature_style . ' '.$icon_image_size); ?>">
+                    <div <?php echo $icon_style; ?> class="callout-icon">
                         <?php if($icon_type == 'icon'){ ?>
                             <i style="color:<?php echo $icon_color; ?>" class="<?php echo esc_attr($icon_class); ?>"></i>
                         <?php }

@@ -122,7 +122,7 @@ function manang_team_integrateWithVC(){
                                 <div class="<?php echo $column; ?>">
                                     <div class="team-wrap team-classic">
                                         <div class="our-team">
-                                            <?php the_post_thumbnail('manang_team'); ?>
+                                            <?php the_post_thumbnail('manang_team_basic'); ?>
                                             <div class="team-content">
                                                 <?php the_title( '<h3 class="title">', '</h3>' ); ?>
                                                 <span class="post"><?php echo esc_html($manang_basecamp_team_designation); ?></span>
@@ -142,7 +142,7 @@ function manang_team_integrateWithVC(){
                                         <div class="team-wrap team-fancy">
                                             <div class="our-team">
                                                 <div class="team_img">
-                                                    <?php the_post_thumbnail('manang_team'); ?>
+                                                    <?php the_post_thumbnail('manang_team_basic'); ?>
                                                     <ul class="social">
                                                         <li><a href="<?php echo esc_url($manang_basecamp_team_facebook); ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
                                                         <li><a href="<?php echo esc_url($manang_basecamp_team_twitter); ?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
@@ -163,7 +163,7 @@ function manang_team_integrateWithVC(){
                                     <div class="team-wrap team-round">
                                         <div class="our-team">
                                             <div class="pic">
-                                                <?php the_post_thumbnail('manang_team'); ?>
+                                                <?php the_post_thumbnail('manang_team_round'); ?>
                                                 <a href="<?php the_permalink(); ?>" class="pic-bottom"></a>
                                             </div>
                                             <div class="team-prof">
@@ -184,7 +184,7 @@ function manang_team_integrateWithVC(){
                                     <div class="<?php echo $column; ?>">
                                         <div class="team-wrap team-classic">
                                             <div class="our-team">
-                                                <?php the_post_thumbnail('manang_team'); ?>
+                                                <?php the_post_thumbnail('manang_team_basic'); ?>
                                                 <div class="team-content">
                                                     <?php the_title( '<h3 class="title">', '</h3>' ); ?>
                                                     <span class="post"><?php echo esc_html($manang_basecamp_team_designation); ?></span>

@@ -14126,15 +14126,15 @@ div#map {
         margin-bottom: 0; }
 
 .mg-event.style2 .event-wrap {
-  height: 420px;
   background-size: cover;
   width: 45%;
-  float: left; }
+  float: left;
+  height: 495px; }
 
 .mg-event.style2 .event-desc-wrap {
   width: 55%;
   float: left;
-  height: 100%; }
+  height: 495px; }
   .mg-event.style2 .event-desc-wrap .event-desc {
     background: #272e37;
     padding: 50px;

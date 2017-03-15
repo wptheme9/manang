@@ -8,6 +8,13 @@
         arrows: true,
     });
 
+    $('.mg-event-wrap.slider-style').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        speed: 500,
+        arrows: true,
+    });
+
     //Preloader
     setTimeout(function(){
         $('body').addClass('loaded');

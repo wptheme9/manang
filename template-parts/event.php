@@ -121,44 +121,83 @@
     </div>
 
 
-
+<!-- Event slider -->
 
     <div class="col-md-12">
-        <div class="mg-event style2">
-            <div class="event-wrap" style="background-image:url('https://demo.codethemes.co/charity/wp-content/uploads/2017/01/rnguvzog-x8-jesse-orrico-e1485333011126.jpg')">
-            </div>
-            <div class="event-desc-wrap">
-                <div class="event-desc">
-                    <h3><a href="https://demo.codethemes.co/charity/charity_pro_event/kids-playground/">We are Manang.We are the leader in Web Design </a></h3>
+        <div class="mg-event-wrap slider-style">
+            <div class="mg-event style2">
+                <div class="event-wrap" style="background-image:url('https://demo.codethemes.co/charity/wp-content/uploads/2017/01/rnguvzog-x8-jesse-orrico-e1485333011126.jpg')">
+                </div>
+                <div class="event-desc-wrap">
+                    <div class="event-desc">
+                        <h3><a href="https://demo.codethemes.co/charity/charity_pro_event/kids-playground/">We are Manang.We are the leader in Web Design </a></h3>
 
-                      <span class="event-day">
-                          <p><span>28</span>May</p>
-                      </span>
-                    <div class="event-meta">
-                        <span class="event-loc">
-                              <i class="fa fa-map-marker" aria-hidden="true"></i>
-                              <div class="event-loc-detail">
-                                <h4>Event Arena</h4>
-                                <p>Ethiad Stadium</p>
-                              </div>
-                        </span>
-                        <span class="event-time">
-                            <i class="fa fa-clock-o"></i>
-                            <div class="event-time-detail">
-                                <h4>Event Time</h4>
-                                <p>2:00 AM To 4:00 PM</p>
-                            </div>
-                        </span>
+                          <span class="event-day">
+                              <p><span>28</span>May</p>
+                          </span>
+                        <div class="event-meta">
+                            <span class="event-loc">
+                                  <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                  <div class="event-loc-detail">
+                                    <h4>Event Arena</h4>
+                                    <p>Ethiad Stadium</p>
+                                  </div>
+                            </span>
+                            <span class="event-time">
+                                <i class="fa fa-clock-o"></i>
+                                <div class="event-time-detail">
+                                    <h4>Event Time</h4>
+                                    <p>2:00 AM To 4:00 PM</p>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="event-footer">
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio Lorem ipsum dolor sit amet, consectetuer</p>
+                        <a href="#" class="btn btn-default">Read More</a>
                     </div>
                 </div>
-                <div class="event-footer">
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio Lorem ipsum dolor sit amet, consectetuer</p>
-                    <a href="#" class="btn btn-default">Read More</a>
+            </div>
+
+            <div class="mg-event style2">
+                <div class="event-wrap" style="background-image:url('https://demo.codethemes.co/charity/wp-content/uploads/2017/01/rnguvzog-x8-jesse-orrico-e1485333011126.jpg')">
+                </div>
+                <div class="event-desc-wrap">
+                    <div class="event-desc">
+                        <h3><a href="https://demo.codethemes.co/charity/charity_pro_event/kids-playground/">We are Manang.We are the leader in Web Design </a></h3>
+
+                          <span class="event-day">
+                              <p><span>28</span>May</p>
+                          </span>
+                        <div class="event-meta">
+                            <span class="event-loc">
+                                  <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                  <div class="event-loc-detail">
+                                    <h4>Event Arena</h4>
+                                    <p>Ethiad Stadium</p>
+                                  </div>
+                            </span>
+                            <span class="event-time">
+                                <i class="fa fa-clock-o"></i>
+                                <div class="event-time-detail">
+                                    <h4>Event Time</h4>
+                                    <p>2:00 AM To 4:00 PM</p>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="event-footer">
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio Lorem ipsum dolor sit amet, consectetuer</p>
+                        <a href="#" class="btn btn-default">Read More</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+
 </div>
+
 
 
 

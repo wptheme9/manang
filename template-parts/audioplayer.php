@@ -40,5 +40,10 @@
 
               </div>
             </div>
+            <div class="col-md-6">
+                <div class="btns">
+                    <a href="#" class="btn gradient-btn"><span>Click Me</span></a>
+                </div>
+            </div>
         </div>
     </div>

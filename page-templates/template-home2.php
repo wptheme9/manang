@@ -21,7 +21,7 @@ get_template_part('template-parts/counter');
 get_template_part('template-parts/portfolio');
 get_template_part('template-parts/team');
 // manang_testimonial_shortcode();
-// get_template_part('template-parts/testimonial');
+get_template_part('template-parts/testimonial');
 get_template_part('template-parts/pricing');
 get_template_part('template-parts/client');
 get_template_part('template-parts/subscribe');

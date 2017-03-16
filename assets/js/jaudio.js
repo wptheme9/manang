@@ -433,6 +433,3 @@
 
 })(jQuery)
 
-
-
-$(".jAudio--player").jAudio(t);

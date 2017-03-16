@@ -50,7 +50,10 @@
         </div>
     </div>
 </section>
-<div id="map"></div>
+<div id="roadmap" class="map"></div>
+<div id="satellite" class="map"></div>
+<div id="hybrid" class="map"></div>
+<div id="terrain" class="map"></div>
 <!-- End of contact section -->
 
 <!-- Start of map section -->

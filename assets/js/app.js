@@ -275,7 +275,7 @@
       midClick: true
     });
 
-      $('.testimonial-content').slick({
+      $('.testimonial-content.modern-style').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         speed: 500,
@@ -283,7 +283,7 @@
         fade: true,
         asNavFor: '.testimonial-img-wrap'
     });
-    $('.testimonial-img-wrap').slick({
+    $('.testimonial-img-wrap.modern-style').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
         speed: 500,
@@ -293,6 +293,102 @@
         centerMode: true,
         focusOnSelect: true,
         slide: 'div'
+    });
+
+    $('.testimonial-content.three-column.slider').slick({
+        infinite: true,
+        autoplaySpeed: 7000,
+        arrows: false,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [
+        {
+          breakpoint: 990,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            infinite: true,
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
+
+    $('.testimonial-content.two-column.slider').slick({
+        infinite: true,
+        autoplaySpeed: 7000,
+        arrows: false,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        responsive: [
+        {
+          breakpoint: 990,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            infinite: true,
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
+
+    $('.testimonial-content.one-column.slider').slick({
+        infinite: true,
+        autoplaySpeed: 7000,
+        arrows: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        responsive: [
+        {
+          breakpoint: 990,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
     });
 
     //client
@@ -360,39 +456,54 @@
 
     })
 
-        // When the window has finished loading create our google map below
-    google.maps.event.addDomListener(window, 'load', init);
 
-    function init() {
-        // Basic options for a simple Google Map
-        // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-        var mapOptions = {
-            // How zoomed in you want the map to start at (always required)
-            zoom: 14,
-            scrollwheel: false,
+// Roadmap style
+    var myLatlng = new google.maps.LatLng(36.964, -122.015);
+    var mapOptions = {
+      zoom: 18,
+      center: myLatlng,
+      scrollwheel: false,
+      mapTypeId: 'roadmap',
+      styles: [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}]
+    };
+    var map = new google.maps.Map(document.getElementById('roadmap'),
+        mapOptions);
 
-            // The latitude and longitude to center the map (always required)
-            center: new google.maps.LatLng(40.6700, -73.9400), // New York
+// satellite style
+    var myLatlng = new google.maps.LatLng(36.964, -122.015);
+    var mapOptions = {
+      zoom: 18,
+      center: myLatlng,
+      scrollwheel: false,
+      mapTypeId: 'satellite',
+    };
+    var map = new google.maps.Map(document.getElementById('satellite'),
+        mapOptions);
 
-            // How you would like to style the map.
-            // This is where you would paste any style found on Snazzy Maps.
-            styles: [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}]
-        };
+// Hybrid style
+    var myLatlng = new google.maps.LatLng(36.964, -122.015);
+    var mapOptions = {
+      zoom: 18,
+      center: myLatlng,
+      scrollwheel: false,
+      mapTypeId: 'hybrid',
+    };
+    var map = new google.maps.Map(document.getElementById('hybrid'),
+        mapOptions);
 
-        // Get the HTML DOM element that will contain your map
-        // We are using a div with id="map" seen below in the <body>
-        var mapElement = document.getElementById('map');
+    // Terrain
+    var myLatlng = new google.maps.LatLng(36.964, -122.015);
+    var mapOptions = {
+      zoom: 18,
+      center: myLatlng,
+      scrollwheel: false,
+      mapTypeId: 'terrain',
+    };
+    var map = new google.maps.Map(document.getElementById('terrain'),
+        mapOptions);
 
-        // Create the Google Map using our element and options defined above
-        var map = new google.maps.Map(mapElement, mapOptions);
 
-        // Let's also add a marker while we're at it
-        var marker = new google.maps.Marker({
-            position: new google.maps.LatLng(40.6700, -73.9400),
-            map: map,
-            title: 'Snazzy!'
-        });
-    }
+
 
 
     var $bubbles = $('.bubbles');

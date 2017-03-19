@@ -75,11 +75,12 @@ function manang_pricing_integrateWithVC(){
                         $button_text = get_post_meta(get_the_id(), 'manang_basecamp_pricing_button_text', true);
                         $button_link = get_post_meta(get_the_id(), 'manang_basecamp_pricing_button_link', true);
                         $featured = get_post_meta(get_the_id(), 'manang_basecamp_pricing_featured', true);
+                        $featured_or_not = ($featured == 'on'?'pricing__item--featured':'');
 
                         switch($pricing_table_style){
                             case( "dark" ): ?>
                                 <div class="<?php echo esc_attr($table_number); ?>">
-                                    <div class="pricing__item styel2">
+                                    <div class="pricing__item styel2 <?php echo esc_attr($featured_or_not); ?>">
                                         <?php if(!empty($plan_name)){ ?>
                                             <h3 class="pricing__title"><?php echo esc_html($plan_name); ?></h3>
                                         <?php } ?>
@@ -107,7 +108,7 @@ function manang_pricing_integrateWithVC(){
                             <?php break;
                             case( "light" ): ?>
                                 <div class="<?php echo esc_attr($table_number); ?>">
-                                    <div class="pricing__item pricing__item--featured pricing style1" data-aos="fade">
+                                    <div class="pricing__item pricing__item--featured pricing style1 <?php echo esc_attr($featured_or_not); ?>" data-aos="fade">
                                         <div class="pricing__deco">
                                             <svg class="pricing__deco-img" version="1.1" id="Layer_2" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="100px" viewBox="0 0 300 100" enable-background="new 0 0 300 100" xml:space="preserve">
                                                 <path class="deco-layer deco-layer--1" opacity="0.6" fill="#FFFFFF" d="M30.913,43.944c0,0,42.911-34.464,87.51-14.191c77.31,35.14,113.304-1.952,146.638-4.729c48.654-4.056,69.94,16.218,69.94,16.218v54.396H30.913V43.944z" />

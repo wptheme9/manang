@@ -60,7 +60,7 @@ function manang_icon_box_integrateWithVC(){
                 "heading" => __("Icon Class Name", "manang") ,
                 "param_name" => "icon_class",
                 "value" => "ion-ios-briefcase-outline",
-                "description" => __("<a target='_blank' href='ionicons.com'>Click here</a> to get the icon class name (or any other font icons library that you have installed in the theme)", "manang") ,
+                "description" => __("<a target='_blank' href='http://ionicons.com'>Click here</a> to get the icon class name (or any other font icons library that you have installed in the theme)", "manang") ,
                 "dependency" => array(
                     'element' => "icon_type",
                     'value' => array(

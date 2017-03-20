@@ -20,6 +20,7 @@ get_template_part('template-parts/event');
 get_template_part('template-parts/counter');
 get_template_part('template-parts/portfolio');
 get_template_part('template-parts/team');
+get_template_part('template-parts/image-hover');
 // manang_testimonial_shortcode();
 get_template_part('template-parts/testimonial');
 get_template_part('template-parts/pricing');

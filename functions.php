@@ -189,6 +189,7 @@ function manang_scripts() {
     wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.min.js',array(), '20170124', true );
     wp_enqueue_script( 'isotope', get_template_directory_uri() . '/assets/js/isotope.pkgd.min.js',array(), '20170124', true );
     wp_enqueue_script( 'jarallax', get_template_directory_uri() . '/assets/js/jarallax.js',array(), '20170124', true );
+    wp_enqueue_script( 'chart', get_template_directory_uri() . '/assets/js/zingchart.js',array(), '20170124', true );
     wp_enqueue_script( 'countto', get_template_directory_uri() . '/assets/js/jquery.countTo.js',array(), '20170124', true );
     wp_enqueue_script( 'slick', get_template_directory_uri() . '/assets/js/slick.min.js',array(), '20170124', true );
     wp_enqueue_script( 'aos', get_template_directory_uri() . '/assets/js/aos.js',array(), '20170302', true );
@@ -197,7 +198,8 @@ function manang_scripts() {
     wp_enqueue_script( 'jquery-magnific', get_template_directory_uri() . '/assets/js/jquery.magnific-popup.min.js',array(), '20170302', true );
     wp_enqueue_script( 'jquery-nav', get_template_directory_uri() . '/assets/js/jquery.nav.js',array(), '20170302', true );
     wp_enqueue_script( 'validate', get_template_directory_uri() . '/assets/js/jquery.validate.min.js',array(), '20170302', true );
-    wp_enqueue_script( 'zingchart', get_template_directory_uri() . '/assets/js/zingchart.js',array(), '20170302', true );
+    wp_enqueue_script( 'anime-js', get_template_directory_uri() . '/assets/js/anime.min.js',array(), '20170302', true );
+    wp_enqueue_script( 'codrops-hover', get_template_directory_uri() . '/assets/js/codrops-hover.js',array(), '20170302', true );
     wp_enqueue_script( 'video', get_template_directory_uri() . '/assets/js/jquery.video.js',array(), '20170302', true );
     wp_enqueue_script( 'pagescroll', get_template_directory_uri() . '/assets/js/pagescroll.js',array(), '20170302', true );
     wp_enqueue_script( 'jaudio', get_template_directory_uri() . '/assets/js/jaudio.js',array(), '20170302', true );

@@ -277,6 +277,7 @@ function manang_icon_box_integrateWithVC(){
                 </div>
                 <?php
                 $app_styles=".callout-icon:hover i{color: $icon_hover_color} .callout-icon:hover {border: 2px solid $icon_hover_border_color;}";
+                 echo '<style type="text/css">'.$app_styles.'</style>';
                 // manang_style_function($app_styles);
                 $output = ob_get_clean();
                 return $output;

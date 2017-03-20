@@ -6,7 +6,7 @@ function manang_cta_action($cta_title="",$cta_description="",$cta_button_link=""
     <section class="section cta-sec parallax" style="background-color: <?php echo $cta_bg_color_secondary; ?>; background-image:url(<?php echo esc_url($cta_bg_image_secondary); ?>);">
         <div class="container">
             <div class="row">
-                <div class="cta-content" data-aos="fade-up">
+                <div class="cta-content">
                     <?php if(!empty($cta_title)){ ?>
                         <h2 class="cta-title">
                             <?php echo esc_html($cta_title); ?>

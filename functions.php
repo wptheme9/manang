@@ -256,3 +256,4 @@ require get_template_directory() . '/vc-elements/cta.php';
 require get_template_directory() . '/vc-elements/testimonial.php';
 require get_template_directory() . '/vc-elements/team.php';
 require get_template_directory() . '/vc-elements/fancybox.php';
+require get_template_directory() . '/vc-elements/pricing.php';

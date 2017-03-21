@@ -194,10 +194,9 @@ if(class_exists('WPBakeryShortCode')){
                 $cta_background_color = "";
             }
 
-            // $cta_bg_color_secondary = $values['cta_bg_color'];
             ob_start();
             ?>
-            <section class="section cta-sec parallax <?php echo esc_attr($cta_background . ' '.$cta_style.' '.$cta_content_color); ?>" <?php echo $video_background_data; ?> style="background-color: <?php echo $cta_background_color; ?>; padding-top: <?php echo esc_attr($padding_top); ?>px; padding-bottom: <?php echo esc_attr($padding_bottom); ?>px; background-image:url(<?php echo esc_url($cta_bg_img); ?>);">
+            <section class="section cta-sec parallax <?php echo esc_attr($cta_background . ' '.$cta_style.' '.$cta_content_color); ?>" <?php echo $video_background_data; ?> style="background-color: <?php echo $cta_background_color; ?>; padding-top: <?php echo esc_attr($padding_top); ?>; padding-bottom: <?php echo esc_attr($padding_bottom); ?>; background-image:url(<?php echo esc_url($cta_bg_img); ?>);">
                 <div class="container">
                     <div class="row">
                         <div class="cta-content">
@@ -207,8 +206,11 @@ if(class_exists('WPBakeryShortCode')){
                                 </h2>
                             <?php }?>
                             <p><?php echo esc_html($cta_description); ?></p>
+                        </div>
+                        <div class="cta-btn">
                             <a href="<?php echo esc_url($cta_button_link); ?>" class="btn btn-default"><?php echo esc_html($cta_button_text) ?></a>
                         </div>
+
                     </div>
                 </div>
             </section>

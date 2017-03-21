@@ -196,7 +196,7 @@ if(class_exists('WPBakeryShortCode')){
 
             ob_start();
             ?>
-            <section class="section cta-sec parallax <?php echo esc_attr($cta_background . ' '.$cta_style.' '.$cta_content_color); ?>" <?php echo $video_background_data; ?> style="background-color: <?php echo $cta_background_color; ?>; padding-top: <?php echo esc_attr($padding_top); ?>; padding-bottom: <?php echo esc_attr($padding_bottom); ?>; background-image:url(<?php echo esc_url($cta_bg_img); ?>);">
+            <section class="section cta-sec parallax <?php echo esc_attr($cta_background . ' '.$cta_style.' '.$cta_content_color); ?>" <?php echo $video_background_data; ?> style="background: <?php echo $cta_background_color; ?>; padding-top: <?php echo esc_attr($padding_top); ?>; padding-bottom: <?php echo esc_attr($padding_bottom); ?>; background-image:url(<?php echo esc_url($cta_bg_img); ?>);">
                 <div class="container">
                     <div class="row">
                         <div class="cta-content">

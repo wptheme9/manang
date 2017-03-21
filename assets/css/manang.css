@@ -11844,6 +11844,15 @@ section.section.portfolio-sec {
   font-size: 55px;
   color: #fff; }
 
+.counter-wrap.counter-dark h3.timer {
+  color: #444; }
+
+.counter-wrap.counter-dark span {
+  color: #666; }
+
+.counter-wrap.counter-dark i {
+  color: #444; }
+
 .counter-wrap.icon-left h3.timer {
   font-size: 42px;
   font-weight: 700;
@@ -14167,7 +14176,7 @@ div#map {
   color: #fff; }
 
 figure.tilter__figure:before {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.2);
   position: absolute;
   top: 0;
   left: 0;

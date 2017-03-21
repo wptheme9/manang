@@ -16,7 +16,17 @@
         color: #fff;
     }
 }
-
+.counter-wrap.counter-dark{
+    h3.timer{
+        color: #444;
+    }
+    span{
+        color: #666;
+    }
+    i{
+        color: #444;
+    }
+}
 .counter-wrap.icon-left{
     h3.timer{
         font-size: 42px;

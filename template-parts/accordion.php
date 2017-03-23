@@ -125,3 +125,64 @@
           </li>
     </ul>
 </div>
+
+
+<!-- Restaurant menu -->
+
+<div class="restaurant-menu">
+    <div class="container">
+        <div class="col-md-6">
+            <div class="res-menu-item">
+                <div class="menu-img">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/img/menu.png" alt=""></a>
+                </div>
+                <div class="menu-item-desc">
+                    <h3>Fresh Salmon</h3>
+                    <p>Salmon fillets, lemon, pepper, garlic powder, soy sauce, brown sugar, vegetable oil, pepper</p>
+                </div>
+                <div class="menu-item-price">
+                    <span>$59</span>
+                </div>
+            </div>
+
+            <div class="res-menu-item">
+                <div class="menu-img">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/img/menu.png" alt=""></a>
+                </div>
+                <div class="menu-item-desc">
+                    <h3>Fresh Salmon</h3>
+                    <p>Salmon fillets, lemon, pepper, garlic powder, soy sauce, brown sugar, vegetable oil, pepper</p>
+                </div>
+                <div class="menu-item-price">
+                    <span>$59</span>
+                </div>
+            </div>
+
+            <div class="res-menu-item">
+                <div class="menu-img">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/img/menu.png" alt=""></a>
+                </div>
+                <div class="menu-item-desc">
+                    <h3>Fresh Salmon</h3>
+                    <p>Salmon fillets, lemon, pepper, garlic powder, soy sauce, brown sugar, vegetable oil, pepper</p>
+                </div>
+                <div class="menu-item-price">
+                    <span>$59</span>
+                </div>
+            </div>
+
+            <div class="res-menu-item">
+                <div class="menu-img">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/img/menu.png" alt=""></a>
+                </div>
+                <div class="menu-item-desc">
+                    <h3>Fresh Salmon</h3>
+                    <p>Salmon fillets, lemon, pepper, garlic powder, soy sauce, brown sugar, vegetable oil, pepper</p>
+                </div>
+                <div class="menu-item-price">
+                    <span>$59</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

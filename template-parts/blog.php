@@ -223,3 +223,194 @@
 </section>
 
 
+
+<!-- Slider version -->
+
+
+<section class="section blog-sec">
+    <div class="container">
+        <div class="row">
+            <div class="blog-post-slider">
+                <div class="blog-wrap style3 box-shadow">
+                    <div class="blog-image">
+                        <img src="<?php echo get_template_directory_uri();?>/assets/img/blog4.jpg" alt="">
+                        <div class="blog-date">
+                            <span class="tags">fashion</span>
+                        </div>
+                    </div>
+
+                    <div class="blog-footer">
+                        <h2>PortLand transforms your current website into a powerful traffic generating machine</h2>
+                        <div class="author">
+                            <i class="fa fa-user"></i><span>Codemin</span>
+                        </div>
+                        <div class="author">
+                            <i class="fa fa-comments-o"></i><span>25</span>
+                        </div>
+                        <a class="know-more" href="#">Read more<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+
+                <div class="blog-wrap style3 box-shadow">
+                     <div class="blog-image">
+                        <img src="<?php echo get_template_directory_uri();?>/assets/img/blog4.jpg" alt="">
+                        <div class="blog-date">
+                            <span class="tags">fashion</span>
+                        </div>
+                    </div>
+
+                    <div class="blog-footer">
+                        <h2>PortLand transforms your current website into a powerful traffic generating machine</h2>
+                        <div class="author">
+                            <i class="fa fa-user"></i><span>Codemin</span>
+                        </div>
+                        <div class="author">
+                            <i class="fa fa-comments-o"></i><span>25</span>
+                        </div>
+                        <a class="know-more" href="#">Read more<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+                <div class="blog-wrap style3 box-shadow">
+                     <div class="blog-image">
+                        <img src="<?php echo get_template_directory_uri();?>/assets/img/blog4.jpg" alt="">
+                        <div class="blog-date">
+                            <span class="tags">fashion</span>
+                        </div>
+                    </div>
+
+                    <div class="blog-footer">
+                        <h2>PortLand transforms your current website into a powerful traffic generating machine</h2>
+                        <div class="author">
+                            <i class="fa fa-user"></i><span>Codemin</span>
+                        </div>
+                        <div class="author">
+                            <i class="fa fa-comments-o"></i><span>25</span>
+                        </div>
+                        <a class="know-more" href="#">Read more<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+
+                <div class="blog-wrap style3 box-shadow">
+                    <div class="blog-image">
+                        <img src="<?php echo get_template_directory_uri();?>/assets/img/blog4.jpg" alt="">
+                        <div class="blog-date">
+                            <span class="tags">fashion</span>
+                        </div>
+                    </div>
+
+
+                    <div class="blog-footer">
+                        <h2>PortLand transforms your current website into a powerful traffic generating machine</h2>
+                        <div class="author">
+                            <i class="fa fa-user"></i><span>Codemin</span>
+                        </div>
+                        <div class="author">
+                            <i class="fa fa-comments-o"></i><span>25</span>
+                        </div>
+                        <a class="know-more" href="#">Read more<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- for column version we need blog post column class instead of blog-post-slider.Tapaile garnu vako ma
+just yo blog post slider or blog post column le wrap gardinu teti ho-->
+
+
+<section class="section blog-sec">
+    <div class="container">
+        <div class="row">
+            <div class="blog-post-column">
+                <div class="blog-wrap style3 box-shadow">
+                    <div class="blog-image">
+                        <img src="<?php echo get_template_directory_uri();?>/assets/img/blog4.jpg" alt="">
+                        <div class="blog-date">
+                            <span class="tags">fashion</span>
+                        </div>
+                    </div>
+
+                    <div class="blog-footer">
+                        <h2>PortLand transforms your current website into a powerful traffic generating machine</h2>
+                        <div class="author">
+                            <i class="fa fa-user"></i><span>Codemin</span>
+                        </div>
+                        <div class="author">
+                            <i class="fa fa-comments-o"></i><span>25</span>
+                        </div>
+                        <a class="know-more" href="#">Read more<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+
+                <div class="blog-wrap style3 box-shadow">
+                     <div class="blog-image">
+                        <img src="<?php echo get_template_directory_uri();?>/assets/img/blog4.jpg" alt="">
+                        <div class="blog-date">
+                            <span class="tags">fashion</span>
+                        </div>
+                    </div>
+
+                    <div class="blog-footer">
+                        <h2>PortLand transforms your current website into a powerful traffic generating machine</h2>
+                        <div class="author">
+                            <i class="fa fa-user"></i><span>Codemin</span>
+                        </div>
+                        <div class="author">
+                            <i class="fa fa-comments-o"></i><span>25</span>
+                        </div>
+                        <a class="know-more" href="#">Read more<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+                <div class="blog-wrap style3 box-shadow">
+                     <div class="blog-image">
+                        <img src="<?php echo get_template_directory_uri();?>/assets/img/blog4.jpg" alt="">
+                        <div class="blog-date">
+                            <span class="tags">fashion</span>
+                        </div>
+                    </div>
+
+                    <div class="blog-footer">
+                        <h2>PortLand transforms your current website into a powerful traffic generating machine</h2>
+                        <div class="author">
+                            <i class="fa fa-user"></i><span>Codemin</span>
+                        </div>
+                        <div class="author">
+                            <i class="fa fa-comments-o"></i><span>25</span>
+                        </div>
+                        <a class="know-more" href="#">Read more<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+
+                <div class="blog-wrap style3 box-shadow">
+                    <div class="blog-image">
+                        <img src="<?php echo get_template_directory_uri();?>/assets/img/blog4.jpg" alt="">
+                        <div class="blog-date">
+                            <span class="tags">fashion</span>
+                        </div>
+                    </div>
+
+
+                    <div class="blog-footer">
+                        <h2>PortLand transforms your current website into a powerful traffic generating machine</h2>
+                        <div class="author">
+                            <i class="fa fa-user"></i><span>Codemin</span>
+                        </div>
+                        <div class="author">
+                            <i class="fa fa-comments-o"></i><span>25</span>
+                        </div>
+                        <a class="know-more" href="#">Read more<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

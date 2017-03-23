@@ -12770,6 +12770,15 @@ section.section.portfolio-sec {
   -webkit-box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); }
 
+.blog-post-slider .blog-wrap {
+  margin-right: 15px;
+  margin-left: 15px; }
+
+.blog-post-column .blog-wrap {
+  margin-right: 15px;
+  margin-left: 15px;
+  width: 33.33%; }
+
 .client-sec .client-image-wrapper.edged {
   text-align: center;
   box-shadow: 1px 1px 0 0 #eee;

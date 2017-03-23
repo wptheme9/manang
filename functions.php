@@ -259,3 +259,5 @@ require get_template_directory() . '/vc-elements/fancybox.php';
 require get_template_directory() . '/vc-elements/pricing.php';
 require get_template_directory() . '/vc-elements/fact-counter.php';
 require get_template_directory() . '/vc-elements/section-title.php';
+require get_template_directory() . '/vc-elements/clients.php';
+require get_template_directory() . '/vc-elements/latest-post.php';

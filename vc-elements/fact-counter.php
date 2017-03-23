@@ -75,7 +75,7 @@ function manang_fact_counter_integrateWithVC(){
                             'icon_class'         => 'ion-ios-briefcase-outline',
                             'count_to'           => '',
                             'content_color'      => 'counter-light',
-                            'icon_position'      => 'icon-left',
+                            'icon_position'      => 'icon-top',
                             ),$atts);
                $title = $values['title'];
                $icon_class = $values['icon_class'];

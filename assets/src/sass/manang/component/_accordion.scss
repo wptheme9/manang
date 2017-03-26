@@ -190,3 +190,49 @@ p.timeline-date {
     width: 160px;
     text-align: center;
 }
+
+
+// Menu item
+
+.product-menu{
+    margin-bottom: 20px;
+    .menu-img {
+        width: 15%;
+        height: 100px;
+        float: left;
+        margin-right: 30px;
+
+        img {
+            border-radius: 50%;
+        }
+    }
+
+    .menu-item-desc {
+        width: 60%;
+        float: left;
+        height: 100%;
+
+        h3 {
+            margin-top: 0;
+            font-size: 21px;
+            margin-bottom: 5px;
+        }
+        p {
+            font-size: 15px;
+        }
+    }
+    .product-menu-item {
+        width: 100%;
+    }
+    .menu-item-price {
+        float: left;
+        width: 15%;
+        height: 100%;
+        text-align: right;
+        span {
+            font-size: 20px;
+            display: block;
+            color: $color__theme;
+        }
+    }
+}

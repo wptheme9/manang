@@ -91,7 +91,8 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    padding: 4em;
+    padding: 3em 2em;
+    text-align: center;
 }
 
 .tilter__title {
@@ -273,6 +274,10 @@ figure.tilter__figure:before {
     background: url(../img/photo1.jpg);
     background-size: cover;
     height: 400px;
+
+}
+.tilter.tilter--1:hover .tilter__figure:after{
+    opacity: 1;
 }
 figure.tilter__figure:after {
     content: "";
@@ -281,5 +286,97 @@ figure.tilter__figure:after {
     left: 15px;
     bottom: 15px;
     right: 15px;
-    border: 2px solid #fff;
+    border: 11px solid #fff;
+    opacity: 0;
+    transition: all 0.5s ease 0s;
+}
+
+
+
+.classic-simple-hover.box {
+    position: relative;
+    overflow: hidden;
+    background: url(../img/photo1.jpg);
+    background-size: cover;
+    height: 350px;
+}
+.classic-simple-hover.box .box-heading{
+    width: 90%;
+    position: absolute;
+    bottom: 25px;
+    left: 5%;
+    background: $color__theme;
+    opacity: 0.9;
+    padding: 10px 60px 10px 25px;
+    color: #fff;
+    transition: all 0.3s ease 0s;
+}
+.classic-simple-hover.box:hover .box-heading{
+    left: 100%;
+}
+.classic-simple-hover.box .box-heading:after{
+    content: "\f105";
+    font-family: fontawesome;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    position: absolute;
+    top: 13px;
+    right: 11px;
+    background: #20211c;
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+}
+.classic-simple-hover.box .title{
+    margin: 0;
+    font-size: 21px;
+    font-weight: bold;
+    color: #fff;
+}
+.classic-simple-hover.box .post{
+    display: block;
+    font-size: 13px;
+    color: #fff;
+    text-transform: capitalize;
+    margin-top: 5px;
+}
+.classic-simple-hover.box .boxContent{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    padding: 30px 35px;
+    background: $color__theme;
+    transition: all 0.3s ease 0s;
+}
+.classic-simple-hover:hover .boxContent{
+    left: 0;
+}
+.classic-simple-hover.box .description{
+    font-size: 16px;
+    color: #fff;
+    line-height: 25px;
+}
+.classic-simple-hover.box .read{
+    display: inline-block;
+    padding: 10px 20px;
+    background: #20211c;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 35px;
+    margin-top: 20px;
+    transition: all 0.3s ease 0s;
+}
+.classic-simple-hover.box .read:hover{
+    text-decoration: none;
+    background: #fff;
+    color: $color__theme;
+}
+.classic-simple-hover.box .read i{
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 10px;
 }

@@ -1,0 +1,39 @@
+
+.portfolio-fullscreeen-item {
+  position: relative;
+    background: url("../img/business.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    height: 100vh !important;
+}
+
+.wrapper {
+  position: relative;
+  -webkit-transition: -webkit-transform 1s ease;
+  -moz-transition: transform 1s ease;
+  -o-transition: transform 1s ease;
+  -ms-transition: transform 1s ease;
+  transition: transform 1s ease;
+}
+
+.portfolio-nav {
+  position: fixed;
+  width: 20px;
+  height: 160px;
+  margin-top: -80px;
+  top: 50%;
+  right: 50px;
+  z-index: 20000;
+}
+
+.portfolio-nav .dot {
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  margin-top: 8px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.5);
+}
+
+.portfolio-nav .cursor { background: #5647c8; }

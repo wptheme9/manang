@@ -23,6 +23,7 @@ function manang_latest_post_integrateWithVC(){
                     __("Simple", 'manang') => "style1",
                     __("Classic", 'manang') => "style2",
                     __("Modern", 'manang') => "style3",
+                    __("List layout",'manang') => 'style4',
                 ) ,
                 "type" => "dropdown"
             ) ,
@@ -36,6 +37,12 @@ function manang_latest_post_integrateWithVC(){
                     __("Slider", 'manang') => "blog-post-slider"
                 ) ,
                 "type" => "dropdown",
+                 "dependency" => array(
+                    'element' => "post_layout",
+                    'value' => array(
+                        'style1','style2','style3'
+                    )
+                ),
             ) ,
 
             array(
@@ -50,6 +57,12 @@ function manang_latest_post_integrateWithVC(){
                 "heading" => __("Use Boxshadow?", "manang") ,
                 "param_name" => "box_shadow",
                 "value" => "",
+                "dependency" => array(
+                    'element' => "post_layout",
+                    'value' => array(
+                        'style1','style2','style3'
+                    )
+                ),
             ) ,
 
 
@@ -82,60 +95,66 @@ function manang_latest_post_integrateWithVC(){
 
                 ob_start();
                 if($latest_post_query->have_posts()):
-                    if($display_type == 'blog-post-column'){
+                    if($display_type == 'blog-post-column' && $post_layout !='style4'){
                         echo '<div class="blog-post-column">';
                     }
-                    else{
+                    elseif($display_type == 'blog-post-slider' && $post_layout !='style4'){
                         echo '<div class="blog-post-slider">';
 
                     }
+                    if($post_layout == 'style4'){ ?>
+                        <div class="blog-style4">
+                    <?php }
+                    $count = 0;
                         $box_shadow_checked = ($box_shadow == 'true'?'box-shadow':'');
                         while($latest_post_query->have_posts()):
                             $latest_post_query->the_post();
 
-                            $latest_post_image_id = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' ); ?>
-
-                            <div class="blog-wrap <?php echo esc_attr($post_layout .' '.$box_shadow_checked); ?>">
-                                <?php
-                                switch($post_layout){
-                                    case( "style1" ): ?>
-                                            <div class="blog-img">
-                                                <img src="<?php echo esc_url($latest_post_image_id[0]); ?>" alt="">
-                                            </div>
-                                            <div class="blog-meta">
-                                                <div class="date">
-                                                    <i class="fa fa-calendar"></i><span><?php echo get_the_date('M d, Y');  ?></span>
-                                                </div>
-                                                <div class="author">
-                                                    <i class="fa fa-user"></i><span><?php the_author(); ?></span>
-                                                </div>
-                                                <div class="author">
-                                                    <i class="fa fa-comments-o"></i><span><?php comments_popup_link( '0', '1', '%', '', '-' ); ?></span>
-                                                </div>
-                                            </div>
-                                            <?php the_title( '<h2>', '</h2>' ); ?>
-                                            <p><?php echo manang_get_excerpt(get_the_id(),200); ?></p>
-                                            <a href="<?php the_permalink() ?>" class="btn btn-default"><?php esc_html_e( 'Read More', 'manang' ); ?></a>
-                                    <?php break;
-                                    case( "style2" ): ?>
+                            $latest_post_image_id = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' );
+                            switch($post_layout){
+                                case( "style1" ): ?>
+                                    <div class="blog-wrap style1 <?php echo esc_attr($box_shadow_checked); ?>">
+                                        <div class="blog-img">
                                             <img src="<?php echo esc_url($latest_post_image_id[0]); ?>" alt="">
-                                            <div class="post-review">
-                                                <div class="post-date">
-                                                    <?php echo get_the_date('d');  ?><small><?php echo get_the_date('M');  ?></small>
-                                                </div>
-                                                <h3 class="post-title">
-                                                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                                                </h3>
-                                                <ul class="post-comment">
-                                                    <li><?php echo __( 'By ', 'manang' );
-                                                    the_author();
-                                                    comments_popup_link( '0', '1', '%', '', '-' ); ?></li>
-                                                </ul>
+                                        </div>
+                                        <div class="blog-meta">
+                                            <div class="date">
+                                                <i class="fa fa-calendar"></i><span><?php echo get_the_date('M d, Y');  ?></span>
                                             </div>
-                                             <p><?php echo manang_get_excerpt(get_the_id(),200); ?></p>
-                                            <a href="<?php the_permalink(); ?>" class="btn btn-default"><?php esc_html_e( 'Read More', 'manang' ); ?></a>
-                                    <?php break;
-                                    case( "style3" ): ?>
+                                            <div class="author">
+                                                <i class="fa fa-user"></i><span><?php the_author(); ?></span>
+                                            </div>
+                                            <div class="author">
+                                                <i class="fa fa-comments-o"></i><span><?php comments_popup_link( '0', '1', '%', '', '-' ); ?></span>
+                                            </div>
+                                        </div>
+                                        <?php the_title( '<h2>', '</h2>' ); ?>
+                                        <p><?php echo manang_get_excerpt(get_the_id(),200); ?></p>
+                                        <a href="<?php the_permalink() ?>" class="btn btn-default"><?php esc_html_e( 'Read More', 'manang' ); ?></a>
+                                    </div>
+                                <?php break;
+                                case( "style2" ): ?>
+                                    <div class="blog-wrap style2 <?php echo esc_attr($box_shadow_checked); ?>">
+                                        <img src="<?php echo esc_url($latest_post_image_id[0]); ?>" alt="">
+                                        <div class="post-review">
+                                            <div class="post-date">
+                                                <?php echo get_the_date('d');  ?><small><?php echo get_the_date('M');  ?></small>
+                                            </div>
+                                            <h3 class="post-title">
+                                                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                            </h3>
+                                            <ul class="post-comment">
+                                                <li><?php echo __( 'By ', 'manang' );
+                                                the_author();
+                                                comments_popup_link( '0', '1', '%', '', '-' ); ?></li>
+                                            </ul>
+                                        </div>
+                                         <p><?php echo manang_get_excerpt(get_the_id(),200); ?></p>
+                                        <a href="<?php the_permalink(); ?>" class="btn btn-default"><?php esc_html_e( 'Read More', 'manang' ); ?></a>
+                                    </div>
+                                <?php break;
+                                case( "style3" ): ?>
+                                    <div class="blog-wrap style3 <?php echo esc_attr($box_shadow_checked); ?>">
                                          <div class="blog-image">
                                             <img src="<?php echo esc_url($latest_post_image_id[0]); ?>" alt="">
                                             <div class="blog-date">
@@ -153,12 +172,61 @@ function manang_latest_post_integrateWithVC(){
                                             </div>
                                             <a class="know-more" href="<?php the_permalink(); ?>"><?php esc_html_e( 'Read More', 'manang' ); ?><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
                                         </div>
-                                    <?php break;
+                                    </div>
+                                <?php break;
+                                case("style4");
+                                    if($count == 0){ ?>
+                                        <div class="col-md-7">
+                                            <div class="blog-wrap">
+                                                <div class="blog-img">
+                                                    <img src="<?php echo esc_url($latest_post_image_id[0]); ?>" alt="">
+                                                </div>
+                                                <div class="blog-meta">
+                                                    <div class="date">
+                                                        <i class="fa fa-calendar"></i><span><?php echo get_the_date('M d, Y');  ?></span>
+                                                    </div>
+                                                    <div class="author">
+                                                        <i class="fa fa-user"></i><span><?php the_author(); ?></span>
+                                                    </div>
+                                                    <div class="author">
+                                                        <i class="fa fa-comments-o"></i><span><?php comments_popup_link( '0', '1', '%', '', '-' ); ?></span>
+                                                    </div>
+                                                </div>
+                                                <?php the_title( '<h2>', '</h2>' ); ?>
+                                                <p><?php echo manang_get_excerpt(get_the_id(),200); ?></p>
+                                            </div>
+                                        </div>
+                                    <?php }
+                                    else{
+                                        if($count == 1){ ?>
+                                            <div class="col-md-5">
+                                        <?php } ?>
+                                            <div class="blog-wrap blog-list">
+                                                <div class="blog-img">
+                                                    <img src="<?php echo esc_url($latest_post_image_id[0]); ?>" alt="">
+                                                </div>
+                                                <?php the_title( '<h2>', '</h2>' ); ?>
+                                                <div class="blog-meta">
+                                                    <div class="date">
+                                                        <i class="fa fa-calendar"></i><span><?php echo get_the_date('M d, Y');  ?></span>
+                                                    </div>
+                                                    <div class="author">
+                                                        <i class="fa fa-user"></i><span><?php the_author(); ?></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    <?php }
+                                    $count++;
+                                    break;
                                     }
-                            echo '</div>';
                             endwhile;
+                            if($count == 1) {
+                                echo '</div>';
+                            }
                         echo '</div>';
                     wp_reset_postdata();
+
+
                 endif;
                 $output = ob_get_clean();
                 return $output;

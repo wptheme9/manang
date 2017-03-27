@@ -99,30 +99,36 @@
 
 <div class="container">
     <ul class="timeline">
-          <li>
-            <p class="timeline-date">Jan 2014 - Mar 2016</p>
-            <div class="timeline-content">
-              <h3>Full Stack Developer</h3>
-              <h5>Themeforest</h5>
-              <p>Your brand is the core of your marketing, the central theme around your products and services. Your brand is not your Logo or your Company Name</p>
-            </div>
-          </li>
-          <li>
-            <p class="timeline-date">Jan 2014 - Mar 2016</p>
-            <div class="timeline-content">
-              <h3>Full Stack Developer</h3>
-              <h5>Themeforest</h5>
-              <p>Your brand is the core of your marketing, the central theme around your products and services. Your brand is not your Logo or your Company Name</p>
-            </div>
-          </li>
-          <li>
-            <p class="timeline-date">Jan 2014 - Mar 2016</p>
-            <div class="timeline-content">
-              <h3>Full Stack Developer</h3>
-              <h5>Themeforest</h5>
-              <p>Your brand is the core of your marketing, the central theme around your products and services. Your brand is not your Logo or your Company Name</p>
-            </div>
-          </li>
+      <li>
+        <p class="timeline-date">Jan 2014 - Mar 2016</p>
+        <div class="timeline-content">
+          <h3>Full Stack Developer</h3>
+          <h5>Themeforest</h5>
+          <p>Your brand is the core of your marketing, the central theme around your products and services. Your brand is not your Logo or your Company Name</p>
+        </div>
+      </li>
+    </ul>
+
+    <ul class="timeline">
+      <li>
+        <p class="timeline-date">Jan 2014 - Mar 2016</p>
+        <div class="timeline-content">
+          <h3>Full Stack Developer</h3>
+          <h5>Themeforest</h5>
+          <p>Your brand is the core of your marketing, the central theme around your products and services. Your brand is not your Logo or your Company Name</p>
+        </div>
+      </li>
+    </ul>
+
+    <ul class="timeline">
+      <li>
+        <p class="timeline-date">Jan 2014 - Mar 2016</p>
+        <div class="timeline-content">
+          <h3>Full Stack Developer</h3>
+          <h5>Themeforest</h5>
+          <p>Your brand is the core of your marketing, the central theme around your products and services. Your brand is not your Logo or your Company Name</p>
+        </div>
+      </li>
     </ul>
 </div>
 

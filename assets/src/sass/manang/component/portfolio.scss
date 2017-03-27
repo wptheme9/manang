@@ -254,7 +254,7 @@ section.section.portfolio-sec {
     z-index: 1;
     transition: all 0.5s ease 0s;
 }
-.portfolio-simple .box:hover img{
+.portfolio-simple .box:hover img, .portfolio-simple .box:hover .post-video-holder{
     transform: translateY(100%);
 }
 .portfolio-simple .box .portfolio-action{

@@ -41,10 +41,9 @@
     width: 100%;
     z-index: 1;
     position: relative;
-    padding: 20px 33px;
+    padding: 0 80px;
     display: table;
-    background: #272727;
-    border-bottom: 1px solid #313131;
+    background: none;
 }
 .jAudio--player .jAudio--controls ul {
     display: table;
@@ -58,5 +57,7 @@
 .jAudio--player button{
     outline: 0 !important;
     box-shadow: none !important;
-    background: #fff;
+    background: none;
+    color: #fff;
+    font-size: 24px;
 }

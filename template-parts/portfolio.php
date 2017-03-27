@@ -11,7 +11,7 @@
 
 
 
-<div class="portfolio-filter portfolio-classic section">
+<div class="portfolio-filter portfolio-classic">
 <!-- Start of button group -->
     <div class="button-group filters-button-group">
         <button class="button is-checked" data-filter="*">all</button>
@@ -83,11 +83,11 @@
         </div>
     </div>
 </div>
-<!-- End of portfolio section -->
+<!-- End of portfolio -->
 
 
 <!-- Modern style portfolio -->
-<div class="portfolio-filter portfolio-modern section">
+<div class="portfolio-filter portfolio-modern">
 <!-- Start of button group -->
     <div class="button-group filters-button-group">
         <button class="button is-checked" data-filter="*">all</button>
@@ -200,7 +200,7 @@
 
 
 <!-- Simple style portfolio -->
-<div class="portfolio-filter portfolio-simple section">
+<div class="portfolio-filter portfolio-simple">
 <!-- Start of button group -->
     <div class="button-group filters-button-group">
         <button class="button is-checked" data-filter="*">all</button>

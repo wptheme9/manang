@@ -290,3 +290,52 @@ function manang_range_settings_field($settings, $value) {
     </script>';
     return $output;
 }
+
+require_once get_template_directory() . '/lib/class-tgm-plugin-activation.php';
+
+add_action( 'tgmpa_register', 'manang_register_required_plugins' );
+function manang_register_required_plugins() {
+    $plugins = array(
+
+        array(
+            'name'               => 'Manang Basecamp',
+            'slug'               => 'manang-basecamp',
+            'source'             => get_template_directory() . '/lib/plugins/manang-basecamp.zip',
+            'required'           => true,
+            'version'            => '1.0.0',
+            'force_activation'   => false,
+            'force_deactivation' => false,
+            'external_url'       => '',
+            'is_callable'        => '',
+        ),
+        array(
+            'name'               => 'Visual Composer',
+            'slug'               => 'js-composer-theme',
+            'source'             => get_template_directory() . '/lib/plugins/js-composer.zip',
+            'required'           => true,
+            'version'            => '4.11.2.1',
+            'force_activation'   => false,
+            'force_deactivation' => false,
+            'external_url'       => '',
+            'is_callable'        => '',
+        ),
+        array(
+            'name'      => 'Events Manager',
+            'slug'      => 'events-manager',
+            'required'  => false,
+        ),
+    );
+
+    $config = array(
+        'id'           => 'manang',
+        'default_path' => '',
+        'menu'         => 'tgmpa-install-plugins',
+        'has_notices'  => true,                    // Show admin notices or not.
+        'dismissable'  => true,                    // If false, a user cannot dismiss the nag message.
+        'dismiss_msg'  => '',                      // If 'dismissable' is false, this message will be output at top of nag.
+        'is_automatic' => false,                   // Automatically activate plugins after installation or not.
+        'message'      => '',                      // Message to output right before the plugins table.
+    );
+
+    tgmpa( $plugins, $config );
+}

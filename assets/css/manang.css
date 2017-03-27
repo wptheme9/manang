@@ -12941,6 +12941,60 @@ section.section.portfolio-sec {
   width: 33.33333%;
   float: left; }
 
+.blog-style4 .blog-wrap {
+  position: relative;
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 10px; }
+  .blog-style4 .blog-wrap .blog-date {
+    background: #7a90ff;
+    display: inline-block;
+    padding: 0px 11px;
+    font-size: 12px;
+    border-radius: 35px;
+    color: #fff;
+    z-index: 99;
+    position: relative; }
+  .blog-style4 .blog-wrap h2 {
+    color: #444;
+    font-size: 18px;
+    z-index: 99;
+    position: relative;
+    margin-top: 10px;
+    text-transform: capitalize;
+    font-weight: 600;
+    line-height: 24px; }
+  .blog-style4 .blog-wrap .blog-meta {
+    z-index: 99;
+    position: relative;
+    margin-top: 15px; }
+    .blog-style4 .blog-wrap .blog-meta div {
+      display: inline-block;
+      margin-right: 15px; }
+    .blog-style4 .blog-wrap .blog-meta .author, .blog-style4 .blog-wrap .blog-meta .date {
+      display: inline-block;
+      margin-right: 10px; }
+      .blog-style4 .blog-wrap .blog-meta .author span, .blog-style4 .blog-wrap .blog-meta .date span {
+        color: #444; }
+      .blog-style4 .blog-wrap .blog-meta .author span, .blog-style4 .blog-wrap .blog-meta .date span {
+        font-size: 14px; }
+      .blog-style4 .blog-wrap .blog-meta .author i, .blog-style4 .blog-wrap .blog-meta .date i {
+        margin-right: 6px;
+        color: #7a90ff; }
+
+.blog-style4 .blog-wrap.blog-list {
+  margin-bottom: 20px;
+  border: 1px solid #eee;
+  padding: 10px; }
+  .blog-style4 .blog-wrap.blog-list .blog-img {
+    width: 34%;
+    float: right;
+    margin-left: 15px; }
+    .blog-style4 .blog-wrap.blog-list .blog-img img {
+      max-width: 150px; }
+  .blog-style4 .blog-wrap.blog-list h2 {
+    margin-top: 0; }
+
 .client-sec .client-image-wrapper.edged {
   text-align: center;
   box-shadow: 1px 1px 0 0 #eee;

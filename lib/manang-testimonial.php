@@ -1,60 +1,103 @@
 <?php
 add_action( 'testimonial_manang', 'manang_testimonial', 10, 5 );
-function manang_testimonial($testimonial_title="",$testimonial_description="",$testimonial_count="",$testimonial_bg_color="",$testimonial_bg_image=""){
-    if(empty($testimonial_count)){
-        $testimonial_count = -1;
+function manang_testimonial($testimonial_style="",$skin="",$testimonial_count="",$show_as="",$testimonial_category=""){
+    $testimonial_counts = (empty($testimonial_count)?-1:$testimonial_count);
+    $skin_modern = ($testimonial_style == 'modern-style'?$skin:'');
+    $show_as_condition = ($testimonial_style != 'modern-style'?$show_as:'');
+    $tax_query = '';
+    if($testimonial_category!=''){
+        $tax_query[] =  array(
+            'taxonomy' => 'testimonial_category',
+            'field' => 'term_id',
+            'terms' => $testimonial_category,
+        );
     }
     $testimonial_argument = array(
         'post_type'      => 'testimonial',
         'post_status'    => 'publish',
         'oderby'         => 'menu_order date',
         'order'          => 'desc',
-        'posts_per_page' => $testimonial_count,
+        'posts_per_page' => $testimonial_counts,
+        'tax_query' => $tax_query,
         );
     $testimonial_query = new WP_Query($testimonial_argument);
     ob_start();
     if($testimonial_query->have_posts()): ?>
         <!-- Start of testimonial section -->
-        <section id="testimonial" class="section testimonial-sec">
-            <div class="container">
-                <div class="row">
-                    <div class="section-title">
-                        <h2><?php echo esc_html($testimonial_title); ?></h2>
-                        <p><?php echo esc_html($testimonial_description); ?></p>
-                    </div>
-                    <div class="col-md-8 col-md-offset-2">
-                        <div class="slider testimonial-content text-center" data-aos="fade-up">
-                            <?php while($testimonial_query->have_posts()):
-                                $testimonial_query->the_post();
-                                $manang_basecamp_testimonial_designation = get_post_meta( get_the_id(), 'manang_basecamp_testimonial_designation', true ); ?>
-                                    <div class="testimonial-slide">
-                                         <i class="ion-android-hangout"></i>
-                                        <div class="client-testimonial">
-                                            <p><?php the_excerpt(); ?></p>
-                                        </div>
-                                        <h3 class="testimonial-title"><?php the_title(); ?>
-                                            <small class="post"><?php echo esc_html($manang_basecamp_testimonial_designation); ?></small>
-                                        </h3>
-                                    </div>
-                            <?php wp_reset_postdata();
-                            endwhile; ?>
+        <div class="testimonial-content text-center <?php echo esc_attr($testimonial_style .' '.$skin_modern.' '.$show_as_condition); ?>">
+            <?php while($testimonial_query->have_posts()):
+                $testimonial_query->the_post();
+                $manang_basecamp_testimonial_designation = get_post_meta( get_the_id(), 'manang_basecamp_testimonial_designation', true );
+                $testimonial_image =  wp_get_attachment_image_src( get_post_thumbnail_id(),'full');
+                $testimonial_image_url = $testimonial_image[0];
+                switch($testimonial_style){
+                    case('modern-style'): ?>
+                        <div class="testimonial-slide">
+                             <i class="ion-android-hangout"></i>
+                            <div class="client-testimonial">
+                                <p><?php echo manang_get_excerpt(get_the_id(),200); ?></p>
+                            </div>
+                            <h3 class="testimonial-title"><?php the_title(); ?>
+                                <small class="post"><?php echo esc_html($manang_basecamp_testimonial_designation); ?></small>
+                            </h3>
                         </div>
+                    <?php break;
+                    case('boxed-style'): ?>
+                            <div class="testimonial-slide">
+                                <div class="client-testimonial">
+                                    <p><?php echo manang_get_excerpt(get_the_id(),200); ?></p>
+                                </div>
+                                <div class="client-img">
+                                    <img src="<?php echo esc_url($testimonial_image_url); ?>" alt="">
+                                    <i class="ion-android-hangout"></i>
+                                </div>
+                                <h3 class="testimonial-title"><?php the_title(); ?>
+                                    <small class="post"><?php echo esc_html($manang_basecamp_testimonial_designation); ?></small>
+                                </h3>
+                            </div>
+                    <?php break;
+                     case('shadow-style'): ?>
+                            <div class="testimonial-slide">
+                                <div class="client-img">
+                                    <img src="<?php echo esc_url($testimonial_image_url); ?>" alt="">
+                                </div>
+                                <div class="client-testimonial">
+                                    <p><?php echo manang_get_excerpt(get_the_id(),200); ?></p>
+                                </div>
+                                <h3 class="testimonial-title"><?php the_title(); ?>
+                                    <small class="post"><?php echo esc_html($manang_basecamp_testimonial_designation); ?></small>
+                                </h3>
+                            </div>
+                    <?php break;
+                    case('classic-style'): ?>
+                            <div class="testimonial-slide">
+                                <p class="description"><?php echo manang_get_excerpt(get_the_id(),200); ?></p>
+                                <div class="pic">
+                                    <img src="<?php echo esc_url($testimonial_image_url); ?>" alt="">
+                                </div>
+                                <h3 class="testimonial-title"><?php the_title('<span>','</span>'); ?>
+                                    <small><?php echo esc_html($manang_basecamp_testimonial_designation); ?></small>
+                                </h3>
+                            </div>
+                    <?php break;
+                }
+            endwhile;
+             wp_reset_postdata();
 
-                        <div class="slider testimonial-img-wrap" data-aos="fade-up">
-                             <?php while($testimonial_query->have_posts()):
-                                $testimonial_query->the_post();
-                                    $testimonial_image =  wp_get_attachment_image_src( get_post_thumbnail_id(),'full');
-                                    $testimonial_image_url = $testimonial_image[0]; ?>
-                                    <div class="client-img">
-                                        <img src="<?php echo esc_url($testimonial_image_url); ?>" alt="">
-                                    </div>
-                            <?php wp_reset_postdata();
-                            endwhile; ?>
-                        </div>
-                    </div>
+            if($testimonial_style == 'modern-style'): ?>
+                <div class="slider testimonial-img-wrap <?php echo esc_attr($testimonial_style); ?>">
+                     <?php while($testimonial_query->have_posts()):
+                        $testimonial_query->the_post();
+                            $testimonial_image =  wp_get_attachment_image_src( get_post_thumbnail_id(),'full');
+                            $testimonial_image_url = $testimonial_image[0]; ?>
+                            <div class="client-img">
+                                <img src="<?php echo esc_url($testimonial_image_url); ?>" alt="">
+                            </div>
+                    <?php wp_reset_postdata();
+                    endwhile; ?>
                 </div>
             </div>
-        </section>
+        <?php endif; ?>
         <!-- end of testimonial section -->
     <?php
     endif;

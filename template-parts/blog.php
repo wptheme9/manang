@@ -38,7 +38,7 @@
             <div class="col-md-4">
                 <div class="blog-wrap style1"  data-aos="fade-in">
                     <div class="blog-img">
-                        <img src="assets/img/blog2.jpeg" alt="">
+                        <img src="<?php echo get_template_directory_uri();?>/assets/img/blog4.jpg" alt="">
                     </div>
                     <div class="blog-meta">
                         <div class="date">
@@ -411,6 +411,126 @@ just yo blog post slider or blog post column le wrap gardinu teti ho-->
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Style4 -->
+
+<section id="blog" class="section blog-sec">
+    <div class="section-title">
+        <h2>From Our Blog</h2>
+        <p> dolor sit amet, consectetuer adipiscing elit. Donec odio.Quisque volutpat mattis eros. Nullam</p>
+    </div>
+
+    <div class="container">
+        <div class="row">
+
+<!-- Strucute ae dekhi chaincha hai -->
+            <div class="blog-style4">
+            <!-- Yo chai large left pati ko lagi -->
+                <div class="col-md-7">
+                    <div class="blog-wrap">
+                        <div class="blog-img">
+                            <img src="<?php echo get_template_directory_uri();?>/assets/img/blog4.jpg" alt="">
+                        </div>
+                        <div class="blog-meta">
+                            <div class="date">
+                                <i class="fa fa-calendar"></i><span>Mar 02, 2016</span>
+                            </div>
+                            <div class="author">
+                                <i class="fa fa-user"></i><span>Codemin</span>
+                            </div>
+                            <div class="author">
+                                <i class="fa fa-comments-o"></i><span>25</span>
+                            </div>
+                        </div>
+                        <h2>Women on Business, posed to be a powerful network online </h2>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpisLorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis</p>
+                    </div>
+                </div>
+
+                <!-- Yo chai right apti ko lagi -->
+                <div class="col-md-5">
+                    <div class="blog-wrap blog-list">
+                        <div class="blog-img">
+                            <img src="<?php echo get_template_directory_uri();?>/assets/img/blog4.jpg" alt="">
+                        </div>
+                        <h2>common ethical mistakes business owners make</h2>
+                        <div class="blog-meta">
+                            <div class="date">
+                                <i class="fa fa-calendar"></i><span>Mar 02, 2016</span>
+                            </div>
+                            <div class="author">
+                                <i class="fa fa-user"></i><span>Codemin</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="blog-wrap blog-list">
+                        <div class="blog-img">
+                            <img src="<?php echo get_template_directory_uri();?>/assets/img/blog4.jpg" alt="">
+                        </div>
+                        <h2>common ethical mistakes business owners make</h2>
+                        <div class="blog-meta">
+                            <div class="date">
+                                <i class="fa fa-calendar"></i><span>Mar 02, 2016</span>
+                            </div>
+                            <div class="author">
+                                <i class="fa fa-user"></i><span>Codemin</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="blog-wrap blog-list">
+                        <div class="blog-img">
+                            <img src="<?php echo get_template_directory_uri();?>/assets/img/blog4.jpg" alt="">
+                        </div>
+                        <h2>common ethical mistakes business owners make</h2>
+                        <div class="blog-meta">
+                            <div class="date">
+                                <i class="fa fa-calendar"></i><span>Mar 02, 2016</span>
+                            </div>
+                            <div class="author">
+                                <i class="fa fa-user"></i><span>Codemin</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="blog-wrap blog-list">
+                        <div class="blog-img">
+                            <img src="<?php echo get_template_directory_uri();?>/assets/img/blog4.jpg" alt="">
+                        </div>
+                        <h2>common ethical mistakes business owners make</h2>
+                        <div class="blog-meta">
+                            <div class="date">
+                                <i class="fa fa-calendar"></i><span>Mar 02, 2016</span>
+                            </div>
+                            <div class="author">
+                                <i class="fa fa-user"></i><span>Codemin</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="blog-wrap blog-list">
+                        <div class="blog-img">
+                            <img src="<?php echo get_template_directory_uri();?>/assets/img/blog4.jpg" alt="">
+                        </div>
+                        <h2>common ethical mistakes business owners make</h2>
+                        <div class="blog-meta">
+                            <div class="date">
+                                <i class="fa fa-calendar"></i><span>Mar 02, 2016</span>
+                            </div>
+                            <div class="author">
+                                <i class="fa fa-user"></i><span>Codemin</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <!-- ya samma -->
         </div>
     </div>
 </section>

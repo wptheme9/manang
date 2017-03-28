@@ -26,59 +26,71 @@
         <div class="element-item grid-col-3 box category1 " >
             <img src="<?php echo get_template_directory_uri();?>/assets/img/des-port7.jpg" alt="">
             <div class="box-content">
-                <a href="assets/img/des-port7.jpg" class="popup-link"><i class="ion-arrow-resize"></i></a>
-                <i class="ion-share"></i>
-                <h3 class="title">CATALOGUE ILLUSTRATOR</h3>
-                <small>Software, Technology</small>
+                <div class="portfolio-wrap">
+                    <a href="assets/img/des-port7.jpg" class="popup-link"><i class="ion-arrow-resize"></i></a>
+                    <i class="ion-share"></i>
+                    <h3 class="title">CATALOGUE ILLUSTRATOR</h3>
+                    <small>Software, Technology</small>
+                </div>
             </div>
         </div>
 
         <div class="element-item grid-col-3 box category1 " >
             <img src="<?php echo get_template_directory_uri();?>/assets/img/des-port7.jpg" alt="">
             <div class="box-content">
-                <a href="assets/img/des-port7.jpg" class="popup-link"><i class="ion-arrow-resize"></i></a>
-                <i class="ion-share"></i>
-                <h3 class="title">CATALOGUE ILLUSTRATOR</h3>
-                <small>Software, Technology</small>
+                <div class="portfolio-wrap">
+                    <a href="assets/img/des-port7.jpg" class="popup-link"><i class="ion-arrow-resize"></i></a>
+                    <i class="ion-share"></i>
+                    <h3 class="title">CATALOGUE ILLUSTRATOR</h3>
+                    <small>Software, Technology</small>
+                </div>
             </div>
         </div>
 
         <div class="element-item grid-col-3 box category2 " >
             <img src="<?php echo get_template_directory_uri();?>/assets/img/des-port7.jpg" alt="">
             <div class="box-content">
-                <a href="assets/img/des-port7.jpg" class="popup-link"><i class="ion-arrow-resize"></i></a>
-                <i class="ion-share"></i>
-                <h3 class="title">CATALOGUE ILLUSTRATOR</h3>
-                <small>Software, Technology</small>
+                <div class="portfolio-wrap">
+                    <a href="assets/img/des-port7.jpg" class="popup-link"><i class="ion-arrow-resize"></i></a>
+                    <i class="ion-share"></i>
+                    <h3 class="title">CATALOGUE ILLUSTRATOR</h3>
+                    <small>Software, Technology</small>
+                </div>
             </div>
         </div>
 
         <div class="element-item grid-col-3 box category1 " >
             <img src="<?php echo get_template_directory_uri();?>/assets/img/des-port7.jpg" alt="">
             <div class="box-content">
-                <a href="assets/img/des-port7.jpg" class="popup-link"><i class="ion-arrow-resize"></i></a>
-                <i class="ion-share"></i>
-                <h3 class="title">CATALOGUE ILLUSTRATOR</h3>
-                <small>Software, Technology</small>
+                <div class="portfolio-wrap">
+                    <a href="assets/img/des-port7.jpg" class="popup-link"><i class="ion-arrow-resize"></i></a>
+                    <i class="ion-share"></i>
+                    <h3 class="title">CATALOGUE ILLUSTRATOR</h3>
+                    <small>Software, Technology</small>
+                </div>
             </div>
         </div>
 
         <div class="element-item grid-col-3 box category2 " >
             <img src="<?php echo get_template_directory_uri();?>/assets/img/des-port7.jpg" alt="">
             <div class="box-content">
-                <a href="assets/img/des-port7.jpg" class="popup-link"><i class="ion-arrow-resize"></i></a>
-                <i class="ion-share"></i>
-                <h3 class="title">CATALOGUE ILLUSTRATOR</h3>
-                <small>Software, Technology</small>
+                <div class="portfolio-wrap">
+                    <a href="assets/img/des-port7.jpg" class="popup-link"><i class="ion-arrow-resize"></i></a>
+                    <i class="ion-share"></i>
+                    <h3 class="title">CATALOGUE ILLUSTRATOR</h3>
+                    <small>Software, Technology</small>
+                </div>
             </div>
         </div>
         <div class="element-item grid-col-3 box category2 " >
             <img src="<?php echo get_template_directory_uri();?>/assets/img/des-port7.jpg" alt="">
             <div class="box-content">
-                <a href="assets/img/des-port7.jpg" class="popup-link"><i class="ion-arrow-resize"></i></a>
-                <i class="ion-share"></i>
-                <h3 class="title">CATALOGUE ILLUSTRATOR</h3>
-                <small>Software, Technology</small>
+                <div class="portfolio-wrap">
+                    <a href="assets/img/des-port7.jpg" class="popup-link"><i class="ion-arrow-resize"></i></a>
+                    <i class="ion-share"></i>
+                    <h3 class="title">CATALOGUE ILLUSTRATOR</h3>
+                    <small>Software, Technology</small>
+                </div>
             </div>
         </div>
     </div>
@@ -103,15 +115,17 @@
             <div class="pic">
                 <img src="<?php echo get_template_directory_uri();?>/assets/img/des-port7.jpg" alt="">
             </div>
-            <ul class="portfolio-action">
-                <a href="assets/img/des-port7.jpg" class="popup-link"><i class="ion-arrow-resize"></i></a>
-                <i class="ion-share"></i>
-            </ul>
-            <div class="over-layer">
-                <h4 class="post">
-                    <a href="#">Product Catalouge</a>
-                    <small>Software, Technology</small>
-                </h4>
+            <div class="portfolio-wrap">
+                <ul class="portfolio-action">
+                    <a href="assets/img/des-port7.jpg" class="popup-link"><i class="ion-arrow-resize"></i></a>
+                    <i class="ion-share"></i>
+                </ul>
+                <div class="over-layer">
+                    <h4 class="post">
+                        <a href="#">Product Catalouge</a>
+                        <small>Software, Technology</small>
+                    </h4>
+                </div>
             </div>
         </div>
 
@@ -119,15 +133,17 @@
             <div class="pic">
                 <img src="<?php echo get_template_directory_uri();?>/assets/img/des-port7.jpg" alt="">
             </div>
-            <ul class="portfolio-action">
-                <a href="assets/img/des-port7.jpg" class="popup-link"><i class="ion-arrow-resize"></i></a>
-                <i class="ion-share"></i>
-            </ul>
-            <div class="over-layer">
-                <h4 class="post">
-                    <a href="#">Product Catalouge</a>
-                    <small>Software, Technology</small>
-                </h4>
+            <div class="portfolio-wrap">
+                <ul class="portfolio-action">
+                    <a href="assets/img/des-port7.jpg" class="popup-link"><i class="ion-arrow-resize"></i></a>
+                    <i class="ion-share"></i>
+                </ul>
+                <div class="over-layer">
+                    <h4 class="post">
+                        <a href="#">Product Catalouge</a>
+                        <small>Software, Technology</small>
+                    </h4>
+                </div>
             </div>
         </div>
 
@@ -135,15 +151,17 @@
             <div class="pic">
                 <img src="<?php echo get_template_directory_uri();?>/assets/img/des-port7.jpg" alt="">
             </div>
-            <ul class="portfolio-action">
-                <a href="assets/img/des-port7.jpg" class="popup-link"><i class="ion-arrow-resize"></i></a>
-                <i class="ion-share"></i>
-            </ul>
-            <div class="over-layer">
-                <h4 class="post">
-                    <a href="#">Product Catalouge</a>
-                    <small>Software, Technology</small>
-                </h4>
+            <div class="portfolio-wrap">
+                <ul class="portfolio-action">
+                    <a href="assets/img/des-port7.jpg" class="popup-link"><i class="ion-arrow-resize"></i></a>
+                    <i class="ion-share"></i>
+                </ul>
+                <div class="over-layer">
+                    <h4 class="post">
+                        <a href="#">Product Catalouge</a>
+                        <small>Software, Technology</small>
+                    </h4>
+                </div>
             </div>
         </div>
 
@@ -151,15 +169,17 @@
             <div class="pic">
                 <img src="<?php echo get_template_directory_uri();?>/assets/img/des-port7.jpg" alt="">
             </div>
-            <ul class="portfolio-action">
-                <a href="assets/img/des-port7.jpg" class="popup-link"><i class="ion-arrow-resize"></i></a>
-                <i class="ion-share"></i>
-            </ul>
-            <div class="over-layer">
-                <h4 class="post">
-                    <a href="#">Product Catalouge</a>
-                    <small>Software, Technology</small>
-                </h4>
+            <div class="portfolio-wrap">
+                <ul class="portfolio-action">
+                    <a href="assets/img/des-port7.jpg" class="popup-link"><i class="ion-arrow-resize"></i></a>
+                    <i class="ion-share"></i>
+                </ul>
+                <div class="over-layer">
+                    <h4 class="post">
+                        <a href="#">Product Catalouge</a>
+                        <small>Software, Technology</small>
+                    </h4>
+                </div>
             </div>
         </div>
 
@@ -167,15 +187,17 @@
             <div class="pic">
                 <img src="<?php echo get_template_directory_uri();?>/assets/img/des-port7.jpg" alt="">
             </div>
-            <ul class="portfolio-action">
-                <a href="assets/img/des-port7.jpg" class="popup-link"><i class="ion-arrow-resize"></i></a>
-                <i class="ion-share"></i>
-            </ul>
-            <div class="over-layer">
-                <h4 class="post">
-                    <a href="#">Product Catalouge</a>
-                    <small>Software, Technology</small>
-                </h4>
+            <div class="portfolio-wrap">
+                <ul class="portfolio-action">
+                    <a href="assets/img/des-port7.jpg" class="popup-link"><i class="ion-arrow-resize"></i></a>
+                    <i class="ion-share"></i>
+                </ul>
+                <div class="over-layer">
+                    <h4 class="post">
+                        <a href="#">Product Catalouge</a>
+                        <small>Software, Technology</small>
+                    </h4>
+                </div>
             </div>
         </div>
 
@@ -183,15 +205,17 @@
             <div class="pic">
                 <img src="<?php echo get_template_directory_uri();?>/assets/img/des-port7.jpg" alt="">
             </div>
-            <ul class="portfolio-action">
-                <a href="assets/img/des-port7.jpg" class="popup-link"><i class="ion-arrow-resize"></i></a>
-                <i class="ion-share"></i>
-            </ul>
-            <div class="over-layer">
-                <h4 class="post">
-                    <a href="#">Product Catalouge</a>
-                    <small>Software, Technology</small>
-                </h4>
+            <div class="portfolio-wrap">
+                <ul class="portfolio-action">
+                    <a href="assets/img/des-port7.jpg" class="popup-link"><i class="ion-arrow-resize"></i></a>
+                    <i class="ion-share"></i>
+                </ul>
+                <div class="over-layer">
+                    <h4 class="post">
+                        <a href="#">Product Catalouge</a>
+                        <small>Software, Technology</small>
+                    </h4>
+                </div>
             </div>
         </div>
     </div>
@@ -214,58 +238,87 @@
     <div class="grid">
         <div class="element-item grid-col-3 box category1 " >
             <div class="box-content">
-                <h3 class="title">Product Catalouge
-                    <small>Software, Technology</small>
-                </h3>
-                <ul class="portfolio-action">
-                    <a href="assets/img/des-port7.jpg" class="popup-link"><i class="ion-arrow-resize"></i></a>
-                    <i class="ion-share"></i>
-                </ul>
+                <div class="portfolio-wrap">
+                    <h3 class="title">Product Catalouge
+                        <small>Software, Technology</small>
+                    </h3>
+                    <ul class="portfolio-action">
+                        <a href="assets/img/des-port7.jpg" class="popup-link"><i class="ion-arrow-resize"></i></a>
+                        <i class="ion-share"></i>
+                    </ul>
+                </div>
             </div>
             <img src="<?php echo get_template_directory_uri();?>/assets/img/des-port7.jpg" alt="">
         </div>
 
         <div class="element-item grid-col-3 box category1 " >
             <div class="box-content">
-                <h3 class="title">Product Catalouge
-                    <small>Software, Technology</small>
-                </h3>
-                <ul class="portfolio-action">
-                    <a href="assets/img/des-port7.jpg" class="popup-link"><i class="ion-arrow-resize"></i></a>
-                    <i class="ion-share"></i>
-                </ul>
+                <div class="portfolio-wrap">
+                    <h3 class="title">Product Catalouge
+                        <small>Software, Technology</small>
+                    </h3>
+                    <ul class="portfolio-action">
+                        <a href="assets/img/des-port7.jpg" class="popup-link"><i class="ion-arrow-resize"></i></a>
+                        <i class="ion-share"></i>
+                    </ul>
+                </div>
             </div>
             <img src="<?php echo get_template_directory_uri();?>/assets/img/des-port7.jpg" alt="">
         </div>
 
         <div class="element-item grid-col-3 box category1 " >
             <div class="box-content">
-                <h3 class="title">Product Catalouge
-                    <small>Software, Technology</small>
-                </h3>
-                <ul class="portfolio-action">
-                    <a href="assets/img/des-port7.jpg" class="popup-link"><i class="ion-arrow-resize"></i></a>
-                    <i class="ion-share"></i>
-                </ul>
+                <div class="portfolio-wrap">
+                    <h3 class="title">Product Catalouge
+                        <small>Software, Technology</small>
+                    </h3>
+                    <ul class="portfolio-action">
+                        <a href="assets/img/des-port7.jpg" class="popup-link"><i class="ion-arrow-resize"></i></a>
+                        <i class="ion-share"></i>
+                    </ul>
+                </div>
             </div>
             <img src="<?php echo get_template_directory_uri();?>/assets/img/des-port7.jpg" alt="">
         </div>
 
         <div class="element-item grid-col-3 box category1 " >
             <div class="box-content">
-                <h3 class="title">Product Catalouge
-                    <small>Software, Technology</small>
-                </h3>
-                <ul class="portfolio-action">
-                    <a href="assets/img/des-port7.jpg" class="popup-link"><i class="ion-arrow-resize"></i></a>
-                    <i class="ion-share"></i>
-                </ul>
+                <div class="portfolio-wrap">
+                    <h3 class="title">Product Catalouge
+                        <small>Software, Technology</small>
+                    </h3>
+                    <ul class="portfolio-action">
+                        <a href="assets/img/des-port7.jpg" class="popup-link"><i class="ion-arrow-resize"></i></a>
+                        <i class="ion-share"></i>
+                    </ul>
+                </div>
             </div>
             <img src="<?php echo get_template_directory_uri();?>/assets/img/des-port7.jpg" alt="">
         </div>
 
         <div class="element-item grid-col-3 box category1 " >
             <div class="box-content">
+                <div class="portfolio-wrap">
+                    <h3 class="title">Product Catalouge
+                        <small>Software, Technology</small>
+                    </h3>
+                    <ul class="portfolio-action">
+                        <a href="assets/img/des-port7.jpg" class="popup-link"><i class="ion-arrow-resize"></i></a>
+                        <i class="ion-share"></i>
+                    </ul>
+                </div>
+            </div>
+            <img src="<?php echo get_template_directory_uri();?>/assets/img/des-port7.jpg" alt="">
+        </div>
+    </div>
+</div>
+
+
+<!-- Portfolio slider style -->
+<div class="portfolio-slider portfolio-simple">
+    <div class="element-item box" >
+        <div class="box-content">
+            <div class="portfolio-wrap">
                 <h3 class="title">Product Catalouge
                     <small>Software, Technology</small>
                 </h3>
@@ -274,8 +327,68 @@
                     <i class="ion-share"></i>
                 </ul>
             </div>
-            <img src="<?php echo get_template_directory_uri();?>/assets/img/des-port7.jpg" alt="">
         </div>
+        <img src="<?php echo get_template_directory_uri();?>/assets/img/des-port7.jpg" alt="">
+    </div>
+
+    <div class="box" >
+        <div class="box-content">
+            <div class="portfolio-wrap">
+                <h3 class="title">Product Catalouge
+                    <small>Software, Technology</small>
+                </h3>
+                <ul class="portfolio-action">
+                    <a href="assets/img/des-port7.jpg" class="popup-link"><i class="ion-arrow-resize"></i></a>
+                    <i class="ion-share"></i>
+                </ul>
+            </div>
+        </div>
+        <img src="<?php echo get_template_directory_uri();?>/assets/img/des-port7.jpg" alt="">
+    </div>
+
+    <div class="box" >
+        <div class="box-content">
+            <div class="portfolio-wrap">
+                <h3 class="title">Product Catalouge
+                    <small>Software, Technology</small>
+                </h3>
+                <ul class="portfolio-action">
+                    <a href="assets/img/des-port7.jpg" class="popup-link"><i class="ion-arrow-resize"></i></a>
+                    <i class="ion-share"></i>
+                </ul>
+            </div>
+        </div>
+        <img src="<?php echo get_template_directory_uri();?>/assets/img/des-port7.jpg" alt="">
+    </div>
+
+    <div class="box" >
+        <div class="box-content">
+            <div class="portfolio-wrap">
+                <h3 class="title">Product Catalouge
+                    <small>Software, Technology</small>
+                </h3>
+                <ul class="portfolio-action">
+                    <a href="assets/img/des-port7.jpg" class="popup-link"><i class="ion-arrow-resize"></i></a>
+                    <i class="ion-share"></i>
+                </ul>
+            </div>
+        </div>
+        <img src="<?php echo get_template_directory_uri();?>/assets/img/des-port7.jpg" alt="">
+    </div>
+
+    <div class="box" >
+        <div class="box-content">
+            <div class="portfolio-wrap">
+                <h3 class="title">Product Catalouge
+                    <small>Software, Technology</small>
+                </h3>
+                <ul class="portfolio-action">
+                    <a href="assets/img/des-port7.jpg" class="popup-link"><i class="ion-arrow-resize"></i></a>
+                    <i class="ion-share"></i>
+                </ul>
+            </div>
+        </div>
+        <img src="<?php echo get_template_directory_uri();?>/assets/img/des-port7.jpg" alt="">
     </div>
 </div>
 

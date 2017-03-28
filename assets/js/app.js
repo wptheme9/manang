@@ -495,6 +495,43 @@
     });
 
 
+// Portfolio slider
+
+        $('.portfolio-slider').slick({
+        infinite: true,
+        autoplaySpeed: 7000,
+        arrows: false,
+        centerMode: true,
+        autoplay: true,
+        centerPadding: '300px',
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        responsive: [
+        {
+          breakpoint: 990,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
+
     $(".video-popup").YouTubePopUp();
 
     AOS.init({

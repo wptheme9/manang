@@ -11771,7 +11771,8 @@ section.section.portfolio-sec {
     height: 100%;
     top: 0px;
     left: 0px;
-    text-align: center; }
+    text-align: center;
+    display: table; }
     .portfolio-filter.portfolio-classic .box-content:before {
       width: 100%;
       height: 100%;
@@ -11780,6 +11781,11 @@ section.section.portfolio-sec {
       display: block;
       background: #000;
       z-index: 9; }
+  .portfolio-filter.portfolio-classic .portfolio-wrap {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    padding: 25% 0; }
   .portfolio-filter.portfolio-classic .box:hover .box-content {
     top: 0;
     left: 0;
@@ -11796,7 +11802,6 @@ section.section.portfolio-sec {
     color: #fff; }
   .portfolio-filter.portfolio-classic i {
     font-size: 24px;
-    margin-top: 26%;
     color: #444;
     z-index: 99;
     position: relative;
@@ -11964,13 +11969,19 @@ section.section.portfolio-sec {
   z-index: -1;
   -webkit-transform: translate(0px, 0px);
   -ms-transform: translate(0px, 0px);
-  transform: translate(0px, 0px); }
+  transform: translate(0px, 0px);
+  display: table; }
+  .portfolio-simple .box .box-content .portfolio-wrap {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    padding: 25% 0; }
 
 .portfolio-simple .box .title {
   font-size: 21px;
   margin-bottom: 15px;
   color: #fff;
-  margin-top: 20%; }
+  margin-top: 0; }
   .portfolio-simple .box .title small {
     display: block;
     font-size: 14px;
@@ -12010,6 +12021,12 @@ section.section.portfolio-sec {
     line-height: 49px;
     display: inline-block;
     margin-right: 15px; }
+
+.portfolio-slider.portfolio-simple .box .portfolio-wrap {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  padding: 31% 0; }
 
 .counter-wrap.icon-top h3.timer {
   font-size: 42px;

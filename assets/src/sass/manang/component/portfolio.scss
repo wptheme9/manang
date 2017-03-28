@@ -13,6 +13,7 @@ section.section.portfolio-sec {
     top: 0px;
     left: 0px;
     text-align: center;
+    display: table;
 
       &:before{
       width: 100%;
@@ -23,6 +24,12 @@ section.section.portfolio-sec {
       background: #000;
       z-index: 9;
       }
+  }
+  .portfolio-wrap{
+        display: table-cell;
+        vertical-align: middle;
+        width: 100%;
+        padding: 25% 0;
   }
   .box:hover .box-content{
       top: 0;
@@ -43,7 +50,6 @@ section.section.portfolio-sec {
     }
  i{
     font-size: 24px;
-    margin-top: 26%;
     color: #444;
     z-index: 99;
     position: relative;
@@ -234,12 +240,20 @@ section.section.portfolio-sec {
     left: 0;
     z-index: -1;
     transform: translate(0px, 0px);
+    display: table;
+
+    .portfolio-wrap{
+        display: table-cell;
+        vertical-align: middle;
+        width: 100%;
+        padding: 25% 0;
+    }
 }
 .portfolio-simple .box .title{
     font-size: 21px;
     margin-bottom: 15px;
     color: #fff;
-    margin-top: 20%;
+    margin-top: 0;
 
     small{
         display: block;
@@ -280,4 +294,10 @@ section.section.portfolio-sec {
     display: inline-block;
     margin-right: 15px;
   }
+}
+.portfolio-slider.portfolio-simple .box .portfolio-wrap {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    padding: 31% 0;
 }

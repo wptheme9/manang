@@ -398,8 +398,9 @@
 .style3.pricing__item .pricing__price {
     font-size: 3em;
     font-weight: bold;
-    margin: 0.5em 0 0.75em;
+    margin-top: 0;
     overflow: hidden;
+    margin-bottom: 24px;
 }
 
 .style3.pricing__item .pricing__currency {
@@ -454,7 +455,7 @@
 .style3.pricing__item .pricing__feature-list {
     font-size: 16px;
     margin: 0;
-    padding: 0.25em 0 2.5em;
+    padding: 0.25em 0 2em;
     list-style: none;
     text-align: center;
     color: #8b909d;

@@ -139,3 +139,79 @@ c53.07-16.399,104.047,36.903,104.047,36.903l1.333,36.667l-372-2.954L-34.667,62.9
                 </div>
             </div>
         </section>
+
+
+
+
+        <section class="pricing-section">
+            <div class="container">
+                <div class="col-md-4">
+                    <div class="pricing__item style3">
+                        <div class="pricing-image">
+                            <a href="#"><img src="<?php echo get_template_directory_uri();?>/assets/img/agenda.png" alt=""></a>
+                        </div>
+                        <h3 class="pricing__title">Individuals</h3>
+                        <div class="pricing__price">
+                            <span class="pricing__anim pricing__anim--1">
+                                    <span class="pricing__currency">$</span>9
+                            </span>
+                            <span class="pricing__anim pricing__anim--2">
+                                    <span class="pricing__period">per year</span>
+                            </span>
+                        </div>
+                        <ul class="pricing__feature-list">
+                            <li class="pricing__feature">1 GB of space</li>
+                            <li class="pricing__feature">Support at $25/hour</li>
+                            <li class="pricing__feature">Small social media package</li>
+                        </ul>
+                        <button class="pricing__action">Choose plan</button>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="pricing__item style3">
+                        <div class="pricing-image">
+                            <a href="#"><img src="<?php echo get_template_directory_uri();?>/assets/img/application.png" alt=""></a>
+                        </div>
+                        <h3 class="pricing__title">Small Team</h3>
+                        <div class="pricing__price">
+                            <span class="pricing__anim pricing__anim--1">
+                                    <span class="pricing__currency">$</span>79
+                            </span>
+                            <span class="pricing__anim pricing__anim--2">
+                                    <span class="pricing__period">per year</span>
+                            </span>
+                        </div>
+                        <ul class="pricing__feature-list">
+                            <li class="pricing__feature">5 GB of space</li>
+                            <li class="pricing__feature">Free support</li>
+                            <li class="pricing__feature">Full social media package</li>
+                        </ul>
+                        <button class="pricing__action">Choose plan</button>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="pricing__item style3">
+                        <div class="pricing-image">
+                            <a href="#"><img src="<?php echo get_template_directory_uri();?>/assets/img/customer-service.png" alt=""></a>
+                        </div>
+                        <h3 class="pricing__title">Organization</h3>
+                        <div class="pricing__price">
+                            <span class="pricing__anim pricing__anim--1">
+                                    <span class="pricing__currency">$</span>499
+                            </span>
+                            <span class="pricing__anim pricing__anim--2">
+                                    <span class="pricing__period">per year</span>
+                            </span>
+                        </div>
+                        <ul class="pricing__feature-list">
+                            <li class="pricing__feature">Unlimited space</li>
+                            <li class="pricing__feature">Free support</li>
+                            <li class="pricing__feature">Full social media package</li>
+                        </ul>
+                        <button class="pricing__action">Choose plan</button>
+                    </div>
+                </div>
+            </div>
+        </section>

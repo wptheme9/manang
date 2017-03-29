@@ -8,7 +8,12 @@
                     <div class="jAudio--ui">
 
                         <div class="jAudio--status-bar">
-                            <div class="jAudio--volume-bar"></div>
+                            <div class='jAudio--volume-bar'>
+                                <div class='jAudio--volume-bar-wrapper'>
+                                    <div class="jAudio--volume-bar-level"></div>
+                                    <input id="jAudio--volume-slider" class="range" type="range" min="0" max="1" step="0.01" />
+                                </div>
+                            </div>
 
                             <div class="jAudio--progress-bar">
                                   <div class="jAudio--progress-bar-wrapper">

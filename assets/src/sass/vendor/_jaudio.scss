@@ -271,5 +271,95 @@
   -webkit-transition: all 0.3s ease 0s;
           transition: all 0.3s ease 0s;
 }
+.hidden {
+    display: none !important;
+}
+.range {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+}
+.jAudio--player .jAudio--volume-bar i {
+    margin: 0 0 0 25px;
+    color: rgba(0, 0, 0, 0.29);
+    line-height: .5;
+    font-size: 20px;
+}
+.jAudio--player .jAudio--volume-bar .jAudio--volume-bar-wrapper {
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: visible;
+    height: 5px;
+    width: 75%;
+    margin: 0 auto;
+}
+.jAudio--player .jAudio--volume-bar .jAudio--volume-bar-wrapper .jAudio--volume-bar-level {
+    height: 5px;
+    background: $color__theme;
+    position: absolute;
+    top: 0px;
+    width: 50%;
+    z-index: 1;
+    box-sizing: content-box;
+}
+.jAudio--player .jAudio--volume-bar .jAudio--volume-bar-wrapper .jAudio--volume-bar-level:before {
+  content: '\f3b7';
+  position: absolute;
+  left: -39px;
+  font-family: "Ionicons";
+  font-size: 38px;
+  top: -11px;
+  color: #fff;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    background: #fff;
+    border-radius: 16px;
+    height: 5px;
+}
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]::-moz-range-track {
+    -webkit-appearance: none;
+    background: #fff;
+    border-radius: 16px;
+    height: 5px;
+    padding-top: 0px;
+    transform: translateY(-2px);
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border-radius: 50px;
+    height: 5px;
+    width: 5px;
+    position: relative;
+    bottom: 0px;
+    cursor: -webkit-grab;
+    background: #fff;
+    border: none !important;
+    z-index: 2;
+    transform: scale(1.1);
+}
+input[type=range]::-moz-range-thumb {
+    -webkit-appearance: none;
+    border: 2px solid #fff;
+    height: 15px;
+    width: 5px;
+    cursor: -moz-grab;
+    background: #fff;
+    border: none !important;
+    z-index: 2;
+    transform: scale(1.1) translateY(-2px);
+    bottom: 0px;
+}
+input[type=range]::-webkit-slider-thumb:active {
+    cursor: -webkit-grabbing;
+}
+input[type=range]::-moz-range-thumb:active {
+    cursor: -moz-grabbing;
+}
+
 
 /*# sourceMappingURL=main.css.map */

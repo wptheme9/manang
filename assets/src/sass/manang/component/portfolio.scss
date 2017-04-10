@@ -13,8 +13,6 @@ section.section.portfolio-sec {
     top: 0px;
     left: 0px;
     text-align: center;
-    display: table;
-
       &:before{
       width: 100%;
       height: 100%;
@@ -26,10 +24,10 @@ section.section.portfolio-sec {
       }
   }
   .portfolio-wrap{
-        display: table-cell;
-        vertical-align: middle;
-        width: 100%;
-        padding: 25% 0;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 40%;
   }
   .box:hover .box-content{
       top: 0;
@@ -240,13 +238,12 @@ section.section.portfolio-sec {
     left: 0;
     z-index: -1;
     transform: translate(0px, 0px);
-    display: table;
 
     .portfolio-wrap{
-        display: table-cell;
-        vertical-align: middle;
         width: 100%;
-        padding: 25% 0;
+        text-align: center;
+        position: absolute;
+        top: 40%;
     }
 }
 .portfolio-simple .box .title{
@@ -296,8 +293,8 @@ section.section.portfolio-sec {
   }
 }
 .portfolio-slider.portfolio-simple .box .portfolio-wrap {
-    display: table-cell;
-    vertical-align: middle;
     width: 100%;
-    padding: 31% 0;
+    text-align: center;
+    position: absolute;
+    top: 40%;
 }

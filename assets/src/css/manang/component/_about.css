@@ -1,0 +1,47 @@
+.facebook {
+  background-color: #3b5998; }
+
+.twitter {
+  background-color: #1da1f2; }
+
+.gplus {
+  background-color: #dd4b39; }
+
+.dribbble {
+  background-color: #ea4c89; }
+
+.flickr {
+  background-color: #ff0084; }
+
+.pinterest {
+  background-color: #c8232c; }
+
+.youtube {
+  background-color: #c4302b; }
+
+.github {
+  background-color: #171515; }
+
+.linkedin {
+  background-color: #0e76a8; }
+
+.tumblr {
+  background-color: #34526f; }
+
+.style1 li div {
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
+  color: #fff;
+  font-size: 25;
+  text-align: center;
+  line-height: 80px;
+  box-shadow: 4px 2px 8px -4px rgba(0, 0, 0, 0.75);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+.style1 li div {
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+  border-radius: 100px; }

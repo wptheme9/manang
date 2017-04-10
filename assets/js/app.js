@@ -459,7 +459,40 @@
       ]
     });
 
-
+    // Insta slider
+    $('.instagram-wrap').slick({
+      dots: false,
+      infinite: true,
+      speed: 500,
+      autoplay: true,
+      arrows: true,
+      slidesToShow:4,
+      slidesToScroll: 1,
+      responsive: [
+          {
+            breakpoint: 990,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1,
+              infinite: true,
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+      ]
+    });
     // Blog slider
 
     $('.blog-post-slider').slick({

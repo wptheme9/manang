@@ -92,16 +92,17 @@
     bottom: 0;
     width: 100%;
     padding: 3em 2em;
-    text-align: center;
+    text-align: left;
 }
 
 .tilter__title {
     margin: 0;
     font-weight: normal;
-    font-size: 25px;
+    font-size: 29px;
     font-weight: 600;
     line-height: 1;
     color: #fff;
+    text-shadow: rgba(0, 0, 0, 0.7) 0 10px 13px;
 }
 figure.tilter__figure:before {
     background: rgba(0, 0, 0, 0.2);
@@ -286,8 +287,7 @@ figure.tilter__figure:after {
     left: 15px;
     bottom: 15px;
     right: 15px;
-    border: 11px solid #fff;
-    opacity: 0;
+    border: 1px solid #fff9;
     transition: all 0.5s ease 0s;
 }
 

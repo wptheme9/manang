@@ -479,3 +479,41 @@ label.error {
     width: 100% !important;
     height: 100% !important;
 }
+
+// Instagram
+.instagram-slider{
+    position: relative;
+    .instagram-wrap{
+        position: relative;
+        .insta-img{
+            outline: 0;
+            img{
+                margin-right: 0;
+                width: 100%;
+            }
+        }
+    }
+    h4{
+        font-size: 11px;
+        letter-spacing: 0.03em;
+        color: #666;
+        text-transform: uppercase;
+        padding: 0 20px;
+        line-height: 44px;
+        height: 44px;
+        background-color: #FFF;
+        position: absolute;
+        margin: auto;
+        top: 40%;
+        text-align: center;
+        bottom: 0;
+        white-space: nowrap;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+        z-index: 99;
+    }
+}

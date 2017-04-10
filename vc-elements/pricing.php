@@ -34,7 +34,8 @@ function manang_pricing_integrateWithVC(){
                 "param_name" => "pricing_table_style",
                 "value" => array(
                     __("Light", 'manang') => "light",
-                    __("Dark", 'manang') => "dark"
+                    __("Dark", 'manang') => "dark",
+                    __( 'Image', 'manang' ) => "image",
                 ) ,
                 "type" => "dropdown"
             ) ,
@@ -76,6 +77,8 @@ function manang_pricing_integrateWithVC(){
                         $button_link = get_post_meta(get_the_id(), 'manang_basecamp_pricing_button_link', true);
                         $featured = get_post_meta(get_the_id(), 'manang_basecamp_pricing_featured', true);
                         $featured_or_not = ($featured == 'on'?'pricing__item--featured':'');
+                        $pricing_image_id = get_post_thumbnail_id();
+                        $pricing_image_url = wp_get_attachment_image_src( $pricing_image_id, 'full' );
 
                         switch($pricing_table_style){
                             case( "dark" ): ?>
@@ -143,7 +146,45 @@ function manang_pricing_integrateWithVC(){
                                     </div>
                                 </div>
                             <?php break;
-                            }
+                            case("image"): ?>
+                                <div class="<?php echo esc_attr($table_number); ?>">
+                                    <div class="pricing__item style3">
+                                        <?php if(!empty($pricing_image_url)): ?>
+                                            <div class="pricing-image">
+                                                <a href="<?php the_permalink(); ?>"><img src="<?php echo $pricing_image_url[0]; ?>" alt=""></a>
+                                            </div>
+                                        <?php endif; ?>
+
+                                        <?php if(!empty($plan_name)){ ?>
+                                            <h3 class="pricing__title"><?php echo esc_html($plan_name); ?></h3>
+                                        <?php } ?>
+                                        <div class="pricing__price">
+                                            <?php if(!empty($currency)){ ?>
+                                                <span class="pricing__anim pricing__anim--1">
+                                                    <span class="pricing__currency"><?php echo esc_html($currency); ?></span>
+                                                </span>
+                                            <?php } ?>
+                                            <?php echo esc_html($price);
+                                            if(!empty($period)){ ?>
+                                                <span class="pricing__anim pricing__anim--2">
+                                                    <span class="pricing__period">/ <?php echo esc_html($period); ?></span>
+                                                </span>
+                                            <?php } ?>
+                                        </div>
+                                        <?php if(!empty($features)){ ?>
+                                            <ul class="pricing__feature-list">
+                                                <?php foreach($features as $feature){ ?>
+                                                    <li class="pricing__feature"><?php echo esc_html($feature); ?></li>
+                                                <?php } ?>
+                                            </ul>
+                                        <?php }
+                                        if(!empty($button_link) && !empty($button_text)){ ?>
+                                            <a href="<?php echo esc_url($button_link)?>" class="pricing__action"><?php echo esc_html($button_text); ?></a>
+                                        <?php } ?>
+                                    </div>
+                                </div>
+                            <?php break;
+                        }
                     endwhile;
                     wp_reset_postdata();
                 endif;

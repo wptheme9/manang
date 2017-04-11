@@ -40,6 +40,13 @@ function manang_pricing_integrateWithVC(){
                 "type" => "dropdown"
             ) ,
 
+            array(
+                "param_name" => "number_pricing",
+                "heading" => __("Number Of Pricing To Be Displayed", "manang") ,
+                "value" => "",
+                "type" => "textfield",
+            ) ,
+
         ),
     ));
     if(class_exists('WPBakeryShortCode')){
@@ -50,14 +57,17 @@ function manang_pricing_integrateWithVC(){
                $values =  shortcode_atts( array(
                             'table_number'          => 'col-md-6',
                             'pricing_table_style'   => 'light',
+                            'number_pricing'        => '',
                             ),$atts);
                $table_number = $values['table_number'];
                $pricing_table_style = $values['pricing_table_style'];
+               $number_pricing = $values['number_pricing'];
+               $posts_per_page = (empty($number_pricing)?-1:$number_pricing);
 
                $pricing_argument = array(
                     'post_type'      => 'pricing',
                     'post_status'    => 'publish',
-                    'posts_per_page' => -1,
+                    'posts_per_page' => $posts_per_page,
                     'orderby'        => 'menu_order date',
                     'order'          => 'desc',
                 );

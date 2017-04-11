@@ -265,3 +265,5 @@ require get_template_directory() . '/vc-elements/section-title.php';
 require get_template_directory() . '/vc-elements/clients.php';
 require get_template_directory() . '/vc-elements/latest-post.php';
 require get_template_directory() . '/vc-elements/mg-event-timeline.php';
+require get_template_directory() . '/vc-elements/mg-events.php';
+require get_template_directory() . '/vc-elements/mg-pricing-lists.php';

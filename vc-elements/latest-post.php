@@ -157,9 +157,12 @@ function manang_latest_post_integrateWithVC(){
                                     <div class="blog-wrap style3 <?php echo esc_attr($box_shadow_checked); ?>">
                                          <div class="blog-image">
                                             <img src="<?php echo esc_url($latest_post_image_id[0]); ?>" alt="">
-                                            <div class="blog-date">
-                                                <span class="tags">fashion</span>
-                                            </div>
+                                            <?php $category = get_the_category();
+                                            if(!empty($category)){ ?>
+                                                <div class="blog-date">
+                                                    <span class="tags"><?php echo $category[0]->cat_name; ?></span>
+                                                </div>
+                                            <?php } ?>
                                         </div>
 
                                         <div class="blog-footer">

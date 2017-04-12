@@ -21,9 +21,9 @@ function manang_portfolio_integrateWithVC(){
                 "description" => __("", 'manang') ,
                 "param_name" => "portfolio_style",
                 "value" => array(
-                    __("Grid", 'manang') => "icon",
-                    __("Masonry", 'manang') => "number",
-                    __("SLider", 'manang') => "number",
+                    __("Grid", 'manang') => "grid",
+                    __("Masonry", 'manang') => "masonry",
+                    __("Slider", 'manang') => "slider",
                 ) ,
                 "type" => "dropdown"
             ) ,
@@ -32,9 +32,9 @@ function manang_portfolio_integrateWithVC(){
                 "heading" => __("Portfolio Hover Effects", 'manang') ,
                 "param_name" => "hover_effects",
                 "value" => array(
-                    __("Classic", 'manang') => "icon",
-                    __("Modern", 'manang') => "number",
-                    __("Simple", 'manang') => "number",
+                    __("Classic", 'manang') => "portfolio-classic",
+                    __("Modern", 'manang') => "portfolio-modern",
+                    __("Simple", 'manang') => "portfolio-simple",
                 ) ,
                 "type" => "dropdown"
             ) ,
@@ -77,6 +77,12 @@ function manang_portfolio_integrateWithVC(){
                 "heading" => __("Sortable?", "manang") ,
                 "param_name" => "sortable",
                 "value" => __("", "manang") ,
+                "dependency" => array(
+                    'element' => "portfolio_style",
+                    'value' => array(
+                        'grid','masonry'
+                    )
+                )
             ) ,
 
             array(
@@ -93,9 +99,9 @@ function manang_portfolio_integrateWithVC(){
             protected function content( $atts, $content = null ) {
 
                $values =  shortcode_atts( array(
-                            'portfolio_style'       => '',
-                            'hover_effects'         => '',
-                            'column_numbers'        => '',
+                            'portfolio_style'       => 'grid',
+                            'hover_effects'         => 'portfolio-classic',
+                            'column_numbers'        => 'grid-col-2',
                             'show_permalink'        => '',
                             'show_zoomlink'         => '',
                             'number_posts'          => '',
@@ -109,11 +115,78 @@ function manang_portfolio_integrateWithVC(){
                $number_posts = $values['number_posts'];
                $sortable = $values['sortable'];
                $padding_not = $values['padding_not'];
-               $read_more_text = $values['read_more_text'];
+               $posts_per_page = (empty($number_posts)?-1:$number_posts);
+               $padding_check =($padding_not == 'true'?'add-pad':'pad0');
+               $portfolio_arg = array(
+                'post_type'      => 'portfolio',
+                'posts_per_page'  => $posts_per_page,
+                'post_status'    => 'publish',
+                'orderby'        => 'menu_order date',
+                'order'          => 'desc',
+               );
+               $portfolio_query = new WP_Query($portfolio_arg);
 
-                ob_start(); ?>
+                ob_start();
+                if($portfolio_query->have_posts()):
+                    switch($hover_effects){
+                        case('portfolio-classic'): ?>
+                            <div class="portfolio-filter portfolio-classic">
+                                <?php if($portfolio_style  != 'slider' && $sortable == 'true'):
+                                    $taxonomy = 'portfolio_category';
+                                    $terms = get_terms($taxonomy); // Get all terms of a taxonomy
 
-                <?php $output = ob_get_clean();
+                                    if ( $terms && !is_wp_error( $terms ) ) : ?>
+                                        <div class="button-group filters-button-group">
+                                            <button class="button is-checked" data-filter="*">all</button>
+                                            <?php foreach ( $terms as $term ) { ?>
+                                                <button class="button" data-filter="<?php echo $term->slug; ?>"><?php echo $term->name; ?></button>
+                                            <?php } ?>
+                                        </div>
+                                    <?php endif;?>
+                                <?php endif; ?>
+                                <div class="grid">
+                                    <?php while($portfolio_query->have_posts()):
+                                        $portfolio_query->the_post();
+                                        $portfolio_image_id = get_post_thumbnail_id();
+                                        $portfolio_image_size = get_post_meta(get_the_id(), 'manang_basecamp_portfolio_image_size', true);
+                                        $designation = get_post_meta(get_the_id(), 'manang_basecamp_portfolio_designation', true);
+                                        if($portfolio_style == 'grid' || $portfolio_style == 'slider'){
+                                            $preferred_image_size = 'manang_portfolio_800_800';
+                                        }
+                                        else{
+                                            $preferred_image_size = $portfolio_image_size;
+                                            }
+                                        $portfolio_img = wp_get_attachment_image_src( $portfolio_image_id,$preferred_image_size );
+                                        $terms_slugs_string = '';
+                                        $terms = get_the_terms( get_the_id(), 'portfolio_category' );
+                                        if ( $terms && ! is_wp_error( $terms ) ) {
+                                            $term_slugs_array = array();
+                                            foreach ( $terms as $term ) {
+                                                $term_slugs_array[] = $term->slug;
+                                            }
+                                            $terms_slugs_string = join( " ", $term_slugs_array );
+                                        } ?>
+                                            <div class="element-item grid-col-3 box <?php echo esc_attr($padding_check . ' ' .$terms_slugs_string); ?>" >
+                                                <img src="<?php echo esc_url($portfolio_img[0]); ?>" alt="">
+                                                <div class="box-content">
+                                                    <div class="portfolio-wrap">
+                                                        <a href="<?php echo esc_url($portfolio_img[0]); ?>" class="popup-link"><i class="ion-arrow-resize"></i></a>
+                                                        <i class="ion-share"></i>
+                                                        <h3 class="title"><?php the_title(); ?></h3>
+                                                        <small><?php echo esc_html($designation); ?></small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    <?php endwhile;
+                                    wp_reset_postdata(); ?>
+                                </div>
+                            </div>
+                        <?php break;
+                        }?>
+
+                    <?php
+                endif;
+                $output = ob_get_clean();
                 return $output;
             }
         }

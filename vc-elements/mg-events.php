@@ -63,49 +63,58 @@ function manang_events_integrateWithVC(){
                             <ul>
                                 <?php while($events_query->have_posts()):
                                     $events_query->the_post();
+                                        $start_date = get_post_meta(get_the_id(), 'manang_basecamp_event_start_date', true);
+                                        $end_date = get_post_meta(get_the_id(), 'manang_basecamp_event_end_date', true);
+                                        $start_time = get_post_meta(get_the_id(), 'manang_basecamp_event_start_time', true);
+                                        $end_time = get_post_meta(get_the_id(), 'manang_basecamp_event_end_time', true);
+                                        $ticket_price = get_post_meta(get_the_id(), 'manang_basecamp_event_ticket_price', true);
+                                        $category = get_post_meta(get_the_id(), 'manang_basecamp_event_category', true);
+                                        $location = get_post_meta(get_the_id(), 'manang_basecamp_event_location', true);
+                                        $button_text = get_post_meta(get_the_id(), 'manang_basecamp_event_button_text', true);
+                                        $button_link = get_post_meta(get_the_id(), 'manang_basecamp_event_button_link', true);
+                                        $organizers = get_post_meta(get_the_id(), 'manang_basecamp_event_organizers', true);
 
-                                    $start_date = get_post_meta(get_the_id(), 'manang_basecamp_event_start_date', true);
-                                    $end_date = get_post_meta(get_the_id(), 'manang_basecamp_event_end_date', true);
-                                    $start_time = get_post_meta(get_the_id(), 'manang_basecamp_event_start_time', true);
-                                    $end_time = get_post_meta(get_the_id(), 'manang_basecamp_event_end_time', true);
-                                    $ticket_price = get_post_meta(get_the_id(), 'manang_basecamp_event_ticket_price', true);
-                                    $category = get_post_meta(get_the_id(), 'manang_basecamp_event_category', true);
-                                    $location = get_post_meta(get_the_id(), 'manang_basecamp_event_location', true);
-                                    $button_text = get_post_meta(get_the_id(), 'manang_basecamp_event_button_text', true);
-                                    $button_link = get_post_meta(get_the_id(), 'manang_basecamp_event_button_link', true);
-                                    $organizers = get_post_meta(get_the_id(), 'manang_basecamp_event_organizers', true);
-
-                                    $events_image_id = get_post_thumbnail_id();
-                                    $events_image_url = wp_get_attachment_image_src( $events_image_id, 'full' );
-                                     ?>
-                                            <li>
-                                                <div class="row">
-                                                     <div class="col-sm-6 col-md-2">
+                                        $events_image_id = get_post_thumbnail_id();
+                                        $events_image_url = wp_get_attachment_image_src( $events_image_id, 'full' );
+                                        $orderdate = explode('-', $start_date);
+                                        $dateArray = date_parse_from_format('m-d-Y', $start_date);
+                                        $month = $dateArray['month'];
+                                        $day = $dateArray['day'];
+                                        $year = $dateArray['year'];
+                                        $year_check = (!empty($year)?','.$year:'');
+                                        $end_time_check = (!empty($end_time)?' - '.$end_time:''); ?>
+                                        <li>
+                                            <div class="row">
+                                                 <div class="col-sm-6 col-md-2">
+                                                    <?php if(!empty($start_date)): ?>
                                                         <div class="event-date">
-                                                            <p>23<span>Dec,2016</span></p>
+                                                            <p><?php echo esc_html($day); ?><span><?php echo esc_html($month . $year_check); ?></span></p>
                                                         </div>
+                                                    <?php endif; ?>
+                                                </div>
+                                                <div class="col-sm-3 col-md-5">
+                                                    <div class="event-thumb">
+                                                        <img src="<?php echo esc_url($events_image_url[0]); ?>">
                                                     </div>
-                                                    <div class="col-sm-3 col-md-5">
-                                                        <div class="event-thumb">
-                                                            <img src="<?php echo esc_url($events_image_url[0]); ?>">
-                                                        </div>
-                                                        <div class="event-title">
-                                                            <?php the_title( '<h3>', '</h3>' ); ?>
-                                                            <p><?php the_content(); ?></p>
-                                                        </div>
-                                                    </div>
-                                                     <div class="col-sm-6 col-md-3">
-                                                        <div class="event-location">
-                                                            <p class="location">Ekantakuna-Lalitpur,Nepal</span></p>
-                                                            <p>10:00 AM - 2:00PM</p>
-                                                        </div>
-                                                    </div>
-                                                     <div class="col-sm-6 col-md-1">
-                                                        <a href="#" class="btn btn-default">Buy ticket</a>
+                                                    <div class="event-title">
+                                                        <?php the_title( '<h3>', '</h3>' ); ?>
+                                                        <p><?php echo manang_get_excerpt(get_the_id(),200); ?></p>
                                                     </div>
                                                 </div>
-                                            </li>
-                                        <?php endwhile;
+                                                 <div class="col-sm-6 col-md-3">
+                                                    <div class="event-location">
+                                                        <p class="location"><?php echo esc_html($location); ?></span></p>
+                                                        <p><?php echo esc_html($start_time . $end_time_check); ?></p>
+                                                    </div>
+                                                </div>
+                                                <?php if(!empty($button_text) && !empty($button_link)): ?>
+                                                     <div class="col-sm-6 col-md-1">
+                                                        <a href="<?php echo esc_url($button_link); ?>" class="btn btn-default"><?php echo esc_html($button_text); ?></a>
+                                                    </div>
+                                                <?php endif; ?>
+                                            </div>
+                                        </li>
+                                    <?php endwhile;
                                 wp_reset_postdata(); ?>
                             </ul>
                         </div>
@@ -129,7 +138,13 @@ function manang_events_integrateWithVC(){
 
                                     $events_image_id = get_post_thumbnail_id();
                                     $events_image_url = wp_get_attachment_image_src( $events_image_id, 'full' );
-                                     ?>
+                                    $orderdate = explode('-', $start_date);
+                                    $dateArray = date_parse_from_format('m-d-Y', $start_date);
+                                    $month = $dateArray['month'];
+                                    $day = $dateArray['day'];
+                                    $year = $dateArray['year'];
+                                    $year_check = (!empty($year)?','.$year:'');
+                                    $end_time_check = (!empty($end_time)?' To '.$end_time:'');  ?>
                                     <div class="mg-event style2">
                                         <div class="event-wrap" style="background-image:url(<?php echo esc_url($events_image_url[0]); ?>);">
                                         </div>
@@ -138,28 +153,32 @@ function manang_events_integrateWithVC(){
                                                 <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?> </a></h3>
 
                                                   <span class="event-day">
-                                                      <p><span>28</span>May</p>
+                                                        <p><span><?php echo esc_html($day); ?></span><?php echo esc_html($month . $year_check); ?></p>
                                                   </span>
                                                 <div class="event-meta">
-                                                    <span class="event-loc">
-                                                          <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                                          <div class="event-loc-detail">
-                                                            <h4>Event Arena</h4>
-                                                            <p>Ethiad Stadium</p>
-                                                          </div>
-                                                    </span>
+                                                    <?php if(!empty($location)): ?>
+                                                        <span class="event-loc">
+                                                              <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                              <div class="event-loc-detail">
+                                                                <h4>Event Arena</h4>
+                                                                <p><?php echo esc_html($location); ?></p>
+                                                              </div>
+                                                        </span>
+                                                    <?php endif; ?>
                                                     <span class="event-time">
                                                         <i class="fa fa-clock-o"></i>
                                                         <div class="event-time-detail">
                                                             <h4>Event Time</h4>
-                                                            <p>2:00 AM To 4:00 PM</p>
+                                                            <p><?php echo esc_html($start_time . $end_time_check); ?></p>
                                                         </div>
                                                     </span>
                                                 </div>
                                             </div>
                                             <div class="event-footer">
-                                                <p><?php the_content(); ?></p>
-                                                <a href="#" class="btn btn-default">Read More</a>
+                                                <p><?php echo manang_get_excerpt(get_the_id(),200); ?></p>
+                                                <?php if(!empty($button_text) && !empty($button_link)): ?>
+                                                    <a href="<?php echo esc_url($button_link); ?>" class="btn btn-default"><?php echo esc_html($button_text); ?></a>
+                                                <?php endif; ?>
                                             </div>
                                         </div>
                                     </div>

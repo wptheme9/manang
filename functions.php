@@ -77,9 +77,11 @@ function manang_setup() {
 		'default-image' => '',
 	) ) );
     //team_image_size
-    // add_image_size( 'manang_team',600,400,true );
     add_image_size( 'manang_team_basic',635,700,array( 'center', 'top' ) );
     add_image_size( 'manang_team_round',600,600,array( 'center', 'top' ) );
+    add_image_size( 'manang_portfolio_800_800',800,800 );
+    add_image_size( 'manang_portfolio_800_400',800,400 );
+    add_image_size( 'manang_portfolio_400_800',400,800 );
 }
 endif;
 add_action( 'after_setup_theme', 'manang_setup' );
@@ -268,3 +270,5 @@ require get_template_directory() . '/vc-elements/latest-post.php';
 require get_template_directory() . '/vc-elements/mg-event-timeline.php';
 require get_template_directory() . '/vc-elements/mg-events.php';
 require get_template_directory() . '/vc-elements/mg-pricing-lists.php';
+require get_template_directory() . '/vc-elements/mg-gmaps.php';
+require get_template_directory() . '/vc-elements/mg-portfolio.php';

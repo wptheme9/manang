@@ -20,6 +20,13 @@
         $('body').addClass('loaded');
     }, 3000);
 
+    $(".simply-countdown-one").simplyCountdown({
+        year: 2017,
+        month: 2,
+        day: 10,
+        hours:12
+    });
+
     //Mailchimp subscription form
     var subfrom = $(".subscription-form");
     var loader = $(".ajax-loader");

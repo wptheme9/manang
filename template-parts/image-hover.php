@@ -130,3 +130,48 @@
         </div>
     </div>
 </div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="full-image-box card">
+                <div class="wrapper">
+                    <div class="data">
+                        <div class="content">
+                          <h1 class="title"><a href="#">Stranger Things: The sound of the Upside Down</a></h1>
+                          <p class="text">The antsy bingers of Netflix will eagerly anticipate the digital release of the Survive soundtrack, out today.</p>
+                          <a href="#" class="read">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="full-image-box card">
+                <div class="wrapper">
+                    <div class="data">
+                        <div class="content">
+                          <h1 class="title"><a href="#">Stranger Things: The sound of the Upside Down</a></h1>
+                          <p class="text">The antsy bingers of Netflix will eagerly anticipate the digital release of the Survive soundtrack, out today.</p>
+                          <a href="#" class="read">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="full-image-box card">
+                <div class="wrapper">
+                    <div class="data">
+                        <div class="content">
+                          <h1 class="title"><a href="#">Stranger Things: The sound of the Upside Down</a></h1>
+                          <p class="text">The antsy bingers of Netflix will eagerly anticipate the digital release of the Survive soundtrack, out today.</p>
+                          <a href="#" class="read">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

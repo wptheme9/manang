@@ -44,3 +44,8 @@
     </div>
 </div>
 
+
+<!-- Start of countdoown div -->
+<div class="simply-countdown simply-countdown-one"></div>
+<!-- End of countdown div -->
+

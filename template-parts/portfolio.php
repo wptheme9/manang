@@ -331,7 +331,7 @@
         <img src="<?php echo get_template_directory_uri();?>/assets/img/des-port7.jpg" alt="">
     </div>
 
-    <div class="box" >
+    <div class="box element-item" >
         <div class="box-content">
             <div class="portfolio-wrap">
                 <h3 class="title">Product Catalouge
@@ -346,7 +346,7 @@
         <img src="<?php echo get_template_directory_uri();?>/assets/img/des-port7.jpg" alt="">
     </div>
 
-    <div class="box" >
+    <div class="box element-item" >
         <div class="box-content">
             <div class="portfolio-wrap">
                 <h3 class="title">Product Catalouge
@@ -361,7 +361,7 @@
         <img src="<?php echo get_template_directory_uri();?>/assets/img/des-port7.jpg" alt="">
     </div>
 
-    <div class="box" >
+    <div class="box element-item" >
         <div class="box-content">
             <div class="portfolio-wrap">
                 <h3 class="title">Product Catalouge
@@ -376,7 +376,7 @@
         <img src="<?php echo get_template_directory_uri();?>/assets/img/des-port7.jpg" alt="">
     </div>
 
-    <div class="box" >
+    <div class="box element-item" >
         <div class="box-content">
             <div class="portfolio-wrap">
                 <h3 class="title">Product Catalouge

@@ -273,3 +273,4 @@ require get_template_directory() . '/vc-elements/mg-pricing-lists.php';
 require get_template_directory() . '/vc-elements/mg-gmaps.php';
 require get_template_directory() . '/vc-elements/mg-portfolio.php';
 require get_template_directory() . '/vc-elements/mg-social.php';
+require get_template_directory() . '/vc-elements/mg-audioplayer.php';

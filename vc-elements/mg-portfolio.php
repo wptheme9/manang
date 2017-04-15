@@ -112,6 +112,7 @@ function manang_portfolio_integrateWithVC(){
                $hover_effects = $values['hover_effects'];
                $column_numbers = $values['column_numbers'];
                $show_zoomlink = $values['show_zoomlink'];
+               $show_permalink = $values['show_permalink'];
                $number_posts = $values['number_posts'];
                $sortable = $values['sortable'];
                $padding_not = $values['padding_not'];
@@ -130,7 +131,7 @@ function manang_portfolio_integrateWithVC(){
                 if($portfolio_query->have_posts()):
                     switch($hover_effects){
                         case('portfolio-classic'): ?>
-                            <div class="portfolio-filter portfolio-classic">
+                            <div class="portfolio-filter portfolio-classic <?php echo esc_attr($portfolio_style); ?>">
                                 <?php if($portfolio_style  != 'portfolio-slider' && $sortable == 'true'):
                                     $taxonomy = 'portfolio_category';
                                     $terms = get_terms($taxonomy); // Get all terms of a taxonomy
@@ -144,8 +145,10 @@ function manang_portfolio_integrateWithVC(){
                                         </div>
                                     <?php endif;?>
                                 <?php endif; ?>
-                                <div class="grid">
-                                    <?php while($portfolio_query->have_posts()):
+                                <?php if($portfolio_style  != 'portfolio-slider') { ?>
+                                    <div class="grid">
+                                <?php }
+                                    while($portfolio_query->have_posts()):
                                         $portfolio_query->the_post();
                                         $portfolio_image_id = get_post_thumbnail_id();
                                         $portfolio_image_size = get_post_meta(get_the_id(), 'manang_basecamp_portfolio_image_size', true);
@@ -170,21 +173,27 @@ function manang_portfolio_integrateWithVC(){
                                                 <img src="<?php echo esc_url($portfolio_img[0]); ?>" alt="">
                                                 <div class="box-content">
                                                     <div class="portfolio-wrap">
-                                                        <a href="<?php echo esc_url($portfolio_img[0]); ?>" class="popup-link"><i class="ion-arrow-resize"></i></a>
-                                                        <i class="ion-share"></i>
+                                                        <?php if($show_zoomlink == 'true'){ ?>
+                                                            <a href="<?php echo esc_url($portfolio_img[0]); ?>" class="popup-link"><i class="ion-arrow-resize"></i></a>
+                                                        <?php }
+                                                        if($show_permalink == 'true'){ ?>
+                                                            <i class="ion-share"></i>
+                                                        <?php } ?>
                                                         <h3 class="title"><?php the_title(); ?></h3>
                                                         <small><?php echo esc_html($designation); ?></small>
                                                     </div>
                                                 </div>
                                             </div>
                                     <?php endwhile;
-                                    wp_reset_postdata(); ?>
-                                </div>
+                                    wp_reset_postdata();
+                                if($portfolio_style  != 'portfolio-slider') { ?>
+                                    </div>
+                                <?php } ?>
                             </div>
                         <?php break;
 
                         case('portfolio-modern'): ?>
-                        <div class="portfolio-filter portfolio-modern">
+                        <div class="portfolio-filter portfolio-modern <?php echo esc_attr($portfolio_style); ?>">
                         <!-- Start of button group -->
                             <?php if($portfolio_style  != 'portfolio-slider' && $sortable == 'true'):
                                 $taxonomy = 'portfolio_category';
@@ -201,8 +210,10 @@ function manang_portfolio_integrateWithVC(){
                             <?php endif; ?>
                           <!-- End of button group -->
 
-                            <div class="grid">
-                                <?php while($portfolio_query->have_posts()):
+                            <?php if($portfolio_style  != 'portfolio-slider') { ?>
+                                    <div class="grid">
+                                <?php }
+                                while($portfolio_query->have_posts()):
                                     $portfolio_query->the_post();
                                     $portfolio_image_id = get_post_thumbnail_id();
                                     $portfolio_image_size = get_post_meta(get_the_id(), 'manang_basecamp_portfolio_image_size', true);
@@ -229,8 +240,12 @@ function manang_portfolio_integrateWithVC(){
                                         </div>
                                         <div class="portfolio-wrap">
                                             <ul class="portfolio-action">
-                                                <a href="<?php echo esc_url($portfolio_img[0]); ?>" class="popup-link"><i class="ion-arrow-resize"></i></a>
-                                                <i class="ion-share"></i>
+                                                <?php if($show_zoomlink == 'true'){ ?>
+                                                    <a href="<?php echo esc_url($portfolio_img[0]); ?>" class="popup-link"><i class="ion-arrow-resize"></i></a>
+                                                <?php }
+                                                if($show_permalink == 'true'){ ?>
+                                                    <i class="ion-share"></i>
+                                                <?php } ?>
                                             </ul>
                                             <div class="over-layer">
                                                 <h4 class="post">
@@ -241,12 +256,14 @@ function manang_portfolio_integrateWithVC(){
                                         </div>
                                     </div>
                                 <?php endwhile;
-                                    wp_reset_postdata(); ?>
-                            </div>
+                                    wp_reset_postdata();
+                            if($portfolio_style  != 'portfolio-slider') { ?>
+                                </div>
+                            <?php } ?>
                         </div>
                         <?php break;
                         case('portfolio-simple'): ?>
-                            <div class="portfolio-filter portfolio-simple">
+                            <div class="portfolio-filter portfolio-simple <?php echo esc_attr($portfolio_style); ?>">
                             <!-- Start of button group -->
                                 <?php if($portfolio_style  != 'portfolio-slider' && $sortable == 'true'):
                                     $taxonomy = 'portfolio_category';
@@ -262,9 +279,10 @@ function manang_portfolio_integrateWithVC(){
                                     <?php endif;?>
                                 <?php endif; ?>
                               <!-- End of button group -->
-
-                                <div class="grid">
-                                    <?php while($portfolio_query->have_posts()):
+                                <?php if($portfolio_style  != 'portfolio-slider') { ?>
+                                    <div class="grid">
+                                <?php }
+                                    while($portfolio_query->have_posts()):
                                         $portfolio_query->the_post();
                                         $portfolio_image_id = get_post_thumbnail_id();
                                         $portfolio_image_size = get_post_meta(get_the_id(), 'manang_basecamp_portfolio_image_size', true);
@@ -292,16 +310,22 @@ function manang_portfolio_integrateWithVC(){
                                                     <small><?php echo esc_html($designation); ?></small>
                                                 </h3>
                                                 <ul class="portfolio-action">
-                                                    <a href="<?php echo esc_url($portfolio_img[0]); ?>" class="popup-link"><i class="ion-arrow-resize"></i></a>
-                                                    <i class="ion-share"></i>
+                                                    <?php if($show_zoomlink == 'true'){ ?>
+                                                        <a href="<?php echo esc_url($portfolio_img[0]); ?>" class="popup-link"><i class="ion-arrow-resize"></i></a>
+                                                    <?php }
+                                                    if($show_permalink == 'true'){ ?>
+                                                        <i class="ion-share"></i>
+                                                    <?php } ?>
                                                 </ul>
                                             </div>
                                         </div>
                                         <img src="<?php echo esc_url($portfolio_img[0]); ?>" alt="">
                                     </div>
                                 <?php endwhile;
-                                    wp_reset_postdata(); ?>
-                            </div>
+                                    wp_reset_postdata();
+                            if($portfolio_style  != 'portfolio-slider') { ?>
+                                    </div>
+                            <?php } ?>
                         </div>
                         <?php break;
                     }

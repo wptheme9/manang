@@ -517,3 +517,26 @@ label.error {
         z-index: 99;
     }
 }
+
+
+.grid-col-4{
+    width: calc(25% - 30px);
+    float: left;
+    margin: 15px;
+    height: auto;
+    float: left;
+}
+.grid-col-3{
+    width: calc(33.33% - 30px);
+    float: left;
+    margin: 15px;
+    height: auto;
+    float: left;
+}
+.grid-col-2{
+    width: calc(50% - 30px);
+    float: left;
+    margin: 15px;
+    height: auto;
+    float: left;
+}

@@ -315,7 +315,7 @@
 
 
 <!-- Portfolio slider style -->
-<div class="portfolio-slider portfolio-simple">
+<div class="portfolio-slider portfolio-filter portfolio-simple">
     <div class="element-item box" >
         <div class="box-content">
             <div class="portfolio-wrap">

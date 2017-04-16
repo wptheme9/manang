@@ -10,6 +10,7 @@ get_header();
 get_template_part('template-parts/event');
 get_template_part('template-parts/fancybox');
 get_template_part('template-parts/about');
+get_template_part('template-parts/product');
 get_template_part('template-parts/subscribe');
 get_template_part('template-parts/charts');
 get_template_part('template-parts/audioplayer');

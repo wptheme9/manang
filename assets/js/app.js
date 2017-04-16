@@ -35,6 +35,8 @@
       loader.show()
     });
 
+    $('[data-toggle="tooltip"]').tooltip();
+
     subfrom.ajaxChimp({
         url: "http://themeforest.us13.list-manage.com/subscribe/post?u=c9f26ead80c5cb7180849094a&amp;id=51cf03ce84",
         callback: function(response) {

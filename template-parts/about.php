@@ -92,3 +92,51 @@
     </div>
 </div>
 
+<!-- Start Recent Tweets -->
+
+<div class="recent-tweets icon-top">
+    <span class="fa fa-twitter icon med"></span>
+    <div class="tweet-slider">
+        <p>
+            Tweet a message to <a href="#">@codepixelzmedia</a> to get an instant 15% coupon which can be used on any purchase.
+        </p>
+        <p>
+            Tweet a message to <a href="#">@codepixelzmedia_themes</a> to get an instant 15% coupon which can be used on any purchase.
+        </p>
+        <p>
+            Tweet a message to <a href="#">@codepixelzmedia_plugins</a> to get an instant 15% coupon which can be used on any purchase.
+        </p>
+        <p>
+            Tweet a message to <a href="#">@codepixelzmedia</a> to get an instant 15% coupon which can be used on any purchase.
+        </p>
+    </div>
+</div>
+<!-- / End Recent tweets  -->
+
+<!-- Start Recent Tweets -->
+
+<div class="recent-tweets icon-left">
+    <span class="fa fa-twitter icon med"></span>
+    <div class="tweet-slider">
+        <p>
+            Tweet a message to <a href="#">@codepixelzmedia</a> to get an instant 15% coupon which can be used on any purchase.
+        </p>
+        <p>
+            Tweet a message to <a href="#">@codepixelzmedia_themes</a> to get an instant 15% coupon which can be used on any purchase.
+        </p>
+        <p>
+            Tweet a message to <a href="#">@codepixelzmedia_plugins</a> to get an instant 15% coupon which can be used on any purchase.
+        </p>
+        <p>
+            Tweet a message to <a href="#">@codepixelzmedia</a> to get an instant 15% coupon which can be used on any purchase.
+        </p>
+    </div>
+</div>
+<!-- / End Recent tweets  -->
+
+
+<!-- Block quote quote style -->
+<blockquote class="quote-style"><i class="fa fa-quote-left" aria-hidden="true"></i>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede</blockquote>
+
+<!-- Block quote line style -->
+<blockquote class="line-style">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede</blockquote>

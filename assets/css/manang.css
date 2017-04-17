@@ -13078,21 +13078,7 @@ section.section.portfolio-sec {
   .team-round .our-team {
     margin-bottom: 30px; } }
 
-.subscribe-sec {
-  text-align: center;
-  background: #7589ec;
-  outline: 0;
-  padding: 80px 0; }
-  .subscribe-sec h2 {
-    color: #fff;
-    font-size: 27px;
-    margin-top: 0; }
-  .subscribe-sec .subscribe-content {
-    z-index: 99;
-    position: relative;
-    color: #fff; }
-
-.subscribe-sec .form-wrapper input {
+.subscription-form-wrapper.style1 .form-wrapper input {
   background-color: transparent;
   box-shadow: none;
   border-radius: 35px 0 0 35px;
@@ -13100,12 +13086,12 @@ section.section.portfolio-sec {
   font-size: 14px;
   padding-left: 35px;
   height: 55px;
-  width: 305px !important;
+  width: 78%;
   color: #666;
   float: none !important;
   border-right: none !important; }
 
-.subscribe-sec .form-wrapper button {
+.subscription-form-wrapper.style1 .form-wrapper button {
   border-left: none;
   padding: 14px 27px;
   border-radius: 0 35px 35px 0;
@@ -13119,15 +13105,174 @@ section.section.portfolio-sec {
   letter-spacing: 1px;
   height: 55px;
   width: 155px;
-  transition: all 0.5s ease 0s; }
+  transition: all 0.5s ease 0s;
+  margin-left: -5px; }
 
-.subscribe-sec .input-group {
+.subscription-form-wrapper.style1 .input-group {
   position: relative;
-  display: table;
+  display: block;
   border-collapse: separate;
   text-align: center;
   margin: 0 auto;
   margin-top: 40px; }
+
+.subscription-form-wrapper.style2 .form-wrapper input {
+  background-color: transparent;
+  box-shadow: none;
+  border-radius: 35px;
+  background: #fff;
+  font-size: 14px;
+  padding-left: 35px;
+  height: 55px;
+  width: 100%;
+  color: #666;
+  float: none !important;
+  width: 100%; }
+
+.subscription-form-wrapper.style2 .form-wrapper button {
+  border-left: none;
+  padding: 14px 27px;
+  border-radius: 35px;
+  background: #7a90ff;
+  padding-right: 30px;
+  border: 0;
+  color: #fff;
+  font-weight: bold;
+  outline: 0 !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  height: 55px;
+  transition: all 0.5s ease 0s;
+  width: 100%;
+  margin-top: 20px; }
+
+.subscription-form-wrapper.style2 .input-group {
+  position: relative;
+  display: block;
+  border-collapse: separate;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 40px; }
+
+.subscription-form-wrapper.style3 .form-wrapper input {
+  line-height: 65px;
+  height: 65px;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0;
+  box-shadow: none; }
+
+.subscription-form-wrapper.style3 .form-wrapper button {
+  border-left: none;
+  padding: 14px 27px;
+  border-radius: 35px;
+  background: #7a90ff;
+  padding-right: 30px;
+  border: 0;
+  color: #fff;
+  font-weight: bold;
+  outline: 0 !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  height: 55px;
+  transition: all 0.5s ease 0s;
+  width: 100%;
+  margin-top: 20px; }
+
+.subscription-form-wrapper.style3 .input-group {
+  position: relative;
+  display: block;
+  border-collapse: separate;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 40px; }
+
+.subscription-form-wrapper.style4 .form-wrapper input {
+  line-height: 65px;
+  height: 65px;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0;
+  box-shadow: none; }
+
+.subscription-form-wrapper.style4 .form-wrapper button {
+  position: absolute;
+  right: 0;
+  top: 12px;
+  width: 30px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  z-index: 99;
+  background: none; }
+  .subscription-form-wrapper.style4 .form-wrapper button:after {
+    position: absolute;
+    content: "\f30f";
+    display: inline-block;
+    font: normal normal normal 14px/1 ionicons;
+    text-rendering: auto;
+    right: 7px;
+    font-size: 33px;
+    color: #999;
+    top: 8px; }
+
+.subscription-form-wrapper.style4 .input-group {
+  position: relative;
+  display: block;
+  border-collapse: separate;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 40px; }
+
+.recent-tweets.icon-top {
+  text-align: center; }
+  .recent-tweets.icon-top .fa-twitter {
+    color: #10cfff;
+    font-size: 56px;
+    margin-bottom: 20px; }
+  .recent-tweets.icon-top .tweet-slider {
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
+    background: #f5f5f5;
+    padding: 20px; }
+    .recent-tweets.icon-top .tweet-slider p {
+      outline: 0; }
+
+.recent-tweets.icon-left {
+  text-align: center;
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto; }
+  .recent-tweets.icon-left .fa-twitter {
+    color: #10cfff;
+    font-size: 56px;
+    margin-top: 20px;
+    float: left; }
+  .recent-tweets.icon-left .tweet-slider {
+    text-align: center;
+    background: #f5f5f5;
+    padding: 20px;
+    margin-left: 80px; }
+    .recent-tweets.icon-left .tweet-slider p {
+      outline: 0; }
+
+blockquote.quote-style {
+  background: #f5f5f5;
+  padding: 15px;
+  font-style: italic; }
+  blockquote.quote-style i {
+    font-size: 44px;
+    margin-right: 20px;
+    color: #7a90ff; }
+
+blockquote.line-style {
+  background: #f5f5f5;
+  padding: 15px;
+  font-style: italic;
+  border-left: 5px solid #7a90ff; }
 
 .blog-wrap.style1 {
   position: relative;

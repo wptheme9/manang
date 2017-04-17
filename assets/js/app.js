@@ -581,7 +581,7 @@
 
 // Portfolio slider
 
-        $('.portfolio-slider').slick({
+    $('.portfolio-slider').slick({
         infinite: true,
         autoplaySpeed: 7000,
         arrows: false,
@@ -614,6 +614,17 @@
           }
         }
       ]
+    });
+
+
+    // Tweet slider
+    $('.tweet-slider').slick({
+        infinite: true,
+        autoplaySpeed: 7000,
+        arrows: false,
+        autoplay: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
     });
 
     $(".video-popup").YouTubePopUp();

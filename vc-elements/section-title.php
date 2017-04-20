@@ -1,6 +1,6 @@
 <?php
 /**
- * Service
+ * Section Heading
  *
  *
  * @package Manang
@@ -213,7 +213,6 @@ if(class_exists('WPBakeryShortCode')){
             </div>
             <?php
             $output = ob_get_clean();
-            ob_flush();
             return $output;
         }
     }

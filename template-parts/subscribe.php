@@ -250,3 +250,26 @@
       </div>
     </li>
 </ul>
+
+<!-- Divider -->
+
+<!-- dotted divied -->
+
+<div class="divider fullwidth align-center">
+    <div class="double-dotted"></div>
+</div>
+
+<div class="divider custom-width">
+    <div class="single-dotted"></div>
+</div>
+
+<div class="divider fullwidth">
+    <div class="gradient-divider"></div>
+</div>
+<div class="divider fullwidth">
+    <div class="solid-divider"></div>
+</div>
+
+<div class="divider fullwidth">
+    <div class="shadow-divider"></div>
+</div>

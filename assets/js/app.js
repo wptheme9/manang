@@ -22,7 +22,7 @@
 
     $(".simply-countdown-one").simplyCountdown({
         year: 2017,
-        month: 2,
+        month: 5,
         day: 10,
         hours:12
     });

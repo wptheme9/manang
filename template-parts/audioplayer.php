@@ -46,6 +46,10 @@
 
 
 <!-- Start of countdoown div -->
-<div class="simply-countdown simply-countdown-one"></div>
+<div class="simply-countdown simply-countdown-one boxed"></div>
+
+<div class="simply-countdown simply-countdown-one colored-box"></div>
+
+<div class="simply-countdown simply-countdown-one simple"></div>
 <!-- End of countdown div -->
 

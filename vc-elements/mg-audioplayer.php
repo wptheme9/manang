@@ -128,7 +128,11 @@ if(class_exists('WPBakeryShortCode')){
                 </div>
 
 
-                <?php while($query->have_posts()) : $query->the_post();
+                <?php $count = 0;
+                    $array_guid = array();
+                    $array_title = array();
+                    $array_image = array();
+                while($query->have_posts()) : $query->the_post();
 
 
                         $blog_image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' );
@@ -138,16 +142,51 @@ if(class_exists('WPBakeryShortCode')){
                         else{
                             $blog_image_url = '';
                         }
-                         $audios = get_attached_media( 'audio' );
-                         if(!empty($audios)){
-                            foreach ($audios as $audio) { ?>
-                                <input type="hidden" name="audi-title[]" class="audio-data"  value="<?php echo esc_html($audio->post_title); ?>">
-                                <input type="hidden" name="audi-guid[]" class="audio-data" value="<?php echo esc_url($audio->guid); ?>">
-                                <input type="hidden" name="audi-image[]" class="audio-data" value="<?php echo esc_url($blog_image_url); ?>">
-                            <?php }
-                         }
+                         $audios = get_attached_media( 'audio');
+                         if (count($audios) > 0) {
+                            foreach($audios as $audio) {
+                                    $array_guid[$count] = esc_html($audio->guid);
+                                    $array_title[$count] = esc_html($audio->post_title);
+                                    $array_image[$count] = esc_html($audio->blog_image_url);
+                                    $count++;
+                            }
+
+                        }
                 endwhile;
                 wp_reset_postdata(); ?>
+                 <script type="text/javascript">
+                    var n = <?php echo $count ?>;
+                    var i = 0;
+                    var myarray = [];
+                    var array_guid = [];
+                    var array_title = [];
+                    var array_image = [];
+                    var array_guid = <?php echo json_encode($array_guid); ?>;
+                    var array_title = <?php echo json_encode($array_title); ?>;
+                    var array_image = <?php echo json_encode($array_image); ?>;
+                    for(i=0; i < n; i++) {
+                      array_guid[i]  = array_guid[i];
+                      array_title[i] = array_title[i];
+                      array_image[i] = array_image[i];
+                        myarray.push({
+                            file: array_guid[i],
+                            trackName: array_title[i],
+                            thumb: array_image[i],
+                            trackArtist: '',
+                        });
+                    }
+
+                    jQuery(".jAudio--player").jAudio({
+                      playlist:myarray,
+                        swfPath: "",
+                        supplied: "OGA, MP3",
+                        useStateClassSkin: true,
+                        autoBlur: false,
+                        smoothPlayBar: true,
+                    });
+
+                </script>
+
 
             <!-- End of blog section -->
             <?php endif; ?>

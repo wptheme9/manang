@@ -147,37 +147,37 @@
       });
     }
 
-    $(".jAudio--player").jAudio({
-      playlist: [
-        {
-          file: "http://localhost:8888/blaire/wp-content/themes/manang/assets/tracks/01.mp3",
-          thumb: "http://localhost:8888/blaire/wp-content/themes/manang/assets/thumbs/01.jpg",
-          trackName: "Dusk",
-          trackArtist: "Tobu & Syndec",
-          trackAlbum: "Single",
-        },
-        {
-          file: "http://localhost:8888/blaire/wp-content/themes/manang/assets/tracks/02.mp3",
-          thumb: "http://localhost:8888/blaire/wp-content/themes/manang/assets/thumbs/02.jpg",
-          trackName: "Blank",
-          trackArtist: "Disfigure",
-          trackAlbum: "Single",
-        },
-        {
-          file: "http://localhost:8888/blaire/wp-content/themes/manang/assets/tracks/03.mp3",
-          thumb: "http://localhost:8888/blaire/wp-content/themes/manang/assets/thumbs/03.jpg",
-          trackName: "Fade",
-          trackArtist: "Alan Walker",
-          trackAlbum: "Single",
-        }
-      ],
+    // $(".jAudio--player").jAudio({
+    //   playlist: [
+    //     {
+    //       file: "http://localhost:8888/blaire/wp-content/themes/manang/assets/tracks/01.mp3",
+    //       thumb: "http://localhost:8888/blaire/wp-content/themes/manang/assets/thumbs/01.jpg",
+    //       trackName: "Dusk",
+    //       trackArtist: "Tobu & Syndec",
+    //       trackAlbum: "Single",
+    //     },
+    //     {
+    //       file: "http://localhost:8888/blaire/wp-content/themes/manang/assets/tracks/02.mp3",
+    //       thumb: "http://localhost:8888/blaire/wp-content/themes/manang/assets/thumbs/02.jpg",
+    //       trackName: "Blank",
+    //       trackArtist: "Disfigure",
+    //       trackAlbum: "Single",
+    //     },
+    //     {
+    //       file: "http://localhost:8888/blaire/wp-content/themes/manang/assets/tracks/03.mp3",
+    //       thumb: "http://localhost:8888/blaire/wp-content/themes/manang/assets/thumbs/03.jpg",
+    //       trackName: "Fade",
+    //       trackArtist: "Alan Walker",
+    //       trackAlbum: "Single",
+    //     }
+    //   ],
 
-        swfPath: "",
-        supplied: "OGA, MP3",
-        useStateClassSkin: true,
-        autoBlur: false,
-        smoothPlayBar: true,
-    });
+    //     swfPath: "",
+    //     supplied: "OGA, MP3",
+    //     useStateClassSkin: true,
+    //     autoBlur: false,
+    //     smoothPlayBar: true,
+    // });
 
       $('.navbar-nav').onePageNav({
         currentClass: 'current',

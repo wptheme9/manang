@@ -562,3 +562,54 @@
         </div>
     </div>
 </div>
+
+
+
+<div class="product-cat-sec section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="product-cat-wrap">
+                    <div class="cat-product-item">
+                        <div class="product-img">
+                            <img src="<?php echo get_template_directory_uri();?>/assets/img/s2.jpg" alt="">
+                        </div>
+                        <div class="product-desc">
+                            <h3>B&W Sweatshirt</h3>
+                            <span class="rating">
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                            </span>
+                            <div class="price">
+                                <span>$89</span>
+                            </div>
+                            <button class="btn add-cart-btn">+ Add To Cart</button>
+                        </div>
+                    </div>
+                    <div class="cat-product-item">
+                        <div class="product-img">
+                            <img src="<?php echo get_template_directory_uri();?>/assets/img/s2.jpg" alt="">
+                        </div>
+                        <div class="product-desc">
+                            <h3>B&W Sweatshirt</h3>
+                            <span class="rating">
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                            </span>
+                            <div class="price">
+                                <span>$89</span>
+                            </div>
+                            <button class="btn add-cart-btn">+ Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

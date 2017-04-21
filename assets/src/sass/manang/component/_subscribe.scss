@@ -166,6 +166,141 @@
         margin-top: 40px;
     }
 }
+/*............Bootstrap modal.........*/
+
+.subscribe-popup .modal-dialog {
+    width: 670px;
+}
+.subscribe-popup .modal-backdrop.in {
+    filter: alpha(opacity=70);
+    opacity: .7;
+}
+.subscribe-popup .subscribe-wrapper {
+    text-align: center;
+}
+.subscribe-popup .subscribe-img {
+    text-align: center;
+    margin-top: 55px;
+}
+.subscribe-popup .subscribe-img img {
+    width: 350px;
+    margin: 0 auto;
+    text-align: center;
+}
+.subscribe-popup .subscribe-wrapper h4 {
+    margin-top: 30px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+.subscribe-popup .subscription-form-wrapper {
+    margin-top: 70px;
+}
+.subscribe-popup .subscription-form-wrapper p.sub-info {
+    max-width: 450px;
+    margin: 0 auto;
+}
+.subscribe-popup .subscription-form .ajax-loader{
+    display: none;
+}
+.subscribe-popup .form-wrapper input {
+    background-color: transparent;
+    box-shadow: none;
+    border: 2px solid #333 !important;
+    border-radius: 35px 0 0 35px;
+    background: #fff;
+    font-size: 14px;
+    padding-left: 35px;
+    height: 55px;
+    width: 305px !important;
+    color: #666;
+    float: none !important;
+    border-right: none !important;
+}
+.subscribe-popup .form-wrapper button {
+    border-left: none;
+    padding: 14px 27px;
+    border-radius: 0 35px 35px 0;
+    background: #333;
+    padding-right: 30px;
+    border: 0;
+    color: #fff;
+    font-weight: bold;
+    outline: 0!important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    height: 55px;
+    width: 155px;
+    transition: all 0.5s ease 0s;
+}
+.subscribe-popup .input-group {
+    position: relative;
+    display: table;
+    border-collapse: separate;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+.subscribe-popup .ajax-loader {
+    position: absolute;
+    right: -34px;
+    top: 16px;
+    background: #fff;
+}
+.subscribe-popup .modal{
+    top: 20%;
+}
+.subscribe-popup .modal-content{
+    height: 500px;
+}
+.subscribe-popup .modal button.close {
+    top: 8px;
+    position: absolute;
+    right: 15px;
+    font-size: 37px;
+    opacity: 1;
+    color: #333;
+    z-index: 99;
+    outline: 0;
+}
+.subscribe-popup .form-wrapper button:hover {
+    background: #222;
+}
+label.error {
+    color: #a94442;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+}
+.subscribe-popup .result.subscribe-success {
+    background: #ACF95F;
+    color: #036B03;
+    font-size: 16px;
+    display: inline-block;
+    padding: 6px 6px;
+    margin-bottom: 0;
+    width: 88%;
+    margin-top: 25px;
+}
+.subscribe-popup .result.subscribe-error {
+    background: #E2827F;
+    color: #CA241F;
+    font-size: 16px;
+    display: inline-block;
+    padding: 4px 19px;
+    margin-bottom: -10px;
+    margin-top: 15px;
+}
+.subscribe-popup.sub-btn-center {
+    text-align: center;
+}
+.subscribe-popup.sub-btn-left {
+    float: left;
+}
+.subscribe-popup.sub-btn-right {
+    float: right;
+}
+
 
 .recent-tweets.icon-top{
     text-align: center;

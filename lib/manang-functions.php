@@ -352,12 +352,13 @@ if(!function_exists('manang_instagram')):
 
                 $remote = wp_remote_get( 'https://instagram.com/'.trim( $username ) );
 
-
-                if ( is_wp_error( $remote ) )
+                if ( is_wp_error( $remote ) ){
                     return new WP_Error( 'site_down', esc_html__( 'Unable to communicate with Instagram.', 'manang' ) );
+                }
 
-                if ( 200 != wp_remote_retrieve_response_code( $remote ) )
+                if ( 200 != wp_remote_retrieve_response_code( $remote ) ){
                     return new WP_Error( 'invalid_response', esc_html__( 'Instagram did not return a 200.', 'manang' ) );
+                }
 
                 $shards = explode( 'window._sharedData = ', $remote['body'] );
                 $insta_json = explode( ';</script>', $shards[1] );
@@ -438,9 +439,5 @@ if(!function_exists('manang_instagram')):
                 return new WP_Error( 'no_images', esc_html__( 'Instagram did not return any images.', 'manang' ) );
 
             }
-
-        ?>
-
-        <?php
     }
 endif;

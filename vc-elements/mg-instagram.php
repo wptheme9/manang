@@ -65,7 +65,7 @@ if(class_exists('WPBakeryShortCode')){
 
             ob_start();
             if ( $username != '' ) {
-                $media_array = manang_instagram( $username );
+                $media_array = scrape_instagram( $username );
                 if ( is_wp_error( $media_array ) ) {
                     echo wp_kses_post( $media_array->get_error_message() );
                 } else {

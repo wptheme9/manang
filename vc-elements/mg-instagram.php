@@ -24,17 +24,12 @@ function manang_instagram_integrateWithVC2(){
             ),
 
             array(
-                "type"        => "checkbox",
-                "holder" => "div",
-                "heading"     => __("Autoplay?", "manang"),
-                "param_name"  => "autoplay",
-            ),
-             array(
                 "type"        => "textfield",
                 "holder" => "div",
                 "heading"     => __("Number Of Images", "manang"),
                 "param_name"  => "image_count",
             ),
+
             array(
                 "type"        => "textfield",
                 "holder" => "div",
@@ -50,14 +45,12 @@ if(class_exists('WPBakeryShortCode')){
         public function content( $atts, $content = null ) {
             $values = shortcode_atts( array(
                 'username' => '',
-                'autoplay' => '',
                 'add_text' => '',
                 'image_count' => '',
 
             ), $atts ) ;
 
             $username = $values['username'];
-            $autoplay = $values['autoplay'];
             $add_text = $values['add_text'];
             $image_count = $values['image_count'];
             $limit = empty( $image_count ) ? 9 : $image_count;

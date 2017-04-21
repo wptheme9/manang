@@ -176,14 +176,14 @@
 .divider{
     margin-bottom: 40px !important;
 }
-.divider.align-center{
+.divider.divider-align-center{
   margin: 0 auto;
 }
 
-.divider.align-left{
+.divider.divider-align-left{
   float: left;
 }
-.divider.align-right{
+.divider.divider-align-right{
   float: right;
 }
 .divider.align-center{
@@ -215,4 +215,9 @@
 .divider .single-dotted{
     height: 4px;
     border-top: 1px dashed #ddd;
+}
+.double-solid-divider {
+    height: 4px;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
 }

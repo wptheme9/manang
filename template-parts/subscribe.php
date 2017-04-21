@@ -57,6 +57,41 @@
     </div>
 </section>
 
+<div class="subscribe-popup">
+    <a href="#" data-toggle="modal" data-target="#myModal" class="btn btn-default">Subscribe</a>
+
+    <!-- Start of subscribe modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+         <!-- Modal content-->
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <div class="modal-body">
+                    <div class="subscribe-wrapper">
+                        <div class="subscribe-img">
+                            <img src="<?php echo get_template_directory_uri();?>/assets/img/subscribe.png" alt="">
+                        </div>
+                        <h4>Newsletter</h4>
+                        <div class="subscription-form-wrapper">
+                            <p class="sub-info">Subscribe now to get notified when we launch our website and get amazing deals</p>
+                            <p class="result"></p>
+                            <form class="subscription-form form-wrapper input-group" autocomplete="off" novalidate="true">
+                                <input type="email" class="form-control" name="EMAIL" placeholder="Subscribe Email To Get Notified">
+                                <button type="submit" id="submit" class="form-submit">Submit</button>
+                                <div class="ajax-loader" style="">
+                                    <img class="contact_spinner" src="<?php echo get_template_directory_uri();?>/assets/img/spinner.gif" alt="">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of subscribe modal -->
+</div>
+
+
 <ul class="social-icon style1 social-icon-big">
     <li>
       <div class="facebook">
@@ -271,5 +306,6 @@
 </div>
 
 <div class="divider fullwidth">
-    <div class="shadow-divider"></div>
+    <div class="double-solid-divider"></div>
 </div>
+

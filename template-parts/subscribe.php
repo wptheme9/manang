@@ -290,7 +290,7 @@
 
 <!-- dotted divied -->
 
-<div class="divider fullwidth align-center">
+<div class="divider fullwidth divider-align-center">
     <div class="double-dotted"></div>
 </div>
 

@@ -51,5 +51,7 @@
 <div class="simply-countdown simply-countdown-one colored-box"></div>
 
 <div class="simply-countdown simply-countdown-one simple"></div>
+
+<div class="simply-countdown simply-countdown-one transparent-one"></div>
 <!-- End of countdown div -->
 

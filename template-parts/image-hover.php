@@ -44,14 +44,7 @@
     <div class="col-md-4">
         <div class="box classic-simple-hover">
             <div class="box-heading">
-                <h3 class="title">Kristiana</h3>
-                <span class="post">Web Developer</span>
-            </div>
-            <div class="boxContent">
-                <p class="description">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, asperiores eaque error excepturi, expedita facere fuga iure magni modi quam repellat reprehenderit.
-                </p>
-                <a href="#" class="read">Read More <i class="fa fa-angle-right"></i></a>
+                <h3 class="title">Lorem ipsum dolor sit amet</h3>
             </div>
         </div>
     </div>
@@ -59,14 +52,7 @@
     <div class="col-md-4">
         <div class="box classic-simple-hover">
             <div class="box-heading">
-                <h3 class="title">Kristiana</h3>
-                <span class="post">Web Developer</span>
-            </div>
-            <div class="boxContent">
-                <p class="description">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, asperiores eaque error excepturi, expedita facere fuga iure magni modi quam repellat reprehenderit.
-                </p>
-                <a href="#" class="read">Read More <i class="fa fa-angle-right"></i></a>
+                <h3 class="title">Lorem ipsum dolor sit amet</h3>
             </div>
         </div>
     </div>
@@ -74,14 +60,7 @@
     <div class="col-md-4">
         <div class="box classic-simple-hover">
             <div class="box-heading">
-                <h3 class="title">Kristiana</h3>
-                <span class="post">Web Developer</span>
-            </div>
-            <div class="boxContent">
-                <p class="description">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, asperiores eaque error excepturi, expedita facere fuga iure magni modi quam repellat reprehenderit.
-                </p>
-                <a href="#" class="read">Read More <i class="fa fa-angle-right"></i></a>
+                <h3 class="title">Lorem ipsum dolor sit amet</h3>
             </div>
         </div>
     </div>

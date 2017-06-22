@@ -1,11 +1,12 @@
-.service-style1 .serviceBox{
+.service-style1 .serviceBox {
     text-align: center;
     background-size: cover;
     background-attachment: fixed;
-    height: 300px;
+    padding: 40px 10px;
+    border: 1px solid #eee;
 }
 .service-style1 .serviceBox .service-icon{
-    background:#58B25E;
+    background:$color__theme;
     height: 62px;
     width: 62px;
     border-radius:50%;
@@ -32,8 +33,137 @@
     font-weight: 600;
     margin-top: 0;
 }
-.service-style1 .serviceBox .service-content p{
-    color:hsl(0, 0%, 47%);
-    line-height: 2;
-    font-family: 'Open Sans', sans-serif;
+
+
+
+.service-style2 .serviceBox{ text-align: center; }
+.service-style2 .serviceBox .service-icon{
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    margin-bottom: 22px;
+    font-size: 35px;
+    color: $color__theme;
+    position: relative;
+}
+.service-style2 .serviceBox .service-icon:before{
+    content: "";
+    width: 120px;
+    height: 120px;
+    border: 1px solid #e8e8e8;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.25s ease 0s;
+}
+.service-style2 .serviceBox:hover .service-icon:before{
+    width: 93px;
+    height: 93px;
+    border: 3px solid $color__theme;
+    top: 13px;
+    left: 13px;
+    transform: rotate(45deg);
+}
+.service-style2 .serviceBox .title{
+    display: block;
+    font-size: 21px;
+    font-weight: 500;
+    margin: 8px 0 10px 0;
+    transition: all 0.25s ease 0s;
+}
+.service-style2 .serviceBox:hover .title{
+    color: $color__theme;
+}
+
+
+.service-style3 .serviceBox{
+    text-align: center;
+    position: relative;
+}
+.service-style3 .serviceBox .service-icon{
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+    border-radius: 50%;
+    background: $color__theme;
+    font-size: 36px;
+    color: #fff;
+    margin: 0 auto 30px;
+    position: relative;
+    transition: all 500ms ease 0s;
+}
+.service-style3 .serviceBox:hover .service-icon{
+    transform: scale(0.8, 0.8);
+}
+.service-style3 .serviceBox .service-icon:after{
+    content: "";
+    width: 111px;
+    height: 111px;
+    border-radius: 50%;
+    border: 4px solid $color__theme;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    opacity: 0;
+    transform: scale(0.8, 0.8);
+    transition: all 500ms ease 0s;
+}
+.service-style3 .serviceBox:hover .service-icon:after{
+    opacity: 1;
+    transform: scale(1, 1);
+}
+.service-style3 .serviceBox .number{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    background: #fff;
+    font-size: 14px;
+    color: #123a06;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+.service-style3 .serviceBox .title{
+    font-size: 20px;
+    margin: 0 0 10px 0;
+}
+.service-style3 .serviceBox .description{
+    margin: 0;
+}
+
+
+.service-style4 .serviceBox {
+    text-align: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 90px;
+    border: 1px solid #eee;
+}
+.service-style4 .serviceBox .service-icon {
+    background: #7a90ff;
+    height: 62px;
+    width: 62px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.service-style4 .service-content {
+    padding: 30px 0;
+    background: #fff;
+    padding-top: 55px;
+    margin-top: -27px;
+}
+.service-style4 .serviceBox .service-icon i{
+    font-size:30px;
+    color: #fff;
+    line-height: 62px;
+}
+.service-style4 .serviceBox .service-content h3{
+    color: hsl(0, 0%, 20%);
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 0;
 }

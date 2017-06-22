@@ -329,9 +329,6 @@ figure.tilter__figure:after {
     color: #fff;
     transition: all 0.3s ease 0s;
 }
-.classic-simple-hover.box:hover .box-heading{
-    left: 100%;
-}
 .classic-simple-hover.box .box-heading:after{
     content: "\f105";
     font-family: fontawesome;
@@ -341,16 +338,17 @@ figure.tilter__figure:after {
     position: absolute;
     top: 13px;
     right: 11px;
-    background: #20211c;
+    background: #fff;
     font-size: 30px;
-    color: #fff;
+    color: #333;
     text-align: center;
 }
 .classic-simple-hover.box .title{
     margin: 0;
-    font-size: 21px;
-    font-weight: bold;
     color: #fff;
+    margin-top: 10px;
+    font-size: 18px;
+    padding-bottom: 10px;
 }
 .classic-simple-hover.box .post{
     display: block;

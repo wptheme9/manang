@@ -544,6 +544,17 @@
       ]
     });
 
+    // Product slider
+    $('.product-cat-slider').slick({
+      dots: false,
+      infinite: true,
+      speed: 500,
+      autoplay: true,
+      arrows: true,
+      slidesToShow:1,
+      slidesToScroll: 1
+    });
+
 
     // Blog slider
 
@@ -587,7 +598,7 @@
         arrows: false,
         centerMode: true,
         autoplay: true,
-        centerPadding: '300px',
+        centerPadding: '350px',
         slidesToShow: 1,
         slidesToScroll: 1,
         responsive: [

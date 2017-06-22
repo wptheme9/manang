@@ -54,8 +54,9 @@
                     </div>
                     <h3 class="title">Web Designing</h3>
                     <p class="description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam blanditiis debitis, harum minima mollitia sunt totam. Amet cumque deleniti eos harum,libero quaerat quos unde!
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec feugiat.
                     </p>
+                    <a href="#" class="read">Read more</a>
                 </div>
             </div>
             <div class="grid-col-4">
@@ -65,8 +66,9 @@
                     </div>
                     <h3 class="title">Web Designing</h3>
                     <p class="description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam blanditiis debitis, harum minima mollitia sunt totam. Amet cumque deleniti eos harum,libero quaerat quos unde!
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec feugiat.
                     </p>
+                    <a href="#" class="read">Read more</a>
                 </div>
             </div>
             <div class="grid-col-4">
@@ -76,8 +78,9 @@
                     </div>
                     <h3 class="title">Web Designing</h3>
                     <p class="description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam blanditiis debitis, harum minima mollitia sunt totam. Amet cumque deleniti eos harum,libero quaerat quos unde!
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec feugiat.
                     </p>
+                    <a href="#" class="read">Read more</a>
                 </div>
             </div>
             <div class="grid-col-4">
@@ -87,8 +90,9 @@
                     </div>
                     <h3 class="title">Web Designing</h3>
                     <p class="description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam blanditiis debitis, harum minima mollitia sunt totam. Amet cumque deleniti eos harum,libero quaerat quos unde!
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec feugiat.
                     </p>
+                    <a href="#" class="read">Read more</a>
                 </div>
             </div>
         </div>
@@ -107,8 +111,9 @@
                     </div>
                     <h3 class="title">Web Design</h3>
                     <p class="description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium beatae consectetur ea eaque facilis hic, impedit ipsa laudantium modi nostrum, quaerat quod reiciendis sed sunt!
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec feugiat.
                     </p>
+                    <a href="#" class="read">Read more</a>
                 </div>
             </div>
             <div class="grid-col-4">
@@ -118,8 +123,9 @@
                     </div>
                     <h3 class="title">Web Design</h3>
                     <p class="description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium beatae consectetur ea eaque facilis hic, impedit ipsa laudantium modi nostrum, quaerat quod reiciendis sed sunt!
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec feugiat.
                     </p>
+                    <a href="#" class="read">Read more</a>
                 </div>
             </div>
             <div class="grid-col-4">
@@ -129,8 +135,9 @@
                     </div>
                     <h3 class="title">Web Design</h3>
                     <p class="description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium beatae consectetur ea eaque facilis hic, impedit ipsa laudantium modi nostrum, quaerat quod reiciendis sed sunt!
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec feugiat.
                     </p>
+                    <a href="#" class="read">Read more</a>
                 </div>
             </div>
             <div class="grid-col-4">
@@ -140,8 +147,9 @@
                     </div>
                     <h3 class="title">Web Design</h3>
                     <p class="description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium beatae consectetur ea eaque facilis hic, impedit ipsa laudantium modi nostrum, quaerat quod reiciendis sed sunt!
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec feugiat.
                     </p>
+                    <a href="#" class="read">Read more</a>
                 </div>
             </div>
         </div>

@@ -481,13 +481,13 @@
       speed: 500,
       autoplay: true,
       arrows: true,
-      slidesToShow:4,
+      slidesToShow:5,
       slidesToScroll: 1,
       responsive: [
           {
             breakpoint: 990,
             settings: {
-              slidesToShow: 3,
+              slidesToShow: 4,
               slidesToScroll: 1,
               infinite: true,
             }
@@ -495,14 +495,14 @@
           {
             breakpoint: 768,
             settings: {
-              slidesToShow: 2,
+              slidesToShow: 3,
               slidesToScroll: 1
             }
           },
           {
             breakpoint: 600,
             settings: {
-              slidesToShow: 1,
+              slidesToShow: 2,
               slidesToScroll: 1
             }
           }

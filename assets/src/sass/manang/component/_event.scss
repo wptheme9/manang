@@ -265,57 +265,58 @@
     }
 }
 
-
-.event-meta{
-    padding: 10px;
-    border: 1px solid #eee;
-    .event-single-meta {
-        width: 100%;
-        display: block;
+.single-event-wrap{
+    .event-meta{
+        padding: 10px;
         border: 1px solid #eee;
-        margin-bottom: 10px;
-        position: relative;
+        .event-single-meta {
+            width: 100%;
+            display: block;
+            border: 1px solid #eee;
+            margin-bottom: 10px;
+            position: relative;
 
-        &:last-child{
-            margin-bottom: 0;
-        }
-
-        &:before{
-            position: absolute;
-            top: 0;
-            left: 0;
-            background: #f5f5f5;
-            height: 100%;
-            width: 40%;
-            content: "";
-            z-index: -1;
-        }
-
-        .event-title {
-            width: 40%;
-            float: left;
-            text-align: center;
-            display: table;
-            height: 100%;
-
-            h4{
-                font-size: 16px;
-                margin-top: 5px;
+            &:last-child{
                 margin-bottom: 0;
-                display: table-cell;
-                vertical-align: middle;
+            }
+
+            &:before{
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: #f5f5f5;
                 height: 100%;
-                padding-top: 13%;
+                width: 40%;
+                content: "";
+                z-index: -1;
+            }
+
+            .event-title {
+                width: 40%;
+                float: left;
+                text-align: center;
+                display: table;
+                height: 100%;
+
+                h4{
+                    font-size: 16px;
+                    margin-top: 5px;
+                    margin-bottom: 0;
+                    display: table-cell;
+                    vertical-align: middle;
+                    height: 100%;
+                    padding-top: 13%;
+                }
+            }
+            .meta-desc {
+                width: calc(60% - 10px);
+                display: inline-block;
+                padding: 12px 20px;
+                text-align: center;
             }
         }
-        .meta-desc {
-            width: calc(60% - 10px);
-            display: inline-block;
-            padding: 12px 20px;
-            text-align: center;
-        }
     }
-}
-.event-map {
-    margin-top: 25px;
+    .event-map {
+        margin-top: 25px;
+    }
 }

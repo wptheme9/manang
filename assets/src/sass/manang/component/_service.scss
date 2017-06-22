@@ -1,0 +1,39 @@
+.service-style1 .serviceBox{
+    text-align: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 300px;
+}
+.service-style1 .serviceBox .service-icon{
+    background:#58B25E;
+    height: 62px;
+    width: 62px;
+    border-radius:50%;
+    display: inline-block;
+    margin-bottom:20px;
+}
+.service-style1 .serviceBox .service-icon.purple{
+    background:#9F84C4;
+}
+.service-style1 .serviceBox .service-icon.red{
+    background:#F35958;
+}
+.service-style1 .serviceBox .service-icon.blue{
+    background:#02A2DD;
+}
+.service-style1 .serviceBox .service-icon i{
+    font-size:30px;
+    color: #fff;
+    line-height: 62px;
+}
+.service-style1 .serviceBox .service-content h3{
+    color: hsl(0, 0%, 20%);
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 0;
+}
+.service-style1 .serviceBox .service-content p{
+    color:hsl(0, 0%, 47%);
+    line-height: 2;
+    font-family: 'Open Sans', sans-serif;
+}

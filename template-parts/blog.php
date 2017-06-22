@@ -534,3 +534,82 @@ just yo blog post slider or blog post column le wrap gardinu teti ho-->
         </div>
     </div>
 </section>
+
+
+<section class="section blog-sec">
+    <div class="container">
+        <div class="row">
+            <div class="blog-post-column">
+                <div class="blog-wrap style5 box-shadow">
+                    <figure class="blog-details">
+                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/pr-sample13.jpg" alt="pr-sample13" />
+                      <div class="date"><span class="day">28</span><span class="month">Apr</span></div>
+                      <figcaption>
+                        <div class="blog-meta">
+                            <div class="date">
+                                <i class="fa fa-calendar"></i><span>Mar 02, 2016</span>
+                            </div>
+                            <div class="author">
+                                <i class="fa fa-user"></i><span>Codemin</span>
+                            </div>
+                            <div class="author">
+                                <i class="fa fa-comments-o"></i><span>25</span>
+                            </div>
+                        </div>
+                        <h3>common ethical mistakes business owners make</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros</p>
+                      </figcaption>
+                      <div class="hover"><i class="ion-android-open"></i></div>
+                      <a href="#"></a>
+                    </figure>
+                </div>
+                <div class="blog-wrap style5 box-shadow">
+                    <figure class="blog-details">
+                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/pr-sample13.jpg" alt="pr-sample13" />
+                      <div class="date"><span class="day">28</span><span class="month">Apr</span></div>
+                      <figcaption>
+                        <div class="blog-meta">
+                            <div class="date">
+                                <i class="fa fa-calendar"></i><span>Mar 02, 2016</span>
+                            </div>
+                            <div class="author">
+                                <i class="fa fa-user"></i><span>Codemin</span>
+                            </div>
+                            <div class="author">
+                                <i class="fa fa-comments-o"></i><span>25</span>
+                            </div>
+                        </div>
+                        <h3>common ethical mistakes business owners make</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros</p>
+                      </figcaption>
+                      <div class="hover"><i class="ion-android-open"></i></div>
+                      <a href="#"></a>
+                    </figure>
+                </div>
+                <div class="blog-wrap style5 box-shadow">
+                    <figure class="blog-details">
+                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/pr-sample13.jpg" alt="pr-sample13" />
+                      <div class="date"><span class="day">28</span><span class="month">Apr</span></div>
+                      <figcaption>
+                        <div class="blog-meta">
+                            <div class="date-meta">
+                                <i class="fa fa-calendar"></i><span>Mar 02, 2016</span>
+                            </div>
+                            <div class="author">
+                                <i class="fa fa-user"></i><span>Codemin</span>
+                            </div>
+                            <div class="author">
+                                <i class="fa fa-comments-o"></i><span>25</span>
+                            </div>
+                        </div>
+                        <h3>common ethical mistakes business owners make</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros</p>
+                      </figcaption>
+                      <div class="hover"><i class="ion-android-open"></i></div>
+                      <a href="#"></a>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

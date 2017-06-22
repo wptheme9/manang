@@ -60,7 +60,7 @@
         <li class="grid-col-4">
             <div class="single-process">
                 <div class="process-num-holder">
-                    <a href="#"><img src="<?php echo get_template_directory_uri();?>/assets/img/agenda.png" alt="">
+                    <a href="#"><img src="<?php echo get_template_directory_uri();?>/assets/img/agenda.png" alt=""></a>
                     <span>1</span>
                 </div>
                 <div class="process-desc">
@@ -73,7 +73,7 @@
         <li class="grid-col-4">
             <div class="single-process">
                 <div class="process-num-holder">
-                    <img src="<?php echo get_template_directory_uri();?>/assets/img/agenda.png" alt="">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/img/agenda.png" alt=""></a>
                     <span>2</span>
                 </div>
                 <div class="process-desc">
@@ -86,7 +86,7 @@
         <li class="grid-col-4">
             <div class="single-process">
                 <div class="process-num-holder">
-                    <img src="<?php echo get_template_directory_uri();?>/assets/img/agenda.png" alt="">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/img/agenda.png" alt=""></a>
                     <span>3</span>
                 </div>
                 <div class="process-desc">
@@ -99,7 +99,7 @@
         <li class="grid-col-4">
             <div class="single-process">
                 <div class="process-num-holder">
-                    <img src="<?php echo get_template_directory_uri();?>/assets/img/agenda.png" alt="">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/img/agenda.png" alt=""></a>
                     <span>4</span>
                 </div>
                 <div class="process-desc">

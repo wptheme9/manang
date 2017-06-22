@@ -275,3 +275,9 @@ require get_template_directory() . '/vc-elements/mg-portfolio.php';
 require get_template_directory() . '/vc-elements/mg-social.php';
 require get_template_directory() . '/vc-elements/mg-audioplayer.php';
 require get_template_directory() . '/vc-elements/mg-instagram.php';
+require get_template_directory() . '/vc-elements/mg-blockquote.php';
+
+if ( is_admin() ) {
+    require get_template_directory() . '/admin/setting-menu.php';
+    new Test_Multiple_Forms_Options();
+}

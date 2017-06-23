@@ -65,7 +65,7 @@
         padding: 20px 15px;
 
         h3{
-            font-size: 15px;
+            font-size: 18px;
             margin-top: 0;
             margin-bottom: 5px;
             display: inline-block;
@@ -76,7 +76,7 @@
     }
     span.rating {
         display: block;
-        color: #d83986;
+        font-size: 11px;
     }
     .price span {
         font-size: 16px;
@@ -194,7 +194,7 @@
         padding: 20px 15px;
 
         h3{
-            font-size: 15px;
+            font-size: 18px;
             margin-top: 0;
             margin-bottom: 5px;
         }
@@ -204,7 +204,8 @@
     }
     span.rating {
         display: block;
-        color: #d83986;
+        color: #dcc423;
+        font-size: 11px;
     }
     .price span {
         font-size: 16px;
@@ -270,7 +271,7 @@
         float: left;
         width: 52%;
         h3{
-            font-size: 15px;
+            font-size: 18px;
             margin-bottom: 0;
         }
         span.rating i {
@@ -296,4 +297,6 @@
         }
     }
 }
-
+.product-no-hover.product-wrap .product-top:before {
+    display: none;
+}

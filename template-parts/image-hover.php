@@ -1,3 +1,5 @@
+<!-- Image tilt on hover -->
+
 <div class="container">
     <div class="col-md-4">
         <a href="#" class="tilter tilter--1">
@@ -38,33 +40,41 @@
 
 
 
-<!-- Div -->
+<!-- classic card -->
 
 <div class="container section">
     <div class="col-md-4">
         <div class="box classic-simple-hover">
-            <div class="box-heading">
-                <h3 class="title">Lorem ipsum dolor sit amet</h3>
-            </div>
+            <a href="#">
+                <div class="box-heading">
+                    <h3 class="title">Lorem ipsum dolor sit amet</h3>
+                </div>
+            </a>
         </div>
     </div>
 
     <div class="col-md-4">
         <div class="box classic-simple-hover">
-            <div class="box-heading">
-                <h3 class="title">Lorem ipsum dolor sit amet</h3>
-            </div>
+            <a href="#">
+                <div class="box-heading">
+                    <h3 class="title">Lorem ipsum dolor sit amet</h3>
+                </div>
+            </a>
         </div>
     </div>
 
     <div class="col-md-4">
         <div class="box classic-simple-hover">
-            <div class="box-heading">
-                <h3 class="title">Lorem ipsum dolor sit amet</h3>
-            </div>
+            <a href="#">
+                <div class="box-heading">
+                    <h3 class="title">Lorem ipsum dolor sit amet</h3>
+                </div>
+            </a>
         </div>
     </div>
 </div>
+
+<!-- Simple card Hover -->
 
 <div class="container">
     <div class="row">
@@ -110,7 +120,7 @@
     </div>
 </div>
 
-
+<!-- Content on hover -->
 <div class="container">
     <div class="row">
         <div class="col-md-4">

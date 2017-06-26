@@ -201,3 +201,23 @@
         </div>
     </div>
 </div>
+
+
+<div class="container">
+    <div class="service-tabbed-style">
+        <div class="tabs tabs-style-bar">
+            <nav>
+                <ul>
+                    <li><a href="#section-bar-1" class="ion-document-text"><span>Description</span></a></li>
+                    <li><a href="#section-bar-2" class="ion-star"><span>Amenities</span></a></li>
+                    <li><a href="#section-bar-3" class="ion-gear-b"><span>Extra Amenities</span></a></li>
+                </ul>
+            </nav>
+            <div class="content-wrap">
+                <section id="section-bar-1">1</section>
+                <section id="section-bar-2">2</section>
+                <section id="section-bar-3">3</section>
+            </div><!-- /content -->
+        </div><!-- /tabs -->
+    </div>
+</div>

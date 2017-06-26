@@ -5,6 +5,7 @@
         slidesToShow: 1,
         slidesToScroll: 1,
         speed: 500,
+        autoplay: true,
         arrows: true,
     });
 
@@ -12,6 +13,7 @@
         slidesToShow: 1,
         slidesToScroll: 1,
         speed: 500,
+        autoplay: true,
         arrows: true,
     });
 
@@ -199,6 +201,13 @@
         }
       });
 
+    (function() {
+
+      [].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
+        new CBPFWTabs( el );
+      });
+
+    })();
 
     $('.nav-wrapper').stickMe({
       transitionDuration: 500,
@@ -235,6 +244,7 @@
         slidesToShow: 1,
         slidesToScroll: 1,
         speed: 500,
+        autoplay: true,
         arrows: false,
         fade: true,
         asNavFor: '.testimonial-img-wrap'
@@ -242,6 +252,7 @@
     $('.testimonial-img-wrap.modern-style').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
+        autoplay: true,
         speed: 500,
         asNavFor: '.testimonial-content',
         dots: false,
@@ -256,6 +267,7 @@
         autoplaySpeed: 7000,
         arrows: false,
         slidesToShow: 3,
+        autoplay: true,
         slidesToScroll: 1,
         responsive: [
         {
@@ -288,6 +300,7 @@
         autoplaySpeed: 7000,
         arrows: false,
         slidesToShow: 2,
+        autoplay: true,
         slidesToScroll: 1,
         responsive: [
         {
@@ -319,6 +332,7 @@
         infinite: true,
         autoplaySpeed: 7000,
         arrows: false,
+        autoplay: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         responsive: [
@@ -353,6 +367,7 @@
       autoplaySpeed: 7000,
       arrows: false,
       slidesToShow: 5,
+      autoplay: true,
       slidesToScroll: 5,
       responsive: [
           {
@@ -421,6 +436,7 @@
       infinite: true,
       speed: 500,
       autoplay: true,
+      autoplay: true,
       arrows: true,
       slidesToShow:4,
       slidesToScroll: 1,
@@ -468,6 +484,7 @@
         infinite: true,
         autoplaySpeed: 7000,
         arrows: false,
+        autoplay: true,
         slidesToShow: 3,
         slidesToScroll: 1,
         responsive: [

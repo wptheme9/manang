@@ -76,6 +76,8 @@ function manang_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+
+    add_theme_support( 'woocommerce' );
     //team_image_size
     add_image_size( 'manang_team_basic',635,700,array( 'center', 'top' ) );
     add_image_size( 'manang_team_round',600,600,array( 'center', 'top' ) );

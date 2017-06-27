@@ -324,6 +324,16 @@ function manang_register_required_plugins() {
             'slug'      => 'events-manager',
             'required'  => false,
         ),
+        array(
+            'name'      => 'Woocommerce',
+            'slug'      => 'woocommerce',
+            'required'  => false,
+        ),
+        array(
+            'name'      => 'YITH Woocommerce Wishlist',
+            'slug'      => 'yith-woocommerce-wishlist',
+            'required'  => false,
+        ),
     );
 
     $config = array(

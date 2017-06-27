@@ -78,6 +78,12 @@ function manang_services_integrateWithVC(){
                 "param_name" => "show_permalink",
                 "value" => "",
             ) ,
+            array(
+                "type" => "textfield",
+                "heading" => __("Add Button Text?", "manang") ,
+                "param_name" => "button_text",
+                "value" => "",
+            ) ,
         ),
     ));
     if(class_exists('WPBakeryShortCode')){
@@ -91,12 +97,14 @@ function manang_services_integrateWithVC(){
                             'count'                => '',
                             'service_category'        => '',
                             'show_permalink' =>    '',
+                            'button_text' => '',
                             ),$atts);
                $service_layout = $values['service_layout'];
                $column = $values['column'];
                $count = $values['count'];
                $service_category = $values['service_category'];
                $show_permalink = $values['show_permalink'];
+               $button_text = $values['button_text'];
 
                $service_post_count = (!empty($count)?$count:-1);
                 $tax_query = '';
@@ -121,7 +129,8 @@ function manang_services_integrateWithVC(){
 
                     while($service_query->have_posts()):
                         $service_query->the_post();
-                       $service_icon_class = get_post_meta( get_the_id(), 'service_icon_class', true );
+                        $service_image_id = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' );
+                        $service_icon_class = get_post_meta( get_the_id(), 'service_icon_class', true );
                         switch($service_layout){
                             case( "boxed-layout" ): ?>
                                 <div class="service-style1">
@@ -135,7 +144,7 @@ function manang_services_integrateWithVC(){
                                                 <h3><?php the_title(); ?></h3>
                                                 <p><?php the_content(); ?> </p>
                                                 <?php if($show_permalink == 'true'){ ?>
-                                                    <a href="<?php the_permalink(); ?>" class="read">Read more</a>
+                                                    <a href="<?php the_permalink(); ?>" class="read"><?php echo esc_html($button_text); ?></a>
                                                 <?php } ?>
                                             </div>
                                         </div>
@@ -149,14 +158,14 @@ function manang_services_integrateWithVC(){
                                         <div class="grid-col-4">
                                             <div class="serviceBox">
                                                 <div class="service-icon">
-                                                    <i class="fa fa-globe"></i>
+                                                    <i class="<?php echo $service_icon_class ?>"></i>
                                                 </div>
                                                 <h3 class="title"><?php the_title(); ?></h3>
                                                 <p class="description">
                                                     <?php the_content(); ?>
                                                 </p>
                                                 <?php if($show_permalink == 'true'){ ?>
-                                                    <a href="<?php the_permalink(); ?>" class="read">Read more</a>
+                                                    <a href="<?php the_permalink(); ?>" class="read"><?php echo esc_html($button_text); ?></a>
                                                 <?php } ?>
                                             </div>
                                         </div>
@@ -168,14 +177,14 @@ function manang_services_integrateWithVC(){
                                     <div class="grid-col-4">
                                         <div class="serviceBox">
                                             <div class="service-icon">
-                                                <i class="fa fa-globe"></i>
+                                                <i class="<?php echo $service_icon_class ?>"></i>
                                             </div>
                                             <h3 class="title"><?php the_title(); ?></h3>
                                             <p class="description">
                                                 <?php the_content(); ?>
                                             </p>
                                             <?php if($show_permalink == 'true'){ ?>
-                                                <a href="<?php the_permalink(); ?>" class="read">Read more</a>
+                                                <a href="<?php the_permalink(); ?>" class="read"><?php echo esc_html($button_text); ?></a>
                                             <?php } ?>
                                         </div>
                                     </div>
@@ -185,15 +194,15 @@ function manang_services_integrateWithVC(){
                             case( "image-background" ): ?>
                                     <div class="service-style4">
                                         <div class="grid-col-3">
-                                            <div class="serviceBox" style="background-image: url(http://193.235.147.161/product/robojob_pro/wp-content/uploads/2017/06/index-e1497934690801.png);">
+                                            <div class="serviceBox" style="background-image: url(<?php echo esc_url($service_image_id[0]); ?>);">
                                                 <div class="service-icon">
-                                                    <i class="ion-ios-people"></i>
+                                                    <i class="<?php echo $service_icon_class ?>"></i>
                                                 </div>
                                                 <div class="service-content">
                                                     <h3><?php the_title(); ?></h3>
                                                     <p><?php the_content(); ?> </p>
                                                     <?php if($show_permalink == 'true'){ ?>
-                                                        <a href="<?php the_permalink(); ?>" class="read">Read more</a>
+                                                        <a href="<?php the_permalink(); ?>" class="read"><?php echo esc_html($button_text); ?></a>
                                                     <?php } ?>
                                                 </div>
                                             </div>

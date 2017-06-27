@@ -210,8 +210,10 @@ function manang_scripts() {
     wp_enqueue_script( 'video', get_template_directory_uri() . '/assets/js/jquery.video.js',array(), '20170302', true );
     wp_enqueue_script( 'pagescroll', get_template_directory_uri() . '/assets/js/pagescroll.js',array(), '20170302', true );
     wp_enqueue_script( 'jaudio', get_template_directory_uri() . '/assets/js/jaudio.js',array(), '20170302', true );
+    wp_enqueue_script( 'mega-menu', get_template_directory_uri() . '/assets/js/mega-menu.js',array(), '20170302', true );
     wp_enqueue_script( 'simplycountdown', get_template_directory_uri() . '/assets/js/simplyCountdown.js',array(), '20170302', true );
     wp_enqueue_script( 'plax', get_template_directory_uri() . '/assets/js/plax.js',array(), '20170302', true );
+    wp_enqueue_script( 'dynamics', get_template_directory_uri() . '/assets/js/dynamics.min.js',array(), '20170302', true );
     wp_enqueue_script( 'slick-animation', get_template_directory_uri() . '/assets/js/slick-animation.js',array(), '20170302', true );
     wp_enqueue_script( 'sticky-header', get_template_directory_uri() . '/assets/js/sticky-header.js',array(), '20170302', true );
     wp_enqueue_script( 'youtubepopup', get_template_directory_uri() . '/assets/js/youtubepopup.js',array(), '20170302', true );

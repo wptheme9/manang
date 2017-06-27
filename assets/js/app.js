@@ -111,6 +111,11 @@
       layoutMode: 'masonry'
     });
 
+    (function() {
+      document.documentElement.className = 'js';
+      var slideshow = new CircleSlideshow(document.getElementById('slideshow'));
+    })();
+
 
 // Isotope
     var $grid = $('.grid').isotope({

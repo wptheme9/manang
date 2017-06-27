@@ -52,35 +52,100 @@
 
 
         <!-- Start of Naviation -->
-        <div class="nav-wrapper navbar-transparent">
-            <div class="container">
-                <nav id="primary-nav" class="navbar navbar-default">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                      </button>
-                      <a class="custom-logo" href="#"><img src="assets/img/logo.png" alt=""></a>
-                    </div>
-
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="navbar-collapse">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#about">About Us</a></li>
-                            <li><a href="#service">Services</a></li>
-                            <li><a href="#fact">Fun Facts</a></li>
-                            <li><a href="#portfolio">Portfolio</a></li>
-                            <li><a href="#team">Team</a></li>
-                            <li><a href="#testimonial">Testimonials</a></li>
-                            <li><a href="#pricing">Pricing</a></li>
-                            <li><a href="#blog">Blog</a></li>
-                            <li><a href="#contact">Contact</a></li>
+        <div class="meganav-wrapper">
+            <div class="menu-container">
+              <div class="menu">
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="http://marioloncarek.com">About</a>
+                    <ul>
+                      <li><a href="#">School</a>
+                        <ul>
+                          <li><a href="#">Lidership</a></li>
+                          <li><a href="#">History</a></li>
+                          <li><a href="#">Locations</a></li>
+                          <li><a href="#">Careers</a></li>
                         </ul>
-                    </div><!-- End navbar-collapse -->
-                </nav>
+                      </li>
+                      <li><a href="#">Study</a>
+                        <ul>
+                          <li><a href="#">Undergraduate</a></li>
+                          <li><a href="#">Masters</a></li>
+                          <li><a href="#">International</a></li>
+                          <li><a href="#">Online</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">Research</a>
+                        <ul>
+                          <li><a href="#">Undergraduate research</a></li>
+                          <li><a href="#">Masters research</a></li>
+                          <li><a href="#">Funding</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">Something</a>
+                        <ul>
+                          <li><a href="#">Sub something</a></li>
+                          <li><a href="#">Sub something</a></li>
+                          <li><a href="#">Sub something</a></li>
+                          <li><a href="#">Sub something</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a href="#">News</a>
+                    <ul>
+                      <li><a href="#">Today</a></li>
+                      <li><a href="#">Calendar</a></li>
+                      <li><a href="#">Sport</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="http://marioloncarek.com">Contact</a>
+                    <ul>
+                      <li><a href="#">School</a>
+                        <ul>
+                          <li><a href="#">Lidership</a></li>
+                          <li><a href="#">History</a></li>
+                          <li><a href="#">Locations</a></li>
+                          <li><a href="#">Careers</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">Study</a>
+                        <ul>
+                          <li><a href="#">Undergraduate</a></li>
+                          <li><a href="#">Masters</a></li>
+                          <li><a href="#">International</a></li>
+                          <li><a href="#">Online</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">Study</a>
+                        <ul>
+                          <li><a href="#">Undergraduate</a></li>
+                          <li><a href="#">Masters</a></li>
+                          <li><a href="#">International</a></li>
+                          <li><a href="#">Online</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">Empty sub</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="description">
+              <h4><a href="https://github.com/marioloncarek/megamenu-js" target="_blank">Star and fork on github</a></h4>
+              <iframe src="https://ghbtns.com/github-btn.html?user=marioloncarek&repo=megamenu-js&type=star&count=true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+              <iframe src="https://ghbtns.com/github-btn.html?user=marioloncarek&repo=megamenu-js&type=fork&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+              <h3>megamenu.js - Last responsive megamenu you'll ever need</h3>
+              <h5>Features:</h5>
+              <ul>
+                <li>IE8 Compatible (jquery animated)</li>
+                <li>No classes! (for dropdowns)</li>
+                <li>Smart - knows when to show megamenu</li>
+                <li>100% responsive</li>
+                <li>Seamless wordpress integration</li>
+                <li>Open source!</li>
+              </ul>
             </div>
         </div>
         <!-- End of Navigation -->

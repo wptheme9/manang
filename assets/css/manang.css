@@ -11086,9 +11086,11 @@ Screen style's
     margin: 0; }
     .menu > ul > li a {
       text-decoration: none;
-      padding: 1.5em 1.6em;
+      padding: 2em 1.2em;
       display: block;
-      color: #fff; }
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: 500; }
     .menu > ul > li > ul {
       display: none;
       width: 100%;
@@ -11096,8 +11098,7 @@ Screen style's
       padding: 20px 30px 20px 40px;
       position: absolute;
       z-index: 99;
-      left: auto;
-      right: 0;
+      left: 0;
       max-width: 800px;
       margin: 0;
       list-style: none;
@@ -11122,7 +11123,7 @@ Screen style's
           border: none;
           margin-right: 0; }
         .menu > ul > li > ul > li a {
-          color: #333;
+          color: #333 !important;
           padding: 6px 0;
           width: 95%;
           display: block;
@@ -11131,6 +11132,8 @@ Screen style's
           margin: 0 auto;
           line-height: 24px;
           text-transform: capitalize; }
+          .menu > ul > li > ul > li a:hover {
+            color: #7a90ff; }
         .menu > ul > li > ul > li > ul {
           display: block;
           padding: 0;
@@ -11210,6 +11213,86 @@ ul.simple-dropdown li {
 
 .menu > ul > li > ul.menu-col-2 > li {
   width: calc(50% - 30px); }
+
+.header-default .menu > ul > li a {
+  color: #333; }
+
+.header-transparent .menu > ul > li a, .menu-widget ul li a {
+  color: #fff; }
+
+.menu > ul > li i {
+  font-size: 20px; }
+
+.nav-wrapper.header-transparent {
+  position: absolute !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.29); }
+
+.menu-widget ul {
+  margin: 0;
+  padding: 0; }
+
+.menu-widget ul li {
+  float: left;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+
+.menu-widget ul li a {
+  text-decoration: none;
+  padding: 2em 1.2em;
+  display: block;
+  color: #333;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 20px; }
+
+.menu-widget ul li a i {
+  font-size: 20px; }
+
+.navbar-right .menu-widget ul li a {
+  text-decoration: none;
+  padding: 1.5em 1.2em; }
+
+/*Midheader*/
+.header-mid {
+  background: #fff;
+  padding: 25px 0;
+  padding-top: 30px; }
+
+.quick-contact-wrap {
+  text-align: right; }
+
+.quick-contact-wrap ul {
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+
+.quick-contact-wrap ul li {
+  display: inline-block;
+  text-align: left;
+  margin-right: 35px; }
+
+.quick-contact-wrap ul li:last-child {
+  margin-right: 0; }
+
+.quick-contact-wrap li h5 {
+  font-size: 14px;
+  font-weight: normal;
+  margin-bottom: 0;
+  letter-spacing: 1px;
+  font-weight: 700; }
+
+.quick-contact-wrap li .icon {
+  margin-right: 25px; }
+
+.quick-contact-wrap li .icon i {
+  font-size: 27px;
+  margin-top: 3px; }
+
+.quick-contact-wrap li .quick-desc span {
+  display: block;
+  font-size: 13px; }
 
 .bubbles {
   background: #09f;
@@ -11417,7 +11500,8 @@ ul.simple-dropdown li {
   background-size: cover;
   background-repeat: no-repeat;
   display: table;
-  width: 100%; }
+  width: 100%;
+  position: relative; }
   .mg-banner-wrapper:before {
     position: absolute;
     top: 0;
@@ -11663,8 +11747,7 @@ a.btn-default.btn-white {
   width: 100%;
   display: block;
   z-index: 9999;
-  position: relative;
-  background: rgba(0, 0, 0, 0.27); }
+  position: relative; }
   .nav-wrapper .navbar {
     border: none;
     margin: 0;

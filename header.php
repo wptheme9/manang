@@ -63,10 +63,10 @@
 
 
         <!-- Start of Naviation -->
-        <div class="nav-wrapper">
+        <div class="nav-wrapper header-default">
             <div class="container">
                 <div class="navbar-header col-lg-2">
-                  <a class="custom-logo" href="#"><img src="assets/img/logo.png" alt=""></a>
+                  <a class="custom-logo" href="#"><img src="<?php echo get_template_directory_uri();?>/assets/img/logo.png" alt=""></a>
                 </div>
 
                 <!-- Start of Naviation -->
@@ -202,6 +202,9 @@
                                       </li>
                                     </ul>
                                 </li>
+                                <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-th" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -210,20 +213,530 @@
         </div>
         <!-- End of Navigation -->
 
-        <!-- Start of header banner -->
-        <div class="mg-banner-wrapper parallax">
-            <div class="banner-text-wrap" data-aos="fade-up">
-                <img src="assets/img/header-logo.png" alt="">
-                <h2>Premier <span>Digital</span> Agency</h2>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros</p>
-                <a href="#" class="btn btn-default btn-white">Start a Project</a>
-                <a href="#" class="btn btn-default">Purchase Now</a>
+        <!-- Start of Naviation -->
+        <div class="nav-wrapper header-default">
+            <div class="container-fluid">
+                <div class="navbar-header col-lg-2">
+                  <a class="custom-logo" href="#"><img src="<?php echo get_template_directory_uri();?>/assets/img/logo.png" alt=""></a>
+                </div>
+
+                <!-- Start of Naviation -->
+                <div class="meganav-wrapper col-lg-10">
+                    <div class=" navbar-right">
+                        <div class="menu">
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="http://marioloncarek.com">About</a>
+                                    <ul class="mega-sub-menu menu-col-4">
+                                      <li>
+                                        <ul>
+                                          <li><a href="#">Lidership</a></li>
+                                          <li><a href="#">History</a></li>
+                                          <li><a href="#">Locations</a></li>
+                                          <li><a href="#">Careers</a></li>
+                                        </ul>
+                                      </li>
+                                      <li>
+                                        <ul>
+                                          <li><a href="#">Undergraduate</a></li>
+                                          <li><a href="#">Masters</a></li>
+                                          <li><a href="#">International</a></li>
+                                          <li><a href="#">Online</a></li>
+                                        </ul>
+                                      </li>
+                                      <li>
+                                        <ul>
+                                          <li><a href="#">Undergraduate research</a></li>
+                                          <li><a href="#">Masters research</a></li>
+                                          <li><a href="#">Funding</a></li>
+                                        </ul>
+                                      </li>
+                                      <li>
+                                        <ul>
+                                          <li><a href="#">Sub something</a></li>
+                                          <li><a href="#">Sub something</a></li>
+                                          <li><a href="#">Sub something</a></li>
+                                          <li><a href="#">Sub something</a></li>
+                                        </ul>
+                                      </li>
+                                    </ul>
+                                </li>
+                                <li><a href="http://marioloncarek.com">Portfolio</a>
+                                    <ul class="mega-sub-menu menu-col-3">
+                                      <li>
+                                        <ul>
+                                          <li><a href="#">Lidership</a></li>
+                                          <li><a href="#">History</a></li>
+                                          <li><a href="#">Locations</a></li>
+                                          <li><a href="#">Careers</a></li>
+                                        </ul>
+                                      </li>
+                                      <li>
+                                        <ul>
+                                          <li><a href="#">Undergraduate</a></li>
+                                          <li><a href="#">Masters</a></li>
+                                          <li><a href="#">International</a></li>
+                                          <li><a href="#">Online</a></li>
+                                        </ul>
+                                      </li>
+                                      <li>
+                                        <ul>
+                                          <li><a href="#">Sub something</a></li>
+                                          <li><a href="#">Sub something</a></li>
+                                          <li><a href="#">Sub something</a></li>
+                                          <li><a href="#">Sub something</a></li>
+                                        </ul>
+                                      </li>
+                                    </ul>
+                                </li>
+
+                                <li><a href="http://marioloncarek.com">Clients</a>
+                                    <ul class="mega-sub-menu menu-col-2">
+                                      <li>
+                                        <ul>
+                                          <li><a href="#">Lidership</a></li>
+                                          <li><a href="#">History</a></li>
+                                          <li><a href="#">Locations</a></li>
+                                          <li><a href="#">Careers</a></li>
+                                        </ul>
+                                      </li>
+                                      <li>
+                                        <ul>
+                                          <li><a href="#">Sub something</a></li>
+                                          <li><a href="#">Sub something</a></li>
+                                          <li><a href="#">Sub something</a></li>
+                                          <li><a href="#">Sub something</a></li>
+                                        </ul>
+                                      </li>
+                                    </ul>
+                                </li>
+
+                                <li><a href="#">Blog</a>
+                                    <ul class="simple-dropdown">
+                                      <li><a href="#">Today</a></li>
+                                      <li><a href="#">Calendar</a></li>
+                                      <li><a href="#">Sport</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="http://marioloncarek.com">About</a>
+                                    <ul class="mega-sub-menu menu-col-4">
+                                      <li>
+                                        <ul>
+                                          <li><a href="#">Lidership</a></li>
+                                          <li><a href="#">History</a></li>
+                                          <li><a href="#">Locations</a></li>
+                                          <li><a href="#">Careers</a></li>
+                                        </ul>
+                                      </li>
+                                      <li>
+                                        <ul>
+                                          <li><a href="#">Undergraduate</a></li>
+                                          <li><a href="#">Masters</a></li>
+                                          <li><a href="#">International</a></li>
+                                          <li><a href="#">Online</a></li>
+                                        </ul>
+                                      </li>
+                                      <li>
+                                        <ul>
+                                          <li><a href="#">Undergraduate research</a></li>
+                                          <li><a href="#">Masters research</a></li>
+                                          <li><a href="#">Funding</a></li>
+                                        </ul>
+                                      </li>
+                                      <li>
+                                        <ul>
+                                          <li><a href="#">Sub something</a></li>
+                                          <li><a href="#">Sub something</a></li>
+                                          <li><a href="#">Sub something</a></li>
+                                          <li><a href="#">Sub something</a></li>
+                                        </ul>
+                                      </li>
+                                    </ul>
+                                </li>
+                                <li class="header-icon header-search"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                                <li class="header-icon header-sidebar"><a href="#"><i class="fa fa-th" aria-hidden="true"></i></a></li>
+                                <li class="header-icon header-cart"><a href="#"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="scroll-wrap">
-            <div class="scroll"><span>Scroll</span></div>
-        </div>
-        <!-- End of header banner -->
+        <!-- End of Navigation -->
 
+
+<!-- navbar -left -->
+        <!-- Start of Naviation -->
+        <div class="nav-wrapper header-default">
+            <div class="container">
+                <!-- Start of Naviation -->
+
+                <div class="navbar-header col-lg-2">
+                  <a class="custom-logo" href="#"><img src="<?php echo get_template_directory_uri();?>/assets/img/logo.png" alt=""></a>
+                </div>
+
+                <div class="meganav-wrapper col-lg-10">
+                    <div class="navbar-left">
+                        <div class="menu">
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="http://marioloncarek.com">About</a>
+                                    <ul class="mega-sub-menu menu-col-4">
+                                      <li>
+                                        <ul>
+                                          <li><a href="#">Lidership</a></li>
+                                          <li><a href="#">History</a></li>
+                                          <li><a href="#">Locations</a></li>
+                                          <li><a href="#">Careers</a></li>
+                                        </ul>
+                                      </li>
+                                      <li>
+                                        <ul>
+                                          <li><a href="#">Undergraduate</a></li>
+                                          <li><a href="#">Masters</a></li>
+                                          <li><a href="#">International</a></li>
+                                          <li><a href="#">Online</a></li>
+                                        </ul>
+                                      </li>
+                                      <li>
+                                        <ul>
+                                          <li><a href="#">Undergraduate research</a></li>
+                                          <li><a href="#">Masters research</a></li>
+                                          <li><a href="#">Funding</a></li>
+                                        </ul>
+                                      </li>
+                                      <li>
+                                        <ul>
+                                          <li><a href="#">Sub something</a></li>
+                                          <li><a href="#">Sub something</a></li>
+                                          <li><a href="#">Sub something</a></li>
+                                          <li><a href="#">Sub something</a></li>
+                                        </ul>
+                                      </li>
+                                    </ul>
+                                </li>
+                                <li><a href="http://marioloncarek.com">Portfolio</a>
+                                    <ul class="mega-sub-menu menu-col-3">
+                                      <li>
+                                        <ul>
+                                          <li><a href="#">Lidership</a></li>
+                                          <li><a href="#">History</a></li>
+                                          <li><a href="#">Locations</a></li>
+                                          <li><a href="#">Careers</a></li>
+                                        </ul>
+                                      </li>
+                                      <li>
+                                        <ul>
+                                          <li><a href="#">Undergraduate</a></li>
+                                          <li><a href="#">Masters</a></li>
+                                          <li><a href="#">International</a></li>
+                                          <li><a href="#">Online</a></li>
+                                        </ul>
+                                      </li>
+                                      <li>
+                                        <ul>
+                                          <li><a href="#">Sub something</a></li>
+                                          <li><a href="#">Sub something</a></li>
+                                          <li><a href="#">Sub something</a></li>
+                                          <li><a href="#">Sub something</a></li>
+                                        </ul>
+                                      </li>
+                                    </ul>
+                                </li>
+
+                                <li><a href="http://marioloncarek.com">Clients</a>
+                                    <ul class="mega-sub-menu menu-col-2">
+                                      <li>
+                                        <ul>
+                                          <li><a href="#">Lidership</a></li>
+                                          <li><a href="#">History</a></li>
+                                          <li><a href="#">Locations</a></li>
+                                          <li><a href="#">Careers</a></li>
+                                        </ul>
+                                      </li>
+                                      <li>
+                                        <ul>
+                                          <li><a href="#">Sub something</a></li>
+                                          <li><a href="#">Sub something</a></li>
+                                          <li><a href="#">Sub something</a></li>
+                                          <li><a href="#">Sub something</a></li>
+                                        </ul>
+                                      </li>
+                                    </ul>
+                                </li>
+
+                                <li><a href="#">Blog</a>
+                                    <ul class="simple-dropdown">
+                                      <li><a href="#">Today</a></li>
+                                      <li><a href="#">Calendar</a></li>
+                                      <li><a href="#">Sport</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="http://marioloncarek.com">About</a>
+                                    <ul class="mega-sub-menu menu-col-4">
+                                      <li>
+                                        <ul>
+                                          <li><a href="#">Lidership</a></li>
+                                          <li><a href="#">History</a></li>
+                                          <li><a href="#">Locations</a></li>
+                                          <li><a href="#">Careers</a></li>
+                                        </ul>
+                                      </li>
+                                      <li>
+                                        <ul>
+                                          <li><a href="#">Undergraduate</a></li>
+                                          <li><a href="#">Masters</a></li>
+                                          <li><a href="#">International</a></li>
+                                          <li><a href="#">Online</a></li>
+                                        </ul>
+                                      </li>
+                                      <li>
+                                        <ul>
+                                          <li><a href="#">Undergraduate research</a></li>
+                                          <li><a href="#">Masters research</a></li>
+                                          <li><a href="#">Funding</a></li>
+                                        </ul>
+                                      </li>
+                                      <li>
+                                        <ul>
+                                          <li><a href="#">Sub something</a></li>
+                                          <li><a href="#">Sub something</a></li>
+                                          <li><a href="#">Sub something</a></li>
+                                          <li><a href="#">Sub something</a></li>
+                                        </ul>
+                                      </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="navbar-right">
+                        <div class="menu-widget">
+                            <ul>
+                                <li class="header-icon header-search"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                                <li class="header-icon header-sidebar"><a href="#"><i class="fa fa-th" aria-hidden="true"></i></a></li>
+                                <li class="header-icon header-cart"><a href="#"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Navigation -->
+
+
+
+<!-- Extended header -->
+        <!-- Start of Naviation -->
+        <div class="nav-wrapper header-default">
+            <div class="container">
+                <!-- Start of Naviation -->
+                <div class="header-mid">
+                    <div class="col-md-5 col-sm-12">
+                         <!-- Start Site Branding -->
+                        <div class="navbar-header">
+                          <a class="custom-logo" href="#"><img src="<?php echo get_template_directory_uri();?>/assets/img/logo.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-md-7 col-sm-12">
+                        <div class="quick-contact-wrap">
+                            <ul>
+                                <li class="quick-phone">
+                                    <div class="icon pull-left">
+                                        <i class="fa fa-phone" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="quick-desc pull-right">
+                                        <h5>Helpline</h5>
+                                        <span>00-0000-0000</span>
+                                    </div>
+                                </li>
+                                <li class="quick-mail">
+                                    <div class="icon pull-left">
+                                       <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="quick-desc pull-right">
+                                        <h5>Mail Us</h5>
+                                        <span>info@codethemes.co</span>
+                                    </div>
+                                </li>
+
+                                <li class="quick-address">
+                                    <div class="icon pull-left">
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="quick-desc pull-right">
+                                        <h5>Here We Are</h5>
+                                        <span>Eakantakuna, lalitpur</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="meganav-wrapper">
+                    <div class="navbar-left">
+                        <div class="menu">
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="http://marioloncarek.com">About</a>
+                                    <ul class="mega-sub-menu menu-col-4">
+                                      <li>
+                                        <ul>
+                                          <li><a href="#">Lidership</a></li>
+                                          <li><a href="#">History</a></li>
+                                          <li><a href="#">Locations</a></li>
+                                          <li><a href="#">Careers</a></li>
+                                        </ul>
+                                      </li>
+                                      <li>
+                                        <ul>
+                                          <li><a href="#">Undergraduate</a></li>
+                                          <li><a href="#">Masters</a></li>
+                                          <li><a href="#">International</a></li>
+                                          <li><a href="#">Online</a></li>
+                                        </ul>
+                                      </li>
+                                      <li>
+                                        <ul>
+                                          <li><a href="#">Undergraduate research</a></li>
+                                          <li><a href="#">Masters research</a></li>
+                                          <li><a href="#">Funding</a></li>
+                                        </ul>
+                                      </li>
+                                      <li>
+                                        <ul>
+                                          <li><a href="#">Sub something</a></li>
+                                          <li><a href="#">Sub something</a></li>
+                                          <li><a href="#">Sub something</a></li>
+                                          <li><a href="#">Sub something</a></li>
+                                        </ul>
+                                      </li>
+                                    </ul>
+                                </li>
+                                <li><a href="http://marioloncarek.com">Portfolio</a>
+                                    <ul class="mega-sub-menu menu-col-3">
+                                      <li>
+                                        <ul>
+                                          <li><a href="#">Lidership</a></li>
+                                          <li><a href="#">History</a></li>
+                                          <li><a href="#">Locations</a></li>
+                                          <li><a href="#">Careers</a></li>
+                                        </ul>
+                                      </li>
+                                      <li>
+                                        <ul>
+                                          <li><a href="#">Undergraduate</a></li>
+                                          <li><a href="#">Masters</a></li>
+                                          <li><a href="#">International</a></li>
+                                          <li><a href="#">Online</a></li>
+                                        </ul>
+                                      </li>
+                                      <li>
+                                        <ul>
+                                          <li><a href="#">Sub something</a></li>
+                                          <li><a href="#">Sub something</a></li>
+                                          <li><a href="#">Sub something</a></li>
+                                          <li><a href="#">Sub something</a></li>
+                                        </ul>
+                                      </li>
+                                    </ul>
+                                </li>
+
+                                <li><a href="http://marioloncarek.com">Clients</a>
+                                    <ul class="mega-sub-menu menu-col-2">
+                                      <li>
+                                        <ul>
+                                          <li><a href="#">Lidership</a></li>
+                                          <li><a href="#">History</a></li>
+                                          <li><a href="#">Locations</a></li>
+                                          <li><a href="#">Careers</a></li>
+                                        </ul>
+                                      </li>
+                                      <li>
+                                        <ul>
+                                          <li><a href="#">Sub something</a></li>
+                                          <li><a href="#">Sub something</a></li>
+                                          <li><a href="#">Sub something</a></li>
+                                          <li><a href="#">Sub something</a></li>
+                                        </ul>
+                                      </li>
+                                    </ul>
+                                </li>
+
+                                <li><a href="#">Blog</a>
+                                    <ul class="simple-dropdown">
+                                      <li><a href="#">Today</a></li>
+                                      <li><a href="#">Calendar</a></li>
+                                      <li><a href="#">Sport</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="http://marioloncarek.com">About</a>
+                                    <ul class="mega-sub-menu menu-col-4">
+                                      <li>
+                                        <ul>
+                                          <li><a href="#">Lidership</a></li>
+                                          <li><a href="#">History</a></li>
+                                          <li><a href="#">Locations</a></li>
+                                          <li><a href="#">Careers</a></li>
+                                        </ul>
+                                      </li>
+                                      <li>
+                                        <ul>
+                                          <li><a href="#">Undergraduate</a></li>
+                                          <li><a href="#">Masters</a></li>
+                                          <li><a href="#">International</a></li>
+                                          <li><a href="#">Online</a></li>
+                                        </ul>
+                                      </li>
+                                      <li>
+                                        <ul>
+                                          <li><a href="#">Undergraduate research</a></li>
+                                          <li><a href="#">Masters research</a></li>
+                                          <li><a href="#">Funding</a></li>
+                                        </ul>
+                                      </li>
+                                      <li>
+                                        <ul>
+                                          <li><a href="#">Sub something</a></li>
+                                          <li><a href="#">Sub something</a></li>
+                                          <li><a href="#">Sub something</a></li>
+                                          <li><a href="#">Sub something</a></li>
+                                        </ul>
+                                      </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="navbar-right">
+                        <div class="menu-widget">
+                            <ul>
+                                <li class="header-icon header-search"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                                <li class="header-icon header-sidebar"><a href="#"><i class="fa fa-th" aria-hidden="true"></i></a></li>
+                                <li class="header-icon header-cart"><a href="#"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
     <!-- End of header -->
+
+        <!-- Start of header banner -->
+    <div class="mg-banner-wrapper parallax">
+        <div class="banner-text-wrap" data-aos="fade-up">
+            <img src="<?php echo get_template_directory_uri();?>/assets/img/header-logo.png" alt="">
+            <h2>Premier <span>Digital</span> Agency</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros</p>
+            <a href="#" class="btn btn-default btn-white">Start a Project</a>
+            <a href="#" class="btn btn-default">Purchase Now</a>
+        </div>
+    </div>
+    <div class="scroll-wrap">
+        <div class="scroll"><span>Scroll</span></div>
+    </div>
+    <!-- End of header banner -->

@@ -7,8 +7,8 @@
  * @since Manang 1.0.0
  */
 
-add_action( 'vc_before_init', 'manang_team_integrateWithVC' );
-function manang_team_integrateWithVC(){
+add_action( 'vc_before_init', 'manang_services_integrateWithVC' );
+function manang_services_integrateWithVC(){
     if(!function_exists('manang_get_service_categories_select')):
         function manang_get_service_categories_select() {
             $manang_cat = get_terms( array(
@@ -72,6 +72,12 @@ function manang_team_integrateWithVC(){
                 "description" => __("This option will display only the selected categories.", "manang") ,
                 "value" => manang_get_service_categories_select(),
             ) ,
+            array(
+                "type" => "checkbox",
+                "heading" => __("Show Permalink?", "manang") ,
+                "param_name" => "show_permalink",
+                "value" => "",
+            ) ,
         ),
     ));
     if(class_exists('WPBakeryShortCode')){
@@ -84,120 +90,133 @@ function manang_team_integrateWithVC(){
                             'column'               => 'grid-col-2',
                             'count'                => '',
                             'service_category'        => '',
+                            'show_permalink' =>    '',
                             ),$atts);
                $service_layout = $values['service_layout'];
                $column = $values['column'];
                $count = $values['count'];
                $service_category = $values['service_category'];
+               $show_permalink = $values['show_permalink'];
 
-               $team_post_count = (!empty($count)?$count:-1);
+               $service_post_count = (!empty($count)?$count:-1);
                 $tax_query = '';
                 if($service_category!=''){
                     $tax_query[] =  array(
-                        'taxonomy' => 'service_category',
+                        'taxonomy' => 'mg_service_category',
                         'field' => 'term_id',
                         'terms' => $service_category,
                     );
                 }
-                $team_argument = array(
-                    'post_type'      => 'team',
+                $service_argument = array(
+                    'post_type'      => 'service',
                     'post_status'    => 'publish',
-                    'posts_per_page' => $team_post_count,
+                    'posts_per_page' => $service_post_count,
                     'orderby'        => 'menu_order date',
                     'order'          => 'desc',
                     'tax_query' => $tax_query,
                 );
-                $team_query = new WP_Query($team_argument);
+                $service_query = new WP_Query($service_argument);
                 ob_start();
-                if($team_query->have_posts()):
+                if($service_query->have_posts()):
 
-                    while($team_query->have_posts()):
-                        $team_query->the_post();
-                        $manang_basecamp_team_designation = get_post_meta(get_the_id(), 'manang_basecamp_team_designation', true);
-                        $manang_basecamp_team_facebook = get_post_meta(get_the_id(), 'manang_basecamp_team_facebook', true);
-                        $manang_basecamp_team_twitter = get_post_meta(get_the_id(), 'manang_basecamp_team_twitter', true);
-                        $manang_basecamp_team_gmail = get_post_meta(get_the_id(), 'manang_basecamp_team_gmail', true);
-                        $manang_basecamp_team_pinterest = get_post_meta(get_the_id(), 'manang_basecamp_team_pinterest', true);
+                    while($service_query->have_posts()):
+                        $service_query->the_post();
+                       $service_icon_class = get_post_meta( get_the_id(), 'service_icon_class', true );
                         switch($service_layout){
-                            case( "classic" ): ?>
-                                <div class="<?php echo $column; ?>">
-                                    <div class="team-wrap team-classic">
-                                        <div class="our-team">
-                                            <?php the_post_thumbnail('manang_team_basic'); ?>
-                                            <div class="team-content">
-                                                <?php the_title( '<h3 class="title">', '</h3>' ); ?>
-                                                <span class="post"><?php echo esc_html($manang_basecamp_team_designation); ?></span>
-                                                <ul class="social-links">
-                                                    <li><a href="<?php echo esc_url($manang_basecamp_team_facebook); ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                                                    <li><a href="<?php echo esc_url($manang_basecamp_team_twitter); ?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                                                    <li><a href="<?php echo esc_url($manang_basecamp_team_gmail); ?>" target="_blank"><i class="fa fa-google-plus"></i></a></li>
-                                                    <li><a href="<?php echo esc_url($manang_basecamp_team_pinterest); ?>" target="_blank"><i class="fa fa-pinterest"></i></a></li>
-                                                </ul>
+                            case( "boxed-layout" ): ?>
+                                <div class="service-style1">
+
+                                    <div class="grid-col-3">
+                                        <div class="serviceBox">
+                                            <div class="service-icon">
+                                                <i class="<?php echo $service_icon_class ?>"></i>
+                                            </div>
+                                            <div class="service-content">
+                                                <h3><?php the_title(); ?></h3>
+                                                <p><?php the_content(); ?> </p>
+                                                <?php if($show_permalink == 'true'){ ?>
+                                                    <a href="<?php the_permalink(); ?>" class="read">Read more</a>
+                                                <?php } ?>
                                             </div>
                                         </div>
                                     </div>
+
                                 </div>
                             <?php break;
-                            case( "fancy" ): ?>
-                                    <div class="<?php echo $column; ?>">
-                                        <div class="team-wrap team-fancy">
-                                            <div class="our-team">
-                                                <div class="team_img">
-                                                    <?php the_post_thumbnail('manang_team_basic'); ?>
-                                                    <ul class="social">
-                                                        <li><a href="<?php echo esc_url($manang_basecamp_team_facebook); ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                                                        <li><a href="<?php echo esc_url($manang_basecamp_team_twitter); ?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                                                        <li><a href="<?php echo esc_url($manang_basecamp_team_gmail); ?>" target="_blank"><i class="fa fa-google-plus"></i></a></li>
-                                                        <li><a href="<?php echo esc_url($manang_basecamp_team_pinterest); ?>" target="_blank"><i class="fa fa-pinterest"></i></a></li>
-                                                    </ul>
+                            case( "simple-hover" ): ?>
+                                    <div class="service-style2">
+
+                                        <div class="grid-col-4">
+                                            <div class="serviceBox">
+                                                <div class="service-icon">
+                                                    <i class="fa fa-globe"></i>
                                                 </div>
-                                                <div class="team-content">
-                                                    <?php the_title( '<h3 class="title">', '</h3>' ); ?>
-                                                    <span class="post"><?php echo esc_html($manang_basecamp_team_designation); ?></span>
+                                                <h3 class="title"><?php the_title(); ?></h3>
+                                                <p class="description">
+                                                    <?php the_content(); ?>
+                                                </p>
+                                                <?php if($show_permalink == 'true'){ ?>
+                                                    <a href="<?php the_permalink(); ?>" class="read">Read more</a>
+                                                <?php } ?>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                            <?php break;
+                            case( "classic-hover" ): ?>
+                                <div class="service-style3">
+                                    <div class="grid-col-4">
+                                        <div class="serviceBox">
+                                            <div class="service-icon">
+                                                <i class="fa fa-globe"></i>
+                                            </div>
+                                            <h3 class="title"><?php the_title(); ?></h3>
+                                            <p class="description">
+                                                <?php the_content(); ?>
+                                            </p>
+                                            <?php if($show_permalink == 'true'){ ?>
+                                                <a href="<?php the_permalink(); ?>" class="read">Read more</a>
+                                            <?php } ?>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            <?php break;
+                            case( "image-background" ): ?>
+                                    <div class="service-style4">
+                                        <div class="grid-col-3">
+                                            <div class="serviceBox" style="background-image: url(http://193.235.147.161/product/robojob_pro/wp-content/uploads/2017/06/index-e1497934690801.png);">
+                                                <div class="service-icon">
+                                                    <i class="ion-ios-people"></i>
+                                                </div>
+                                                <div class="service-content">
+                                                    <h3><?php the_title(); ?></h3>
+                                                    <p><?php the_content(); ?> </p>
+                                                    <?php if($show_permalink == 'true'){ ?>
+                                                        <a href="<?php the_permalink(); ?>" class="read">Read more</a>
+                                                    <?php } ?>
                                                 </div>
                                             </div>
                                         </div>
+
                                     </div>
                             <?php break;
-                            case( "rounded" ): ?>
-                                 <div class="<?php echo $column; ?>">
-                                    <div class="team-wrap team-round">
-                                        <div class="our-team">
-                                            <div class="pic">
-                                                <?php the_post_thumbnail('manang_team_round'); ?>
-                                                <a href="<?php the_permalink(); ?>" class="pic-bottom"></a>
-                                            </div>
-                                            <div class="team-prof">
-                                                <h3 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                                                <span class="post"><?php echo esc_html($manang_basecamp_team_designation); ?></span>
-                                                <ul class="team_social">
-                                                    <li><a href="<?php echo esc_url($manang_basecamp_team_facebook); ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                                                    <li><a href="<?php echo esc_url($manang_basecamp_team_twitter); ?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                                                    <li><a href="<?php echo esc_url($manang_basecamp_team_gmail); ?>" target="_blank"><i class="fa fa-google-plus"></i></a></li>
-                                                    <li><a href="<?php echo esc_url($manang_basecamp_team_pinterest); ?>" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+                            case( "tabbed-layout" ): ?>
+                                    <div class="service-tabbed-style">
+                                        <div class="tabs tabs-style-bar">
+                                            <nav>
+                                                <ul>
+                                                    <li><a href="#section-bar-1" class="ion-document-text"><span>Description</span></a></li>
+                                                    <li><a href="#section-bar-2" class="ion-star"><span>Amenities</span></a></li>
+                                                    <li><a href="#section-bar-3" class="ion-gear-b"><span>Extra Amenities</span></a></li>
                                                 </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            <?php break;
-                            case( "simple" ): ?>
-                                    <div class="<?php echo $column; ?>">
-                                        <div class="team-wrap team-classic">
-                                            <div class="our-team">
-                                                <?php the_post_thumbnail('manang_team_basic'); ?>
-                                                <div class="team-content">
-                                                    <?php the_title( '<h3 class="title">', '</h3>' ); ?>
-                                                    <span class="post"><?php echo esc_html($manang_basecamp_team_designation); ?></span>
-                                                    <ul class="social-links">
-                                                        <li><a href="<?php echo esc_url($manang_basecamp_team_facebook); ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                                                        <li><a href="<?php echo esc_url($manang_basecamp_team_twitter); ?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                                                        <li><a href="<?php echo esc_url($manang_basecamp_team_gmail); ?>" target="_blank"><i class="fa fa-google-plus"></i></a></li>
-                                                        <li><a href="<?php echo esc_url($manang_basecamp_team_pinterest); ?>" target="_blank"><i class="fa fa-pinterest"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
+                                            </nav>
+                                            <div class="content-wrap">
+                                                <section id="section-bar-1">1</section>
+                                                <section id="section-bar-2">2</section>
+                                                <section id="section-bar-3">3</section>
+                                            </div><!-- /content -->
+                                        </div><!-- /tabs -->
                                     </div>
                             <?php break;
                         }

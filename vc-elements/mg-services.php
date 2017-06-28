@@ -62,7 +62,13 @@ function manang_services_integrateWithVC(){
                     __("Three Column", 'manang') => "grid-col-3",
                     __("Four Column", 'manang') => "grid-col-4",
                 ) ,
-                "type" => "dropdown"
+                "type" => "dropdown",
+                "dependency" => array(
+                    'element' => "service_layout",
+                    'value' => array(
+                        'boxed-layout','simple-hover','classic-hover','image-background'
+                    )
+                )
             ) ,
 
              array(
@@ -77,12 +83,24 @@ function manang_services_integrateWithVC(){
                 "heading" => __("Show Permalink?", "manang") ,
                 "param_name" => "show_permalink",
                 "value" => "",
+                "dependency" => array(
+                    'element' => "service_layout",
+                    'value' => array(
+                        'boxed-layout','simple-hover','classic-hover','image-background'
+                    )
+                )
             ) ,
             array(
                 "type" => "textfield",
                 "heading" => __("Add Button Text?", "manang") ,
                 "param_name" => "button_text",
                 "value" => "",
+                "dependency" => array(
+                    'element' => "service_layout",
+                    'value' => array(
+                        'boxed-layout','simple-hover','classic-hover','image-background'
+                    )
+                )
             ) ,
         ),
     ));

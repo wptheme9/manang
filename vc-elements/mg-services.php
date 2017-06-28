@@ -126,7 +126,9 @@ function manang_services_integrateWithVC(){
                 $service_query = new WP_Query($service_argument);
                 ob_start();
                 if($service_query->have_posts()):
-
+                    if($service_layout == 'tabbed-layout'){ ?>
+                        <div class="service-tabbed-style"><div class="tabs tabs-style-bar"><nav><ul>
+                    <?php }
                     while($service_query->have_posts()):
                         $service_query->the_post();
                         $service_image_id = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' );
@@ -211,26 +213,21 @@ function manang_services_integrateWithVC(){
                                     </div>
                             <?php break;
                             case( "tabbed-layout" ): ?>
-                                    <div class="service-tabbed-style">
-                                        <div class="tabs tabs-style-bar">
-                                            <nav>
-                                                <ul>
-                                                    <li><a href="#section-bar-1" class="ion-document-text"><span>Description</span></a></li>
-                                                    <li><a href="#section-bar-2" class="ion-star"><span>Amenities</span></a></li>
-                                                    <li><a href="#section-bar-3" class="ion-gear-b"><span>Extra Amenities</span></a></li>
-                                                </ul>
-                                            </nav>
-                                            <div class="content-wrap">
-                                                <section id="section-bar-1">1</section>
-                                                <section id="section-bar-2">2</section>
-                                                <section id="section-bar-3">3</section>
-                                            </div><!-- /content -->
-                                        </div><!-- /tabs -->
-                                    </div>
+                                <li><a href="#<?php echo sanitize_title(get_the_title()); ?>" class="<?php echo $service_icon_class ?>"><span><?php the_title(); ?></span></a></li>
                             <?php break;
                         }
                         endwhile;
                     wp_reset_postdata();
+                    if($service_layout == 'tabbed-layout'): ?>
+                        </ul></nav>
+                        <div class="content-wrap">
+                             <?php while($service_query->have_posts()):
+                                $service_query->the_post(); ?>
+                                    <section id="<?php echo sanitize_title(get_the_title()); ?>"><?php the_content(); ?></section>
+                            <?php wp_reset_postdata();
+                            endwhile; ?>
+                        </div><!-- /content --></div></div>
+                    <?php endif;
                 endif;
             $output = ob_get_clean();
             return $output;

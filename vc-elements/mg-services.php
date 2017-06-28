@@ -155,7 +155,7 @@ function manang_services_integrateWithVC(){
                             case( "boxed-layout" ): ?>
                                 <div class="service-style1">
 
-                                    <div class="grid-col-3">
+                                    <div class="<?php echo $column; ?>">
                                         <div class="serviceBox">
                                             <div class="service-icon">
                                                 <i class="<?php echo $service_icon_class ?>"></i>
@@ -175,7 +175,7 @@ function manang_services_integrateWithVC(){
                             case( "simple-hover" ): ?>
                                     <div class="service-style2">
 
-                                        <div class="grid-col-4">
+                                        <div class="<?php echo $column; ?>">
                                             <div class="serviceBox">
                                                 <div class="service-icon">
                                                     <i class="<?php echo $service_icon_class ?>"></i>
@@ -194,7 +194,7 @@ function manang_services_integrateWithVC(){
                             <?php break;
                             case( "classic-hover" ): ?>
                                 <div class="service-style3">
-                                    <div class="grid-col-4">
+                                    <div class="<?php echo $column; ?>">
                                         <div class="serviceBox">
                                             <div class="service-icon">
                                                 <i class="<?php echo $service_icon_class ?>"></i>
@@ -213,7 +213,7 @@ function manang_services_integrateWithVC(){
                             <?php break;
                             case( "image-background" ): ?>
                                     <div class="service-style4">
-                                        <div class="grid-col-3">
+                                        <div class="<?php echo $column; ?>">
                                             <div class="serviceBox" style="background-image: url(<?php echo esc_url($service_image_id[0]); ?>);">
                                                 <div class="service-icon">
                                                     <i class="<?php echo $service_icon_class ?>"></i>

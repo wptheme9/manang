@@ -37,11 +37,11 @@ function manang_services_integrateWithVC(){
                 "description" => __("", 'manang') ,
                 "param_name" => "service_layout",
                 "value" => array(
-                    __("Boxed Layout", 'manang') => "boxed-layout",
-                    __("Simple Hover Layout", 'manang') => "simple-hover",
-                    __("Classic Hover Layout", 'manang') => "classic-hover",
-                    __("Image Background Layout", 'manang') => "image-background",
-                    __("Tabbed Layout", 'manang') => "tabbed-layout",
+                    __("Boxed Layout", 'manang') => "service-style1",
+                    __("Simple Hover Layout", 'manang') => "service-style2",
+                    __("Classic Hover Layout", 'manang') => "service-style3",
+                    __("Image Background Layout", 'manang') => "service-style4",
+                    __("Tabbed Layout", 'manang') => "service-tabbed-style",
                 ) ,
                 "type" => "dropdown"
             ) ,
@@ -86,7 +86,7 @@ function manang_services_integrateWithVC(){
                 "dependency" => array(
                     'element' => "service_layout",
                     'value' => array(
-                        'boxed-layout','simple-hover','classic-hover','image-background'
+                        'service-style1','service-style2','service-style3','service-style4'
                     )
                 )
             ) ,
@@ -98,7 +98,7 @@ function manang_services_integrateWithVC(){
                 "dependency" => array(
                     'element' => "service_layout",
                     'value' => array(
-                        'boxed-layout','simple-hover','classic-hover','image-background'
+                        'service-style1','service-style2','service-style3','service-style4'
                     )
                 )
             ) ,
@@ -110,7 +110,7 @@ function manang_services_integrateWithVC(){
             protected function content( $atts, $content = null ) {
 
                $values =  shortcode_atts( array(
-                            'service_layout'        => 'boxed-layout',
+                            'service_layout'        => 'service-style1',
                             'column'               => 'grid-col-2',
                             'count'                => '',
                             'service_category'        => '',
@@ -143,18 +143,17 @@ function manang_services_integrateWithVC(){
                 );
                 $service_query = new WP_Query($service_argument);
                 ob_start();
-                if($service_query->have_posts()):
-                    if($service_layout == 'tabbed-layout'){ ?>
-                        <div class="service-tabbed-style"><div class="tabs tabs-style-bar"><nav><ul>
+                if($service_query->have_posts()): ?>
+                    <div class="<?php echo $service_layout ?>">
+                    <?php if($service_layout == 'service-tabbed-style'){ ?>
+                        <div class="tabs tabs-style-bar"><nav><ul>
                     <?php }
                     while($service_query->have_posts()):
                         $service_query->the_post();
                         $service_image_id = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' );
                         $service_icon_class = get_post_meta( get_the_id(), 'service_icon_class', true );
                         switch($service_layout){
-                            case( "boxed-layout" ): ?>
-                                <div class="service-style1">
-
+                            case( "service-style1" ): ?>
                                     <div class="<?php echo $column; ?>">
                                         <div class="serviceBox">
                                             <div class="service-icon">
@@ -169,31 +168,8 @@ function manang_services_integrateWithVC(){
                                             </div>
                                         </div>
                                     </div>
-
-                                </div>
                             <?php break;
-                            case( "simple-hover" ): ?>
-                                    <div class="service-style2">
-
-                                        <div class="<?php echo $column; ?>">
-                                            <div class="serviceBox">
-                                                <div class="service-icon">
-                                                    <i class="<?php echo $service_icon_class ?>"></i>
-                                                </div>
-                                                <h3 class="title"><?php the_title(); ?></h3>
-                                                <p class="description">
-                                                    <?php the_content(); ?>
-                                                </p>
-                                                <?php if($show_permalink == 'true'){ ?>
-                                                    <a href="<?php the_permalink(); ?>" class="read"><?php echo esc_html($button_text); ?></a>
-                                                <?php } ?>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                            <?php break;
-                            case( "classic-hover" ): ?>
-                                <div class="service-style3">
+                            case( "service-style2" ): ?>
                                     <div class="<?php echo $column; ?>">
                                         <div class="serviceBox">
                                             <div class="service-icon">
@@ -208,26 +184,37 @@ function manang_services_integrateWithVC(){
                                             <?php } ?>
                                         </div>
                                     </div>
-
-                                </div>
                             <?php break;
-                            case( "image-background" ): ?>
-                                    <div class="service-style4">
-                                        <div class="<?php echo $column; ?>">
-                                            <div class="serviceBox" style="background-image: url(<?php echo esc_url($service_image_id[0]); ?>);">
-                                                <div class="service-icon">
-                                                    <i class="<?php echo $service_icon_class ?>"></i>
-                                                </div>
-                                                <div class="service-content">
-                                                    <h3><?php the_title(); ?></h3>
-                                                    <p><?php the_content(); ?> </p>
-                                                    <?php if($show_permalink == 'true'){ ?>
-                                                        <a href="<?php the_permalink(); ?>" class="read"><?php echo esc_html($button_text); ?></a>
-                                                    <?php } ?>
-                                                </div>
+                            case( "service-style3" ): ?>
+                                    <div class="<?php echo $column; ?>">
+                                        <div class="serviceBox">
+                                            <div class="service-icon">
+                                                <i class="<?php echo $service_icon_class ?>"></i>
+                                            </div>
+                                            <h3 class="title"><?php the_title(); ?></h3>
+                                            <p class="description">
+                                                <?php the_content(); ?>
+                                            </p>
+                                            <?php if($show_permalink == 'true'){ ?>
+                                                <a href="<?php the_permalink(); ?>" class="read"><?php echo esc_html($button_text); ?></a>
+                                            <?php } ?>
+                                        </div>
+                                    </div>
+                            <?php break;
+                            case( "service-style4" ): ?>
+                                    <div class="<?php echo $column; ?>">
+                                        <div class="serviceBox" style="background-image: url(<?php echo esc_url($service_image_id[0]); ?>);">
+                                            <div class="service-icon">
+                                                <i class="<?php echo $service_icon_class ?>"></i>
+                                            </div>
+                                            <div class="service-content">
+                                                <h3><?php the_title(); ?></h3>
+                                                <p><?php the_content(); ?> </p>
+                                                <?php if($show_permalink == 'true'){ ?>
+                                                    <a href="<?php the_permalink(); ?>" class="read"><?php echo esc_html($button_text); ?></a>
+                                                <?php } ?>
                                             </div>
                                         </div>
-
                                     </div>
                             <?php break;
                             case( "tabbed-layout" ): ?>
@@ -235,8 +222,9 @@ function manang_services_integrateWithVC(){
                             <?php break;
                         }
                         endwhile;
-                    wp_reset_postdata();
-                    if($service_layout == 'tabbed-layout'): ?>
+                    wp_reset_postdata(); ?>
+                    </div>
+                    <?php if($service_layout == 'service-tabbed-style'): ?>
                         </ul></nav>
                         <div class="content-wrap">
                              <?php while($service_query->have_posts()):

@@ -102,6 +102,18 @@ function manang_services_integrateWithVC(){
                     )
                 )
             ) ,
+            array(
+                "type" => "textfield",
+                "heading" => __("Add Excerpt Count", "manang") ,
+                "param_name" => "excerpt_count",
+                "value" => "200",
+                "dependency" => array(
+                    'element' => "service_layout",
+                    'value' => array(
+                        'service-style1','service-style2','service-style3','service-style4'
+                    )
+                )
+            ) ,
         ),
     ));
     if(class_exists('WPBakeryShortCode')){
@@ -116,6 +128,7 @@ function manang_services_integrateWithVC(){
                             'service_category'        => '',
                             'show_permalink' =>    '',
                             'button_text' => '',
+                            'excerpt_count' => '200',
                             ),$atts);
                $service_layout = $values['service_layout'];
                $column = $values['column'];
@@ -123,6 +136,7 @@ function manang_services_integrateWithVC(){
                $service_category = $values['service_category'];
                $show_permalink = $values['show_permalink'];
                $button_text = $values['button_text'];
+               $excerpt_count = $values['excerpt_count'];
 
                $service_post_count = (!empty($count)?$count:-1);
                 $tax_query = '';
@@ -161,7 +175,7 @@ function manang_services_integrateWithVC(){
                                             </div>
                                             <div class="service-content">
                                                 <h3><?php the_title(); ?></h3>
-                                                <p><?php the_content(); ?> </p>
+                                                <p><?php echo manang_get_excerpt(get_the_id(),$excerpt_count); ?> </p>
                                                 <?php if($show_permalink == 'true'){ ?>
                                                     <a href="<?php the_permalink(); ?>" class="read"><?php echo esc_html($button_text); ?></a>
                                                 <?php } ?>
@@ -177,7 +191,7 @@ function manang_services_integrateWithVC(){
                                             </div>
                                             <h3 class="title"><?php the_title(); ?></h3>
                                             <p class="description">
-                                                <?php the_content(); ?>
+                                                <?php echo manang_get_excerpt(get_the_id(),$excerpt_count); ?>
                                             </p>
                                             <?php if($show_permalink == 'true'){ ?>
                                                 <a href="<?php the_permalink(); ?>" class="read"><?php echo esc_html($button_text); ?></a>
@@ -193,7 +207,7 @@ function manang_services_integrateWithVC(){
                                             </div>
                                             <h3 class="title"><?php the_title(); ?></h3>
                                             <p class="description">
-                                                <?php the_content(); ?>
+                                                <?php echo manang_get_excerpt(get_the_id(),$excerpt_count); ?>
                                             </p>
                                             <?php if($show_permalink == 'true'){ ?>
                                                 <a href="<?php the_permalink(); ?>" class="read"><?php echo esc_html($button_text); ?></a>
@@ -209,7 +223,7 @@ function manang_services_integrateWithVC(){
                                             </div>
                                             <div class="service-content">
                                                 <h3><?php the_title(); ?></h3>
-                                                <p><?php the_content(); ?> </p>
+                                                <p><?php echo manang_get_excerpt(get_the_id(),$excerpt_count); ?> </p>
                                                 <?php if($show_permalink == 'true'){ ?>
                                                     <a href="<?php the_permalink(); ?>" class="read"><?php echo esc_html($button_text); ?></a>
                                                 <?php } ?>

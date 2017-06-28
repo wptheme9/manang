@@ -78,13 +78,13 @@ Screen style's
       > ul {
         display: none;
         width: 100%;
-        background: #f0f0f0;
+        background: #fff;
         padding: 20px 30px 20px 40px;
         position: absolute;
         z-index: 99;
         left: 0;
-        max-width: 800px;
         margin: 0;
+        border-top: 1px solid #eee;
         list-style: none;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
@@ -104,7 +104,7 @@ Screen style's
           list-style: none;
           background: none;
           float: left;
-          border-right: 1px solid #e5e0e0;
+          border-right: 1px solid rgba(189, 188, 188, 0.21);
           margin-right: 35px;
           &:last-child{
             border: none;
@@ -284,8 +284,8 @@ ul.simple-dropdown li {
 /*Midheader*/
 .header-mid {
     background: #fff;
-    padding: 25px 0;
-    padding-top: 30px;
+    // padding: 25px 0;
+    // padding-top: 30px;
 }
 .quick-contact-wrap {
     text-align: right;
@@ -298,13 +298,13 @@ ul.simple-dropdown li {
 .quick-contact-wrap ul li {
     display: inline-block;
     text-align: left;
-    margin-right: 35px;
+    margin-right: 20px;
 }
 .quick-contact-wrap ul li:last-child {
     margin-right: 0;
 }
 .quick-contact-wrap li h5 {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: normal;
     margin-bottom: 0;
     letter-spacing: 1px;
@@ -314,10 +314,16 @@ ul.simple-dropdown li {
     margin-right: 25px;
 }
 .quick-contact-wrap li .icon i {
-    font-size: 27px;
-    margin-top: 3px;
+    font-size: 33px;
+    margin-top: 8px;
 }
 .quick-contact-wrap li .quick-desc span{
     display: block;
-    font-size: 13px;
+    font-size: 12px;
+}
+.meganav-wrapper {
+    border-top: 1px solid #eee;
+}
+.header-extended {
+    padding: 15px 0 5px 0;
 }

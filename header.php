@@ -530,16 +530,16 @@
 <!-- Extended header -->
         <!-- Start of Naviation -->
         <div class="nav-wrapper header-default">
-            <div class="container">
-                <!-- Start of Naviation -->
-                <div class="header-mid">
-                    <div class="col-md-5 col-sm-12">
+            <!-- Start of Naviation -->
+            <div class="header-extended">
+                <div class="container">
+                    <div class="col-md-3 col-sm-12">
                          <!-- Start Site Branding -->
                         <div class="navbar-header">
                           <a class="custom-logo" href="#"><img src="<?php echo get_template_directory_uri();?>/assets/img/logo.png" alt=""></a>
                         </div>
                     </div>
-                    <div class="col-md-7 col-sm-12">
+                    <div class="col-md-9 col-sm-12">
                         <div class="quick-contact-wrap">
                             <ul>
                                 <li class="quick-phone">
@@ -560,7 +560,15 @@
                                         <span>info@codethemes.co</span>
                                     </div>
                                 </li>
-
+                                <li class="quick-office-hour">
+                                    <div class="icon pull-left">
+                                       <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="quick-desc pull-right">
+                                        <h5>Office Hours</h5>
+                                        <span>Monday - Friday 08:00 - 20:00</span>
+                                    </div>
+                                </li>
                                 <li class="quick-address">
                                     <div class="icon pull-left">
                                         <i class="fa fa-map-marker" aria-hidden="true"></i>
@@ -574,8 +582,10 @@
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="meganav-wrapper">
+            <div class="meganav-wrapper">
+                <div class="container">
                     <div class="navbar-left">
                         <div class="menu">
                             <ul>

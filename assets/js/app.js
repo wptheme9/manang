@@ -111,11 +111,6 @@
       layoutMode: 'masonry'
     });
 
-    (function() {
-      document.documentElement.className = 'js';
-      var slideshow = new CircleSlideshow(document.getElementById('slideshow'));
-    })();
-
 
 // Isotope
     var $grid = $('.grid').isotope({
@@ -212,6 +207,10 @@
         new CBPFWTabs( el );
       });
 
+    })();
+    (function() {
+      document.documentElement.className = 'js';
+      var slideshow = new CircleSlideshow(document.getElementById('slideshow'));
     })();
 
     $('.nav-wrapper').stickMe({

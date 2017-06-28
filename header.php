@@ -683,7 +683,7 @@
                                     </ul>
                                 </li>
                                 <li><a href="http://marioloncarek.com">About</a>
-                                    <ul class="mega-sub-menu menu-col-4">
+                                    <ul class="mega-sub-menu menu-col-5">
                                       <li>
                                         <ul>
                                           <li><a href="#">Lidership</a></li>
@@ -705,6 +705,14 @@
                                           <li><a href="#">Undergraduate research</a></li>
                                           <li><a href="#">Masters research</a></li>
                                           <li><a href="#">Funding</a></li>
+                                        </ul>
+                                      </li>
+                                      <li>
+                                        <ul>
+                                          <li><a href="#">Undergraduate</a></li>
+                                          <li><a href="#">Masters</a></li>
+                                          <li><a href="#">International</a></li>
+                                          <li><a href="#">Online</a></li>
                                         </ul>
                                       </li>
                                       <li>

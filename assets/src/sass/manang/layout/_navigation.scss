@@ -228,6 +228,12 @@ ul.simple-dropdown li {
     border: none !important;
     margin: 0;
 }
+.menu > ul > li > ul.menu-col-6 > li{
+  width: calc(16% - 30px);
+}
+.menu > ul > li > ul.menu-col-5 > li{
+  width: calc(20% - 30px);
+}
 .menu > ul > li > ul.menu-col-4 > li{
   width: calc(25% - 30px);
 }

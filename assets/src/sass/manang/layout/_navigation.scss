@@ -333,3 +333,10 @@ ul.simple-dropdown li {
 .header-extended {
     padding: 15px 0 5px 0;
 }
+.header-extended .meganav-wrapper {
+    border-top: 1px solid #eee;
+    background: #030d26;
+}
+.header-extended .menu-widget ul li a i,.header-extended .menu > ul > li a{
+  color: #fff;
+}

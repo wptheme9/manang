@@ -307,14 +307,10 @@ ul.simple-dropdown li {
     margin-right: 20px;
 }
 .quick-contact-wrap ul li:last-child {
-    margin-right: 0;
+    margin-right: 0 !important;
 }
 .quick-contact-wrap li h5 {
-    font-size: 13px;
-    font-weight: normal;
     margin-bottom: 0;
-    letter-spacing: 1px;
-    font-weight: 700;
 }
 .quick-contact-wrap li .icon {
     margin-right: 25px;
@@ -339,4 +335,14 @@ ul.simple-dropdown li {
 }
 .header-extended .menu-widget ul li a i,.header-extended .menu > ul > li a{
   color: #fff;
+}
+.header-glide .quick-contact-wrap {
+    padding: 28px 0;
+}
+.header-glide .quick-contact-wrap ul li {
+    margin-right: 45px;
+}
+.header-glide .navbar-right .menu-widget ul li a {
+    text-decoration: none;
+    padding: 1.5em 1em;
 }

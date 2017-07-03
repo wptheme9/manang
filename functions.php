@@ -214,6 +214,7 @@ function manang_scripts() {
     wp_enqueue_script( 'simplycountdown', get_template_directory_uri() . '/assets/js/simplyCountdown.js',array(), '20170302', true );
     wp_enqueue_script( 'plax', get_template_directory_uri() . '/assets/js/plax.js',array(), '20170302', true );
     wp_enqueue_script( 'dynamics', get_template_directory_uri() . '/assets/js/dynamics.min.js',array(), '20170302', true );
+    wp_enqueue_script( 'mmenu', get_template_directory_uri() . '/assets/js/mmenu.js',array(), '20170302', true );
     wp_enqueue_script( 'slick-animation', get_template_directory_uri() . '/assets/js/slick-animation.js',array(), '20170302', true );
     wp_enqueue_script( 'sticky-header', get_template_directory_uri() . '/assets/js/sticky-header.js',array(), '20170302', true );
     wp_enqueue_script( 'youtubepopup', get_template_directory_uri() . '/assets/js/youtubepopup.js',array(), '20170302', true );

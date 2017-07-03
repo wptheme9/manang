@@ -17,6 +17,41 @@
         arrows: true,
     });
 
+    jQuery('#glide-left').mmenu({
+        "extensions": [
+          "effect-menu-slide",
+          "effect-panels-slide-100",
+          "effect-listitems-slide"
+       ],
+       "scrollBugFix" : {
+          fix: "true"
+        },
+        "offCanvas": {
+            pageSelector: ".offcanvas-wrap"
+         }
+      });
+
+      jQuery('#glide-right').mmenu({
+        "extensions": [
+          "effect-menu-slide",
+          "effect-panels-slide-100",
+          "effect-listitems-slide"
+       ],
+       "offCanvas": {
+          "position": "right"
+       },
+       "offCanvas": {
+            "pageSelector": ".offcanvas-wrap"
+         }
+      });
+
+      var API = $("#glide-left,#glide-right").data( "mmenu" );
+      $("#menu-close").click(function() {
+         API.close();
+      });
+
+
+
     //Preloader
     setTimeout(function(){
         $('body').addClass('loaded');
@@ -28,6 +63,9 @@
         day: 10,
         hours:12
     });
+
+  //mmenu right left logo show
+  jQuery('.side-nav-wrap').clone(true).removeClass('mmenu_topdisplay').insertBefore(".mmenuglide .mm-navbar");
 
     //Mailchimp subscription form
     var subfrom = $(".subscription-form");

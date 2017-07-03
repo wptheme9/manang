@@ -16,6 +16,7 @@ get_template_part('template-parts/instagram');
 // manang_features_shortcode();
 // get_template_part('template-parts/feature');
 get_template_part('template-parts/counter');
+get_template_part('template-parts/subscribe');
 get_template_part('template-parts/image-hover');
 // manang_testimonial_shortcode();
 get_template_part('template-parts/contact');

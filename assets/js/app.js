@@ -17,40 +17,35 @@
         arrows: true,
     });
 
-    jQuery('#glide-left').mmenu({
-        "extensions": [
-          "effect-menu-slide",
-          "effect-panels-slide-100",
-          "effect-listitems-slide"
-       ],
-       "scrollBugFix" : {
-          fix: "true"
-        },
-        "offCanvas": {
-            pageSelector: ".offcanvas-wrap"
-         }
+     $(document).ready(function () {
+         $('.menu-btn').sidr({
+             body: '.offcanvas-wrap',
+              name: 'sidr-main',
+             renaming: 'false',
+             source: '.mmenuglide',
+         });
+     });
+
+     //this code is close sidr menu if clicked outside  {optional}
+     jQuery(".offcanvas-wrap").on("click", function () {
+         jQuery.sidr('close', 'sidr-main');
+     });
+
+    $(document).ready(function(){
+      $('.sidr-inner [class*="sidr-class"]').each(function(){
+        var old_classes = $(this).attr('class');
+        old_classes = old_classes.replace(/sidr-class-/g, '');
+        $(this).attr('class', old_classes);
       });
+    jQuery('<i class="fa fa-caret-down sidedropdown"></i>').appendTo(jQuery(".sidr li.menu-item-has-children > a"));
 
-      jQuery('#glide-right').mmenu({
-        "extensions": [
-          "effect-menu-slide",
-          "effect-panels-slide-100",
-          "effect-listitems-slide"
-       ],
-       "offCanvas": {
-          "position": "right"
-       },
-       "offCanvas": {
-            "pageSelector": ".offcanvas-wrap"
-         }
-      });
-
-      var API = $("#glide-left,#glide-right").data( "mmenu" );
-      $("#menu-close").click(function() {
-         API.close();
-      });
-
-
+        jQuery(".sidr ul .sidedropdown").on('click', function(event) {
+          event.preventDefault();
+          jQuery(this).toggleClass('open');
+          jQuery(this).toggleClass('first');
+          jQuery(this).parent().next('.sub-menu').toggleClass('open');
+        });
+    });
 
     //Preloader
     setTimeout(function(){
@@ -64,8 +59,7 @@
         hours:12
     });
 
-  //mmenu right left logo show
-  jQuery('.side-nav-wrap').clone(true).removeClass('mmenu_topdisplay').insertBefore(".mmenuglide .mm-navbar");
+
 
     //Mailchimp subscription form
     var subfrom = $(".subscription-form");

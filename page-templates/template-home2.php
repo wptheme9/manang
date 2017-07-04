@@ -9,6 +9,7 @@ get_header();
 // get_template_part( 'template-parts/header', 'img' );
 get_template_part('template-parts/fancybox');
 get_template_part('template-parts/service');
+get_template_part('template-parts/portfolio');
 get_template_part('template-parts/product');
 get_template_part('template-parts/instagram');
 // get_template_part('template-parts/cta','sec');

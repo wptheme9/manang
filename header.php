@@ -558,7 +558,7 @@
                                     <li class="header-icon header-search"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
                                     <li class="header-icon header-sidebar"><a href="#"><i class="fa fa-th" aria-hidden="true"></i></a></li>
                                     <li class="header-icon header-cart"><a href="#"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a></li>
-                                    <li class="header-icon header-cart"><a href="#glide-left" class="menu-btn"><i class="fa fa-bars" aria-hidden="true"></i></a></li>
+                                    <li class="header-icon header-glide"><a class="ninja-btn menu-btn"><span></span></a></li>
                                 </ul>
                             </div>
                         </div>

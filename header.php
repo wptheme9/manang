@@ -567,6 +567,50 @@
             </div>
             <!-- End of Navigation -->
 
+<!-- Start of minimal side header -->
+            <div class="min-header-glide">
+                    <!-- Start of Naviation -->
+
+              <div class="navbar-header">
+                <a class="custom-logo" href="#"><img src="<?php echo get_template_directory_uri();?>/assets/img/logo.png" alt=""></a>
+              </div>
+
+              <div class="meganav-wrapper">
+                  <div class="menu-widget">
+                      <ul>
+                          <li class="header-icon header-glide"><a class="ninja-btn menu-btn"><span></span></a></li>
+                      </ul>
+                  </div>
+              </div>
+                <ul class="social-icon style4 social-icon-small min-header-social">
+                    <li>
+                      <div class="facebook">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="twitter">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="gplus">
+                        <i class="fa fa-google-plus" aria-hidden="true"></i>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="dribble">
+                        <i class="fa fa-dribbble" aria-hidden="true"></i>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="youtube">
+                        <i class="fa fa-youtube-square" aria-hidden="true"></i>
+                      </div>
+                    </li>
+                </ul>
+            </div>
+<!-- End of minimal side header -->
     <!-- Extended header -->
             <!-- Start of Naviation -->
             <div class="nav-wrapper header-default">

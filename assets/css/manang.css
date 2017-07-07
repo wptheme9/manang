@@ -15859,9 +15859,10 @@ div#map {
 /*Elements*/
 .flip-overlay {
   display: block;
-  background: rgba(0, 0, 0, 0.5);
+  background: -webkit-linear-gradient(left, #7a90ff 6%, #53bfd8);
   width: 100%;
   height: 100%;
+  opacity: .6;
   position: absolute;
   top: 0; }
 
@@ -15947,11 +15948,11 @@ div#map {
 
 .square-flip .service-icon i {
   font-size: 40px;
-  color: #7a90ff; }
+  color: #fff; }
 
 .square-flip a.read {
-  background: #7a90ff;
-  color: #fff;
+  background: #fff;
+  color: #333;
   padding: 5px 15px;
   border-radius: 35px;
   font-size: 14px;

@@ -133,110 +133,9 @@ switch ($display) {
 $query = new WP_Query( $args );
 if($query->have_posts()): ?>
     <div class="product-style2 product-grid product-column-based">
-    <div class="grid-col-4 product-wrap">
-        <div class="product-top">
-            <img src="<?php echo get_template_directory_uri();?>/assets/img/s2.jpg" alt="">
-            <div class="product-icons">
-                <a class="wishlist fa fa-heart-o" data-toggle="tooltip" title="Add To Wishlist"></a>
-                <a class="add-to-cart" data-toggle="tooltip" title="Add To Cart" aria-hidden="true">Add to Cart</a>
-                <a class="quick-view fa fa-search" data-toggle="tooltip" title="Quick View"></a>
-            </div>
-        </div>
-        <div class="product-footer">
-            <div class="product-desc">
-                <h3>Niels logo tee</h3>
-                <span class="rating">
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                </span>
-                <div class="price">
-                    <span>$57</span>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="grid-col-4 product-wrap">
-        <div class="product-top">
-            <img src="<?php echo get_template_directory_uri();?>/assets/img/s2.jpg" alt="">
-            <div class="product-icons">
-                <a class="wishlist fa fa-heart-o" data-toggle="tooltip" title="Add To Wishlist"></a>
-                <a class="add-to-cart" data-toggle="tooltip" title="Add To Cart" aria-hidden="true">Add to Cart</a>
-                <a class="quick-view fa fa-search" data-toggle="tooltip" title="Quick View"></a>
-            </div>
-        </div>
-        <div class="product-footer">
-            <div class="product-desc">
-                <h3>Niels logo tee</h3>
-                <span class="rating">
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                </span>
-                <div class="price">
-                    <span>$57</span>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="grid-col-4 product-wrap">
-        <div class="product-top">
-            <img src="<?php echo get_template_directory_uri();?>/assets/img/s2.jpg" alt="">
-            <div class="product-icons">
-                <a class="wishlist fa fa-heart-o" data-toggle="tooltip" title="Add To Wishlist"></a>
-                <a class="add-to-cart" data-toggle="tooltip" title="Add To Cart" aria-hidden="true">Add to Cart</a>
-                <a class="quick-view fa fa-search" data-toggle="tooltip" title="Quick View"></a>
-            </div>
-        </div>
-        <div class="product-footer">
-            <div class="product-desc">
-                <h3>Niels logo tee</h3>
-                <span class="rating">
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                </span>
-                <div class="price">
-                    <span>$57</span>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="grid-col-4 product-wrap">
-        <div class="product-top">
-            <img src="<?php echo get_template_directory_uri();?>/assets/img/s2.jpg" alt="">
-            <div class="product-icons">
-                <a class="wishlist fa fa-heart-o" data-toggle="tooltip" title="Add To Wishlist"></a>
-                <a class="add-to-cart" data-toggle="tooltip" title="Add To Cart" aria-hidden="true">Add to Cart</a>
-                <a class="quick-view fa fa-search" data-toggle="tooltip" title="Quick View"></a>
-            </div>
-        </div>
-        <div class="product-footer">
-            <div class="product-desc">
-                <h3>Niels logo tee</h3>
-                <span class="rating">
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                </span>
-                <div class="price">
-                    <span>$57</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
     <?php while ( $query->have_posts() ) : $query->the_post();
         global $product;
 
@@ -353,12 +252,46 @@ if($query->have_posts()): ?>
         // echo mk_get_shortcode_view( 'mk_products',  'loop-styles/product-loop-' . $layout,  true,  $shortcodeViewAtts );
 
         // $shortcodeViewAtts = array();
+    ?>
+     <div class="grid-col-4 product-wrap">
+            <div class="product-top">
+                <img src="<?php echo get_template_directory_uri();?>/assets/img/s2.jpg" alt="">
+                <div class="product-icons">
+                    <a class="wishlist fa fa-heart-o" data-toggle="tooltip" title="Add To Wishlist"></a>
+                    <a class="add-to-cart" data-toggle="tooltip" title="Add To Cart" aria-hidden="true">Add to Cart</a>
+                    <a class="quick-view fa fa-search" data-toggle="tooltip" title="Quick View"></a>
+                </div>
+            </div>
+            <div class="product-footer">
+                <div class="product-desc">
+                    <h3><?php the_title(); ?></h3>
+                    <span class="rating">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                    </span>
+                    <?php
+                        echo wc_get_rating_html( $product->get_average_rating() );
+                    ?>
+                    <div class="price">
+                        <span><?php echo $product->get_price_html(); ?></span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    endwhile;
+
+
+
+    <?php endwhile;
     wp_reset_postdata();
 endif;
 
 ?>
+    </div>
+</div>
 <!-- </section>
 </div> -->
 

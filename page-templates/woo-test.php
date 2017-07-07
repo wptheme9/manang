@@ -170,30 +170,29 @@ if($query->have_posts()): ?>
         break;
     }
 
-    // if ( has_post_thumbnail() ) {
+    if ( has_post_thumbnail() ) {
 
-    //     if($image_size == 'crop') {
-    //         $image_src_array = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full', true);
-    //         $image_output_src = mk_image_generator($image_src_array[0], $image_width*$quality, $height*$quality, 'true');
-    //     } else {
-    //         $image_src_array = wp_get_attachment_image_src(get_post_thumbnail_id(), $image_size, true);
-    //         $image_output_src = $image_src_array[0];
-    //     }
+        // if($image_size == 'crop') {
+            $image_src_array = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full', true);
+        // } else {
+            // $image_src_array = wp_get_attachment_image_src(get_post_thumbnail_id(), $image_size, true);
+            $image_output_src = $image_src_array[0];
+        }
 
-    //     $product_gallery = get_post_meta( $post->ID, '_product_image_gallery', true );
+        // $product_gallery = get_post_meta( $post->ID, '_product_image_gallery', true );
 
-    //     if ( !empty( $product_gallery ) ) {
-    //         $gallery = explode( ',', $product_gallery );
-    //         $hover_image_id  = $gallery[0];
+        // if ( !empty( $product_gallery ) ) {
+        //     $gallery = explode( ',', $product_gallery );
+        //     $hover_image_id  = $gallery[0];
 
-    //         if($image_size == 'crop') {
-    //             $image_src_hover_array = wp_get_attachment_image_src($hover_image_id, 'full', true);
-    //             $image_hover_src = mk_image_generator($image_src_hover_array[0], $image_width*$quality, $height*$quality, 'true');
-    //         } else {
-    //             $image_src_hover_array = wp_get_attachment_image_src($hover_image_id, $image_size, true);
-    //             $image_hover_src = $image_src_hover_array[0];
-    //         }
-    //     }
+        //     if($image_size == 'crop') {
+        //         $image_src_hover_array = wp_get_attachment_image_src($hover_image_id, 'full', true);
+        //         $image_hover_src = mk_image_generator($image_src_hover_array[0], $image_width*$quality, $height*$quality, 'true');
+        //     } else {
+        //         $image_src_hover_array = wp_get_attachment_image_src($hover_image_id, $image_size, true);
+        //         $image_hover_src = $image_src_hover_array[0];
+        //     }
+        // }
     // }
 
     //  product rating
@@ -252,10 +251,17 @@ if($query->have_posts()): ?>
         // echo mk_get_shortcode_view( 'mk_products',  'loop-styles/product-loop-' . $layout,  true,  $shortcodeViewAtts );
 
         // $shortcodeViewAtts = array();
+    if ( has_post_thumbnail() ) {
+            $image_src_array = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full');
+            $image_output_src = $image_src_array[0];
+        }
     ?>
      <div class="grid-col-4 product-wrap">
             <div class="product-top">
-                <img src="<?php echo get_template_directory_uri();?>/assets/img/s2.jpg" alt="">
+                <?php  if ( has_post_thumbnail() ) { ?>
+                <img src="<?php echo esc_url($image_output_src); ?>" alt="">
+                <?php } ?>
+
                 <div class="product-icons">
                     <a class="wishlist fa fa-heart-o" data-toggle="tooltip" title="Add To Wishlist"></a>
                     <a class="add-to-cart" data-toggle="tooltip" title="Add To Cart" aria-hidden="true">Add to Cart</a>

@@ -226,3 +226,82 @@
         </div><!-- /tabs -->
     </div>
 </div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="service-style5">
+            <div class="grid-col-3">
+                <div class="square-flip">
+                    <div class='square' data-image="http://193.235.147.161/product/robojob_pro/wp-content/uploads/2017/06/index-e1497934690801.png">
+                        <div class="square-container">
+                            <div class="align-center">
+                                <div class="service-icon">
+                                    <i class="fa fa-globe"></i>
+                                </div>
+                            </div>
+                            <h2 class="textshadow">Web Development</h2>
+                            <p class="textshadow">The #1 Selling Most Enjoyable and Creative Multipurpose WordPress theme.</p>
+                        </div>
+                        <div class="flip-overlay"></div>
+                    </div>
+                    <div class='square2' data-image="http://193.235.147.161/product/robojob_pro/wp-content/uploads/2017/06/index-e1497934690801.png">
+                        <div class="square-container2">
+                            <div class="align-center"></div>
+                            <a href="#" class="read">Read more</a>
+                        </div>
+                        <div class="flip-overlay"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-col-3">
+                <div class="square-flip">
+                    <div class='square' data-image="http://193.235.147.161/product/robojob_pro/wp-content/uploads/2017/06/index-e1497934690801.png">
+                        <div class="square-container">
+                            <div class="align-center">
+                                <div class="service-icon">
+                                    <i class="fa fa-globe"></i>
+                                </div>
+                            </div>
+                            <h2 class="textshadow">Web Development</h2>
+                            <p class="textshadow">The #1 Selling Most Enjoyable and Creative Multipurpose WordPress theme.</p>
+                        </div>
+                        <div class="flip-overlay"></div>
+                    </div>
+                    <div class='square2' data-image="http://193.235.147.161/product/robojob_pro/wp-content/uploads/2017/06/index-e1497934690801.png">
+                        <div class="square-container2">
+                            <div class="align-center"></div>
+                            <a href="#" class="read">Read more</a>
+                        </div>
+                        <div class="flip-overlay"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-col-3">
+                <div class="square-flip">
+                    <div class='square' data-image="http://193.235.147.161/product/robojob_pro/wp-content/uploads/2017/06/index-e1497934690801.png">
+                        <div class="square-container">
+                            <div class="align-center">
+                                <div class="service-icon">
+                                    <i class="fa fa-globe"></i>
+                                </div>
+                            </div>
+                            <h2 class="textshadow">Web Development</h2>
+                            <p class="textshadow">The #1 Selling Most Enjoyable and Creative Multipurpose WordPress theme.</p>
+                        </div>
+                        <div class="flip-overlay"></div>
+                    </div>
+                    <div class='square2' data-image="http://193.235.147.161/product/robojob_pro/wp-content/uploads/2017/06/index-e1497934690801.png">
+                        <div class="square-container2">
+                            <div class="align-center"></div>
+                            <a href="#" class="read">Read more</a>
+                        </div>
+                        <div class="flip-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

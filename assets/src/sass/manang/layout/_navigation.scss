@@ -495,7 +495,39 @@ i.sidedropdown {
     left: 0;
     bottom: 10px;
     transition: all .3s .5s;
-    -webkit-transition: all .3s .5s;
+    -webkit-transition: asll .3s .5s;
     padding-left: 31px;
 }
-
+.header-split .navbar-header {
+    text-align: center;
+}
+.header-split ul.mega-sub-menu {
+    width: 900px;
+}
+.header-split .navbar-left ul.mega-sub-menu {
+    width: 900px;
+    right: 0;
+    left: auto;
+}
+.header-split .menu-widget ul li a {
+    font-size: 15px;
+}
+.header-split .navbar-right.menu-widget {
+    position: absolute;
+    right: 20px;
+    top: 0;
+}
+.header-menu-down .menu > ul > li {
+    display: inline-block;
+    float: none;
+}
+.header-menu-down .navbar-center {
+    text-align: center;
+}
+.header-menu-down .navbar-header {
+    float: none;
+    text-align: center;
+}
+.header-menu-down .meganav-wrapper {
+    border: none;
+}

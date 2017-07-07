@@ -241,8 +241,10 @@
 
     })();
     (function() {
-      document.documentElement.className = 'js';
-      var slideshow = new CircleSlideshow(document.getElementById('slideshow'));
+      if(jQuery("#slideshow").length != 0) {
+        document.documentElement.className = 'js';
+        var slideshow = new CircleSlideshow(document.getElementById('slideshow'));
+      }
     })();
 
     $('.nav-wrapper').stickMe({

@@ -32,6 +32,7 @@
     </div> -->
     <?php
       get_template_part('template-parts/glide-menu');
+      get_template_part('template-parts/fullscreen');
     ?>
 
     <div class="offcanvas-wrap">
@@ -69,7 +70,7 @@
 
 <!-- Standar header -->
             <!-- Start of Naviation -->
-            <div class="nav-wrapper header-default">
+            <div class="nav-wrapper header-default page-down">
                 <div class="container">
                     <div class="navbar-header col-lg-2">
                       <a class="custom-logo" href="#"><img src="<?php echo get_template_directory_uri();?>/assets/img/logo.png" alt=""></a>
@@ -222,7 +223,7 @@
 
 <!-- Standard header with full iwdth -->
             <!-- Start of Naviation -->
-            <div class="nav-wrapper header-default">
+            <div class="nav-wrapper header-default stickme">
                 <div class="container-fluid">
                     <div class="navbar-header col-lg-2">
                       <a class="custom-logo" href="#"><img src="<?php echo get_template_directory_uri();?>/assets/img/logo.png" alt=""></a>
@@ -1198,6 +1199,35 @@
                                     <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
                                     <li><a href="#"><i class="fa fa-th" aria-hidden="true"></i></a></li>
                                     <li><a href="#"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Navigation -->
+
+<!-- Start of full screen navigation -->
+            <!-- Start of Naviation -->
+            <div class="nav-wrapper header-default fulls-creen-header">
+                <div class="container">
+                    <!-- Start of Naviation -->
+
+                    <div class="navbar-header col-md-2">
+                      <a class="custom-logo" href="#"><img src="<?php echo get_template_directory_uri();?>/assets/img/logo.png" alt=""></a>
+                    </div>
+                    <div class="meganav-wrapper col-md-10">
+                        <div class="navbar-right">
+                            <div class="menu-widget">
+                                <ul>
+                                    <li class="header-icon header-search"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                                    <li class="header-icon header-sidebar"><a href="#"><i class="fa fa-th" aria-hidden="true"></i></a></li>
+                                    <li class="header-icon header-cart"><a href="#"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a></li>
+                                    <li class="header-icon header-glide">
+                                        <button class="toggle-menu">
+                                            <span></span>
+                                        </button>
+                                    </li>
                                 </ul>
                             </div>
                         </div>

@@ -46,10 +46,10 @@ function manang_products_integrateWithVC(){
                 "description" => __("", 'manang') ,
                 "value" => array(
                     __("Recent Products", 'manang') => "recent_product",
-                    __("Featured Products", 'manang') => "feat_product",
-                    __("Best Selling Products", 'manang') => "best_selling_products",
-                    __("Top rated Products", 'manang') => "top_rated_products",
-                    __("Sale Products", 'manang') => "sale_products",
+                    __("Featured Products", 'manang') => "featured",
+                    __("Best Selling Products", 'manang') => "best_sellings",
+                    __("Top rated Products", 'manang') => "top_rated",
+                    __("Sale Products", 'manang') => "products_on_sale",
                 ) ,
                 "type" => "dropdown"
             ) ,
@@ -85,7 +85,7 @@ if(class_exists('WPBakeryShortCode')){
                             'display_type'      => 'column',
                             'columns'           => '2column',
                             'display_products'  => 'recent_product',
-                            'number_products'   => '',
+                            'number_products'   => '-1',
                             'rating_color'      => '',
                             'rem_color'         => '',
                             ),$atts);
@@ -106,29 +106,21 @@ if(class_exists('WPBakeryShortCode')){
 
                     wp_enqueue_script( 'wc-add-to-cart-variation' );
 
-                    // $path = pathinfo(__FILE__) ['dirname'];
-
-                    // include ($path . '/config.php');
-
-                    // $id = Mk_Static_Files::shortcode_id();
-
                     do_action( 'woocommerce_before_single_product' );
                     //Default val
-                    $display = 'recent';
-                    $count = '-1';
                     $columns = 4;
                     $pagination = 'true';
 
                     //
 
                     $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
-                    switch ($display) {
-                        case 'recent':
+                    switch ($display_products) {
+                        case 'recent_product':
                            $args = array(
                                 'post_type'             => 'product',
                                 'post_status'           => 'publish',
                                 'ignore_sticky_posts'   => 1,
-                                'posts_per_page'        => $count,
+                                'posts_per_page'        => $number_products,
                                 'orderby'               => 'date',
                                 'order'                 => 'desc',
                                 'paged'                 => $paged,
@@ -137,7 +129,7 @@ if(class_exists('WPBakeryShortCode')){
                             break;
 
                         case 'featured':
-                            $meta_query   = WC()->query->get_meta_query();
+                            // $meta_query   = WC()->query->get_meta_query();
                             $meta_query[] = array(
                                 'key'   => '_featured',
                                 'value' => 'yes'
@@ -146,7 +138,7 @@ if(class_exists('WPBakeryShortCode')){
                                 'post_type'             => 'product',
                                 'post_status'           => 'publish',
                                 'ignore_sticky_posts'   => 1,
-                                'posts_per_page'        => $count,
+                                'posts_per_page'        => $number_products,
                                 'orderby'               => 'date',
                                 'order'                 => 'desc',
                                 'paged'                 => $paged,
@@ -155,14 +147,14 @@ if(class_exists('WPBakeryShortCode')){
                             break;
 
                         case 'top_rated':
-                            add_filter( 'posts_clauses',  array( WC()->query, 'order_by_rating_post_clauses' ) );
+                            // add_filter( 'posts_clauses',  array( WC()->query, 'order_by_rating_post_clauses' ) );
                            $args = array(
                                 'post_type'             => 'product',
                                 'post_status'           => 'publish',
                                 'ignore_sticky_posts'   => 1,
-                                'posts_per_page'        => $count,
-                                'orderby'               => $orderby,
-                                'order'                 => $order,
+                                'posts_per_page'        => $number_products,
+                                'orderby'               => 'date',
+                                'order'                 => 'desc',
                                 'paged'                 => $paged,
                                 'meta_query'            => WC()->query->get_meta_query(),
                             );
@@ -173,11 +165,11 @@ if(class_exists('WPBakeryShortCode')){
                                 'post_type'             => 'product',
                                 'post_status'           => 'publish',
                                 'ignore_sticky_posts'   => 1,
-                                'posts_per_page'        => $count,
-                                'orderby'               => $orderby,
-                                'order'                 => $order,
+                                'posts_per_page'        => $number_products,
+                                'orderby'               => 'date',
+                                'order'                 => 'desc',
                                 'paged'                 => $paged,
-                                'meta_query'            => WC()->query->get_meta_query(),
+                                // 'meta_query'            => WC()->query->get_meta_query(),
                                 'post__in'                   => array_merge( array( 0 ), wc_get_product_ids_on_sale() ),
                             );
                             break;
@@ -187,10 +179,10 @@ if(class_exists('WPBakeryShortCode')){
                                 'post_type'             => 'product',
                                 'post_status'           => 'publish',
                                 'ignore_sticky_posts'   => 1,
-                                'posts_per_page'        => $count,
+                                'posts_per_page'        => $number_products,
                                 'orderby'               => 'meta_value_num',
-                                'order'                 => $order,
-                                'orderby'               => $orderby,
+                                'orderby'               => 'date',
+                                'order'                 => 'desc',
                                 'paged'                 => $paged,
                                 'meta_key'               => 'total_sales',
                                 'meta_query'            => WC()->query->get_meta_query(),
@@ -198,23 +190,19 @@ if(class_exists('WPBakeryShortCode')){
                             break;
                     }
 
-                            if(!empty($category)) {
-                                $args['tax_query'] = array(
-                                    array(
-                                        'taxonomy'      => 'product_cat',
-                                        'terms'         => array_map( 'sanitize_title', explode( ',', $category ) ),
-                                        'field'         => 'slug',
-                                    )
-                                );
-                            }
+                            // if(!empty($category)) {
+                            //     $args['tax_query'] = array(
+                            //         array(
+                            //             'taxonomy'      => 'product_cat',
+                            //             'terms'         => array_map( 'sanitize_title', explode( ',', $category ) ),
+                            //             'field'         => 'slug',
+                            //         )
+                            //     );
+                            // }
 
                     // if (isset($posts) && !empty($posts)) {
                     //     $args['post__in'] = explode(',', $posts);
                     // }
-
-                    // $class[] = $layout.'-layout';
-                    // $class[] = $layout.'mk--row';
-                    // $class[] = $el_class;
 
 
                     /**
@@ -233,35 +221,7 @@ if(class_exists('WPBakeryShortCode')){
                             $cart_page =  do_shortcode('[add_to_cart_url id="'.$product_id.'"]');
                             $wishlist =  do_shortcode('[yith_wcwl_add_to_wishlist product_id="'.$product_id.'"]');
 
-                            // $uid                = uniqid();
-                            // $woocommerce_cat    = $mk_options['woocommerce_catalog'];
-                            // $quality            = $mk_options['woo_image_quality'] ? $mk_options['woo_image_quality'] : 1;
-                            // $grid_width         = $mk_options['grid_width'];
-                            // $content_width      = $mk_options['content_width'];
-                            // $height             = $mk_options['woo_loop_img_height'];
-                            // $product_type       = $product->get_type();
                             $image_hover_src    = '';
-
-                            // thumbnail
-                            switch ($columns) {
-                            case 4:
-                                $column_class = 'mk--col--3-12';
-                                // $image_width = round($grid_width/4) - 28;
-                            break;
-                            case 3:
-                                $column_class = 'mk--col--4-12';
-                                // $image_width = round($grid_width/3) - 33;
-                            break;
-                            case 2:
-                                $column_class = 'mk--col--1-2';
-                                // $image_width = round($grid_width/2) - 38;
-                            break;
-
-                            default:
-                                $column_class = 'mk--col--1-2';
-                                // $image_width = round($grid_width/2) - 38;
-                            break;
-                        }
 
                         if ( has_post_thumbnail() ) {
                             $image_src_array = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full', true);
@@ -284,40 +244,7 @@ if(class_exists('WPBakeryShortCode')){
                             // }
                         // }
 
-                                echo wc_get_rating_html( $product->get_average_rating() );
 
-
-                        // check product stock, add cart a tag url, add cart a tag label and add icon class
-                        if ( ! $product->is_in_stock() ) {
-                            // $link           = apply_filters( 'out_of_stock_add_to_cart_url', get_permalink( $product->id ));
-                            $label              = apply_filters( 'out_of_stock_add_to_cart_text', __( 'READ MORE', 'mk_framework' ) );
-                            $icon_class         = 'mk-moon-search-3';
-                            $out_of_stock_badge = '<span class="mk-out-stock"><span>'.__( 'Out of Stock', 'mk_framework' ).'</span></span>';
-                        }else {
-                            $out_of_stock_badge = '';
-                            switch ( $product->get_type() ) {
-                                case "variable" :
-                                    // $link       = apply_filters( 'variable_add_to_cart_url', get_permalink( $product->id ) );
-                                    $label          = apply_filters( 'variable_add_to_cart_text', __( 'Select Options', 'mk_framework' ) );
-                                    $icon_class     = 'mk-icon-plus';
-                                    break;
-                                case "grouped" :
-                                    // $link       = apply_filters( 'grouped_add_to_cart_url', get_permalink( $product->id ) );
-                                    $label          = apply_filters( 'grouped_add_to_cart_text', __( 'View Options', 'mk_framework' ) );
-                                    $icon_class     = 'mk-moon-search-3';
-                                    break;
-                                case "external" :
-                                    // $link       = apply_filters( 'external_add_to_cart_url', get_permalink( $product->id ) );
-                                    $label          = apply_filters( 'external_add_to_cart_text', __( 'Read More', 'mk_framework' ) );
-                                    $icon_class     = 'mk-moon-search-3';
-                                    break;
-                                default :
-                                    // $link       = apply_filters( 'add_to_cart_url', esc_url( $product->add_to_cart_url() ) );
-                                    $label          = apply_filters( 'add_to_cart_text', __( 'Add to Cart', 'mk_framework' ) );
-                                    $icon_class     = 'mk-moon-cart-plus';
-                                    break;
-                                }
-                        }
 
                         // check product on sale
                         if( $product->is_on_sale() ) {

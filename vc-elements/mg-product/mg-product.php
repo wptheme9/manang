@@ -23,8 +23,8 @@ function manang_products_integrateWithVC(){
                 "heading" => __("Display Type", 'manang') ,
                 "description" => __("", 'manang') ,
                 "value" => array(
-                    __("Column Based", 'manang') => "column",
-                    __("Slider Based", 'manang') => "slider",
+                    __("Column Based", 'manang') => "product-grid product-column-based",
+                    __("Slider Based", 'manang') => "product-slider-based",
                 ) ,
                 "type" => "dropdown",
             ) ,
@@ -33,9 +33,9 @@ function manang_products_integrateWithVC(){
                 "heading" => __("Columns", 'manang') ,
                 "description" => __("", 'manang') ,
                 "value" => array(
-                    __("2 Column", 'manang') => "2column",
-                    __("3 Column", 'manang') => "3column",
-                    __("4 Column", 'manang') => "4column",
+                    __("2 Column", 'manang') => "grid-col-2",
+                    __("3 Column", 'manang') => "grid-col-3",
+                    __("4 Column", 'manang') => "grid-col-4",
                 ) ,
                 "type" => "dropdown"
             ) ,
@@ -82,8 +82,8 @@ if(class_exists('WPBakeryShortCode')){
         protected function content( $atts, $content = null ) {
 
                $values =  shortcode_atts( array(
-                            'display_type'      => 'column',
-                            'columns'           => '2column',
+                            'display_type'      => 'product-grid product-column-based',
+                            'columns'           => 'grid-col-2',
                             'display_products'  => 'recent_product',
                             'number_products'   => '-1',
                             'rating_color'      => '',
@@ -94,7 +94,8 @@ if(class_exists('WPBakeryShortCode')){
                $display_products = $values['display_products'];
                $number_products = $values['number_products'];
                $rating_color = $values['rating_color'];
-               $rem_color = $values['rem_color'];
+               $rem_color = ($values['rem_color']=='true'?'product-no-hover':'');
+               $columns_chk = ($display_type=='product-slider-based'?'':$columns);
                 ob_start();
                     global $product, $woocommerce_loop, $woocommerce, $post;
                     $product_rating = '';
@@ -103,16 +104,9 @@ if(class_exists('WPBakeryShortCode')){
                         echo 'WooCommerce Plugin is not installed!';
                         return false;
                     }
-
                     wp_enqueue_script( 'wc-add-to-cart-variation' );
 
                     do_action( 'woocommerce_before_single_product' );
-                    //Default val
-                    $columns = 4;
-                    $pagination = 'true';
-
-                    //
-
                     $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
                     switch ($display_products) {
                         case 'recent_product':
@@ -145,7 +139,6 @@ if(class_exists('WPBakeryShortCode')){
                                 'meta_query'            => $meta_query,
                             );
                             break;
-
                         case 'top_rated':
                             // add_filter( 'posts_clauses',  array( WC()->query, 'order_by_rating_post_clauses' ) );
                            $args = array(
@@ -159,7 +152,6 @@ if(class_exists('WPBakeryShortCode')){
                                 'meta_query'            => WC()->query->get_meta_query(),
                             );
                             break;
-
                         case 'products_on_sale':
                            $args = array(
                                 'post_type'             => 'product',
@@ -173,7 +165,6 @@ if(class_exists('WPBakeryShortCode')){
                                 'post__in'                   => array_merge( array( 0 ), wc_get_product_ids_on_sale() ),
                             );
                             break;
-
                         case 'best_sellings':
                             $args = array(
                                 'post_type'             => 'product',
@@ -190,126 +181,71 @@ if(class_exists('WPBakeryShortCode')){
                             break;
                     }
 
-                            // if(!empty($category)) {
-                            //     $args['tax_query'] = array(
-                            //         array(
-                            //             'taxonomy'      => 'product_cat',
-                            //             'terms'         => array_map( 'sanitize_title', explode( ',', $category ) ),
-                            //             'field'         => 'slug',
-                            //         )
-                            //     );
-                            // }
-
-                    // if (isset($posts) && !empty($posts)) {
-                    //     $args['post__in'] = explode(',', $posts);
-                    // }
-
-
                     /**
                      * Product Loop
                      * ==================================================================================*/
                     $query = new WP_Query( $args );
                     if($query->have_posts()): ?>
-                        <div class="product-style2 product-grid product-column-based">
+                        <div class="product-style2 <?php echo esc_attr($display_type); ?>">
+                            <?php while ( $query->have_posts() ) : $query->the_post();
+                                global $product;
+                                $product_id         = get_the_ID();
+                                $cart_page =  do_shortcode('[add_to_cart_url id="'.$product_id.'"]');
+                                $wishlist =  do_shortcode('[yith_wcwl_add_to_wishlist product_id="'.$product_id.'"]');
 
+                                if ( has_post_thumbnail() ) {
+                                    $image_src_array = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full', true);
+                                    $image_output_src = $image_src_array[0];
+                                }
 
+                                // check product on sale
+                                if( $product->is_on_sale() ) {
+                                    $sale_badge = apply_filters('woocommerce_sale_flash', '<span class="mk-onsale"><span>'.__( 'Sale', 'mk_framework' ).'</span></span>', $post, $product);
+                                }else {
+                                    $sale_badge = '';
+                                }
+                                if ( has_post_thumbnail() ) {
+                                        $image_src_array = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full');
+                                        $image_output_src = $image_src_array[0];
+                                    }
+                                ?>
+                                 <div class="<?php echo esc_attr($columns_chk); ?> product-wrap">
+                                    <div class="product-top">
+                                        <?php  if ( has_post_thumbnail() ) { ?>
+                                        <img src="<?php echo esc_url($image_output_src); ?>" alt="">
+                                        <?php } ?>
 
-                        <?php while ( $query->have_posts() ) : $query->the_post();
-                            global $product;
-
-                            $product_id         = get_the_ID();
-                            $cart_page =  do_shortcode('[add_to_cart_url id="'.$product_id.'"]');
-                            $wishlist =  do_shortcode('[yith_wcwl_add_to_wishlist product_id="'.$product_id.'"]');
-
-                            $image_hover_src    = '';
-
-                        if ( has_post_thumbnail() ) {
-                            $image_src_array = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full', true);
-                            $image_output_src = $image_src_array[0];
-                        }
-
-                            // $product_gallery = get_post_meta( $post->ID, '_product_image_gallery', true );
-
-                            // if ( !empty( $product_gallery ) ) {
-                            //     $gallery = explode( ',', $product_gallery );
-                            //     $hover_image_id  = $gallery[0];
-
-                            //     if($image_size == 'crop') {
-                            //         $image_src_hover_array = wp_get_attachment_image_src($hover_image_id, 'full', true);
-                            //         $image_hover_src = mk_image_generator($image_src_hover_array[0], $image_width*$quality, $height*$quality, 'true');
-                            //     } else {
-                            //         $image_src_hover_array = wp_get_attachment_image_src($hover_image_id, $image_size, true);
-                            //         $image_hover_src = $image_src_hover_array[0];
-                            //     }
-                            // }
-                        // }
-
-
-
-                        // check product on sale
-                        if( $product->is_on_sale() ) {
-                            $sale_badge = apply_filters('woocommerce_sale_flash', '<span class="mk-onsale"><span>'.__( 'Sale', 'mk_framework' ).'</span></span>', $post, $product);
-                        }else {
-                            $sale_badge = '';
-                        }
-                        // if($mk_options['woocommerce_loop_show_desc'] == 'true') {
-                            $item_desc = apply_filters( 'woocommerce_short_description', $post->post_excerpt );
-                        // }else {
-                            $item_desc = '';
-                        // }
-
-
-                            // echo mk_get_shortcode_view( 'mk_products',  'loop-styles/product-loop-' . $layout,  true,  $shortcodeViewAtts );
-
-                            // $shortcodeViewAtts = array();
-                        if ( has_post_thumbnail() ) {
-                                $image_src_array = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full');
-                                $image_output_src = $image_src_array[0];
-                            }
-                        ?>
-                         <div class="grid-col-4 product-wrap">
-                                <div class="product-top">
-                                    <?php  if ( has_post_thumbnail() ) { ?>
-                                    <img src="<?php echo esc_url($image_output_src); ?>" alt="">
-                                    <?php } ?>
-
-                                    <div class="product-icons">
-                                        <!-- <a class="wishlist fa fa-heart-o" data-toggle="tooltip" title="Add To Wishlist"></a> -->
-                                        <?php echo $wishlist; ?>
-                                        <a href="<?php echo $cart_page; ?>" class="add-to-cart" data-toggle="tooltip" title="Add To Cart" aria-hidden="true">Add to Cart</a>
-                                        <a class="quick-view fa fa-search" data-toggle="tooltip" title="Quick View"></a>
+                                        <div class="product-icons">
+                                            <!-- <a class="wishlist fa fa-heart-o" data-toggle="tooltip" title="Add To Wishlist"></a> -->
+                                            <?php echo $wishlist; ?>
+                                            <a href="<?php echo $cart_page; ?>" class="add-to-cart" data-toggle="tooltip" title="Add To Cart" aria-hidden="true">Add to Cart</a>
+                                            <a class="quick-view fa fa-search" data-toggle="tooltip" title="Quick View"></a>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="product-footer">
-                                    <div class="product-desc">
-                                        <h3><?php the_title(); ?></h3>
-                                        <span class="rating">
-                                          <i class="fa fa-star"></i>
-                                          <i class="fa fa-star"></i>
-                                          <i class="fa fa-star"></i>
-                                          <i class="fa fa-star"></i>
-                                          <i class="fa fa-star"></i>
-                                        </span>
-                                        <?php
-                                            echo wc_get_rating_html( $product->get_average_rating() );
-                                        ?>
-                                        <div class="price">
-                                            <span><?php echo $product->get_price_html(); ?></span>
+                                    <div class="product-footer">
+                                        <div class="product-desc">
+                                            <h3><?php the_title(); ?></h3>
+                                            <span class="rating <?php echo esc_attr($rem_color); ?>">
+                                              <i class="fa fa-star"></i>
+                                              <i class="fa fa-star"></i>
+                                              <i class="fa fa-star"></i>
+                                              <i class="fa fa-star"></i>
+                                              <i class="fa fa-star"></i>
+                                            </span>
+                                            <?php
+                                                echo wc_get_rating_html( $product->get_average_rating() );
+                                            ?>
+                                            <div class="price">
+                                                <span><?php echo $product->get_price_html(); ?></span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
-
-
-
-                        <?php endwhile;
-                        wp_reset_postdata();
-                    endif;
-
-                    ?>
+                            <?php endwhile;
+                            wp_reset_postdata(); ?>
                         </div>
-                    </div>
+                    <?php endif; ?>
                     <!-- </section>
                     </div> -->
                     <?php

@@ -107,17 +107,6 @@
 </div>
 
 
-<div class="modal-frame">
-  <div class="modal-body">
-    <div class="modal-inner">
-      <button id="close" class="close"><i class="fa fa-times"></i></button>
-      <p>I love sweet sweet content</p>
-    </div>
-  </div>
-  <div class="modal-overlay"></div>
-</div>
-
-
 
 <!-- Slider based -->
 
@@ -450,5 +439,19 @@
     <button class="action action--close" aria-label="Close"><i class="fa fa-close"></i></button>
   </div>
 </div><!-- /container -->
+
+
+
+<div class="product-quick-view">
+  <div class="modal-frame">
+    <div class="modal-body">
+      <div class="modal-inner">
+        <button id="close" class="close"><i class="fa fa-times"></i></button>
+        <p>I love sweet sweet content</p>
+      </div>
+    </div>
+    <div class="modal-overlay"></div>
+  </div>
+</div>
 
 

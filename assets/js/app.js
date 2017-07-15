@@ -53,18 +53,18 @@
         });
     });
 
+
     //Preloader
     setTimeout(function(){
-        $('body').addClass('loaded');
+        jQuery('body').addClass('loaded');
     }, 3000);
 
-    $(".simply-countdown-one").simplyCountdown({
+    jQuery(".simply-countdown-one").simplyCountdown({
         year: 2017,
         month: 5,
         day: 10,
         hours:12
     });
-
 
 
     //Mailchimp subscription form
@@ -816,3 +816,37 @@
     });
       bubbles();
   })(jQuery);
+
+jQuery(window).load(function(){
+  $modal = jQuery('.modal-frame');
+
+  function enterNewConvo() {
+    jQuery('.create-chat-input').focus();
+  }
+
+  function closeModal() {
+      $modal.removeClass('active');
+      $modal.addClass('leave');
+  }
+
+  jQuery('.modal-popup').click(function() {
+    $modal.toggleClass('active');
+    $modal.removeClass('leave');
+    enterNewConvo();
+  })
+
+  jQuery('.modal-overlay').click(function() {
+    closeModal();
+  })
+
+  jQuery('#close').click(function() {
+      closeModal();
+  })
+
+  jQuery(document).keyup(function(e) {
+    if(e.which === 27) {
+      closeModal();
+    }
+  })
+});
+

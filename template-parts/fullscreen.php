@@ -17,6 +17,13 @@
                 <li><a href="#">Our address</a></li>
              </ul>
           </li>
+            <li class="menu-item-has-children"><a href="">Blog</a>
+             <ul class="sub-menu">
+                <li><a href="#">History</a></li>
+                <li><a href="#">The team</a></li>
+                <li><a href="#">Our address</a></li>
+             </ul>
+          </li>
           <li><a href="#">Contact</a></li>
        </ul>
     </nav>

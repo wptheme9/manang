@@ -378,8 +378,9 @@ ul.simple-dropdown li {
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
-  width: 30px;
+  width: 26px;
   height: 2px;
+  color: #333;
 }
 .ninja-btn span {
   position: relative;
@@ -434,12 +435,12 @@ ul.simple-dropdown li {
 .ninja-btn span,
 .ninja-btn span:before,
 .ninja-btn span:after {
-  background-color: $color__theme;
+  background-color: #333;
 }
 .ninja-btn span,
 .ninja-btn span:before,
 .ninja-btn span:after {
-  background-color: $color__theme;
+  background-color: #333;
 }
 .ninja-btn span,
 .ninja-btn span:before,
@@ -484,6 +485,7 @@ i.sidedropdown {
     margin-bottom: 5px;
     height: 35px;
     line-height: 35px;
+    color: #333;
 }
 .min-header-glide .style4 li div i {
     cursor: pointer;
@@ -633,8 +635,8 @@ Fullscreen header
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    overflow: scroll;
-    max-height: 450px;
+    overflow-y: scroll;
+    max-height: 500px;
 }
 #menu .main-nav ul {
   list-style: none;

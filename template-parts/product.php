@@ -1,5 +1,4 @@
 
-
 <!-- style2-->
 <div class="product-style2 product-grid product-column-based">
     <div class="grid-col-4 product-wrap">
@@ -8,7 +7,7 @@
             <div class="product-icons">
                 <a class="wishlist fa fa-heart-o" data-toggle="tooltip" title="Add To Wishlist"></a>
                 <a class="add-to-cart" data-toggle="tooltip" title="Add To Cart" aria-hidden="true">Add to Cart</a>
-                <a class="quick-view fa fa-search" data-toggle="tooltip" title="Quick View"></a>
+                <a class="quick-view modal-popup fa fa-search" data-toggle="tooltip" title="Quick View"></a>
             </div>
         </div>
         <div class="product-footer">
@@ -34,7 +33,7 @@
             <div class="product-icons">
                 <a class="wishlist fa fa-heart-o" data-toggle="tooltip" title="Add To Wishlist"></a>
                 <a class="add-to-cart" data-toggle="tooltip" title="Add To Cart" aria-hidden="true">Add to Cart</a>
-                <a class="quick-view fa fa-search" data-toggle="tooltip" title="Quick View"></a>
+                <a class="quick-view modal-popup fa fa-search" data-toggle="tooltip" title="Quick View"></a>
             </div>
         </div>
         <div class="product-footer">
@@ -60,7 +59,7 @@
             <div class="product-icons">
                 <a class="wishlist fa fa-heart-o" data-toggle="tooltip" title="Add To Wishlist"></a>
                 <a class="add-to-cart" data-toggle="tooltip" title="Add To Cart" aria-hidden="true">Add to Cart</a>
-                <a class="quick-view fa fa-search" data-toggle="tooltip" title="Quick View"></a>
+                <a class="quick-view modal-popup fa fa-search" data-toggle="tooltip" title="Quick View"></a>
             </div>
         </div>
         <div class="product-footer">
@@ -86,7 +85,7 @@
             <div class="product-icons">
                 <a class="wishlist fa fa-heart-o" data-toggle="tooltip" title="Add To Wishlist"></a>
                 <a class="add-to-cart" data-toggle="tooltip" title="Add To Cart" aria-hidden="true">Add to Cart</a>
-                <a class="quick-view fa fa-search" data-toggle="tooltip" title="Quick View"></a>
+                <a class="quick-view modal-popup fa fa-search" data-toggle="tooltip" title="Quick View"></a>
             </div>
         </div>
         <div class="product-footer">
@@ -108,7 +107,15 @@
 </div>
 
 
-
+<div class="modal-frame">
+  <div class="modal-body">
+    <div class="modal-inner">
+      <button id="close" class="close"><i class="fa fa-times"></i></button>
+      <p>I love sweet sweet content</p>
+    </div>
+  </div>
+  <div class="modal-overlay"></div>
+</div>
 
 
 
@@ -121,7 +128,7 @@
             <div class="product-icons">
                 <a class="wishlist fa fa-heart-o" data-toggle="tooltip" title="Add To Wishlist"></a>
                 <a class="add-to-cart" data-toggle="tooltip" title="Add To Cart" aria-hidden="true">Add to Cart</a>
-                <a class="quick-view fa fa-search" data-toggle="tooltip" title="Quick View"></a>
+                <a class="quick-view modal-popup fa fa-search" data-toggle="tooltip" title="Quick View"></a>
             </div>
         </div>
         <div class="product-footer">
@@ -147,7 +154,7 @@
             <div class="product-icons">
                 <a class="wishlist fa fa-heart-o" data-toggle="tooltip" title="Add To Wishlist"></a>
                 <a class="add-to-cart" data-toggle="tooltip" title="Add To Cart" aria-hidden="true">Add to Cart</a>
-                <a class="quick-view fa fa-search" data-toggle="tooltip" title="Quick View"></a>
+                <a class="quick-view modal-popup fa fa-search" data-toggle="tooltip" title="Quick View"></a>
             </div>
         </div>
         <div class="product-footer">
@@ -173,7 +180,7 @@
             <div class="product-icons">
                 <a class="wishlist fa fa-heart-o" data-toggle="tooltip" title="Add To Wishlist"></a>
                 <a class="add-to-cart" data-toggle="tooltip" title="Add To Cart" aria-hidden="true">Add to Cart</a>
-                <a class="quick-view fa fa-search" data-toggle="tooltip" title="Quick View"></a>
+                <a class="quick-view modal-popup fa fa-search" data-toggle="tooltip" title="Quick View"></a>
             </div>
         </div>
         <div class="product-footer">
@@ -199,7 +206,7 @@
             <div class="product-icons">
                 <a class="wishlist fa fa-heart-o" data-toggle="tooltip" title="Add To Wishlist"></a>
                 <a class="add-to-cart" data-toggle="tooltip" title="Add To Cart" aria-hidden="true">Add to Cart</a>
-                <a class="quick-view fa fa-search" data-toggle="tooltip" title="Quick View"></a>
+                <a class="quick-view modal-popup fa fa-search" data-toggle="tooltip" title="Quick View"></a>
             </div>
         </div>
         <div class="product-footer">
@@ -225,7 +232,7 @@
             <div class="product-icons">
                 <a class="wishlist fa fa-heart-o" data-toggle="tooltip" title="Add To Wishlist"></a>
                 <a class="add-to-cart" data-toggle="tooltip" title="Add To Cart" aria-hidden="true">Add to Cart</a>
-                <a class="quick-view fa fa-search" data-toggle="tooltip" title="Quick View"></a>
+                <a class="quick-view modal-popup fa fa-search" data-toggle="tooltip" title="Quick View"></a>
             </div>
         </div>
         <div class="product-footer">
@@ -251,7 +258,7 @@
             <div class="product-icons">
                 <a class="wishlist fa fa-heart-o" data-toggle="tooltip" title="Add To Wishlist"></a>
                 <a class="add-to-cart" data-toggle="tooltip" title="Add To Cart" aria-hidden="true">Add to Cart</a>
-                <a class="quick-view fa fa-search" data-toggle="tooltip" title="Quick View"></a>
+                <a class="quick-view modal-popup fa fa-search" data-toggle="tooltip" title="Quick View"></a>
             </div>
         </div>
         <div class="product-footer">
@@ -277,7 +284,7 @@
             <div class="product-icons">
                 <a class="wishlist fa fa-heart-o" data-toggle="tooltip" title="Add To Wishlist"></a>
                 <a class="add-to-cart" data-toggle="tooltip" title="Add To Cart" aria-hidden="true">Add to Cart</a>
-                <a class="quick-view fa fa-search" data-toggle="tooltip" title="Quick View"></a>
+                <a class="quick-view modal-popup fa fa-search" data-toggle="tooltip" title="Quick View"></a>
             </div>
         </div>
         <div class="product-footer">
@@ -443,3 +450,5 @@
     <button class="action action--close" aria-label="Close"><i class="fa fa-close"></i></button>
   </div>
 </div><!-- /container -->
+
+

@@ -85,7 +85,22 @@ function manang_subscribe_integrateWithVC(){
                $enter_title = $values['enter_title'];
                $button_align = $values['button_align'];
                $admin_email = $values['admin_email'];
+               ob_start();
+               ?>
+               <div class="subscription-form-wrapper style1">
+                    <p class="result"></p>
+                    <form class="subscription-form form-wrapper input-group" autocomplete="off" novalidate="true">
+                        <input type="email" class="form-control" name="EMAIL" placeholder="Subscribe Email To Get Notified">
+                        <button type="submit" id="submit" class="form-submit">Submit</button>
+                        <div class="ajax-loader" style="">
+                            <img class="contact_spinner" src="assets/img/spinner.gif" alt="">
+                        </div>
+                    </form>
+                </div>
 
+            <?php
+            $output = ob_get_clean();
+            ob_flush();
             return $output;
             }
         }

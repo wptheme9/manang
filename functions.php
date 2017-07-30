@@ -285,6 +285,7 @@ require get_template_directory() . '/vc-elements/mg-divider.php';
 require get_template_directory() . '/vc-elements/mg-cards.php';
 require get_template_directory() . '/vc-elements/mg-services.php';
 require get_template_directory() . '/vc-elements/mg-product/mg-product.php';
+require get_template_directory() . '/vc-elements/mg-subscribe.php';
 
 if ( is_admin() ) {
     require get_template_directory() . '/admin/setting-menu.php';

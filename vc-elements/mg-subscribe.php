@@ -1,6 +1,6 @@
 <?php
 /**
- * Portfolio
+ * Fancybox
  *
  *
  * @package Manang
@@ -14,7 +14,7 @@ function manang_subscribe_integrateWithVC(){
         "base" => "manang_subscribe_vc",
         "category" => __('Manang', 'manang') ,
         'icon' => 'icon-mk-icon-box vc_mk_element-icon',
-        'description' => __('Subscribe Elements.', 'manang') ,
+        'description' => __('', 'manang') ,
         "params" => array(
             array(
                 "heading" => __("Preset Styles", 'manang') ,
@@ -68,15 +68,16 @@ function manang_subscribe_integrateWithVC(){
                 "value" => "",
                 "description" => __("", "manang")
             ) ,
+
         ),
     ));
-    if(class_exists('WPBakerySubscribe')){
+    if(class_exists('WPBakeryShortCode')){
         class WPBakeryShortCode_manang_subscribe_vc extends WPBakeryShortCode {
 
             protected function content( $atts, $content = null ) {
 
                $values =  shortcode_atts( array(
-                            'preset_style'       => '',
+                           'preset_style'       => '',
                             'enter_title'         => '',
                             'button_align'        => '',
                             'admin_email'          => '',
@@ -85,23 +86,20 @@ function manang_subscribe_integrateWithVC(){
                $enter_title = $values['enter_title'];
                $button_align = $values['button_align'];
                $admin_email = $values['admin_email'];
-               ob_start();
-               ?>
-               <div class="subscription-form-wrapper style1">
+
+                ob_start(); ?>
+                    <div class="subscription-form-wrapper style1">
                     <p class="result"></p>
                     <form class="subscription-form form-wrapper input-group" autocomplete="off" novalidate="true">
                         <input type="email" class="form-control" name="EMAIL" placeholder="Subscribe Email To Get Notified">
-                        <button type="submit" id="submit" class="form-submit">Submit</button>
+                        <button type="submit" id="submit" class="form-submit"><?php esc_html_e( 'Submit', 'manang' ); ?></button>
                         <div class="ajax-loader" style="">
                             <img class="contact_spinner" src="assets/img/spinner.gif" alt="">
                         </div>
                     </form>
                 </div>
-
-            <?php
-            $output = ob_get_clean();
-            ob_flush();
-            return $output;
+                <?php $output = ob_get_clean();
+                return $output;
             }
         }
     }

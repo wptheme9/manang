@@ -201,7 +201,7 @@ function manang_scripts() {
     wp_enqueue_script( 'cbpFWTabs', get_template_directory_uri() . '/assets/js/cbpFWTabs.js',array(), '20170302', true );
     wp_enqueue_script( 'isotope', get_template_directory_uri() . '/assets/js/isotope.pkgd.min.js',array(), '20170302', true );
     wp_enqueue_script( 'footer-reveal', get_template_directory_uri() . '/assets/js/footer-reveal.js',array(), '20170302', true );
-    wp_enqueue_script( 'jquery-ajaxchimp', get_template_directory_uri() . '/assets/js/jquery.ajaxchimp.js',array(), '20170302', true );
+    // wp_enqueue_script( 'jquery-ajaxchimp', get_template_directory_uri() . '/assets/js/jquery.ajaxchimp.js',array(), '20170302', true );
     wp_enqueue_script( 'jquery-magnific', get_template_directory_uri() . '/assets/js/jquery.magnific-popup.min.js',array(), '20170302', true );
     wp_enqueue_script( 'jquery-nav', get_template_directory_uri() . '/assets/js/jquery.nav.js',array(), '20170302', true );
     wp_enqueue_script( 'validate', get_template_directory_uri() . '/assets/js/jquery.validate.min.js',array(), '20170302', true );
@@ -219,6 +219,8 @@ function manang_scripts() {
     wp_enqueue_script( 'sticky-header', get_template_directory_uri() . '/assets/js/sticky-header.js',array(), '20170302', true );
     wp_enqueue_script( 'youtubepopup', get_template_directory_uri() . '/assets/js/youtubepopup.js',array(), '20170302', true );
 	wp_enqueue_script( 'manang-app', get_template_directory_uri() . '/assets/js/app.js',array(), '20170124', true );
+    wp_enqueue_script( 'manang-main', get_template_directory_uri() . '/assets/js/main.js',array(), '20170803', true );
+    wp_localize_script('manang-main','framework', array( 'ajaxUrl' => admin_url('admin-ajax.php')) );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -291,3 +293,33 @@ if ( is_admin() ) {
     require get_template_directory() . '/admin/setting-menu.php';
     new Test_Multiple_Forms_Options();
 }
+
+if(!function_exists('cpm_framework_add_to_mailchimp_list')):
+    add_action('wp_ajax_nopriv_cpm_framework_add_to_mailchimp_list', 'cpm_framework_add_to_mailchimp_list');
+    add_action( 'wp_ajax_cpm_framework_add_to_mailchimp_list' , 'cpm_framework_add_to_mailchimp_list' );
+
+
+    function cpm_framework_add_to_mailchimp_list() {
+
+        // $mailchimp_api_key = '123132131';
+        $mailchimp_list_id = '56ed55fd07';
+
+        print_r($_POST);
+        $email = sanitize_email($_POST['email']);
+
+        require get_template_directory() . '/inc/library/MailChimp.php';
+        $MailChimp = new \DrewM\MailChimp\MailChimp('39c086c13c1c065d29d1a8ac3ef11bf4-us13');
+        print_r($MailChimp);
+        // $mailchimp_status = apply_filters( 'cpm_framework_mailchimp_status', 'pending' );
+        // $result = $MailChimp->post("lists/".$mailchimp_list_id."/members", array('email_address' => $email,'status' => 'subscribed'));
+
+        if ($MailChimp->success()) {
+           echo 'added_mailchimp';
+        }
+        else {
+             echo 'invalid email';
+        }
+        echo 'taaait';
+        die();
+    }
+endif;

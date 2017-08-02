@@ -90,8 +90,8 @@ function manang_subscribe_integrateWithVC(){
                 ob_start(); ?>
                     <div class="subscription-form-wrapper style1">
                     <p class="result"></p>
-                    <form class="subscription-form form-wrapper input-group" autocomplete="off" novalidate="true">
-                        <input type="email" class="form-control" name="EMAIL" placeholder="Subscribe Email To Get Notified">
+                    <form id="mailchimp" class="subscription-form form-wrapper input-group" autocomplete="off" novalidate="true">
+                        <input type="email" class="form-control" name="email" placeholder="Subscribe Email To Get Notified">
                         <button type="submit" id="submit" class="form-submit"><?php esc_html_e( 'Submit', 'manang' ); ?></button>
                         <div class="ajax-loader" style="">
                             <img class="contact_spinner" src="assets/img/spinner.gif" alt="">

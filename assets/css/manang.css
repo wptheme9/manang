@@ -2883,40 +2883,62 @@ a.btn.disabled,
 fieldset[disabled] a.btn {
   pointer-events: none; }
 
-.btn-default {
+.btn-default, .comment-respond .comment-form input[type="submit"], .comments-area ol.comment-list .reply a {
   color: #333;
   background-color: #fff;
   border-color: #ccc; }
-  .btn-default:focus, .btn-default.focus {
+  .btn-default:focus, .comment-respond .comment-form input[type="submit"]:focus, .comments-area ol.comment-list .reply a:focus, .btn-default.focus, .comment-respond .comment-form input.focus[type="submit"], .comments-area ol.comment-list .reply a.focus {
     color: #333;
     background-color: #e6e6e6;
     border-color: #8c8c8c; }
-  .btn-default:hover {
+  .btn-default:hover, .comment-respond .comment-form input[type="submit"]:hover, .comments-area ol.comment-list .reply a:hover {
     color: #333;
     background-color: #e6e6e6;
     border-color: #adadad; }
-  .btn-default:active, .btn-default.active,
-  .open > .btn-default.dropdown-toggle {
+  .btn-default:active, .comment-respond .comment-form input[type="submit"]:active, .comments-area ol.comment-list .reply a:active, .btn-default.active, .comment-respond .comment-form input.active[type="submit"], .comments-area ol.comment-list .reply a.active,
+  .open > .btn-default.dropdown-toggle, .comment-respond .comment-form
+  .open > input.dropdown-toggle[type="submit"], .comments-area ol.comment-list .reply
+  .open > a.dropdown-toggle {
     color: #333;
     background-color: #e6e6e6;
     border-color: #adadad; }
-    .btn-default:active:hover, .btn-default:active:focus, .btn-default:active.focus, .btn-default.active:hover, .btn-default.active:focus, .btn-default.active.focus,
-    .open > .btn-default.dropdown-toggle:hover,
-    .open > .btn-default.dropdown-toggle:focus,
-    .open > .btn-default.dropdown-toggle.focus {
+    .btn-default:active:hover, .comment-respond .comment-form input[type="submit"]:active:hover, .comments-area ol.comment-list .reply a:active:hover, .btn-default:active:focus, .comment-respond .comment-form input[type="submit"]:active:focus, .comments-area ol.comment-list .reply a:active:focus, .btn-default:active.focus, .comment-respond .comment-form input[type="submit"]:active.focus, .comments-area ol.comment-list .reply a:active.focus, .btn-default.active:hover, .comment-respond .comment-form input.active[type="submit"]:hover, .comments-area ol.comment-list .reply a.active:hover, .btn-default.active:focus, .comment-respond .comment-form input.active[type="submit"]:focus, .comments-area ol.comment-list .reply a.active:focus, .btn-default.active.focus, .comment-respond .comment-form input.active.focus[type="submit"], .comments-area ol.comment-list .reply a.active.focus,
+    .open > .btn-default.dropdown-toggle:hover, .comment-respond .comment-form
+    .open > input.dropdown-toggle[type="submit"]:hover, .comments-area ol.comment-list .reply
+    .open > a.dropdown-toggle:hover,
+    .open > .btn-default.dropdown-toggle:focus, .comment-respond .comment-form
+    .open > input.dropdown-toggle[type="submit"]:focus, .comments-area ol.comment-list .reply
+    .open > a.dropdown-toggle:focus,
+    .open > .btn-default.dropdown-toggle.focus, .comment-respond .comment-form
+    .open > input.dropdown-toggle.focus[type="submit"], .comments-area ol.comment-list .reply
+    .open > a.dropdown-toggle.focus {
       color: #333;
       background-color: #d4d4d4;
       border-color: #8c8c8c; }
-  .btn-default:active, .btn-default.active,
-  .open > .btn-default.dropdown-toggle {
+  .btn-default:active, .comment-respond .comment-form input[type="submit"]:active, .comments-area ol.comment-list .reply a:active, .btn-default.active, .comment-respond .comment-form input.active[type="submit"], .comments-area ol.comment-list .reply a.active,
+  .open > .btn-default.dropdown-toggle, .comment-respond .comment-form
+  .open > input.dropdown-toggle[type="submit"], .comments-area ol.comment-list .reply
+  .open > a.dropdown-toggle {
     background-image: none; }
-  .btn-default.disabled:hover, .btn-default.disabled:focus, .btn-default.disabled.focus, .btn-default[disabled]:hover, .btn-default[disabled]:focus, .btn-default[disabled].focus,
+  .btn-default.disabled:hover, .comment-respond .comment-form input.disabled[type="submit"]:hover, .comments-area ol.comment-list .reply a.disabled:hover, .btn-default.disabled:focus, .comment-respond .comment-form input.disabled[type="submit"]:focus, .comments-area ol.comment-list .reply a.disabled:focus, .btn-default.disabled.focus, .comment-respond .comment-form input.disabled.focus[type="submit"], .comments-area ol.comment-list .reply a.disabled.focus, .btn-default[disabled]:hover, .comment-respond .comment-form input[disabled][type="submit"]:hover, .comments-area ol.comment-list .reply a[disabled]:hover, .btn-default[disabled]:focus, .comment-respond .comment-form input[disabled][type="submit"]:focus, .comments-area ol.comment-list .reply a[disabled]:focus, .btn-default[disabled].focus, .comment-respond .comment-form input[disabled].focus[type="submit"], .comments-area ol.comment-list .reply a[disabled].focus,
   fieldset[disabled] .btn-default:hover,
+  fieldset[disabled] .comment-respond .comment-form input[type="submit"]:hover, .comment-respond .comment-form
+  fieldset[disabled] input[type="submit"]:hover,
+  fieldset[disabled] .comments-area ol.comment-list .reply a:hover, .comments-area ol.comment-list .reply
+  fieldset[disabled] a:hover,
   fieldset[disabled] .btn-default:focus,
-  fieldset[disabled] .btn-default.focus {
+  fieldset[disabled] .comment-respond .comment-form input[type="submit"]:focus, .comment-respond .comment-form
+  fieldset[disabled] input[type="submit"]:focus,
+  fieldset[disabled] .comments-area ol.comment-list .reply a:focus, .comments-area ol.comment-list .reply
+  fieldset[disabled] a:focus,
+  fieldset[disabled] .btn-default.focus,
+  fieldset[disabled] .comment-respond .comment-form input.focus[type="submit"], .comment-respond .comment-form
+  fieldset[disabled] input.focus[type="submit"],
+  fieldset[disabled] .comments-area ol.comment-list .reply a.focus, .comments-area ol.comment-list .reply
+  fieldset[disabled] a.focus {
     background-color: #fff;
     border-color: #ccc; }
-  .btn-default .badge {
+  .btn-default .badge, .comment-respond .comment-form input[type="submit"] .badge, .comments-area ol.comment-list .reply a .badge {
     color: #fff;
     background-color: #333; }
 
@@ -11006,7 +11028,7 @@ input[type="reset"]:active, input[type="submit"]:hover, input[type="submit"]:foc
   outline: 0;
   box-shadow: none; }
 
-.btn-default {
+.btn-default, .comment-respond .comment-form input[type="submit"], .comments-area ol.comment-list .reply a {
   background: #7a90ff;
   border: 2px solid #7a90ff;
   color: #fff;
@@ -11018,7 +11040,7 @@ input[type="reset"]:active, input[type="submit"]:hover, input[type="submit"]:foc
   -moz-transition-duration: 0.3s;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s; }
-  .btn-default:hover, .btn-default:focus {
+  .btn-default:hover, .comment-respond .comment-form input[type="submit"]:hover, .comments-area ol.comment-list .reply a:hover, .btn-default:focus, .comment-respond .comment-form input[type="submit"]:focus, .comments-area ol.comment-list .reply a:focus {
     box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.17), 0 6px 14px 0 rgba(0, 0, 0, 0.17) !important;
     background: transparent;
     border-color: #fff; }
@@ -11027,6 +11049,330 @@ input[type="reset"]:active, input[type="submit"]:hover, input[type="submit"]:foc
 
 3. layout
 --------------------------------------------------------------*/
+.section-content {
+  padding: 60px 0;
+  position: relative; }
+
+.comment-respond .comment-reply-title {
+  font-size: 24px;
+  margin: 0;
+  margin-bottom: 10px;
+  text-transform: capitalize; }
+
+.comment-respond .comment-form {
+  margin-bottom: 20px; }
+  .comment-respond .comment-form label {
+    display: block;
+    font-size: 16px; }
+  .comment-respond .comment-form input {
+    background: none;
+    border: 2px solid #eee;
+    outline: 0;
+    font-size: 16px;
+    padding: 0;
+    box-shadow: none;
+    -webkit-transition: all 0.3s;
+    border-radius: 4px;
+    height: 40px;
+    width: 100%;
+    padding: 0 10px;
+    transition: all 0.5s ease-out 0s; }
+    .comment-respond .comment-form input:active, .comment-respond .comment-form input:focus {
+      border: 2px solid #7a90ff; }
+  .comment-respond .comment-form textarea {
+    height: 200px;
+    padding: 10px;
+    background: none;
+    border: 2px solid #eee;
+    outline: 0 !important;
+    transition: all 0.5s ease-out 0s;
+    width: 100%;
+    border-radius: 4px; }
+    .comment-respond .comment-form textarea:active, .comment-respond .comment-form textarea:focus {
+      border: 2px solid #7a90ff; }
+  .comment-respond .comment-form input[type="submit"] {
+    background: #7a90ff;
+    font-weight: normal;
+    text-transform: capitalize;
+    height: auto;
+    width: auto; }
+  .comment-respond .comment-form .comment-notes {
+    margin-bottom: 25px; }
+
+.comments-area {
+  margin-top: 40px; }
+  .comments-area h2 {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 10px;
+    text-transform: capitalize; }
+  .comments-area ol.comment-list {
+    list-style: none;
+    padding: 0; }
+    .comments-area ol.comment-list:last-child {
+      margin-bottom: 0; }
+    .comments-area ol.comment-list .comment-author b.fn {
+      margin-left: 7px; }
+    .comments-area ol.comment-list .comment-author span.says {
+      display: none; }
+    .comments-area ol.comment-list .comment-author img {
+      width: 40px;
+      display: inline-block;
+      max-width: 100%;
+      height: auto;
+      padding: 2px;
+      line-height: 1.42857143;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      margin-top: 15px;
+      -webkit-transition: all .2s ease-in-out;
+      -o-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out; }
+    .comments-area ol.comment-list .comment-metadata {
+      margin-left: 52px;
+      margin-top: -18px;
+      margin-bottom: 14px; }
+      .comments-area ol.comment-list .comment-metadata time {
+        font-size: 14px;
+        color: #666; }
+    .comments-area ol.comment-list .comment-content {
+      margin-left: 51px;
+      padding: 20px;
+      background: #f5f5f5;
+      margin-bottom: 27px; }
+    .comments-area ol.comment-list .reply {
+      text-align: right;
+      margin-top: 16px; }
+      .comments-area ol.comment-list .reply a {
+        background: #7a90ff;
+        font-weight: normal;
+        text-transform: capitalize;
+        padding: 6px 21px;
+        overflow: hidden !important; }
+    .comments-area ol.comment-list ol.children {
+      padding: 0;
+      list-style: none;
+      margin-left: 56px; }
+  .comments-area .comment-subscription-form input[type="checkbox"] {
+    height: auto !important; }
+
+.nav-links {
+  width: 100%; }
+  .nav-links .nav-previous {
+    width: 50%;
+    display: inline-block;
+    border: 1px solid #e2e2e2; }
+  .nav-links .nav-next {
+    width: 50%;
+    display: inline-block;
+    border: 1px solid #e2e2e2;
+    text-align: right; }
+
+.nav-links a, .nav-links span {
+  padding: 1em 2em;
+  margin-right: 5px;
+  display: inline-block;
+  background: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+  position: relative;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease; }
+  .nav-links a:hover, .nav-links span:hover {
+    color: #7a90ff; }
+
+.inner-banner-wrap {
+  background-attachment: fixed;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: block;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  outline: 0;
+  padding: 85px 0; }
+  .inner-banner-wrap:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .5;
+    content: '';
+    background: #000; }
+  .inner-banner-wrap .inner-banner-content {
+    position: relative;
+    z-index: 99;
+    text-align: center;
+    max-width: 670px;
+    margin: 0 auto; }
+    .inner-banner-wrap .inner-banner-content h2 {
+      font-size: 28px;
+      color: #fff;
+      text-transform: uppercase;
+      margin-top: 0;
+      font-weight: 500;
+      margin-bottom: 18px; }
+  .inner-banner-wrap ul.breadcrumb {
+    background: none;
+    background: none;
+    margin-bottom: 0;
+    margin: 0; }
+    .inner-banner-wrap ul.breadcrumb li {
+      color: #fff;
+      font-size: 17px; }
+
+.page-not-found {
+  border-bottom: 1px solid #eee; }
+  .page-not-found .page-header {
+    text-align: center;
+    margin: 0; }
+    .page-not-found .page-header h2 {
+      font-size: 100px;
+      font-weight: bold;
+      margin-top: 0; }
+      .page-not-found .page-header h2 span {
+        color: #7a90ff; }
+  .page-not-found .content-list {
+    margin-top: 16px; }
+  .page-not-found .search-form {
+    width: 50%;
+    margin: 20px auto 0; }
+    .page-not-found .search-form label {
+      margin: 0;
+      width: 75%; }
+  .page-not-found .search-form .search-submit {
+    width: 25% !important; }
+
+#wp-calendar caption {
+  background-color: #7a90ff;
+  color: #ffffff;
+  padding: 10px; }
+
+#wp-calendar thead tr th {
+  text-align: center; }
+
+table th {
+  border: 1px solid #dddddd;
+  padding: 8px;
+  line-height: 20px;
+  text-align: center;
+  vertical-align: top; }
+
+table td {
+  border: 1px solid #dddddd;
+  padding: 8px;
+  line-height: 20px;
+  text-align: center;
+  vertical-align: top; }
+
+table td {
+  border: 1px solid #dddddd;
+  padding: 8px;
+  line-height: 20px;
+  text-align: center;
+  vertical-align: top; }
+
+#wp-calendar tbody tr td {
+  text-align: center; }
+
+#wp-calendar tr th {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-right: 0;
+  border-bottom: 0; }
+
+#wp-calendar tr th:last-child {
+  border-right: 1px solid rgba(0, 0, 0, 0.2); }
+
+#wp-calendar tr td {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-right: 0;
+  border-bottom: 0; }
+
+#wp-calendar tr td a {
+  font-weight: bold; }
+
+#wp-calendar tr td:last-child {
+  border-right: 1px solid rgba(0, 0, 0, 0.2); }
+
+#wp-calendar tfoot tr td {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
+
+#secondary #wp-calendar tr td {
+  border: 1px solid #eee; }
+
+#secondary #wp-calendar tr th {
+  border: 1px solid #eee; }
+
+.tagcloud a {
+  background: #7a90ff;
+  color: #fff;
+  font-size: 14px !important;
+  padding: 5px 8px;
+  margin-right: 3px;
+  margin-bottom: 8px;
+  display: inline-block; }
+
+#secondary .widget {
+  margin-bottom: 35px; }
+  #secondary .widget .widget-title {
+    font-size: 22px;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 25px; }
+  #secondary .widget ul {
+    padding: 0;
+    margin: 0;
+    list-style: none; }
+    #secondary .widget ul li {
+      padding-bottom: 8px;
+      position: relative;
+      border-bottom: 1px solid #eee;
+      margin-bottom: 10px; }
+      #secondary .widget ul li a {
+        color: #666;
+        text-decoration: none; }
+        #secondary .widget ul li a:hover {
+          color: #7a90ff; }
+
+.search-form {
+  width: 100%; }
+  .search-form .search-field {
+    width: 100%;
+    border: 2px solid #eee;
+    padding: 9px 23px;
+    outline: 0;
+    -webkit-appearance: none;
+    font-weight: 400;
+    background: #fff;
+    height: auto;
+    border-radius: 4px; }
+    .search-form .search-field:focus {
+      border: 2px solid #7a90ff !important; }
+  .search-form .search-submit {
+    box-shadow: none !important;
+    font-size: 15px;
+    border-radius: 0;
+    background: #7a90ff;
+    transition: all .5s ease-in-out 0s;
+    border: none;
+    color: #fff;
+    padding: 16px 17px;
+    margin-left: -6px;
+    border: none;
+    line-height: 14px;
+    width: 26%;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px; }
+  .search-form label {
+    width: 74%;
+    margin-bottom: 0; }
+
 /* ––––––––––––––––––––––––––––––––––––––––––––––––––
 megamenu.js STYLE STARTS HERE
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -11982,9 +12328,9 @@ body.fullscreen-loaded {
       margin-bottom: 20px; }
     .mg-banner-wrapper .banner-text-wrap p {
       color: #fff; }
-    .mg-banner-wrapper .banner-text-wrap .btn-default {
+    .mg-banner-wrapper .banner-text-wrap .btn-default, .mg-banner-wrapper .banner-text-wrap .comment-respond .comment-form input[type="submit"], .comment-respond .comment-form .mg-banner-wrapper .banner-text-wrap input[type="submit"], .mg-banner-wrapper .banner-text-wrap .comments-area ol.comment-list .reply a, .comments-area ol.comment-list .reply .mg-banner-wrapper .banner-text-wrap a {
       margin-top: 30px; }
-      .mg-banner-wrapper .banner-text-wrap .btn-default:hover {
+      .mg-banner-wrapper .banner-text-wrap .btn-default:hover, .mg-banner-wrapper .banner-text-wrap .comment-respond .comment-form input[type="submit"]:hover, .comment-respond .comment-form .mg-banner-wrapper .banner-text-wrap input[type="submit"]:hover, .mg-banner-wrapper .banner-text-wrap .comments-area ol.comment-list .reply a:hover, .comments-area ol.comment-list .reply .mg-banner-wrapper .banner-text-wrap a:hover {
         color: #fff;
         background: transparent; }
 
@@ -12038,9 +12384,9 @@ body.fullscreen-loaded {
       color: #fff;
       letter-spacing: 8px;
       text-transform: uppercase; }
-    .videobg-wrapper .banner-text-wrap .btn-default {
+    .videobg-wrapper .banner-text-wrap .btn-default, .videobg-wrapper .banner-text-wrap .comment-respond .comment-form input[type="submit"], .comment-respond .comment-form .videobg-wrapper .banner-text-wrap input[type="submit"], .videobg-wrapper .banner-text-wrap .comments-area ol.comment-list .reply a, .comments-area ol.comment-list .reply .videobg-wrapper .banner-text-wrap a {
       margin-top: 30px; }
-      .videobg-wrapper .banner-text-wrap .btn-default:hover {
+      .videobg-wrapper .banner-text-wrap .btn-default:hover, .videobg-wrapper .banner-text-wrap .comment-respond .comment-form input[type="submit"]:hover, .comment-respond .comment-form .videobg-wrapper .banner-text-wrap input[type="submit"]:hover, .videobg-wrapper .banner-text-wrap .comments-area ol.comment-list .reply a:hover, .comments-area ol.comment-list .reply .videobg-wrapper .banner-text-wrap a:hover {
         color: #fff;
         background: transparent; }
 
@@ -12107,9 +12453,9 @@ body.fullscreen-loaded {
       .mg-banner-slider .slider-item .banner-text-wrap img {
         margin: 0 auto;
         margin-bottom: 20px; }
-      .mg-banner-slider .slider-item .banner-text-wrap .btn-default {
+      .mg-banner-slider .slider-item .banner-text-wrap .btn-default, .mg-banner-slider .slider-item .banner-text-wrap .comment-respond .comment-form input[type="submit"], .comment-respond .comment-form .mg-banner-slider .slider-item .banner-text-wrap input[type="submit"], .mg-banner-slider .slider-item .banner-text-wrap .comments-area ol.comment-list .reply a, .comments-area ol.comment-list .reply .mg-banner-slider .slider-item .banner-text-wrap a {
         margin-top: 30px; }
-        .mg-banner-slider .slider-item .banner-text-wrap .btn-default:hover {
+        .mg-banner-slider .slider-item .banner-text-wrap .btn-default:hover, .mg-banner-slider .slider-item .banner-text-wrap .comment-respond .comment-form input[type="submit"]:hover, .comment-respond .comment-form .mg-banner-slider .slider-item .banner-text-wrap input[type="submit"]:hover, .mg-banner-slider .slider-item .banner-text-wrap .comments-area ol.comment-list .reply a:hover, .comments-area ol.comment-list .reply .mg-banner-slider .slider-item .banner-text-wrap a:hover {
           color: #fff;
           background: transparent; }
   .mg-banner-slider button.slick-next {
@@ -12125,7 +12471,7 @@ body.fullscreen-loaded {
   opacity: 1;
   left: 20px; }
 
-a.btn-default.btn-white {
+a.btn-default.btn-white, .comments-area ol.comment-list .reply a.btn-white {
   background: #fff;
   border: 2px solid #fff;
   color: #444;
@@ -12876,13 +13222,13 @@ a.custom-logo img {
     .cta-sec .cta-content p {
       margin-bottom: 20px;
       color: #fff; }
-  .cta-sec .btn-default {
+  .cta-sec .btn-default, .cta-sec .comment-respond .comment-form input[type="submit"], .comment-respond .comment-form .cta-sec input[type="submit"], .cta-sec .comments-area ol.comment-list .reply a, .comments-area ol.comment-list .reply .cta-sec a {
     background: transparent;
     border: 2px solid #fff;
     color: #fff;
     z-index: 99;
     position: relative; }
-    .cta-sec .btn-default:hover, .cta-sec .btn-default:focus {
+    .cta-sec .btn-default:hover, .cta-sec .comment-respond .comment-form input[type="submit"]:hover, .comment-respond .comment-form .cta-sec input[type="submit"]:hover, .cta-sec .comments-area ol.comment-list .reply a:hover, .comments-area ol.comment-list .reply .cta-sec a:hover, .cta-sec .btn-default:focus, .cta-sec .comment-respond .comment-form input[type="submit"]:focus, .comment-respond .comment-form .cta-sec input[type="submit"]:focus, .cta-sec .comments-area ol.comment-list .reply a:focus, .comments-area ol.comment-list .reply .cta-sec a:focus {
       border-color: #7a90ff;
       background: #7a90ff; }
 
@@ -14329,7 +14675,7 @@ blockquote.line-style {
     font-size: 15px;
     z-index: 99;
     position: relative; }
-  .blog-wrap.style1 a.btn.btn-default {
+  .blog-wrap.style1 a.btn.btn-default, .blog-wrap.style1 .comments-area ol.comment-list .reply a.btn, .comments-area ol.comment-list .reply .blog-wrap.style1 a.btn {
     padding: 8px 18px; }
   .blog-wrap.style1 .blog-meta {
     z-index: 99;
@@ -14349,7 +14695,7 @@ blockquote.line-style {
         margin-right: 6px;
         color: #7a90ff; }
 
-.btn-default {
+.btn-default, .comment-respond .comment-form input[type="submit"], .comments-area ol.comment-list .reply a {
   text-transform: capitalize; }
 
 .blog-wrap.style2 img {
@@ -18557,7 +18903,7 @@ figure.tilter__figure:after {
 .mg-event.style2 .event-footer {
   background: #2f3740;
   padding: 40px 50px; }
-  .mg-event.style2 .event-footer a.btn.btn-default {
+  .mg-event.style2 .event-footer a.btn.btn-default, .mg-event.style2 .event-footer .comments-area ol.comment-list .reply a.btn, .comments-area ol.comment-list .reply .mg-event.style2 .event-footer a.btn {
     margin-top: 25px;
     width: 75%;
     margin: 0 auto;

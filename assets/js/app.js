@@ -77,24 +77,24 @@
 
     $('[data-toggle="tooltip"]').tooltip();
 
-    subfrom.ajaxChimp({
-        url: "http://themeforest.us13.list-manage.com/subscribe/post?u=c9f26ead80c5cb7180849094a&amp;id=51cf03ce84",
-        callback: function(response) {
-            var subresult = $(".subscription-form-wrapper .result");
-            if(jQuery('.form-control.valid')[0]){
-                $(".subscription-form").hide();
-                subresult.removeClass('subscribe-error fadeInDown');
-                subresult.addClass('subscribe-success');
-                subresult.text(response.msg).addClass('animated fadeInDown');
-            }
-            else{
-                subresult.addClass('subscribe-error');
-                subresult.removeClass('subscribe-success fadeInDown');
-                subresult.text(response.msg).addClass('animated fadeInDown');
-            loader.hide();
-            }
-        }
-    });
+    // subfrom.ajaxChimp({
+    //     url: "http://themeforest.us13.list-manage.com/subscribe/post?u=c9f26ead80c5cb7180849094a&amp;id=51cf03ce84",
+    //     callback: function(response) {
+    //         var subresult = $(".subscription-form-wrapper .result");
+    //         if(jQuery('.form-control.valid')[0]){
+    //             $(".subscription-form").hide();
+    //             subresult.removeClass('subscribe-error fadeInDown');
+    //             subresult.addClass('subscribe-success');
+    //             subresult.text(response.msg).addClass('animated fadeInDown');
+    //         }
+    //         else{
+    //             subresult.addClass('subscribe-error');
+    //             subresult.removeClass('subscribe-success fadeInDown');
+    //             subresult.text(response.msg).addClass('animated fadeInDown');
+    //         loader.hide();
+    //         }
+    //     }
+    // });
 
     //Contact form validation
     $('#contact_form').validate({

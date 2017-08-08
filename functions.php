@@ -300,18 +300,23 @@ if(!function_exists('cpm_framework_add_to_mailchimp_list')):
 
 
     function cpm_framework_add_to_mailchimp_list() {
-
         // $mailchimp_api_key = '123132131';
         $mailchimp_list_id = '56ed55fd07';
 
-        print_r($_POST);
+        // print_r($_POST);
         $email = sanitize_email($_POST['email']);
 
         require get_template_directory() . '/inc/library/MailChimp.php';
-        $MailChimp = new \DrewM\MailChimp\MailChimp('39c086c13c1c065d29d1a8ac3ef11bf4-us13');
+        $MailChimp = new \DrewM\MailChimp\MailChimp('94b5e7fd215837a0c310c713ac3acf83-us13');
         print_r($MailChimp);
-        // $mailchimp_status = apply_filters( 'cpm_framework_mailchimp_status', 'pending' );
+        $mailchimp_status = apply_filters( 'cpm_framework_mailchimp_status', 'pending' );
         // $result = $MailChimp->post("lists/".$mailchimp_list_id."/members", array('email_address' => $email,'status' => 'subscribed'));
+        // $result = $MailChimp->post("lists/56ed55fd07/members", array(
+        //         'email_address' => 'davy@example.com',
+        //         'status'        => 'subscribed',
+        //     ));
+        $result = $MailChimp->get('lists');
+        print_r($result);
 
         if ($MailChimp->success()) {
            echo 'added_mailchimp';
@@ -319,7 +324,10 @@ if(!function_exists('cpm_framework_add_to_mailchimp_list')):
         else {
              echo 'invalid email';
         }
-        echo 'taaait';
+        // echo 'taaait';
+        echo $MailChimp->getLastError();
+        print_r($MailChimp->getLastResponse());
+        print_r($MailChimp->getLastRequest());
         die();
     }
 endif;

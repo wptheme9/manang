@@ -7,7 +7,7 @@ function manang_testimonial($testimonial_style="",$skin="",$testimonial_count=""
     $tax_query = '';
     if($testimonial_category!=''){
         $tax_query[] =  array(
-            'taxonomy' => 'testimonial_category',
+            'taxonomy' => 'manang_testimonial_category',
             'field' => 'term_id',
             'terms' => $testimonial_category,
         );

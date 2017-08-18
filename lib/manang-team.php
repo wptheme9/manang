@@ -19,7 +19,7 @@ if ( ! function_exists ( 'manang_team_shortcode' ) ) {
         $customizer_options = manang_options();
         $team_post_count = ( empty($number_post)?$customizer_options['team_count']: $number_post );
         $team_argument = array(
-            'post_type'      => 'team',
+            'post_type'      => 'manang-team',
             'post_status'    => 'publish',
             'posts_per_page' => $team_post_count,
             'orderby'        => 'menu_order date',

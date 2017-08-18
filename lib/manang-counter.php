@@ -12,7 +12,7 @@
         $skills_post_count = ( empty($number_post)?$customizer_options['skills_post_count']:$number_post );
         $skills_layout = ( empty($layout)?$customizer_options['skills_layout']:$layout );
         $skills_arg = array(
-            'post_type'      => 'counter',
+            'post_type'      => 'manang-counter',
             'posts_per_page' => $skills_post_count,
             'post_status'    => 'publish',
             'orderby'        => 'menu_order date',

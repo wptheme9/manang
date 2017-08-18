@@ -148,7 +148,7 @@ function manang_services_integrateWithVC(){
                     );
                 }
                 $service_argument = array(
-                    'post_type'      => 'service',
+                    'post_type'      => 'manang-service',
                     'post_status'    => 'publish',
                     'posts_per_page' => $service_post_count,
                     'orderby'        => 'menu_order date',

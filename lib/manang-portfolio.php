@@ -18,7 +18,7 @@ if ( ! function_exists ( 'manang_portfolio_shortcode' ) ) {
         $portfolio_padding  = ( empty($padding)?$customizer_options['portfolio_padding']:$padding );
 
         $portfolio_argument = array(
-            'post_type'      =>  'portfolio',
+            'post_type'      =>  'manang-portfolio',
             'post_status'    =>  'publish',
             'orderby'        => 'menu_order date',
             'order'          => 'desc',

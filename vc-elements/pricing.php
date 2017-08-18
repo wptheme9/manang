@@ -65,7 +65,7 @@ function manang_pricing_integrateWithVC(){
                $posts_per_page = (empty($number_pricing)?-1:$number_pricing);
 
                $pricing_argument = array(
-                    'post_type'      => 'pricing',
+                    'post_type'      => 'manang-pricing',
                     'post_status'    => 'publish',
                     'posts_per_page' => $posts_per_page,
                     'orderby'        => 'menu_order date',

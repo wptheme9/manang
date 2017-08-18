@@ -102,7 +102,7 @@ function manang_clients_integrateWithVC(){
                $number_post = (empty($values['number_post'])?-1:$values['number_post']);
 
                $clients_argument = array(
-                    'post_type'      => 'clients',
+                    'post_type'      => 'manang-clients',
                     'post_status'    => 'publish',
                     'posts_per_page' => $number_post,
                     'orderby'        => 'menu_order date',

@@ -48,7 +48,7 @@ function manang_events_integrateWithVC(){
                $posts_per_page = (empty($number_events)?-1:$number_events);
                 ob_start();
                 $events_argument = array(
-                    'post_type'      => 'event',
+                    'post_type'      => 'manang-event',
                     'post_status'    => 'publish',
                     'posts_per_page' => $posts_per_page,
                     'orderby'        => 'menu_order date',

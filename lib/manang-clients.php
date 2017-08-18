@@ -12,7 +12,7 @@ if ( ! function_exists ( 'manang_clients_shortcode' ) ) {
             $client_slide_option = ( empty($slide)?$customizer_options['client_slide_option']:$slide);
             $client_title = ( empty($title)?$customizer_options['client_title']:$title );
             $client_argument = array(
-                'post_type'      => 'clients',
+                'post_type'      => 'manang-clients',
                 'post_status'    => 'publish',
                 'orderby'        => 'menu_order date',
                 'order'          =>  'desc',

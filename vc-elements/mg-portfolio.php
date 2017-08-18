@@ -119,7 +119,7 @@ function manang_portfolio_integrateWithVC(){
                $posts_per_page = (empty($number_posts)?-1:$number_posts);
                $padding_check =($padding_not == 'true'?'add-pad':'pad0');
                $portfolio_arg = array(
-                'post_type'      => 'portfolio',
+                'post_type'      => 'manang-portfolio',
                 'posts_per_page'  => $posts_per_page,
                 'post_status'    => 'publish',
                 'orderby'        => 'menu_order date',

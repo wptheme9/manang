@@ -99,7 +99,7 @@ function manang_team_integrateWithVC(){
                     );
                 }
                 $team_argument = array(
-                    'post_type'      => 'team',
+                    'post_type'      => 'manang-team',
                     'post_status'    => 'publish',
                     'posts_per_page' => $team_post_count,
                     'orderby'        => 'menu_order date',

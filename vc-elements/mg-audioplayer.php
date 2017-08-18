@@ -72,7 +72,7 @@ if(class_exists('WPBakeryShortCode')){
 
             ob_start(); ?>
              <?php $args = array(
-                'post_type' => 'music',
+                'post_type' => 'manang-music',
                 'posts_per_page' => $posts_per_page,
                 'post_status' =>'publish',
                 'order' => 'desc',

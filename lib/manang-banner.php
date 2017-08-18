@@ -6,7 +6,7 @@ if ( ! function_exists ( 'manang_slider_default_query' ) ) {
             ), $atts ));
         $posts_number = ($number_posts?$number_posts:-1);
         $slider_arg = array(
-                'post_type'     => 'slider',
+                'post_type'     => 'manang-slider',
                 'post_per_page' => $posts_number,
                 'post_status'   => 'publish',
                 'orderby'       => 'menu_order',

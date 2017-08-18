@@ -13,7 +13,7 @@ function manang_testimonial($testimonial_style="",$skin="",$testimonial_count=""
         );
     }
     $testimonial_argument = array(
-        'post_type'      => 'testimonial',
+        'post_type'      => 'manang-testimonial',
         'post_status'    => 'publish',
         'oderby'         => 'menu_order date',
         'order'          => 'desc',
